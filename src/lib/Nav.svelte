@@ -1,34 +1,39 @@
 <script>
-	import NavLink from '$lib/NavLink.svelte';
+	import Link from '$lib/navLink.svelte';
 </script>
 
 
 <nav class="nav">
 	<ul class="nav__block">
-		<NavLink name={'home'} link={''} />
-		<NavLink name={'about'} />
-		<NavLink name={'projects'} />
-		<NavLink name={'blog'} />
-		<NavLink name={'contact'} />
+		<Link name={'home'} link={''} />
+		<Link name={'about'} />
+		<Link name={'projects'} />
+		<Link name={'blog'} />
+		<Link name={'contact'} />
 	</ul>
 </nav>
 
-<style>
+<style type="text/scss">
+	$dNavHeight: 5rem;
+	$color1: white;
+	$color2: black;
+
 	.nav {
-		background-color: black;
+		background-color: $color2;
 		width: 100%;
 
 		position: fixed;
+		top: 0;
 	}
 	.nav__block {
-		height: 5rem;
+		display: flex;
+
+		height: $dNavHeight;
 		max-width: 800px;
 
+		color: $color1;
+		
 		margin: auto;
-
-		color: white;
-
-		display: flex;
 
 		/* fix */
 		padding: 0;

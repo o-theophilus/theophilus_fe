@@ -1,6 +1,7 @@
 <script>
 	import '../app.scss';
-	import Nav from '$lib/Nav.svelte';
+	import Nav from '$lib/nav.svelte';
+	import Footer from '$lib/footer.svelte';
 </script>
 
 
@@ -9,15 +10,20 @@
 	<div class="content__block" >
 		<slot />
 	</div>
+	<Footer />
 </main>
 
-<style>
+<style type="text/scss">
+	$dNavHeight: 5rem;
+	$width: 800px;
+
 	.content {
-		background-color: gray;
+		background-color: rgb(200, 200, 200);
 	}
 	.content__block{
-		max-width: 800px;
+		max-width: $width;
 		margin: auto;
+		margin-top: $dNavHeight;
 	
 		background-color: white;
 
