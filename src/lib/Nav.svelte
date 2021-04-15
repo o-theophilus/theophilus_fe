@@ -1,15 +1,15 @@
 <script>
-	import Link from './navLink.svelte';
+	// import Link from './navLink.svelte';
 </script>
 
 
 <nav class="nav">
 	<ul class="nav__block">
-		<Link name={'home'} link={''} />
+		<!-- <Link name={'home'} link={''} />
 		<Link name={'about'} />
 		<Link name={'projects'} />
 		<Link name={'blog'} />
-		<Link name={'contact'} />
+		<Link name={'contact'} /> -->
 	</ul>
 </nav>
 
