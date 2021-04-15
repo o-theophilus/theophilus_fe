@@ -4,27 +4,26 @@
 
 	let skills = [
 		{ name: 'C#', value: 82 },
-		{ name: "Python", value: 90 },
-		{ name: "HTML", value: 95 },
-		{ name: "CSS", value: 90 },
-		{ name: "JavaScript", value: 65 },
-		{ name: "React", value: 50 },
-		{ name: "Arduino", value: 92 }
+		{ name: 'Python', value: 90 },
+		{ name: 'HTML', value: 95 },
+		{ name: 'CSS', value: 90 },
+		{ name: 'JavaScript', value: 65 },
+		{ name: 'React', value: 50 },
+		{ name: 'Arduino', value: 92 }
 	];
 
-	// let tools = [
-	// 	{ name: Microsoft_Word, value: 84 },
-	// 	{ name: Power_Point, value: 73 },
-	// 	{ name: CorelDRAW, value: 47 },
-	// 	{ name: Photoshop, value: 79 },
-	// 	{ name: Preniere_Pro, value: 83 },
-	// 	{ name: Maya, value: 88 },
-	// 	{ name: '3D Max', value: 73 },
-	// 	{ name: Blender, value: 80 },
-	// 	{ name: SketchUp, value: 85 },
-	// 	{ name: Godot, value: 30 }
-	// ];
-
+	let tools = [
+		{ name: 'Microsoft Word', value: 84 },
+		{ name: 'Power Point', value: 73 },
+		{ name: 'CorelDRAW', value: 47 },
+		{ name: 'Photoshop', value: 79 },
+		{ name: 'Preniere Pro', value: 83 },
+		{ name: 'Maya', value: 88 },
+		{ name: '3D Max', value: 73 },
+		{ name: 'Blender', value: 80 },
+		{ name: 'SketchUp', value: 85 },
+		{ name: 'Godot', value: 30 }
+	];
 </script>
 
 <svelte:head>
@@ -63,9 +62,9 @@
 			<br />
 			<br />
 		</p>
-		{#each skills as ent }
+		{#each skills as ent}
 			{ent.name} - {ent.value}
-			<br/>
+			<br />
 		{/each}
 	</div>
 </Content>
