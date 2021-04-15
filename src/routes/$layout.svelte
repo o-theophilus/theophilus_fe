@@ -1,6 +1,6 @@
 <script>
 	import '../app.scss';
-	import Nav from '$lib/nav.svelte';
+	import Nav from '$lib/nnav.svelte';
 	import Footer from '$lib/footer.svelte';
 </script>
 
