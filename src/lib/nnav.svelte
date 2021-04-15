@@ -1,9 +1,9 @@
-<!-- <script>
+<script>
 	import Link from './navLink.svelte';
-</script> -->
+</script>
 
 
-<!-- <nav class="nav">
+<nav class="nav">
 	<ul class="nav__block">
 		<Link name={'home'} link={''} />
 		<Link name={'about'} />
@@ -38,8 +38,4 @@
 		/* fix */
 		padding: 0;
 	}
-</style> -->
-
-<p>
-	hello
-</p>
+</style>
