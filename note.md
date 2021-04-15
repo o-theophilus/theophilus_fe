@@ -2,82 +2,58 @@
 
 ## Getting Started
 
-```cmd
+```npm
 npm init svelte@next
 npm install
 npm run dev
 
+//or
+
+npm i
 npm run dev -- --open
-
 ```
 
-
-```cmd
-
-npm i svelte-kit-cookie-session
-
-```
-
-## Getting Started Sapper
-
-```cmd
-npm i -g degit
-npx degit "sveltejs/sapper-template#rollup" firstapp
-cd firstapp
-npm install
-```
-
-## Running App
-
-```cmd
-npm run dev
-```
 
 ## Building App
 
-```cmd
+```npm
 npm run build
 ```
 
-## Setting up sass
+## Testing Build
 
-```cmd
-npm install svelte-preprocess node-sass
+```npm
+npm start
 ```
 
-_then_
-
-`rollup.config.js`
-
-```javascript
-
-// add this import at the top:
-import preprocess from 'svelte-preprocess';
-
-
-/* ... */
-
-
-// and add preprocess as a plugin:
-export default {
-  /* ... */
-  plugins: [
-    svelte({
-      /* ... */
-      preprocess: preprocess()
-    })
-  }),
-  /* ... */
-}
-```
-
-_then_
-
+## Using SCSS
 ```javascript
 <style type="text/scss">
 ```
 
-## Concepts
+
+
+# Session cookie
+```npm
+npm i svelte-kit-cookie-session
+```
+
+# Deploy static site
+
+
+```node
+npm i -D @sveltejs/adapter-static
+```
+
+in `svelte.config.cjs`, set the adapter
+
+```javascript
+const static = require('@sveltejs/adapter-static');
+
+adapter: static(),
+```
+
+# Concepts to know
 
 -   {}
 -   $:
@@ -87,4 +63,3 @@ _then_
 # Tasks
 
 - [  ] authentication mail SignatureExpired
-
