@@ -38,19 +38,21 @@ npm start
 npm i svelte-kit-cookie-session
 ```
 
-# Deploy static site
+# Deploy on vercel
 
-
-```node
-npm i -D @sveltejs/adapter-static
-```
+Add "@sveltejs/adapter-vercel": "next" to the devDependencies in your package.json and run npm install.
 
 in `svelte.config.cjs`, set the adapter
 
 ```javascript
-const static = require('@sveltejs/adapter-static');
+const vercel = require('@sveltejs/adapter-vercel');
 
-adapter: static(),
+module.exports = {
+	kit: {
+		...
+		adapter: vercel()
+	}
+};
 ```
 
 # Concepts to know
