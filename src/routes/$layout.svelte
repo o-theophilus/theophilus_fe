@@ -1,12 +1,12 @@
 <script>
 	import '../app.scss';
-	import Nav from '$lib/nav.svelte';
+	// import Nav from '$lib/nav.svelte';
 	import Footer from '$lib/footer.svelte';
 </script>
 
 
 <main class="content">
-	<Nav />
+	<!-- <Nav /> -->
 	<div class="content__block" >
 		<slot />
 	</div>
