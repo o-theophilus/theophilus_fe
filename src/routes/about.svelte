@@ -2,36 +2,36 @@
 	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
 
-	let abilities = {
-		skills: {
-			'C#': 82,
-			Python: 90,
-			HTML: 95,
-			CSS: 90,
-			JavaScript: 65,
-			React: 50,
-			Arduino: 92
-		},
-		tools: {
-			Microsoft_Word: 84,
-			Power_Point: 73,
-			CorelDRAW: 47,
-			Photoshop: 79,
-			Preniere_Pro: 83,
-			Maya: 88,
-			'3D Max': 73,
-			Blender: 80,
-			SketchUp: 85,
-			Godot: 30
-		}
-	};
+	let skills = [
+		{ name: 'C#', value: 82 },
+		{ name: "Python", value: 90 },
+		{ name: "HTML", value: 95 },
+		{ name: "CSS", value: 90 },
+		{ name: "JavaScript", value: 65 },
+		{ name: "React", value: 50 },
+		{ name: "Arduino", value: 92 }
+	];
+
+	// let tools = [
+	// 	{ name: Microsoft_Word, value: 84 },
+	// 	{ name: Power_Point, value: 73 },
+	// 	{ name: CorelDRAW, value: 47 },
+	// 	{ name: Photoshop, value: 79 },
+	// 	{ name: Preniere_Pro, value: 83 },
+	// 	{ name: Maya, value: 88 },
+	// 	{ name: '3D Max', value: 73 },
+	// 	{ name: Blender, value: 80 },
+	// 	{ name: SketchUp, value: 85 },
+	// 	{ name: Godot, value: 30 }
+	// ];
+
 </script>
 
 <svelte:head>
 	<title>About</title>
 </svelte:head>
+<p id="about" />
 <Image img="/site/Theophilus.jpg" />
-
 <Content>
 	<h6 class="desc">this is the about page</h6>
 	<div class="content about">
@@ -63,5 +63,9 @@
 			<br />
 			<br />
 		</p>
+		{#each skills as ent }
+			{ent.name} - {ent.value}
+			<br/>
+		{/each}
 	</div>
 </Content>

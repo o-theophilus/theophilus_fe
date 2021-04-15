@@ -1,6 +1,6 @@
 <script>
 	// export let segment
-	import { navigating, page, session } from '$app/stores'
+	import { page } from '$app/stores'
 
 	
 	export let name
