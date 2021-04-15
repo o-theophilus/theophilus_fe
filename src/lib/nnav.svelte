@@ -1,5 +1,5 @@
 <script>
-	import Link from './navLink.svelte';
+	import Link from './nnavLink.svelte';
 </script>
 
 
