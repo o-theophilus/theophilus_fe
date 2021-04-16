@@ -5,9 +5,6 @@
 
 <nav class="nav">
 	<ul class="nav__block">
-		<!-- <a href="#home">home</a> -->
-		<!-- <a href="#about">about</a> -->
-		<!-- <a href="#contact">contact</a> -->
 		<Link name={'home'} link={''} />
 		<Link name={'about'} />
 		<Link name={'projects'} />

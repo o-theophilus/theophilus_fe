@@ -4,10 +4,9 @@
 	import Footer from '$lib/footer.svelte';
 </script>
 
-
 <main class="content">
 	<Nav />
-	<div class="content__block" >
+	<div class="content__block">
 		<slot />
 	</div>
 	<Footer />
@@ -15,17 +14,8 @@
 
 <style type="text/scss">
 	$dNavHeight: 5rem;
-	$width: 800px;
 
-	.content {
-		background-color: rgb(200, 200, 200);
-	}
-	.content__block{
-		max-width: $width;
-		margin: auto;
+	.content__block {
 		margin-top: $dNavHeight;
-	
-		background-color: white;
-
 	}
 </style>

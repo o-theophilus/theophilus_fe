@@ -6,9 +6,11 @@
 <svelte:head>
 	<title>Contact</title>
 </svelte:head>
-<Image img="/site/Theophilus.jpg" />
+
+<p id="contact" />
 
 <Content>
+	<Image img="/site/Theophilus.jpg" />
 	Feel free to contact me with questions or anything else. I will do my best to respond to your
 	query as soon as possible.
 	<br />

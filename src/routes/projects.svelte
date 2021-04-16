@@ -111,9 +111,9 @@
 	<title>projects</title>
 </svelte:head>
 
-<Image img="/project/akropol_001.jpeg" />
 
 <Content>
+	<Image img="/project/akropol_001.jpeg" />
 	{#each projects as n}
 		<div class="project">
 			<img class="project__img" src="/Images/project/{n.img}" alt={n.name} />

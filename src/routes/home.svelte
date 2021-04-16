@@ -7,6 +7,8 @@
 	<title>Home</title>
 </svelte:head>
 
+<p id="home" />
+
 <Image img="/project/akropol_001.jpeg" />
 
 <Content>
