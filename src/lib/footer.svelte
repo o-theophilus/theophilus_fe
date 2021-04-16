@@ -12,8 +12,8 @@
 				<p>Lagos, Nigeria.</p>
 			</div>
 		</div>
-		<br/>
-		<hr/>
+		<br />
+		<hr />
 
 		<ul class="footer__block__social">
 			<!-- <a href="assets/file/theophilus_cv.pdf" class="cv btn" download>
@@ -40,16 +40,15 @@
 				<li class="github" />
 			</a>
 		</ul>
-		<br/>
-		<br/>
+		<br />
+		<br />
 
-		<p class="copyright">&copy theophilus.website 2021
-		</p>
+		<p class="copyright">&copy theophilus.website 2021</p>
 	</div>
 </footer>
 
 <style type="text/scss">
-	$width: 800px;
+	@import '../variable';
 
 	.footer {
 		background-color: black;
@@ -57,7 +56,7 @@
 	}
 	.footer__block {
 		box-sizing: border-box;
-		max-width: $width;
+		max-width: $mobileWidth;
 		margin: auto;
 
 		padding: 30px;
@@ -80,7 +79,6 @@
 		// margin: 50px 0;
 		margin: 0;
 	}
-
 
 	li {
 		flex-shrink: 0;
@@ -121,7 +119,7 @@
 	.github {
 		background-image: url('/Images/site/github.svg');
 	}
-	.copyright{
+	.copyright {
 		text-align: center;
 	}
 </style>

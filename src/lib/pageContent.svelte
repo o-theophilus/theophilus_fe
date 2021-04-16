@@ -1,14 +1,13 @@
 <div class="content">
-    <slot/>
+	<slot />
 </div>
 
-
 <style type="text/scss">
-    $width: 800px;
+	@import '../variable';
 
-    .content{
-        max-width: $width;
+	.content {
+		max-width: $mobileWidth;
 		margin: auto;
-        padding: 50px;
-    }
+		padding: 50px;
+	}
 </style>

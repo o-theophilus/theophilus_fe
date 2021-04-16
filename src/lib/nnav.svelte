@@ -2,9 +2,9 @@
 	import Link from './nnavLink.svelte';
 </script>
 
-
 <nav class="nav">
-	<ul class="nav__block">
+	<div class="nav__block">
+	<ul class="nav__block__btns">
 		<!-- <a href="#home">home</a> -->
 		<!-- <a href="#about">about</a> -->
 		<!-- <a href="#contact">contact</a> -->
@@ -14,31 +14,35 @@
 		<Link name={'blog'} />
 		<Link name={'contact'} />
 	</ul>
+</div>
 </nav>
 
 <style type="text/scss">
-	$dNavHeight: 5rem;
-	$color1: white;
-	$color2: black;
+	@import '../variable';
 
 	.nav {
 		background-color: $color2;
-		width: 100%;
+		width: $mobileMenuWidth;
+		height: 100vh;
 
 		position: fixed;
 		top: 0;
+
+		display: flex;
+		align-items: center;
 	}
 	.nav__block {
-		display: flex;
+		width: 100%;
+		padding: 20px;
+	}
+	.nav__block__btns{
+		list-style-type: none;
+	}
 
-		height: $dNavHeight;
-		max-width: 800px;
-
-		color: $color1;
-		
-		margin: auto;
-
-		/* fix */
-		padding: 0;
+	@media screen and (max-width: $mobileWidth) {
+		// .nav {
+		// 	height: 100vh;
+		// 	background-color: lightblue;
+		// }
 	}
 </style>

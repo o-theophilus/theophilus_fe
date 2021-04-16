@@ -1,11 +1,13 @@
 <script>
 	import '../app.scss';
 	import Nav from '$lib/nnav.svelte';
+	import MobileMenuBtn from '$lib/mmb.svelte';
 	import Footer from '$lib/footer.svelte';
 </script>
 
 <main class="content">
 	<Nav />
+	<MobileMenuBtn />
 	<div class="content__block">
 		<slot />
 	</div>
