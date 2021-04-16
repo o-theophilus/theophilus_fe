@@ -3,7 +3,15 @@
 		'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-html, body, p, ul{
+html,
+body {
+	overflow-x: hidden;
+}
+
+html,
+body,
+p,
+ul {
 	margin: 0;
 	padding: 0;
 }

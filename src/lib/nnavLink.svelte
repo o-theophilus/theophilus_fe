@@ -1,5 +1,4 @@
 <script>
-	// export let segment
 	import { page } from '$app/stores';
 
 	export let name;
@@ -11,7 +10,7 @@
 	$: segment = $page.path.split('/')[1] || undefined;
 </script>
 
-<a class="link" class:link--active={segment === page_} href="/{link}">
+<a class="link" class:link--active={segment === page_} href="/{link}" on:click>
 	<li class="link__item">
 		{name}
 	</li>
@@ -31,7 +30,7 @@
 		text-decoration: none;
 		color: $color1;
 
-		transition: all 100ms;
+		transition: all $animTime1;
 	}
 
 	.link--active {
