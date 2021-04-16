@@ -12,5 +12,8 @@
 		width: 100vw;
 		height: 100vh;
 		background-color: $color4;
+
+		backdrop-filter: blur(2px);
+		
 	}
 </style>
