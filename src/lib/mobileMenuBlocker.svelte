@@ -1,4 +1,12 @@
-<div class="blocker" on:click />
+<script>
+	import { fade } from 'svelte/transition';
+
+	export let mobileMenuOpened = false;
+</script>
+
+{#if mobileMenuOpened}
+	<div class="blocker" on:click out:fade={{ duration: 300 }} />
+{/if}
 
 <style type="text/scss">
 	@import '../variable';
@@ -11,9 +19,7 @@
 
 		width: 100vw;
 		height: 100vh;
-		background-color: $color4;
 
 		backdrop-filter: blur(2px);
-		
 	}
 </style>

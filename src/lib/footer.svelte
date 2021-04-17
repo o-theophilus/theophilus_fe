@@ -57,7 +57,6 @@
 	.footer__block {
 		box-sizing: border-box;
 		max-width: $mobileWidth;
-		margin: auto;
 
 		padding: 30px;
 		margin: auto;
