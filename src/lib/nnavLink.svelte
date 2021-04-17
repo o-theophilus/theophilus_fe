@@ -25,7 +25,7 @@
 		align-items: center;
 
 		width: 100%;
-		height: $desktopNavHeight;
+		height: $menuItemHeight;
 
 		text-decoration: none;
 		color: $color1;
