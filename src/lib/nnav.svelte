@@ -8,8 +8,8 @@
 	<div class="nav__block">
 		<ul class="nav__block__btns">
 			<Link name={'home'} link={''} on:click />
-			<Link name={'about'} on:click />
 			<Link name={'projects'} on:click />
+			<Link name={'about'} on:click />
 			<Link name={'blog'} on:click />
 			<Link name={'contact'} on:click />
 		</ul>

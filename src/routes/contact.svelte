@@ -9,30 +9,44 @@
 
 <p id="contact" />
 
-<Content>
-	<Image img="/site/Theophilus.jpg" />
+<form
+	class="form"
+	method="post"
+	autoComplete="off"
+	action="https://formspree.io/theophilus.ogbolu@gmail.com"
+>
 	Feel free to contact me with questions or anything else. I will do my best to respond to your
 	query as soon as possible.
 	<br />
 	<br />
-	<form method="post" autoComplete="off" action="https://formspree.io/theophilus.ogbolu@gmail.com">
-		<div class="inputGroup required">
-			<label for="name">Full Name</label>
-			<br />
-			<input placeholder="Your Name" type="text" id="name" name="name" required />
-		</div>
-		<div class="inputGroup required">
-			<label for="email">Email Address</label>
-			<br />
-			<input placeholder="Your Email Address" type="email" id="email" name="email" required />
-		</div>
-		<div class="inputGroup required">
-			<label for="message">Message</label>
-			<br />
-			<textarea placeholder="Your Message" id="message" name="message" required />
-		</div>
-		<div class="inputGroup submit">
-			<input type="submit" class="btn" value="Send Message" />
-		</div>
-	</form>
-</Content>
+	<div class="inputGroup required">
+		<label for="name">Full Name</label>
+		<br />
+		<input placeholder="Your Name" type="text" id="name" name="name" required />
+	</div>
+	<div class="inputGroup required">
+		<label for="email">Email Address</label>
+		<br />
+		<input placeholder="Your Email Address" type="email" id="email" name="email" required />
+	</div>
+	<div class="inputGroup required">
+		<label for="message">Message</label>
+		<br />
+		<textarea placeholder="Your Message" id="message" name="message" required />
+	</div>
+	<div class="inputGroup submit">
+		<input type="submit" class="btn" value="Send Message" />
+	</div>
+</form>
+
+<style type="text/scss">
+	@import '../variable';
+	.form {
+		max-width: $mobileWidth;
+		margin: auto;
+		padding: 40px;
+
+		color: $color1;
+		background-color: $color3;
+	}
+</style>

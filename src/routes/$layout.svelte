@@ -13,9 +13,9 @@
 </script>
 
 <main class="content" class:content--mobileMenuOpened={mobileMenuOpened}>
-	<Header />
-
+	
 	<slot />
+	<Header />
 	<Footer />
 </main>
 
@@ -25,6 +25,7 @@
 
 <style type="text/scss">
 	@import '../variable';
+
 	.content {
 		position: relative;
 		left: 0;

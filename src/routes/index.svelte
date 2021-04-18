@@ -6,15 +6,14 @@
 	import Breaker from './breaker.svelte';
 </script>
 
-
 <Home />
-<Breaker title="About" />
-<About />
-<Breaker title="Projects" />
-<Projects mini />
-<Breaker title="Contact" />
+<Breaker title="Projects">
+	<Projects mini />
+</Breaker>
+<Breaker title="About">
+	<About />
+</Breaker>
 <Contact />
-
 
 <svelte:head>
 	<title>Home</title>

@@ -5,7 +5,7 @@
 	let showHeader = true;
 	onMount(() => {
 		window.addEventListener('scroll', (event) => {
-			showHeader = document.documentElement.scrollTop < 1000;
+			showHeader = document.documentElement.scrollTop < 500;
 		});
 	});
 </script>

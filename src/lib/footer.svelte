@@ -58,7 +58,7 @@
 		box-sizing: border-box;
 		max-width: $mobileWidth;
 
-		padding: 30px;
+		padding: 40px;
 		margin: auto;
 	}
 
