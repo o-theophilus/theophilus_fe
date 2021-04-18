@@ -8,11 +8,12 @@
 
 	let element;
 	const handleTab = () => {
-		tabOpened = !tabOpened;
-
 		if (tabOpened === false) {
 			element.scrollIntoView(true);
 		}
+        
+        tabOpened = !tabOpened;
+
 		// setTimeout(scroll(), 400);
 	};
 	// const scroll = () => {
@@ -54,7 +55,7 @@
 
 	.tab__title {
 		color: $color1;
-		font-size: 1.3em;
+		font-size: 1.3rem;
 
 		transition: all $animTime1;
 	}
@@ -107,7 +108,7 @@
 
 	.tab--open {
 		.tab__title {
-			font-size: 2em;
+			font-size: 2rem;
 			font-weight: bolder;
 		}
 		.tab__btn__bar--one {

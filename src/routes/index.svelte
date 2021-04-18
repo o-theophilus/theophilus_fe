@@ -1,9 +1,9 @@
 <script>
 	import Home from './home.svelte';
 	import About from './about.svelte';
-	import Projects from './projects.svelte';
-	import Contact from './contact.svelte';
-	import Breaker from './breaker.svelte';
+	import Projects from './projects/index.svelte';
+	
+	import Breaker from '$lib/breaker.svelte';
 </script>
 
 <Home />
@@ -13,7 +13,6 @@
 <Breaker title="About">
 	<About />
 </Breaker>
-<Contact />
 
 <svelte:head>
 	<title>Home</title>

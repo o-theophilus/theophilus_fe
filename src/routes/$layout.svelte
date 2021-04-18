@@ -3,8 +3,9 @@
 	import Nav from '$lib/nnav.svelte';
 	import MobileMenuButton from '$lib/mobileMenuButton.svelte';
 	import MobileMenuBlocker from '$lib/mobileMenuBlocker.svelte';
-	import Footer from '$lib/footer.svelte';
 	import Header from '$lib/header.svelte';
+	import Footer from '$lib/footer.svelte';
+	import Contact from '$lib/contact.svelte';
 
 	let mobileMenuOpened = false;
 	const toggleMobileMenu = () => {
@@ -16,6 +17,7 @@
 	
 	<slot />
 	<Header />
+	<Contact />
 	<Footer />
 </main>
 

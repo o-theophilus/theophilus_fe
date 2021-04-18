@@ -28,6 +28,11 @@
 
 		width: 100%;
 		height: $headerHeight;
+
+
+		// border-bottom: solid;
+		// border-color: $color1;
+		// border-width: 1px;
 	}
 
 	.header__block {
@@ -39,7 +44,7 @@
 
 		margin: auto;
 
-		font-size: 1.5em;
+		font-size: 2rem;
 	}
 
 	.header__block__title {

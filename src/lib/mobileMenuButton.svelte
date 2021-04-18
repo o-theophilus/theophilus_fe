@@ -31,7 +31,7 @@
 		width: $buttonSize;
 		height: $buttonSize;
 
-		border-radius: 5px;
+		border-radius: $bRadius;
 		cursor: pointer;
 		background-color: $color4;
 

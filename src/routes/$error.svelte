@@ -1,13 +1,30 @@
+<script context="module">
+	export function load({ error, status }) {
+		return {
+			props: {
+				status,
+				error
+			}
+		};
+	}
+</script>
+
 <script>
+	import Content from '$lib/pageContent.svelte';
+
 	export let status;
 	export let error;
 </script>
 
-<h1>{status}</h1>
+<svelte:head>
+	<title>{status} - {error.name}</title>
+</svelte:head>
 
-<p>{error.message}</p>
+<Content>
+	<h1>{status}</h1>
 
-<!-- TODO figure out what to do with stacktraces in prod -->
-{#if error.stack}
-	<pre>{error.stack}</pre>
-{/if}
+	<p>{error.message}</p>
+	<br>
+	<br>
+	Back to <a href="/">Home</a>
+</Content>
