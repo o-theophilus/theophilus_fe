@@ -9,15 +9,14 @@
 	let element;
 	const handleTab = () => {
 		if (tabOpened === false) {
-			element.scrollIntoView(true);
+			// element.scrollIntoView(true);
+			element.scrollIntoView({ behavior: 'smooth' });
 		}
-        
-        tabOpened = !tabOpened;
 
-		// setTimeout(scroll(), 400);
+		tabOpened = !tabOpened;
+
 	};
-	// const scroll = () => {
-	// };
+
 </script>
 
 <div class="tab" class:tab--open={tabOpened} on:click={handleTab} bind:this={element}>

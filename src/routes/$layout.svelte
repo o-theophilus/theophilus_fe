@@ -5,7 +5,7 @@
 	import MobileMenuBlocker from '$lib/mobileMenuBlocker.svelte';
 	import Header from '$lib/header.svelte';
 	import Footer from '$lib/footer.svelte';
-	import Contact from '$lib/contact.svelte';
+	import ContactForm from '$lib/contactForm.svelte';
 
 	let mobileMenuOpened = false;
 	const toggleMobileMenu = () => {
@@ -17,7 +17,6 @@
 	
 	<slot />
 	<Header />
-	<Contact />
 	<Footer />
 </main>
 

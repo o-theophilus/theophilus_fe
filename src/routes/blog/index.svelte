@@ -1,14 +1,45 @@
+<script context="module">
+	export const prerender = true;
+
+	export async function load({ fetch }) {
+		const res = await fetch('/blog.json');
+		return {
+			props: {
+				posts: await res.json()
+			}
+		};
+	}
+</script>
+
 <script>
-	import Image from '$lib/pageImage.svelte';
-	import Content from '$lib/pageContent.svelte';
+	export let posts;
 </script>
 
 <svelte:head>
 	<title>Blog</title>
 </svelte:head>
 
-<Image img="/project/akropol_001.jpeg" />
+<h1>blog</h1>
 
-<Content>
-	Under construction
-</Content>
+<ul>
+	{#each posts as post}
+		<li><a href="/blog/{post.slug}">{post.title}</a></li>
+	{/each}
+</ul>
+
+<style>
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+
+	li {
+		list-style: none;
+	}
+
+	a {
+		display: block;
+		padding: 0.5em 0;
+		border-bottom: 1px solid #999;
+	}
+</style>

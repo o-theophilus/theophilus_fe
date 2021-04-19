@@ -26,14 +26,10 @@
 	];
 </script>
 
-<svelte:head>
-	<title>About</title>
-</svelte:head>
-
 <p id="about" />
 
+<Image img="/site/Theophilus.jpg" />
 <Content>
-	<img src="/Images/site/Theophilus.jpg" alt="Theophilus.jpg" />
 	<h6 class="desc">this is the about page</h6>
 	<div class="content about">
 		<p>
@@ -72,8 +68,8 @@
 </Content>
 
 <style type="text/scss">
- img{
-	//  margin:auto
-	width: 100%;
- }
+	img {
+		//  margin:auto
+		width: 100%;
+	}
 </style>
