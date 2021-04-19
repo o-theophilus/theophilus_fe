@@ -1,18 +1,4 @@
-import React, { Component } from "react";
 
-class Flipaxis extends Component {
-	page = {
-		title: "Flipaxis Logo",
-		description: "",
-		tab: "Projects"
-	};
-
-	componentDidMount() {
-		this.props.pageProperties(this.page);
-	}
-
-	render() {
-		return (
 			<div className="grp">
 				<div className="unit">
 					<img
@@ -22,8 +8,3 @@ class Flipaxis extends Component {
 					/>
 				</div>
 			</div>
-		);
-	}
-}
-
-export default Flipaxis;

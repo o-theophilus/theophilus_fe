@@ -1,18 +1,4 @@
-import React, { Component } from "react";
 
-class Interrogation extends Component {
-	page = {
-		title: "Interrogation Room",
-		description: "",
-		tab: "Projects"
-	};
-
-	componentDidMount() {
-		this.props.pageProperties(this.page);
-	}
-
-	render() {
-		return (
 			<div className="grp">
 				<div className="unit">
 					<img
@@ -127,8 +113,3 @@ class Interrogation extends Component {
 					/>
 				</div>
 			</div>
-		);
-	}
-}
-
-export default Interrogation;

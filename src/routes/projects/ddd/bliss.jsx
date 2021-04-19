@@ -1,18 +1,4 @@
-import React, { Component } from "react";
 
-class Bliss extends Component {
-	page = {
-		title: "Bliss",
-		description: "",
-		tab: "Projects"
-	};
-
-	componentDidMount() {
-		this.props.pageProperties(this.page);
-	}
-
-	render() {
-		return (
 			<div className="grp">
 				<div className="unit">
 					<img
@@ -78,8 +64,3 @@ class Bliss extends Component {
 					/>
 				</div>
 			</div>
-		);
-	}
-}
-
-export default Bliss;

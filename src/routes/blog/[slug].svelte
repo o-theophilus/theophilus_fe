@@ -12,6 +12,8 @@
 </script>
 
 <script>
+	import Content from '$lib/pageContent.svelte';
+
 	export let post;
 </script>
 
@@ -19,7 +21,9 @@
 	<title>{post.title}</title>
 </svelte:head>
 
-<h1>{post.title}</h1>
-<div class="post">
-	{@html post.body}
-</div>
+<Content>
+	<h1>{post.title}</h1>
+	<div class="post">
+		{@html post.body}
+	</div>
+</Content>

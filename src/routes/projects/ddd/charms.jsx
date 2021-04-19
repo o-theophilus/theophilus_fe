@@ -1,18 +1,4 @@
-import React, { Component } from "react";
 
-class Charms extends Component {
-	page = {
-		title: "Charms",
-		description: "",
-		tab: "Projects"
-	};
-
-	componentDidMount() {
-		this.props.pageProperties(this.page);
-	}
-
-	render() {
-		return (
 			<div className="grp">
 				<div className="unit">
 					<img
@@ -225,8 +211,3 @@ class Charms extends Component {
 					/>
 				</div>
 			</div>
-		);
-	}
-}
-
-export default Charms;

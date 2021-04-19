@@ -1,18 +1,4 @@
-import React, { Component } from "react";
 
-class Lily extends Component {
-	page = {
-		title: "Lily Collection",
-		description: "",
-		tab: "Projects"
-	};
-
-	componentDidMount() {
-		this.props.pageProperties(this.page);
-	}
-
-	render() {
-		return (
 			<div className="grp">
 				<div className="unit">
 					<img
@@ -29,8 +15,3 @@ class Lily extends Component {
 					/>
 				</div>
 			</div>
-		);
-	}
-}
-
-export default Lily;

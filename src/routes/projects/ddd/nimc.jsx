@@ -1,18 +1,4 @@
-import React, { Component } from "react";
 
-class NIMC extends Component {
-	page = {
-		title: "National Identity Management Commission",
-		description: "",
-		tab: "Projects"
-	};
-
-	componentDidMount() {
-		this.props.pageProperties(this.page);
-	}
-
-	render() {
-		return (
 			<div className="grp">
 				<div className="unit">
 					<video controls>
@@ -23,8 +9,3 @@ class NIMC extends Component {
 					</video>
 				</div>
 			</div>
-		);
-	}
-}
-
-export default NIMC;

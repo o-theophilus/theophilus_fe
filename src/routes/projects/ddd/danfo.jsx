@@ -1,18 +1,4 @@
-import React, { Component } from "react";
 
-class Danfo extends Component {
-	page = {
-		title: "Danfo 2.0",
-		description: "",
-		tab: "Projects"
-	};
-
-	componentDidMount() {
-		this.props.pageProperties(this.page);
-	}
-
-	render() {
-		return (
 			<div className="grp">
 				<div className="unit">
 					<img
@@ -39,8 +25,3 @@ class Danfo extends Component {
 					</a>
 				</div>
 			</div>
-		);
-	}
-}
-
-export default Danfo;

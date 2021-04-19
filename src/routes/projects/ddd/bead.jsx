@@ -1,18 +1,4 @@
-import React, { Component } from "react";
 
-class Bead extends Component {
-	page = {
-		title: "Bead",
-		description: "",
-		tab: "Projects"
-	};
-
-	componentDidMount() {
-		this.props.pageProperties(this.page);
-	}
-
-	render() {
-		return (
 			<div className="grp">
 				<div className="unit">
 					<img
@@ -85,8 +71,3 @@ class Bead extends Component {
 					/>
 				</div>
 			</div>
-		);
-	}
-}
-
-export default Bead;

@@ -1,18 +1,4 @@
-import React, { Component } from "react";
 
-class Arduino extends Component {
-	page = {
-		title: "Arduino Smart Car",
-		description: "",
-		tab: "Projects"
-	};
-
-	componentDidMount() {
-		this.props.pageProperties(this.page);
-	}
-
-	render() {
-		return (
 			<div className="grp">
 				<div className="unit">
 					<img
@@ -144,8 +130,3 @@ class Arduino extends Component {
 					/>
 				</div>
 			</div>
-		);
-	}
-}
-
-export default Arduino;
