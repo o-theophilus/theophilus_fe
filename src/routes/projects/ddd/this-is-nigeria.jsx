@@ -1,6 +1,6 @@
-<div className="grp">
-	<div className="unit">
-		<img className="noDesign" src="/Images/project/tin_001.png" alt="image_image" />
+<div class="grp">
+	<div class="unit">
+		<img class="noDesign" src="/Images/project/tin_001.png" alt="image_image" />
 		<br />
 		<br />
 		<video controls>

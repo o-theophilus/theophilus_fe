@@ -1,5 +1,5 @@
 <script context="module">
-	export const prerender = true;
+	// export const prerender = true;
 
 	export async function load({ page, fetch }) {
 		const res = await fetch(`/blog/${page.params.slug}.json`);

@@ -1,9 +1,9 @@
-<div className="grp">
-	<div className="unit">
-		<img className="noDesign" src="/Images/project/akropol_001.jpeg" alt="image_image" />
+<div class="grp">
+	<div class="unit">
+		<img class="noDesign" src="/Images/project/akropol_001.jpeg" alt="image_image" />
 		<br />
 		<br />
-		<img className="noDesign" src="/Images/project/akropol_002.png" alt="image_image" />
+		<img class="noDesign" src="/Images/project/akropol_002.png" alt="image_image" />
 		<br />
 		<br />
 		<video controls>
