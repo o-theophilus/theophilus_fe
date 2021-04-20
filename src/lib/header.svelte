@@ -13,7 +13,7 @@
 {#if showHeader}
 	<header class="header" in:slide={{ duration: 300 }} out:slide={{ delay: 500, duration: 300 }}>
 		<div class="header__block">
-			<img class="header__block__img" src="/images/site/logo.png" alt="">
+			<img class="header__block__img" src="/Images/site/logo.png" alt="">
 		</div>
 	</header>
 {/if}
