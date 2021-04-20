@@ -13,7 +13,7 @@
 {#if showHeader}
 	<header class="header" in:slide={{ duration: 300 }} out:slide={{ delay: 500, duration: 300 }}>
 		<div class="header__block">
-			<p class="header__block__title">Theophilus</p>
+			<img class="header__block__img" src="/images/site/logo.png" alt="">
 		</div>
 	</header>
 {/if}
@@ -47,8 +47,8 @@
 		font-size: 2rem;
 	}
 
-	.header__block__title {
-		color: $color1;
-		display: inline-block;
+	.header__block__img {
+		height: calc(#{$headerHeight} - 20px);
+		margin: 10px;
 	}
 </style>
