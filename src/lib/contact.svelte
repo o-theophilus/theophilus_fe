@@ -1,11 +1,11 @@
 <div class="contact">
 	<div class="contact__block">
-		<div class="contact__block__name">
+		<div>
 			<p>Phone</p>
 			<p>Email</p>
 			<p>Location</p>
 		</div>
-		<div class="contact__block__value">
+		<div>
 			<p>08067397793</p>
 			<p>theophilus.ogbolu@gmail.com</p>
 			<p>Lagos, Nigeria.</p>
@@ -22,6 +22,7 @@
 	.contact__block {
 		display: flex;
 		justify-content: center;
+		gap: 20px;
 
 		max-width: $mobileWidth;
 
@@ -29,13 +30,5 @@
 		padding: 40px;
 
 		color: $color1;
-	}
-
-	$gap: 10px;
-	.contact__block__name {
-		margin-right: $gap;
-	}
-	.contact__block__value {
-		margin-left: $gap;
 	}
 </style>

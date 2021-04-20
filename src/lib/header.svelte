@@ -2,6 +2,8 @@
 	import { slide } from 'svelte/transition';
 	import { onMount } from 'svelte';
 
+	import Logo from './svg/logo.svelte';
+
 	let showHeader = true;
 	onMount(() => {
 		window.addEventListener('scroll', (event) => {
@@ -13,7 +15,9 @@
 {#if showHeader}
 	<header class="header" in:slide={{ duration: 300 }} out:slide={{ delay: 500, duration: 300 }}>
 		<div class="header__block">
-			<img class="header__block__img" src="/Images/site/logo.png" alt="">
+			<a href="/">
+				<Logo />
+			</a>
 		</div>
 	</header>
 {/if}
@@ -29,15 +33,11 @@
 		width: 100%;
 		height: $headerHeight;
 
-
-		// border-bottom: solid;
-		// border-color: $color1;
-		// border-width: 1px;
 	}
 
 	.header__block {
-		display: flex;
-		align-items: center;
+		// display: flex;
+		// align-items: center;
 
 		max-width: $mobileWidth;
 		height: 100%;
@@ -46,9 +46,7 @@
 
 		font-size: 2rem;
 	}
-
-	.header__block__img {
-		height: calc(#{$headerHeight} - 20px);
-		margin: 10px;
+	a{
+		height: 100%;
 	}
 </style>
