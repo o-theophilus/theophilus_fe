@@ -88,7 +88,7 @@
 		border-radius: 50%;
 		margin: 10px;
 
-		background-color: white;
+		// background-color: white;
 
 		box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 
@@ -108,6 +108,8 @@
 		border-radius: 50%;
 		width: 100%;
 		height: 100%;
+
+background-color: white;
 	}
 	svg:hover {
 		fill: $color3;
