@@ -1,28 +1,28 @@
 <script>
 	import { slide } from 'svelte/transition';
-	import { onMount } from 'svelte';
 
 	import Logo from './logo.svelte';
 
-	let showHeader = true;
-	onMount(() => {
-		window.addEventListener('scroll', (event) => {
-			showHeader = document.documentElement.scrollTop < 500;
-		});
-	});
+	export let showHeader = true;
+	export let isMobile = true;
 </script>
 
-<header class="header">
-	{#if showHeader}
-		<div class="header__bg" in:slide={{ duration: 300 }} out:slide={{ delay: 500, duration: 300 }}>
+{#if showHeader}
+	<header
+		class="header"
+		class:notMobile={!isMobile}
+		in:slide={{ duration: 300 }}
+		out:slide={{ delay: 500, duration: 300 }}
+	>
+		<div class="header__bg">
 			<div class="header__block">
 				<a href="/">
 					<Logo />
 				</a>
 			</div>
 		</div>
-	{/if}
-</header>
+	</header>
+{/if}
 
 <style type="text/scss">
 	@import '../variable';
@@ -35,6 +35,10 @@
 		width: 100%;
 	}
 
+	.notMobile {
+		display: none;
+	}
+
 	.header__bg {
 		background-color: $color2;
 
@@ -45,7 +49,7 @@
 		max-width: $mobileWidth;
 		height: 100%;
 
-		padding: 10px;
+		padding: 10px 40px;
 		margin: auto;
 	}
 </style>

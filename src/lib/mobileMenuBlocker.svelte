@@ -4,13 +4,19 @@
 	export let mobileMenuOpened = false;
 </script>
 
-{#if mobileMenuOpened}
-	<div class="blocker" on:click out:fade={{ duration: 300 }} />
-{/if}
+<div
+	class="blocker"
+	class:blocker--mobileMenuOpened={mobileMenuOpened}
+	on:click
+	out:fade={{ duration: 300 }}
+/>
 
 <style type="text/scss">
 	@import '../variable';
+
 	.blocker {
+		display: none;
+
 		position: fixed;
 		top: 0;
 		bottom: 0;
@@ -21,5 +27,8 @@
 		height: 100vh;
 
 		backdrop-filter: blur(2px);
+	}
+	.blocker--mobileMenuOpened {
+		display: unset;
 	}
 </style>

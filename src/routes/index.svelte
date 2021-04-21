@@ -1,18 +1,29 @@
+<script context="module">
+	export const prerender = true;
+
+	export async function load({ fetch }) {
+		const resp = await fetch('/projects.json');
+		let data = await resp.json();
+
+		return {
+			props: {
+				projects: data.projects
+			}
+		};
+	}
+</script>
+
 <script>
 	import Home from './home.svelte';
 	import About from './about.svelte';
 	import Projects from './proj.svelte';
-	
-	import Breaker from '$lib/breaker.svelte';
+
+	export let projects;
 </script>
 
 <Home />
-<!-- <Breaker title="Projects"> -->
-	<Projects />
-<!-- </Breaker>
-<Breaker title="About"> -->
-	<About />
-<!-- </Breaker> -->
+<Projects {projects} />
+<About />
 
 <svelte:head>
 	<title>Home</title>

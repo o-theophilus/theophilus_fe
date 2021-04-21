@@ -1,4 +1,6 @@
 <script>
+	import { onMount } from 'svelte';
+
 	import '../app.scss';
 	import Nav from '$lib/nnav.svelte';
 	import MobileMenuButton from '$lib/mobileMenuButton.svelte';
@@ -6,21 +8,44 @@
 	import Header from '$lib/header.svelte';
 	import Footer from '$lib/footer.svelte';
 
+	let showHeader = true;
 	let mobileMenuOpened = false;
+	let isMobile = true;
+
+	let top;
+
+	const run = () => {
+		showHeader = document.documentElement.scrollTop < 500;
+		isMobile = document.documentElement.clientWidth < 900;
+		top = window.pageYOffset;
+
+		if (isMobile == false) {
+			mobileMenuOpened = false;
+		}
+	};
+
 	const toggleMobileMenu = () => {
 		mobileMenuOpened = !mobileMenuOpened;
 	};
+
+	onMount(() => {
+		window.addEventListener('scroll', run);
+		window.addEventListener('resize', run);
+		run();
+	});
 </script>
 
-<main class="content" class:content--mobileMenuOpened={mobileMenuOpened}>
-	<slot />
-	<Header />
-	<Footer />
+<main class="content" class:mobileMenuOpened class:notMobile={!isMobile}>
+	<div class="content__block">
+		<Header {showHeader} {isMobile} />
+		<slot />
+		<Footer />
+	</div>
+	<MobileMenuBlocker {mobileMenuOpened} {isMobile} on:click={toggleMobileMenu} />
+	<Nav {top} {mobileMenuOpened} {isMobile} on:click={toggleMobileMenu} />
 </main>
 
-<MobileMenuBlocker {mobileMenuOpened} on:click={toggleMobileMenu} />
-<MobileMenuButton {mobileMenuOpened} on:click={toggleMobileMenu} />
-<Nav {mobileMenuOpened} on:click={toggleMobileMenu} />
+<MobileMenuButton {mobileMenuOpened} {isMobile} on:click={toggleMobileMenu} />
 
 <style type="text/scss">
 	@import '../variable';
@@ -33,7 +58,19 @@
 
 		transition: left $animTime1;
 	}
-	.content--mobileMenuOpened {
+	.mobileMenuOpened {
 		left: $mobileMenuWidth;
+	}
+
+	.notMobile {
+		max-width: 1200px;
+
+		margin: auto;
+		margin-top: 0;
+
+		.content__block {
+			// position: relative;
+			margin-left: $mobileMenuWidth;
+		}
 	}
 </style>

@@ -89,20 +89,18 @@
 	}
 
 	svg {
-		box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-
-		transition-property: box-shadow;
-		transition-duration: $animTime1;
-		background-color: white;
-
 		border-radius: 50%;
 		width: 100%;
 		height: 100%;
 
-background-color: white;
+		transition: all $animTime1;
+
+		box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+		background-color: white;
 	}
 	svg:hover {
 		box-shadow: 0 0 1em $color3;
-		fill: $color3;
+		fill: white;
+		background-color: $color3;
 	}
 </style>

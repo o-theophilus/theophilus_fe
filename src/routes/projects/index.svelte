@@ -3,11 +3,11 @@
 
 	export async function load({ fetch }) {
 		const resp = await fetch('/projects.json');
-		let projects = await resp.json();
+		let data = await resp.json();
 
 		return {
 			props: {
-				projects
+				projects: data.projects
 			}
 		};
 	}
@@ -19,7 +19,6 @@
 	import ProjectBox from '$lib/projectBox.svelte';
 
 	export let projects;
-	projects = projects.projects;
 </script>
 
 <svelte:head>
@@ -37,9 +36,6 @@
 </Content>
 
 <style type="text/scss">
-	$bradius: 20px;
-	.project {
-		border-radius: $bradius;
-		box-shadow: 0 0 20px 1px;
-	}
+
+
 </style>

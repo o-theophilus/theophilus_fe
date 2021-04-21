@@ -1,8 +1,9 @@
 <script>
 	export let mobileMenuOpened = false;
+	export let isMobile = true;
 </script>
 
-<div class="mmb" class:mmb--mobileMenuOpened={mobileMenuOpened} on:click>
+<div class="mmb" class:mobileMenuOpened class:isMobile on:click>
 	<div class="mmb__bar mmb__bar--one" />
 	<div class="mmb__bar mmb__bar--two" />
 	<div class="mmb__bar mmb__bar--three" />
@@ -18,25 +19,30 @@
 	$barWidth: calc(#{$buttonSize} - #{$buttonSize}/ 5);
 	$barPos: calc(#{$buttonSize}/ 5);
 	$barCenter: calc(#{$buttonSize}/ 2 - #{$barHeight}/ 2);
-
+	
 	.mmb {
-		display: flex;
+		display: none;
 		justify-content: center;
 		align-items: center;
-
+		
 		position: fixed;
 		top: $topRight;
 		right: $topRight;
 
 		width: $buttonSize;
 		height: $buttonSize;
-
+		
 		border-radius: $bRadius;
 		cursor: pointer;
 		background-color: $color4;
-
+		
 		transition: all $animTime1;
 	}
+	.isMobile{
+		display: flex;
+	}
+	// @media screen and (min-width: $mobileWidth2) {
+	// }
 
 	.mmb__bar {
 		position: absolute;
@@ -63,7 +69,7 @@
 		}
 	}
 
-	.mmb--mobileMenuOpened {
+	.mobileMenuOpened {
 		.mmb__bar--one {
 			top: $barCenter;
 		}
@@ -79,10 +85,4 @@
 		}
 	}
 
-	@media screen and (max-width: $mobileWidth) {
-		// .nav {
-		// 	height: 100vh;
-		// 	background-color: lightblue;
-		// }
-	}
 </style>
