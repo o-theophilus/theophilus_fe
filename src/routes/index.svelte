@@ -7,12 +7,12 @@
 </script>
 
 <Home />
-<Breaker title="Projects">
+<!-- <Breaker title="Projects"> -->
 	<Projects />
-</Breaker>
-<Breaker title="About">
+<!-- </Breaker>
+<Breaker title="About"> -->
 	<About />
-</Breaker>
+<!-- </Breaker> -->
 
 <svelte:head>
 	<title>Home</title>

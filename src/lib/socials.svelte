@@ -9,7 +9,6 @@
 			let bbox = element.getBBox();
 			let viewBox = [bbox.x, bbox.y, bbox.width, bbox.height].join(' ');
 			element.setAttribute('viewBox', viewBox);
-			
 		}
 	});
 </script>
@@ -87,29 +86,21 @@
 
 		border-radius: 50%;
 		margin: 10px;
+	}
 
-		background-color: white;
-
+	svg {
 		box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 
 		transition-property: box-shadow;
 		transition-duration: $animTime1;
+		background-color: white;
 
-		// overflow: hidden;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	a:hover {
-		box-shadow: 0 0 1em $color3;
-	}
-
-	svg {
 		border-radius: 50%;
 		width: 100%;
 		height: 100%;
 	}
 	svg:hover {
+		box-shadow: 0 0 1em $color3;
 		fill: $color3;
 	}
 </style>

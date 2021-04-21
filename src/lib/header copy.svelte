@@ -1,4 +1,5 @@
 <script>
+
 	import { slide } from 'svelte/transition';
 	import { onMount } from 'svelte';
 
@@ -14,14 +15,17 @@
 
 <header class="header">
 	{#if showHeader}
-		<div class="header__bg" in:slide={{ duration: 300 }} out:slide={{ delay: 500, duration: 300 }}>
-			<div class="header__block">
-				<a href="/">
-					<Logo />
-				</a>
-			</div>
-		</div>
+		<div
+			class="header__bg"
+			in:slide={{ duration: 300 }}
+			out:slide={{ delay: 500, duration: 300 }}
+		/>
 	{/if}
+	<div class="header__block">
+		<a href="/">
+			<Logo />
+		</a>
+	</div>
 </header>
 
 <style type="text/scss">
@@ -36,6 +40,9 @@
 	}
 
 	.header__bg {
+		position: absolute;
+		z-index: -1;
+		top: 0;
 		background-color: $color2;
 
 		width: 100%;

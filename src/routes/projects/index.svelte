@@ -42,11 +42,4 @@
 		border-radius: $bradius;
 		box-shadow: 0 0 20px 1px;
 	}
-	.project__img {
-		border-radius: $bradius $bradius 0 0;
-		width: 100%;
-	}
-	.project__details {
-		padding: 30px;
-	}
 </style>

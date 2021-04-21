@@ -14,7 +14,7 @@
 
 	svg {
 		height: calc(#{$headerHeight} - 20px);
-		margin: 10px;
+		// margin: 10px;
 	}
 	.fil0 {
 		fill: $color3;
