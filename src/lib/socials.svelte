@@ -98,6 +98,8 @@
 		border-radius: 50%;
 		width: 100%;
 		height: 100%;
+
+background-color: white;
 	}
 	svg:hover {
 		box-shadow: 0 0 1em $color3;
