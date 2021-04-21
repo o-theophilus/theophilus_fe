@@ -8,7 +8,7 @@
 		<div class="project__details">
 			{project.name}
 			<br />
-			{project.desc}
+			{project.summary}
 		</div>
 	</div>
 </a>

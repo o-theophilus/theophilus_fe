@@ -53,7 +53,7 @@
 	}
 
 	.tab__title {
-		color: $color1;
+		color: $fColor1;
 		font-size: 1.3rem;
 
 		transition: all $animTime1;

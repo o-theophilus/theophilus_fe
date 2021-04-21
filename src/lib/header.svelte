@@ -2,7 +2,7 @@
 	import { slide } from 'svelte/transition';
 	import { onMount } from 'svelte';
 
-	import Logo from './svg/logo.svelte';
+	import Logo from './logo.svelte';
 
 	let showHeader = true;
 	onMount(() => {

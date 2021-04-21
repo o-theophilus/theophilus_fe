@@ -36,6 +36,6 @@
 <Content>
 	<p>{project.category}</p>
 	<p>{project.name}</p>
-	<p>{project.desc}</p>
-	{@html project.content}
+	<p>{project.summary}</p>
+	{@html project.html}
 </Content>

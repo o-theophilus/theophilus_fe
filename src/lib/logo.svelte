@@ -10,7 +10,7 @@
 </svg>
 
 <style type="text/scss">
-	@import '../../variable';
+	@import '../variable';
 
 	svg {
 		height: calc(#{$headerHeight} - 20px);
