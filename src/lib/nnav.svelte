@@ -11,7 +11,7 @@
 			<Link name={'home'} link={''} on:click />
 			<Link name={'projects'} on:click />
 			<Link name={'about'} on:click />
-			<!-- <Link name={'blog'} on:click /> -->
+			<Link name={'blog'} on:click />
 			<!-- <Link name={'contact'} on:click /> -->
 		</ul>
 	</div>
