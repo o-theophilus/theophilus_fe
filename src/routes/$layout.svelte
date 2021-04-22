@@ -37,8 +37,8 @@
 
 <main class="content" class:mobileMenuOpened class:notMobile={!isMobile}>
 	<div class="content__block">
-		<Header {showHeader} {isMobile} />
 		<slot />
+		<Header {showHeader} {isMobile} />
 		<Footer />
 	</div>
 	<MobileMenuBlocker {mobileMenuOpened} {isMobile} on:click={toggleMobileMenu} />
