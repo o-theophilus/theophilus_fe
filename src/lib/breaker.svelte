@@ -14,15 +14,13 @@
 		}
 
 		tabOpened = !tabOpened;
-
 	};
-
 </script>
 
 <div class="tab" class:tab--open={tabOpened} on:click={handleTab} bind:this={element}>
-	<div class="tab__btn">
-		<div class="tab__btn__bar tab__btn__bar--one" />
-		<div class="tab__btn__bar tab__btn__bar--two" />
+	<div class="btn">
+		<div class="bar one" />
+		<div class="bar two" />
 	</div>
 	<p class="tab__title">
 		{title}
@@ -67,7 +65,7 @@
 	$barPos: calc(#{$buttonSize}/ 5);
 	$barCenter: calc(#{$buttonSize}/ 2 - #{$barHeight}/ 2);
 
-	.tab__btn {
+	.btn {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -86,7 +84,7 @@
 		transition: all $animTime1;
 	}
 
-	.tab__btn__bar {
+	.bar {
 		position: absolute;
 
 		height: $barHeight;
@@ -97,11 +95,11 @@
 
 		transition: all $animTime1;
 	}
-	.tab__btn__bar--two {
+	.two {
 		transform: rotate(90deg);
 	}
 
-	.tab__btn:hover {
+	.btn:hover {
 		background-color: $color4;
 	}
 
@@ -110,10 +108,10 @@
 			font-size: 2rem;
 			font-weight: bolder;
 		}
-		.tab__btn__bar--one {
+		.one {
 			transform: rotate(45deg);
 		}
-		.tab__btn__bar--two {
+		.two {
 			transform: rotate(-45deg);
 		}
 	}

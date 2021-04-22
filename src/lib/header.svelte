@@ -2,24 +2,21 @@
 	import { slide } from 'svelte/transition';
 
 	import Logo from './logo.svelte';
+	import Nav from './nnav.svelte';
 
 	export let showHeader = true;
 	export let isMobile = true;
 </script>
 
 {#if showHeader}
-	<header
-		class="header"
-		class:notMobile={!isMobile}
-		in:slide={{ duration: 300 }}
-		out:slide={{ delay: 500, duration: 300 }}
-	>
-		<div class="header__bg">
-			<div class="header__block">
-				<a href="/">
-					<Logo />
-				</a>
-			</div>
+	<header class="header" in:slide={{ duration: 300 }} out:slide={{ delay: 500, duration: 300 }}>
+		<div class="block">
+			<a href="/">
+				<Logo />
+			</a>
+			<!-- {#if isMobile == false}
+				<Nav {isMobile} />
+			{/if} -->
 		</div>
 	</header>
 {/if}
@@ -33,19 +30,16 @@
 		height: $headerHeight;
 
 		width: 100%;
-	}
 
-	.notMobile {
-		display: none;
-	}
-
-	.header__bg {
 		background-color: $color2;
 
-		width: 100%;
-		height: 100%;
+		z-index: 1;
 	}
-	.header__block {
+
+	.block {
+		// for header nav
+		position: relative;
+		// ******
 		max-width: $mobileWidth;
 		height: 100%;
 

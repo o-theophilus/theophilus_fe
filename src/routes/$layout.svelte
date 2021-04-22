@@ -12,15 +12,14 @@
 	let mobileMenuOpened = false;
 	let isMobile = true;
 
-	let top;
-
 	const run = () => {
 		showHeader = document.documentElement.scrollTop < 500;
 		isMobile = document.documentElement.clientWidth < 900;
-		top = window.pageYOffset;
+		// top = window.pageYOffset;
 
 		if (isMobile == false) {
 			mobileMenuOpened = false;
+			showHeader = true;
 		}
 	};
 
@@ -35,14 +34,14 @@
 	});
 </script>
 
-<main class="content" class:mobileMenuOpened class:notMobile={!isMobile}>
+<main class="content" class:mobileMenuOpened>
+	<Header {showHeader} {isMobile} />
 	<div class="content__block">
 		<slot />
-		<Header {showHeader} {isMobile} />
 		<Footer />
 	</div>
 	<MobileMenuBlocker {mobileMenuOpened} {isMobile} on:click={toggleMobileMenu} />
-	<Nav {top} {mobileMenuOpened} {isMobile} on:click={toggleMobileMenu} />
+	<Nav {mobileMenuOpened} on:click={toggleMobileMenu} />
 </main>
 
 <MobileMenuButton {mobileMenuOpened} {isMobile} on:click={toggleMobileMenu} />
@@ -57,20 +56,9 @@
 		margin-top: $headerHeight;
 
 		transition: left $animTime1;
-	}
-	.mobileMenuOpened {
-		left: $mobileMenuWidth;
-	}
 
-	.notMobile {
-		max-width: 1200px;
-
-		margin: auto;
-		margin-top: 0;
-
-		.content__block {
-			// position: relative;
-			margin-left: $mobileMenuWidth;
+		&.mobileMenuOpened {
+			left: $mobileMenuWidth;
 		}
 	}
 </style>
