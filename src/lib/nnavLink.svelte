@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/stores';
+	import { openMobileMenu } from '$lib/store.js';
 
 	export let name;
 	export let link;
@@ -10,7 +11,15 @@
 	$: segment = $page.path.split('/')[1] || undefined;
 </script>
 
-<a class="link" class:link--active={segment === page_} href="/{link}" on:click>
+<a
+	class="link"
+	class:link--active={segment === page_}
+	href="/{link}"
+	
+	on:click={() => {
+		$openMobileMenu = false;
+	}}
+>
 	<li class="link__item">
 		{name}
 	</li>

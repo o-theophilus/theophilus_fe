@@ -71,7 +71,7 @@
 
 		padding: 10px;
 
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 	}
 	textarea {
 		height: 150px;

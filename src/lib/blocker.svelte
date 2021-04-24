@@ -1,10 +1,17 @@
 <script>
 	import { fade } from 'svelte/transition';
 
-	export let mobileMenuOpened = false;
+	import { openMobileMenu } from '$lib/store.js';
 </script>
 
-<div class="blocker" class:mobileMenuOpened on:click out:fade={{ duration: 300 }} />
+<div
+	class="blocker"
+	class:openMobileMenu={$openMobileMenu}
+	on:click={() => {
+		$openMobileMenu = false;
+	}}
+	out:fade={{ duration: 300 }}
+/>
 
 <style type="text/scss">
 	@import '../variable';
@@ -25,7 +32,7 @@
 
 		backdrop-filter: blur(2px);
 
-		&.mobileMenuOpened {
+		&.openMobileMenu {
 			display: unset;
 		}
 	}

@@ -1,18 +1,16 @@
 <script>
+	import { isMobile, openMobileMenu } from '$lib/store.js';
 	import Link from './nnavLink.svelte';
-
-	export let mobileMenuOpened = false;
-	export let isMobile = true;
 </script>
 
-<nav class="nav" class:mobileMenuOpened class:notMobile={!isMobile}>
+<nav class="nav" class:openMobileMenu={$openMobileMenu} class:notMobile={!isMobile}>
 	<div class="block">
 		<ul class="btns">
-			<Link name={'home'} link={''} on:click />
-			<Link name={'projects'} on:click />
-			<Link name={'about'} on:click />
-			<Link name={'blog'} on:click />
-			<!-- <Link name={'contact'} on:click /> -->
+			<Link name={'home'} link={''} />
+			<Link name={'projects'} />
+			<Link name={'about'} />
+			<Link name={'blog'} />
+			<!-- <Link name={'contact'}  /> -->
 		</ul>
 	</div>
 </nav>
@@ -36,7 +34,7 @@
 
 		transition: left $animTime1;
 
-		&.mobileMenuOpened {
+		&.openMobileMenu {
 			left: 0;
 		}
 

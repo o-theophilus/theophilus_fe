@@ -1,11 +1,16 @@
 <script>
-	export let mobileMenuOpened = false;
-	export let isMobile = true;
+	import { openMobileMenu, isMobile } from '$lib/store.js';
 </script>
 
-<div class="topBar" class:notMobile={!isMobile}>
+<div class="topBar" class:notMobile={!$isMobile}>
 	<div class="block">
-		<div class="mmb" class:mobileMenuOpened on:click>
+		<div
+			class="mmb"
+			class:openMobileMenu={$openMobileMenu}
+			on:click={() => {
+				$openMobileMenu = !$openMobileMenu;
+			}}
+		>
 			<div class="bar one" />
 			<div class="bar two" />
 			<div class="bar three" />
@@ -95,7 +100,7 @@
 		}
 	}
 
-	.mobileMenuOpened {
+	.openMobileMenu {
 		.one {
 			top: $barCenter;
 		}

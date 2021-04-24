@@ -1,22 +1,23 @@
 <script>
+	import { showHeader, isMobile } from '$lib/store.js';
 	import { slide } from 'svelte/transition';
 
 	import Logo from './logo.svelte';
 	import Nav from './nnav.svelte';
 
-	export let showHeader = true;
-	export let isMobile = true;
+	$: $showHeader = $isMobile == false ? true : $showHeader;
 </script>
 
-{#if showHeader}
+{#if $showHeader}
 	<header class="header" in:slide={{ duration: 300 }} out:slide={{ delay: 500, duration: 300 }}>
 		<div class="block">
 			<a href="/">
 				<Logo />
 			</a>
-			<!-- {#if isMobile == false}
-				<Nav {isMobile} />
-			{/if} -->
+
+			{#if $isMobile == false}
+				<Nav />
+			{/if}
 		</div>
 	</header>
 {/if}
