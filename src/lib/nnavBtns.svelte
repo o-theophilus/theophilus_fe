@@ -6,7 +6,7 @@
 <ul class="btns" class:notMobile={!$isMobile}>
 	<Link name={'home'} link={''} />
 	<Link name={'projects'} />
-	<Link name={'about'} />
+	<!-- <Link name={'about'} /> -->
 	<Link name={'blog'} />
 	<!-- <Link name={'contact'}  /> -->
 </ul>
