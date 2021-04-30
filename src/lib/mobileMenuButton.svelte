@@ -38,7 +38,7 @@
 
 	.block {
 		position: relative;
-		max-width: $mobileWidth;
+		max-width: $mobileWidth2;
 		height: 100%;
 
 		margin: auto;
@@ -58,7 +58,7 @@
 
 		position: absolute;
 		top: 10px;
-		right: 40px;
+		right: $pad;
 
 		width: $buttonSize;
 		height: $buttonSize;

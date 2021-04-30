@@ -14,12 +14,9 @@
 
 	svg {
 		height: calc(#{$headerHeight} - 20px);
-		// margin: 10px;
 	}
 	.fil0 {
 		fill: $color3;
-		// stroke-width: 100;
-		// stroke-dasharray: 5, 5, 10;
 	}
 	.fil1 {
 		fill: $color1;

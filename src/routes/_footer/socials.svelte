@@ -62,7 +62,7 @@
 </div>
 
 <style type="text/scss">
-	@import '../variable';
+	@import '../../variable';
 
 	.socials {
 		background-color: $color2;

@@ -8,6 +8,6 @@
 	.content {
 		max-width: $mobileWidth;
 		margin: auto;
-		padding: 40px;
+		padding: $pad;
 	}
 </style>

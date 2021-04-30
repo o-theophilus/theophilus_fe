@@ -3,7 +3,7 @@
 	import { slide } from 'svelte/transition';
 
 	import Logo from './logo.svelte';
-	import Nav from './nnav.svelte';
+	import Btns from './nnavBtns.svelte';
 
 	$: $showHeader = $isMobile == false ? true : $showHeader;
 </script>
@@ -16,7 +16,7 @@
 			</a>
 
 			{#if $isMobile == false}
-				<Nav />
+				<Btns />
 			{/if}
 		</div>
 	</header>
@@ -38,13 +38,19 @@
 	}
 
 	.block {
-		// for header nav
-		position: relative;
-		// ******
-		max-width: $mobileWidth;
+		display: flex;
+		align-items: center;
+
+		max-width: $mobileWidth2;
 		height: 100%;
 
-		padding: 10px 40px;
+		padding: 0 $pad;
 		margin: auto;
 	}
+	// @media screen and (min-width: $mobileWidth) {
+	// @media screen and (min-width: $mobileWidth) {
+	// .block {
+	// max-width: 1200px;
+	// }
+	// }
 </style>

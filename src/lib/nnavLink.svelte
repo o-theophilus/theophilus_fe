@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import { openMobileMenu } from '$lib/store.js';
+	import { openMobileMenu, isMobile } from '$lib/store.js';
 
 	export let name;
 	export let link;
@@ -13,9 +13,9 @@
 
 <a
 	class="link"
-	class:link--active={segment === page_}
+	class:active={segment === page_}
+	class:notMobile={!$isMobile}
 	href="/{link}"
-	
 	on:click={() => {
 		$openMobileMenu = false;
 	}}
@@ -34,15 +34,18 @@
 		align-items: center;
 
 		width: 100%;
-		height: $menuItemHeight;
+		height: 50px;
 
 		text-decoration: none;
 		color: $color1;
 
 		transition: all $animTime1;
 	}
+	.notMobile {
+		height: 100%;
+	}
 
-	.link--active {
+	.active {
 		border-width: 5px;
 		border-color: $color3;
 		border-bottom-style: solid;

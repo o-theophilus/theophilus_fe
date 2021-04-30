@@ -14,8 +14,8 @@
 </script>
 
 <script>
-	import Home from './home.svelte';
-	import About from './about.svelte';
+	import Home from './_home.svelte';
+	import About from './_about.svelte';
 	import Projects from './proj.svelte';
 
 	export let projects;

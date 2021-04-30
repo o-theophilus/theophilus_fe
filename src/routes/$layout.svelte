@@ -7,7 +7,7 @@
 	import MobileMenuButton from '$lib/mobileMenuButton.svelte';
 	import Blocker from '$lib/blocker.svelte';
 	import Header from '$lib/header.svelte';
-	import Footer from '$lib/footer.svelte';
+	import Footer from './_footer/index.svelte';
 
 	const run = () => {
 		$showHeader = document.documentElement.scrollTop < 500;
@@ -30,7 +30,6 @@
 		<slot />
 		<Footer />
 	</div>
-	<!-- <Blocker  /> -->
 	<Blocker />
 	<Nav />
 </main>

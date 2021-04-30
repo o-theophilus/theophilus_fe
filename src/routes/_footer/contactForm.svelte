@@ -36,7 +36,7 @@
 </form>
 
 <style type="text/scss">
-	@import '../variable';
+	@import '../../variable';
 
 	.form {
 		background-color: $color2;
@@ -46,7 +46,7 @@
 		max-width: $mobileWidth;
 		margin: auto;
 
-		padding: 40px;
+		padding: $pad;
 
 		color: $color1;
 	}
