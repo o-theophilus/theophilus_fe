@@ -8,26 +8,27 @@
 	$: $showHeader = $isMobile == false ? true : $showHeader;
 </script>
 
-{#if $showHeader}
-	<header class="header" in:slide={{ duration: 300 }} out:slide={{ delay: 500, duration: 300 }}>
-		<div class="block">
-			<a href="/">
-				<Logo />
-			</a>
+<!-- {#if $showHeader} -->
+<!-- <header class="header" in:slide={{ duration: 300 }} out:slide={{ delay: 500, duration: 300 }}> -->
+<header class="header" class:showHeader={$showHeader}>
+	<div class="block">
+		<a href="/">
+			<Logo />
+		</a>
 
-			{#if $isMobile == false}
-				<Btns />
-			{/if}
-		</div>
-	</header>
-{/if}
+		{#if $isMobile == false}
+			<Btns />
+		{/if}
+	</div>
+</header>
 
+<!-- {/if} -->
 <style type="text/scss">
 	@import '../variable';
 
 	.header {
 		position: fixed;
-		top: 0;
+		top: -$headerHeight;
 		height: $headerHeight;
 
 		width: 100%;
@@ -35,6 +36,11 @@
 		background-color: $color2;
 
 		z-index: 1;
+
+		transition: top $animTime1;
+		&.showHeader {
+			top: 0;
+		}
 	}
 
 	.block {

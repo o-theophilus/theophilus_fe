@@ -2,22 +2,20 @@
 	import { slide } from 'svelte/transition';
 	export let title = 'title';
 
-	export let tabOpened = false;
+	let tabOpened = false;
 
 	let duration = 300;
 
-	let element;
-	const handleTab = () => {
+	const handleTab = (e) => {
 		if (tabOpened === false) {
-			// element.scrollIntoView(true);
-			element.scrollIntoView({ behavior: 'smooth' });
+			e.target.scrollIntoView({ behavior: 'smooth' });
 		}
 
 		tabOpened = !tabOpened;
 	};
 </script>
 
-<div class="tab" class:tab--open={tabOpened} on:click={handleTab} bind:this={element}>
+<div class="tab" class:tabOpened on:click={(e) => handleTab(e)}>
 	<div class="btn">
 		<div class="bar one" />
 		<div class="bar two" />
@@ -103,7 +101,7 @@
 		background-color: $color4;
 	}
 
-	.tab--open {
+	.tabOpened {
 		.tab__title {
 			font-size: 2rem;
 			font-weight: bolder;

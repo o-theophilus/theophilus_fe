@@ -15,15 +15,13 @@
 
 <script>
 	import Home from './_home.svelte';
-	import About from './_about.svelte';
-	import Projects from './proj.svelte';
+	import Projects from './_proj.svelte';
 
 	export let projects;
 </script>
 
 <Home />
 <Projects {projects} />
-<About />
 
 <svelte:head>
 	<title>Home</title>

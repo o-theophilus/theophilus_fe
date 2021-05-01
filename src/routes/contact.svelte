@@ -3,7 +3,6 @@
 	import Content from '$lib/pageContent.svelte';
 </script>
 
-<p id="contact" />
 
 <form
 	class="form"
@@ -36,7 +35,7 @@
 </form>
 
 <style type="text/scss">
-	@import '../../variable';
+	@import '../variable';
 
 	.form {
 		background-color: $color2;

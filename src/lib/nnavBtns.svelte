@@ -6,9 +6,9 @@
 <ul class="btns" class:notMobile={!$isMobile}>
 	<Link name={'home'} link={''} />
 	<Link name={'projects'} />
-	<!-- <Link name={'about'} /> -->
 	<Link name={'blog'} />
-	<!-- <Link name={'contact'}  /> -->
+	<Link name={'about'} />
+	<Link name={'contact'} />
 </ul>
 
 <style type="text/scss">
@@ -17,11 +17,13 @@
 	.btns {
 		list-style-type: none;
 	}
-	.notMobile{
+	.notMobile {
 		display: flex;
 
 		width: 100%;
 		height: 100%;
 		max-width: $mobileWidth;
+
+		margin-left: auto;
 	}
 </style>
