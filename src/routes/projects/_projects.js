@@ -1,5 +1,43 @@
 export default [
 	{
+		name: 'Connekt',
+		slug: 'connekt',
+		category: 'web',
+		img: 'connekt_001.png',
+		summary:
+		'Connekt is a social sharing application that enable users to easily find and connect with other users that are interested in the Products or Services which are being Offered or Requested.',
+		link: 'http://www.connekt.website'
+	},
+	{
+		name: 'Lily Collection',
+		slug: 'lily',
+		category: 'Logos and Banners',
+		img: 'lilyCollection_001.png',
+		summary: '',
+		html: `
+			<img class="noDesign" src="/Images/project/lilyCollection_001.png" alt="image_image" />
+			<br />
+			<br />
+			<img class="noDesign" src="/Images/project/lilyCollection_002.png" alt="image_image" />
+		`
+	},
+	{
+		name: 'Flipaxis Logo',
+		slug: 'flipaxis',
+		category: 'Logos and Banners',
+		img: 'flipaxis_001.png',
+		summary: '',
+		html: `
+			<img class="noDesign" src="/Images/project/flipaxis_001.png" alt="image_image" />
+		`
+	},
+
+
+
+
+
+
+	{
 		name: 'Flipaxis Logo',
 		slug: 'flipaxis',
 		category: 'Logos and Banners',
@@ -21,31 +59,21 @@ export default [
 		category: 'Models, Visualisation and Animation',
 		img: 'akropol_001.jpeg',
 		summary: '',
-		html: '<h1>Testng</h1>'
+		html: `
+			<img class="noDesign" src="/Images/project/akropol_001.jpeg" alt="image_image" />
+			<br />
+			<br />
+			<img class="noDesign" src="/Images/project/akropol_002.png" alt="image_image" />
+			<br />
+			<br />
+			<video controls>
+				<source src="/Images/project/akropol_001.mp4" type="video/mp4" />
+			</video>
+		`
 	}
 ];
 
 // export default [
-// 	{
-// 		category: 'web',
-// 		name: 'Connekt',
-// 		summary:
-// 			'Connekt is a social sharing application that enable users to easily find and connect with other users that are interested in the Products or Services which are being Offered or Requested.',
-// 		img: 'connekt_001.png',
-// 		link: 'http://www.connekt.website'
-// 	},
-// 	{
-// 		category: 'Logos and Banners',
-// 		name: 'Lily Collection',
-// 		summary: '',
-// 		img: 'lilyCollection_001.png'
-// 	},
-// 	{
-// 		category: 'Logos and Banners',
-// 		name: 'Flipaxis Logo',
-// 		summary: '',
-// 		img: 'flipaxis_001.png'
-// 	},
 // 	{
 // 		category: 'Models, Visualisation and Animation',
 // 		name: 'Model Viewer - S3V Range Rover L322',
