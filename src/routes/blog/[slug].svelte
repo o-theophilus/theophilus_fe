@@ -1,15 +1,15 @@
 <script context="module">
 	export async function load({ page, fetch }) {
 		const resp = await fetch('/blog.json');
-		let posts = await resp.json();
+		let data = await resp.json();
 
-		posts = posts.posts;
+		data = data.api;
 		let { slug } = page.params;
 		let post;
 
-		for (let index = 0; index < posts.length; index++) {
-			if (posts[index].slug === slug) {
-				post = posts[index];
+		for (let index = 0; index < data.length; index++) {
+			if (data[index].slug === slug) {
+				post = data[index];
 				break;
 			}
 		}
@@ -32,10 +32,22 @@
 	<title>{post.name}</title>
 </svelte:head>
 
-<Image img="/post/{post.img}" />
+<Image img="/project/{post.img}" />
 <Content>
+	<h1>
+		<p>{post.name}</p>
+	</h1>
 	<p>{post.category}</p>
-	<p>{post.name}</p>
-	<p>{post.summary}</p>
+</Content>
+<hr />
+<Content>
 	{@html post.html}
 </Content>
+
+<style type="text/scss">
+	@import '../../variable';
+
+	:global(img) {
+		width: 100%;
+	}
+</style>

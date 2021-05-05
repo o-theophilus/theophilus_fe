@@ -1,7 +1,7 @@
-import projects from './_projects.js';
+import api from './_api.js';
 
 export function get() {
 	return {
-		body: { projects }
+		body: { api }
 	};
 }

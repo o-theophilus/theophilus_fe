@@ -1,18 +1,21 @@
 <script>
-	export let project;
+	export let item;
+
+	export let blog = false;
+	let link = blog ? 'blog' : 'projects';
 </script>
 
-<a href="/projects/{project.slug}">
+<a href="/{link}/{item.slug}">
 	<!-- <div class="img"> -->
 
-		<img src="/Images/project/{project.img}" alt={project.name} />
+	<img src="/Images/project/{item.img}" alt={item.name} />
 	<!-- </div> -->
 	<div class="details">
 		<h1 class="name">
-			{project.name}
+			{item.name}
 		</h1>
 		<!-- <br /> -->
-		{project.summary}
+		{item.summary}
 	</div>
 </a>
 
@@ -24,7 +27,7 @@
 		flex-direction: column;
 
 		height: 600px;
-		margin: 30px;
+		margin: 30px 0;
 
 		text-decoration: none;
 		color: $fColor2;

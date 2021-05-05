@@ -7,7 +7,7 @@
 
 		return {
 			props: {
-				projects: data.projects
+				projects: data.api
 			}
 		};
 	}

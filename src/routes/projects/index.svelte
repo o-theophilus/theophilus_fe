@@ -7,7 +7,7 @@
 
 		return {
 			props: {
-				projects: data.projects
+				projects: data.api
 			}
 		};
 	}
@@ -28,14 +28,12 @@
 <Image img="/project/akropol_001.jpeg" />
 
 <Content>
-	{#each projects as project}
-		<ProjectBox {project} />
+	{#each projects as item}
+		<ProjectBox {item} />
 	{:else}
-		<p>nothing</p>
+		<p>No Project found</p>
 	{/each}
 </Content>
 
 <style type="text/scss">
-
-
 </style>

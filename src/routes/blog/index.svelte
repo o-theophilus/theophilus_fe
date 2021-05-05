@@ -7,7 +7,7 @@
 
 		return {
 			props: {
-				posts: data.posts
+				posts: data.api
 			}
 		};
 	}
@@ -16,6 +16,7 @@
 <script>
 	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
+	import ProjectBox from '$lib/itemBox.svelte';
 
 	export let posts;
 </script>
@@ -27,12 +28,10 @@
 <Image img="/project/akropol_001.jpeg" />
 
 <Content>
-	{#each posts as post}
-		<a href="/blog/{post.slug}">
-			<h1>{post.name}</h1>
-		</a>
+	{#each posts as item}
+		<ProjectBox {item} blog/>
 	{:else}
-		<p>nothing</p>
+		<p>No Blog post found</p>
 	{/each}
 </Content>
 

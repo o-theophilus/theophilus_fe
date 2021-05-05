@@ -1,7 +1,7 @@
-import posts from './_posts.js';
+import api from './_api.js'
 
 export function get() {
 	return {
-		body: { posts }
+		body: { api }
 	};
 }

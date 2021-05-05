@@ -1,15 +1,15 @@
 <script context="module">
 	export async function load({ page, fetch }) {
 		const resp = await fetch('/projects.json');
-		let projects = await resp.json();
+		let data = await resp.json();
 
-		projects = projects.projects;
+		data = data.api;
 		let { slug } = page.params;
 
 		let project;
-		for (let index = 0; index < projects.length; index++) {
-			if (projects[index].slug === slug) {
-				project = projects[index];
+		for (let index = 0; index < data.length; index++) {
+			if (data[index].slug === slug) {
+				project = data[index];
 				break;
 			}
 		}
@@ -39,9 +39,7 @@
 	</h1>
 	<p>{project.category}</p>
 </Content>
-<!-- <br /> -->
 <hr />
-<!-- <br /> -->
 <Content>
 	{@html project.html}
 </Content>
@@ -50,6 +48,9 @@
 	@import '../../variable';
 
 	:global(img) {
+		width: 100%;
+	}
+	:global(video) {
 		width: 100%;
 	}
 </style>

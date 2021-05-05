@@ -1,6 +1,6 @@
 <script>
 	import Content from '$lib/pageContent.svelte';
-	import ProjectBox from '$lib/itemBox.svelte';
+	import ItemBox from '$lib/itemBox.svelte';
 
 	export let projects = [];
 
@@ -11,10 +11,10 @@
 
 <div class="proj">
 	<Content>
-		{#each _projects as project, i}
-			<ProjectBox {project} />
+		{#each _projects as item}
+			<ItemBox {item} />
 		{:else}
-			<p>nothing</p>
+			<p>No Project found</p>
 		{/each}
 	</Content>
 </div>

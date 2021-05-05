@@ -3,7 +3,7 @@
 	import Content from '$lib/pageContent.svelte';
 </script>
 
-
+<Image img="/site/Theophilus.jpg" />
 <form
 	class="form"
 	method="post"
