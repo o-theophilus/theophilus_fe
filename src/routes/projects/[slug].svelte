@@ -5,8 +5,8 @@
 
 		projects = projects.projects;
 		let { slug } = page.params;
-		let project;
 
+		let project;
 		for (let index = 0; index < projects.length; index++) {
 			if (projects[index].slug === slug) {
 				project = projects[index];
@@ -34,8 +34,22 @@
 
 <Image img="/project/{project.img}" />
 <Content>
+	<h1>
+		<p>{project.name}</p>
+	</h1>
 	<p>{project.category}</p>
-	<p>{project.name}</p>
-	<p>{project.summary}</p>
+</Content>
+<!-- <br /> -->
+<hr />
+<!-- <br /> -->
+<Content>
 	{@html project.html}
 </Content>
+
+<style type="text/scss">
+	@import '../../variable';
+
+	:global(img) {
+		width: 100%;
+	}
+</style>

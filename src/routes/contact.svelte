@@ -37,9 +37,9 @@
 <style type="text/scss">
 	@import '../variable';
 
-	.form {
-		background-color: $color2;
-	}
+	// .form {
+	// 	background-color: $color2;
+	// }
 
 	.form__block {
 		max-width: $mobileWidth;
@@ -47,7 +47,7 @@
 
 		padding: $pad;
 
-		color: $color1;
+		// color: $color1;
 	}
 	.form__block__inputGroup {
 		margin-top: 20px;
@@ -66,7 +66,7 @@
 		resize: none;
 
 		border-radius: $bRadius;
-		border: none;
+		// border: none;
 
 		padding: 10px;
 

@@ -16,7 +16,7 @@
 <script>
 	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
-	import ProjectBox from '$lib/projectBox.svelte';
+	import ProjectBox from '$lib/itemBox.svelte';
 
 	export let projects;
 </script>
