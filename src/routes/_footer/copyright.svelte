@@ -7,9 +7,9 @@
 <style type="text/scss">
 	@import '../../variable';
 
-	.copyright {
-		background-color: $color2;
-	}
+	// .copyright {
+	// 	background-color: $color2;
+	// }
 	.copyright__block {
 		max-width: $mobileWidth;
 

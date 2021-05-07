@@ -1,28 +1,38 @@
+<script>
+	import SVG from '$lib/svg.svelte';
+</script>
+
+<br />
+<br />
 <div class="contact">
-	<div class="contact__block">
-		<div>
-			<p>Phone</p>
-			<p>Email</p>
-			<p>Location</p>
-		</div>
-		<div>
-			<p>08067397793</p>
+	<div class="block">
+		<a href="tel:+2348067397793">
+			<SVG type="call" />
+			<p>+234 806 739 7793</p>
+		</a>
+		<br />
+		<a href="mailto:theophilus.ogbolu@gmail.com">
+			<SVG type="email" />
 			<p>theophilus.ogbolu@gmail.com</p>
+		</a>
+		<br />
+		<a
+			href="https://www.google.com/maps/place/Igando+Bus+Stop/@6.5513295,3.2380606,17z/data=!3m1!4b1!4m5!3m4!1s0x103b8540d0692809:0x4a45a882b29213a8!8m2!3d6.5513242!4d3.2402439"
+			target="blank"
+		>
+			<SVG type="location" />
 			<p>Lagos, Nigeria.</p>
-		</div>
+		</a>
 	</div>
 </div>
 
 <style type="text/scss">
 	@import '../../variable';
 
-	.contact {
-		background-color: $color2;
-	}
-	.contact__block {
+	.block {
 		display: flex;
-		justify-content: center;
-		gap: 20px;
+		flex-direction: column;
+		align-items: center;
 
 		max-width: $mobileWidth;
 
@@ -30,5 +40,20 @@
 		padding: $pad;
 
 		color: $color1;
+	}
+	a {
+		display: flex;
+		gap: 20px;
+		align-items: center;
+
+		color: $fColor1;
+		text-decoration: none;
+		fill: $color1;
+
+		transition: all $animTime1;
+	}
+	a:hover{
+		
+		fill: $color3;
 	}
 </style>

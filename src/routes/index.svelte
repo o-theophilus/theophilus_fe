@@ -15,7 +15,7 @@
 
 <script>
 	import Home from './_home.svelte';
-	import Projects from './_proj.svelte';
+	import Projects from './_projects.svelte';
 	import Image from '$lib/pageImage.svelte';
 
 	export let projects;

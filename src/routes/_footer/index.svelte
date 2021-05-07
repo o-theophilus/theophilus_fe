@@ -4,6 +4,16 @@
 	import Copyright from './copyright.svelte';
 </script>
 
-<Contact />
-<Socials />
-<Copyright />
+<footer>
+	<Contact />
+	<Socials />
+	<Copyright />
+</footer>
+
+<style type="text/scss">
+	@import '../../variable';
+
+	footer {
+		background-color: $color2;
+	}
+</style>

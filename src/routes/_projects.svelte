@@ -4,7 +4,7 @@
 
 	export let projects = [];
 
-	let selected = [5, 3];
+	let selected = [5, 4];
 	let len = 5 - selected.length;
 
 	for (let n = 0; n < len; n++) {
@@ -27,9 +27,7 @@
 		<Content>
 			<h1>Projects</h1>
 		</Content>
-		<!-- <hr /> -->
 	</div>
-
 
 	<Content>
 		{#each _projects as item}
@@ -52,10 +50,10 @@
 		position: sticky;
 		top: 0;
 	}
-	
-	h1{
-		// color: $fColor1;
-		color: white;
-		mix-blend-mode: difference;
+
+	h1 {
+		color: $fColor1;
+		// color: white;
+		// mix-blend-mode: difference;
 	}
 </style>

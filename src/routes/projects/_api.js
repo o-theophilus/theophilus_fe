@@ -27,7 +27,7 @@ export default [
 		category: 'Logos and Banners',
 		img: 'flipaxis_001.png',
 		summary:
-			'hhas ijhashah ajhasha jkajhsaj asjjakjs jajsj asjasj ahhas ijhashah ajhasha jkajhsaj asjjakjs jajsj asjasj as jaksj jaskajs ajskajshhas ijhashah ajhasha jkajhsaj asjjakjs jajsj asjasj as jaksj jaskajs ajskajss jaksj jaskajs ajskajshhas ijhashah ajhasha jkajhsaj asjjakjs jajsj asjasj as jaksj jaskajs ajskajshhas ijhashah ajhasha jkajhsaj asjjakjs jajsj asjasj as jaksj jaskajs ajskajshhas ijhashah ajhasha jkajhsaj asjjakjs jajsj asjasj as jaksj jaskajs ajskajshhas ijhashah ajhasha jkajhsaj asjjakjs jajsj asjasj as jaksj jaskajs ajskajshhas ijhashah ajhasha jkajhsaj asjjakjs jajsj asjasj as jaksj jaskajs ajskajshhas ijhashah ajhasha jkajhsaj asjjakjs jajsj asjasj as jaksj jaskajs ajskajshhas ijhashah ajhasha jkajhsaj asjjakjs jajsj asjasj as jaksj jaskajs ajskajshhas ijhashah ajhasha jkajhsaj asjjakjs jajsj asjasj as jaksj jaskajs ajskajshhas ijhashah ajhasha jkajhsaj asjjakjs jajsj asjasj as jaksj jaskajs ajskajshhas ijhashah ajhasha jkajhsaj asjjakjs jajsj asjasj as jaksj jaskajs ajskajshhas ijhashah ajhasha jkajhsaj asjjakjs jajsj asjasj as jaksj jaskajs ajskajs',
+			'',
 		html: `
 			<img class="noDesign" src="/Images/project/flipaxis_001.png" alt="image_image" />
 		`

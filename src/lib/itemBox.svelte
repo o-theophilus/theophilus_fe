@@ -6,18 +6,15 @@
 </script>
 
 <a href="/{link}/{item.slug}">
-	<!-- <div class="img"> -->
-
-	<img src="/Images/project/{item.img}" alt={item.name} />
-	<!-- </div> -->
+	<div class="img" style="background-image: url('/Images/project/{item.img}')" />
 	<div class="details">
-		<h1 class="name">
+		<h3 class="name">
 			{item.name}
-		</h1>
-		<!-- <br /> -->
+		</h3>
 		{item.summary}
 	</div>
 </a>
+<br />
 
 <style type="text/scss">
 	@import '../variable';
@@ -27,7 +24,6 @@
 		flex-direction: column;
 
 		height: 600px;
-		margin: 30px 0;
 
 		text-decoration: none;
 		color: $fColor2;
@@ -36,31 +32,24 @@
 		border-radius: $bRadius;
 		overflow: hidden;
 	}
-	
-	img {
-		width: 100%;
-		height: 500px;
 
-		object-fit: cover;
+	.img {
+		height: 100%;
+		background-image: url('/Images/project/{item.img}');
+		background-position: center;
+		background-size: cover;
 	}
+
 	.details {
 		padding: 20px;
 	}
 	.name {
 		color: $fColor3;
 	}
-	
+
 	@media screen and (max-width: 500px) {
 		a {
-		
-	
 			height: 300px;
-			
 		}
-		img {
-			height: 150px;
-	
-		}
-		
 	}
 </style>
