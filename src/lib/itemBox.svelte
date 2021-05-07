@@ -36,13 +36,7 @@
 		border-radius: $bRadius;
 		overflow: hidden;
 	}
-
-	// .img {
-	// 	height: 100%;
-	// 	background-color: red;
-
-	// 	object-fit: cover;
-	// }
+	
 	img {
 		width: 100%;
 		height: 500px;
@@ -54,5 +48,19 @@
 	}
 	.name {
 		color: $fColor3;
+	}
+	
+	@media screen and (max-width: 500px) {
+		a {
+		
+	
+			height: 300px;
+			
+		}
+		img {
+			height: 150px;
+	
+		}
+		
 	}
 </style>

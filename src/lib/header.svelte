@@ -53,10 +53,5 @@
 		padding: 0 $pad;
 		margin: auto;
 	}
-	// @media screen and (min-width: $mobileWidth) {
-	// @media screen and (min-width: $mobileWidth) {
-	// .block {
-	// max-width: 1200px;
-	// }
-	// }
+	
 </style>
