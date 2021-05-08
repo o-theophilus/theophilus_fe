@@ -50,7 +50,5 @@
 		color: $fColor2;
 	}
 
-	* {
-		line-height: 30px;
-	}
+
 </style>

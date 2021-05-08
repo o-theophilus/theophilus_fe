@@ -23,11 +23,9 @@
 >
 	<div class="block">
 		{#if $isMobile}
-			<SVG type="facebook" />
+			<SVG type={name} />
 		{/if}
-		<div class="text">
-			{name}
-		</div>
+		<div class="text">{name.replace("_", " ")}</div>
 	</div>
 </a>
 
@@ -40,7 +38,7 @@
 		align-items: center;
 
 		width: 100%;
-		height: 50px;
+		height: $headerHeight;
 
 		text-decoration: none;
 		color: $color1;
@@ -49,8 +47,13 @@
 
 		text-transform: capitalize;
 		fill: $color1;
-
+		
 		transition: all $animTime1;
+
+		&:hover{
+			background-color: $color5;
+
+		}
 	}
 	.notMobile {
 		height: 100%;
@@ -62,14 +65,10 @@
 
 		border-color: $color3;
 		border-width: 10px;
-		border-style: none solid;
-		// border-style: solid none;
-	}
-
-	.active.notMobile {
 		border-width: 5px;
-		border-style: none;
 		border-bottom-style: solid;
+
+		fill: $color3;
 	}
 
 	.block {

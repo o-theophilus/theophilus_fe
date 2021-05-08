@@ -26,9 +26,16 @@
 	];
 </script>
 
+<svelte:head>
+	<title>About - Theophilus</title>
+</svelte:head>
+
 <Image img="/site/Theophilus.jpg" />
 <Content>
-	<h6 class="desc">this is the about page</h6>
+	<h1>About Me</h1>
+</Content>
+<hr />
+<Content>
 	<div class="content about">
 		<p>
 			My name is <strong>Theophilus Ogbolu</strong>, and this is the "About Me" stuff...

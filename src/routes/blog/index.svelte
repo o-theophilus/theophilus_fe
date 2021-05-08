@@ -22,11 +22,15 @@
 </script>
 
 <svelte:head>
-	<title>Blog</title>
+	<title>Blog - Theophilsu</title>
 </svelte:head>
 
 <Image img="/project/akropol_001.jpeg" />
 
+<Content>
+	<h1>Blog</h1>
+</Content>
+<hr />
 <Content>
 	{#each posts as item}
 		<ProjectBox {item} blog/>

@@ -9,5 +9,7 @@
 		max-width: $mobileWidth;
 		margin: auto;
 		padding: $pad;
+
+		line-height: 30px;
 	}
 </style>

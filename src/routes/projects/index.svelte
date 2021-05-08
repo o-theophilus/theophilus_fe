@@ -22,11 +22,14 @@
 </script>
 
 <svelte:head>
-	<title>projects</title>
+	<title>Projects - Theophilus</title>
 </svelte:head>
 
 <Image img="/project/akropol_001.jpeg" />
-
+<Content>
+	<h1>Projects</h1>
+</Content>
+<hr />
 <Content>
 	{#each projects as item}
 		<ProjectBox {item} />
