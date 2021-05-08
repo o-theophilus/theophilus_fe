@@ -1,8 +1,8 @@
 <script>
 	import { showHeader, isMobile } from '$lib/store.js';
-	import { slide } from 'svelte/transition';
+	import SVG from '$lib/svg.svelte';
+	// import { slide } from 'svelte/transition';
 
-	import Logo from './logo.svelte';
 	import Btns from './nnavBtns.svelte';
 
 	$: $showHeader = $isMobile == false ? true : $showHeader;
@@ -12,8 +12,9 @@
 <!-- <header class="header" in:slide={{ duration: 300 }} out:slide={{ delay: 500, duration: 300 }}> -->
 <header class="header" class:showHeader={$showHeader}>
 	<div class="block">
-		<a href="/">
-			<Logo />
+		<a href="/" class="logo">
+			<SVG type="logo" size="50" />
+			Theophilus
 		</a>
 
 		{#if $isMobile == false}
@@ -53,5 +54,17 @@
 		padding: 0 $pad;
 		margin: auto;
 	}
-	
+
+	.logo {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		font-size: 20px;
+		text-decoration: none;
+		color: $fColor1;
+		fill: $color3;
+
+		font-family: font2, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	}
 </style>

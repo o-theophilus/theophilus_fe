@@ -46,10 +46,6 @@
 <style type="text/scss">
 	@import '../../variable';
 
-	// .socials {
-	// 	background-color: $color2;
-	// }
-
 	.block {
 		display: flex;
 		flex-wrap: wrap;
@@ -79,10 +75,10 @@
 		box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 		fill: white;
 	}
-	
+
 	a:hover {
 		box-shadow: 0 0 1em $color3;
 		background-color: $color1;
-		fill:  $color3;
+		fill: $color3;
 	}
 </style>

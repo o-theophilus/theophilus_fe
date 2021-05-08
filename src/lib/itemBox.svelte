@@ -11,7 +11,11 @@
 		<h3 class="name">
 			{item.name}
 		</h3>
-		{item.summary}
+		{#if item.summary}
+			<p class="summary">
+				{item.summary}
+			</p>
+		{/if}
 	</div>
 </a>
 <br />
@@ -46,10 +50,14 @@
 	.name {
 		color: $fColor3;
 	}
+	.summary{
+		margin-top: 10px;
+	}
 
 	@media screen and (max-width: 500px) {
 		a {
 			height: 300px;
+			line-height: 20px;
 		}
 	}
 </style>

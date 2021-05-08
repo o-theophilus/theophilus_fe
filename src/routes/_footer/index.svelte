@@ -8,6 +8,8 @@
 	<Contact />
 	<Socials />
 	<Copyright />
+	<br>
+	<br>
 </footer>
 
 <style type="text/scss">

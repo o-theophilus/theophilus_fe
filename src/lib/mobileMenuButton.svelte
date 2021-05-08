@@ -1,5 +1,5 @@
 <script>
-	import { openMobileMenu, isMobile } from '$lib/store.js';
+	import { openMobileMenu, isMobile, showHeader } from '$lib/store.js';
 </script>
 
 <div class="topBar" class:notMobile={!$isMobile}>
@@ -7,6 +7,7 @@
 		<div
 			class="mmb"
 			class:openMobileMenu={$openMobileMenu}
+			class:hideHeader={$showHeader}
 			on:click={() => {
 				$openMobileMenu = !$openMobileMenu;
 			}}
@@ -65,6 +66,7 @@
 
 		border-radius: $bRadius;
 		cursor: pointer;
+		background-color: $colorNill;
 		background-color: $color4;
 
 		transition: all $animTime1;
@@ -72,8 +74,9 @@
 		pointer-events: auto;
 	}
 
-	// @media screen and (min-width: $mobileWidth2) {
-	// }
+	.hideHeader {
+		background-color: $color4;
+	}
 
 	.bar {
 		position: absolute;
