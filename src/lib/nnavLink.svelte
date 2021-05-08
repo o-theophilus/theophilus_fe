@@ -1,6 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 	import { openMobileMenu, isMobile } from '$lib/store.js';
+	import SVG from '$lib/svg.svelte';
 
 	export let name;
 	export let link;
@@ -20,9 +21,14 @@
 		$openMobileMenu = false;
 	}}
 >
-	<li class="link__item">
-		{name}
-	</li>
+	<div class="block">
+		{#if $isMobile}
+			<SVG type="facebook" />
+		{/if}
+		<div class="text">
+			{name}
+		</div>
+	</div>
 </a>
 
 <style type="text/scss">
@@ -39,6 +45,11 @@
 		text-decoration: none;
 		color: $color1;
 
+		background-color: $colorNill;
+
+		text-transform: capitalize;
+		fill: $color1;
+
 		transition: all $animTime1;
 	}
 	.notMobile {
@@ -46,14 +57,27 @@
 	}
 
 	.active {
-		border-width: 5px;
-		border-color: $color3;
-		border-bottom-style: solid;
-
 		font-weight: bold;
+		background-color: $color5;
+
+		border-color: $color3;
+		border-width: 10px;
+		border-style: none solid;
+		// border-style: solid none;
 	}
 
-	.link__item {
-		text-transform: capitalize;
+	.active.notMobile {
+		border-width: 5px;
+		border-style: none;
+		border-bottom-style: solid;
+	}
+
+	.block {
+		display: flex;
+		width: 100%;
+		padding: 0 20px;
+	}
+	.text {
+		margin: auto;
 	}
 </style>

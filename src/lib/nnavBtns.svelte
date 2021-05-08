@@ -3,13 +3,13 @@
 	import Link from './nnavLink.svelte';
 </script>
 
-<ul class="btns" class:notMobile={!$isMobile}>
+<div class="btns" class:notMobile={!$isMobile}>
 	<Link name={'home'} link={''} />
 	<Link name={'projects'} />
 	<Link name={'blog'} />
 	<Link name={'about'} />
 	<Link name={'contact'} />
-</ul>
+</div>
 
 <style type="text/scss">
 	@import '../variable';
