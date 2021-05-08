@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	import marked from 'marked';
 	let md = `
 # create-svelte
@@ -60,4 +60,4 @@ console.log("here")
 	ol {
 		background-color: red;
 	}
-</style>
+</style> -->
