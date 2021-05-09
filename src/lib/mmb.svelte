@@ -7,7 +7,7 @@
 		<div
 			class="mmb"
 			class:openMobileMenu={$openMobileMenu}
-			class:hideHeader={$showHeader}
+			class:hideHeader={!$showHeader}
 			on:click={() => {
 				$openMobileMenu = !$openMobileMenu;
 			}}
@@ -67,7 +67,6 @@
 		border-radius: $bRadius;
 		cursor: pointer;
 		background-color: $colorNill;
-		background-color: $color4;
 
 		transition: all $animTime1;
 
@@ -76,6 +75,9 @@
 
 	.hideHeader {
 		background-color: $color4;
+		.bar {
+			background-color: $color5;
+		}
 	}
 
 	.bar {
@@ -85,9 +87,12 @@
 		width: $barWidth;
 
 		border-radius: calc(#{$barHeight} / 2);
-		background-color: $color3;
+		background-color: $color1;
 
 		transition: all $animTime1;
+
+		// mix-blend-mode: exclusion;
+		// mix-blend-mode: difference;
 	}
 	.one {
 		top: $barPos;

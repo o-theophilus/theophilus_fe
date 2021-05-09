@@ -8,8 +8,6 @@
 	<Contact />
 	<Socials />
 	<Copyright />
-	<br>
-	<br>
 </footer>
 
 <style type="text/scss">
@@ -17,5 +15,6 @@
 
 	footer {
 		background-color: $color2;
+		padding: 50px 0;
 	}
 </style>

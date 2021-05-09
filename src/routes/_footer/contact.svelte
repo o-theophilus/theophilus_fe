@@ -2,8 +2,6 @@
 	import SVG from '$lib/svg.svelte';
 </script>
 
-<br />
-<br />
 <div class="contact">
 	<div class="block">
 		<a href="tel:+2348067397793">
@@ -52,8 +50,7 @@
 
 		transition: all $animTime1;
 	}
-	a:hover{
-		
+	a:hover {
 		fill: $color3;
 	}
 </style>

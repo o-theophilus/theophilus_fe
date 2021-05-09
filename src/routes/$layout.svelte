@@ -4,7 +4,7 @@
 	import '../app.scss';
 	import { showHeader, isMobile, openMobileMenu } from '$lib/store.js';
 	import Nav from '$lib/nnav.svelte';
-	import MobileMenuButton from '$lib/mobileMenuButton.svelte';
+	import MobileMenuButton from '$lib/mmb.svelte';
 	import Blocker from '$lib/blocker.svelte';
 	import Header from '$lib/header.svelte';
 	import Footer from './_footer/index.svelte';
