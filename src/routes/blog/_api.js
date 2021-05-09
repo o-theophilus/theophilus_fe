@@ -2,11 +2,12 @@ export default [
 	{
 		name: 'Arduino Smart Car',
 		slug: 'arduino',
+		date: '01 Jan 2021',
 		category: 'Electronics',
-		img: 'arduino_001.png',
+		img: 'arduino_001.jpg',
 		summary: '',
 		html: `
-			<img class="noDesign" src="/Images/project/arduino_001.png" alt="image_image" />
+			<img class="noDesign" src="/images/arduino_001.jpg" alt="image_image" />
 			<p>
 				Arduino smart little turtle car is a MCU learning application development system. The arduino
 				microcontroller series Atmega-328 as the core. This kits include a large of interesting code
@@ -22,7 +23,7 @@ export default [
 			</ul>
 			<br />
 			<h3>Components</h3>
-			<img class="noDesign" src="/Images/project/arduino_002.png" alt="image_image" />
+			<img class="noDesign" src="/images/arduino_002.jpg" alt="image_image" />
 			<ol>
 				<li>Metal gear motor x2</li>
 				<li>Wheel x2</li>
@@ -48,21 +49,21 @@ export default [
 			</ol>
 			<br />
 			<h3>Installation</h3>
-			<img class="noDesign" src="/Images/project/arduino_003.png" alt="image_image" />
-			<img class="noDesign" src="/Images/project/arduino_004.png" alt="image_image" />
-			<img class="noDesign" src="/Images/project/arduino_005.png" alt="image_image" />
-			<img class="noDesign" src="/Images/project/arduino_006.png" alt="image_image" />
-			<img class="noDesign" src="/Images/project/arduino_007.png" alt="image_image" />
-			<img class="noDesign" src="/Images/project/arduino_008.png" alt="image_image" />
-			<img class="noDesign" src="/Images/project/arduino_009.png" alt="image_image" />
-			<img class="noDesign" src="/Images/project/arduino_010.png" alt="image_image" />
-			<img class="noDesign" src="/Images/project/arduino_011.png" alt="image_image" />
-			<img class="noDesign" src="/Images/project/arduino_012.png" alt="image_image" />
-			<img class="noDesign" src="/Images/project/arduino_013.png" alt="image_image" />
-			<img class="noDesign" src="/Images/project/arduino_014.png" alt="image_image" />
-			<img class="noDesign" src="/Images/project/arduino_015.png" alt="image_image" />
-			<img class="noDesign" src="/Images/project/arduino_016.png" alt="image_image" />
-			<img class="noDesign" src="/Images/project/arduino_001.png" alt="image_image" />
+			<img class="noDesign" src="/images/arduino_003.jpg" alt="image_image" />
+			<img class="noDesign" src="/images/arduino_004.jpg" alt="image_image" />
+			<img class="noDesign" src="/images/arduino_005.jpg" alt="image_image" />
+			<img class="noDesign" src="/images/arduino_006.jpg" alt="image_image" />
+			<img class="noDesign" src="/images/arduino_007.jpg" alt="image_image" />
+			<img class="noDesign" src="/images/arduino_008.jpg" alt="image_image" />
+			<img class="noDesign" src="/images/arduino_009.jpg" alt="image_image" />
+			<img class="noDesign" src="/images/arduino_010.jpg" alt="image_image" />
+			<img class="noDesign" src="/images/arduino_011.jpg" alt="image_image" />
+			<img class="noDesign" src="/images/arduino_012.jpg" alt="image_image" />
+			<img class="noDesign" src="/images/arduino_013.jpg" alt="image_image" />
+			<img class="noDesign" src="/images/arduino_014.jpg" alt="image_image" />
+			<img class="noDesign" src="/images/arduino_015.jpg" alt="image_image" />
+			<img class="noDesign" src="/images/arduino_016.jpg" alt="image_image" />
+			<img class="noDesign" src="/images/arduino_001.jpg" alt="image_image" />
 		`
 	}
 ];

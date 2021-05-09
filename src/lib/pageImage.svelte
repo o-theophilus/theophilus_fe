@@ -1,8 +1,8 @@
 <script>
-	export let img = 'img';
+	export let src
 </script>
 
-<img src="/Images{img}" alt={img} />
+<img {src} alt={src} />
 
 
 <style type="text/scss">

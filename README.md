@@ -1,42 +1,58 @@
-# create-svelte
+# My Note
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+## Getting Started
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
+```npm
 npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
-```
-
-> Note: the `@next` is temporary
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
+npm install
 npm run dev
 
-# or start the server and open the app in a new browser tab
+//or
+
+npm i
 npm run dev -- --open
 ```
 
-## Building
 
-Svelte apps are built with _adapters_, which optimise your project for deployment to different environments.
+## Building App
 
-By default, `npm run build` will generate a Node app that you can run with `node build`. To use a different adapter, add it to the `devDependencies` in `package.json` making sure to specify the version as `next` and update your `svelte.config.cjs` to [specify your chosen adapter](https://kit.svelte.dev/docs#configuration-adapter). The following official adapters are available:
+```npm
+npm run build
+```
 
-- [@sveltejs/adapter-node](https://github.com/sveltejs/kit/tree/master/packages/adapter-node)
-- [@sveltejs/adapter-static](https://github.com/sveltejs/kit/tree/master/packages/adapter-static)
-- [@sveltejs/adapter-netlify](https://github.com/sveltejs/kit/tree/master/packages/adapter-netlify)
-- [@sveltejs/adapter-vercel](https://github.com/sveltejs/kit/tree/master/packages/adapter-vercel)
-- ...more soon
+## Testing Build
 
-[See the adapter documentation for more detail](https://kit.svelte.dev/docs#adapters)
+```npm
+npm start
+```
+
+
+# Deploy on vercel
+
+Add "@sveltejs/adapter-vercel": "next" to the devDependencies in your package.json and run npm install.
+
+in `svelte.config.cjs`, set the adapter
+
+```javascript
+const vercel = require('@sveltejs/adapter-vercel');
+
+module.exports = {
+	kit: {
+		...
+		adapter: vercel()
+	}
+};
+```
+
+
+# Tasks
+
+- [  ] project title static
+- [  ] custom 404
+- [  ] design form
+- [  ] about skills
+- [  ] svg mmb
+- [  ] blog .md
+- [  ] picture on moile nav
+- [  ] add blog to home
+- [  ] populate proj and blog content

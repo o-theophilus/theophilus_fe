@@ -2,15 +2,30 @@
 	export let item;
 
 	export let blog = false;
-	let link = blog ? 'blog' : 'projects';
+
+	let href;
+	let target;
+
+	if (item.link) {
+		href = item.link;
+		target = 'blank';
+	} else if (item.doc) {
+		href = `/docs/${item.doc}`;
+		target = 'blank';
+	} else {
+		href = `/${blog ? 'blog' : 'project'}/${item.slug}`;
+	}
 </script>
 
-<a href="/{link}/{item.slug}">
-	<div class="img" style="background-image: url('/Images/project/{item.img}')" />
+<a {href} {target}>
+	<div class="img" style="background-image: url('/images/{item.img}')" />
 	<div class="details">
 		<h3 class="name">
 			{item.name}
 		</h3>
+		<p class="date">
+			{item.date}
+		</p>
 		{#if item.summary}
 			<p class="summary">
 				{item.summary}
@@ -39,7 +54,7 @@
 
 	.img {
 		height: 100%;
-		background-image: url('/Images/project/{item.img}');
+		background-image: url('/Images/{item.img}');
 		background-position: center;
 		background-size: cover;
 	}
@@ -50,7 +65,8 @@
 	.name {
 		color: $fColor3;
 	}
-	.summary{
+
+	.summary {
 		margin-top: 10px;
 	}
 

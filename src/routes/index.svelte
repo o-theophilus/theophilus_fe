@@ -2,7 +2,7 @@
 	// export const prerender = true;
 
 	export async function load({ fetch }) {
-		const resp = await fetch('/projects.json');
+		const resp = await fetch('/project.json');
 		let data = await resp.json();
 
 		return {
@@ -15,7 +15,7 @@
 
 <script>
 	import Home from './_home.svelte';
-	import Projects from './_projects.svelte';
+	import Projects from './_project.svelte';
 	import Image from '$lib/pageImage.svelte';
 
 	export let projects;
@@ -25,7 +25,7 @@
 	<title>Theophilus</title>
 </svelte:head>
 
-<Image img="/project/akropol_001.jpeg" />
+<Image src="/images/akropol_001.jpeg" />
 
 <Home />
 <Projects {projects} />

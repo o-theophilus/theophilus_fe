@@ -7,7 +7,7 @@
 	<title>Contact - Theophilus</title>
 </svelte:head>
 
-<Image img="/site/Theophilus.jpg" />
+<Image src="/site/theophilus.jpg" />
 
 <Content>
 	<h1>Contact</h1>

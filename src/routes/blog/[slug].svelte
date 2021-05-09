@@ -5,17 +5,16 @@
 
 		data = data.api;
 		let { slug } = page.params;
-		let post;
 
 		for (let index = 0; index < data.length; index++) {
 			if (data[index].slug === slug) {
-				post = data[index];
+				data = data[index];
 				break;
 			}
 		}
 		return {
 			props: {
-				post
+				data
 			}
 		};
 	}
@@ -25,29 +24,38 @@
 	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
 
-	export let post;
+	export let data;
 </script>
 
 <svelte:head>
-	<title>{post.name}</title>
+	<title>{data.name}</title>
 </svelte:head>
 
-<Image img="/project/{post.img}" />
-<Content>
-	<h1>
-		<p>{post.name}</p>
-	</h1>
-	<p>{post.category}</p>
-</Content>
-<hr />
-<Content>
-	{@html post.html}
-</Content>
+<Image src="/images/{data.img}" />
+<div class="html_content">
+	<Content>
+		<h1>
+			<p>{data.name}</p>
+		</h1>
+		<p>{data.category}</p>
+		<p class="date">{data.date}</p>
+	</Content>
+	<hr />
+	<Content>
+		{@html data.html}
+	</Content>
+</div>
 
 <style type="text/scss">
 	@import '../../variable';
 
-	:global(img) {
-		width: 100%;
+	:global(.html_content) {
+		:global(img) {
+			width: 100%;
+			border-radius: $bRadius;
+		}
+		:global(video) {
+			width: 100%;
+		}
 	}
 </style>

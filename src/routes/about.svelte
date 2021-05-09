@@ -3,24 +3,26 @@
 	import Content from '$lib/pageContent.svelte';
 
 	let skills = [
-		{ name: 'C#', value: 82 },
+		// { name: 'C#', value: 82 },
 		{ name: 'Python', value: 90 },
 		{ name: 'HTML', value: 95 },
 		{ name: 'CSS', value: 90 },
 		{ name: 'JavaScript', value: 65 },
-		{ name: 'React', value: 50 },
-		{ name: 'Arduino', value: 92 }
+		// { name: 'React', value: 50 },
+		{ name: 'Svelte', value: 87 },
+		// { name: 'Arduino', value: 92 }
 	];
 
 	let tools = [
 		{ name: 'Microsoft Word', value: 84 },
 		{ name: 'Power Point', value: 73 },
-		{ name: 'CorelDRAW', value: 47 },
+		{ name: 'CorelDRAW', value: 94 },
 		{ name: 'Photoshop', value: 79 },
-		{ name: 'Preniere Pro', value: 83 },
-		{ name: 'Maya', value: 88 },
-		{ name: '3D Max', value: 73 },
-		{ name: 'Blender', value: 80 },
+		{ name: 'Preniere Pro', value: 53 },
+		// { name: 'Maya', value: 88 },
+		// { name: '3D Max', value: 73 },
+		{ name: 'Blender 3D', value: 80 },
+		{ name: 'Verge3D', value: 80 },
 		{ name: 'SketchUp', value: 85 },
 		{ name: 'Godot', value: 30 }
 	];
@@ -30,7 +32,7 @@
 	<title>About - Theophilus</title>
 </svelte:head>
 
-<Image img="/site/Theophilus.jpg" />
+<Image src="/site/theophilus.jpg" />
 <Content>
 	<h1>About Me</h1>
 </Content>
@@ -66,6 +68,11 @@
 			<br />
 		</p>
 		{#each skills as ent}
+			{ent.name} - {ent.value}
+			<br />
+		{/each}
+		<br />
+		{#each tools as ent}
 			{ent.name} - {ent.value}
 			<br />
 		{/each}

@@ -7,7 +7,7 @@
 
 		return {
 			props: {
-				posts: data.api
+				items: data.api
 			}
 		};
 	}
@@ -16,24 +16,23 @@
 <script>
 	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
-	import ProjectBox from '$lib/itemBox.svelte';
+	import ItemBox from '$lib/itemBox.svelte';
 
-	export let posts;
+	export let items;
 </script>
 
 <svelte:head>
 	<title>Blog - Theophilsu</title>
 </svelte:head>
 
-<Image img="/project/akropol_001.jpeg" />
-
+<Image src="/images/akropol_001.jpeg" />
 <Content>
-	<h1>Blog</h1>
+	<h1>Blog Posts</h1>
 </Content>
 <hr />
 <Content>
-	{#each posts as item}
-		<ProjectBox {item} blog/>
+	{#each items as item}
+		<ItemBox {item} blog />
 	{:else}
 		<p>No Blog post found</p>
 	{/each}

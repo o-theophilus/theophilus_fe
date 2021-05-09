@@ -5,7 +5,7 @@
 
 <div class="btns" class:notMobile={!$isMobile}>
 	<Link name={'home'} link={''} />
-	<Link name={'projects'} />
+	<Link name={'project'} />
 	<Link name={'blog'} />
 	<Link name={'about'} />
 	<Link name={'contact'} />
