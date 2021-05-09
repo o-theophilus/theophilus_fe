@@ -6,17 +6,20 @@
 		data = data.api;
 		let { slug } = page.params;
 
+		let item;
 		for (let index = 0; index < data.length; index++) {
 			if (data[index].slug === slug) {
-				data = data[index];
+				item = data[index];
 				break;
 			}
 		}
-		return {
-			props: {
-				data
-			}
-		};
+		if (item) {
+			return {
+				props: {
+					data: item
+				}
+			};
+		}
 	}
 </script>
 
@@ -53,9 +56,6 @@
 		:global(img) {
 			width: 100%;
 			border-radius: $bRadius;
-		}
-		:global(video) {
-			width: 100%;
 		}
 	}
 </style>

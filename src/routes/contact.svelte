@@ -60,7 +60,7 @@
 
 		border-radius: $bRadius;
 		border-radius: 25px;
-		border: 2px solid $color2;
+		border: 2px solid $colorNill;
 
 		padding: 10px;
 
@@ -68,11 +68,27 @@
 
 		resize: none;
 
+		background-color: $color6;
+
+		transition: all $animTime1;
+
 		&:focus {
 			outline: none;
+			background-color: $color1;
+			border-color: $color3;
 		}
 	}
 	textarea {
 		height: 150px;
+	}
+
+	[type='submit'] {
+		background-color: $color2;
+		color: $color1;
+		&:hover {
+			outline: none;
+			background-color: $color3;
+			border-color: $colorNill;
+		}
 	}
 </style>

@@ -24,7 +24,12 @@
 	<h1>{status}</h1>
 
 	<p>{error.message}</p>
-	<br>
-	<br>
+	<br />
+	<br />
+	<video loop autoplay muted >
+		<source src="/site/404.mp4" type="video/mp4" />
+	</video>
+	<br />
+	<br />
 	Back to <a href="/">Home</a>
 </Content>

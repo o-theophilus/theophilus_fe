@@ -48,11 +48,8 @@ module.exports = {
 # Tasks
 
 - [  ] project title static
-- [  ] custom 404
-- [  ] design form
 - [  ] about skills
 - [  ] svg mmb
 - [  ] blog .md
-- [  ] picture on moile nav
 - [  ] add blog to home
 - [  ] populate proj and blog content
