@@ -53,3 +53,4 @@ module.exports = {
 - [  ] blog .md
 - [  ] add blog to home
 - [  ] populate proj and blog content
+- [  ] page title images
