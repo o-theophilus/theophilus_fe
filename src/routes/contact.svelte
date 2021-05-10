@@ -1,6 +1,31 @@
 <script>
 	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
+	// import nodemailer from 'nodemailer';
+
+
+	// var transporter = nodemailer.createTransport({
+	// 	service: 'gmail',
+	// 	auth: {
+	// 		user: 'theophilus.ogbolu@gmail.com',
+	// 		pass: 'th3hipsoul'
+	// 	}
+	// });
+
+	// var mailOptions = {
+	// 	from: 'theophilus.ogbolu@gmail.com',
+	// 	to: 'theo.like.that@gmail.com',
+	// 	subject: 'Sending Email using Node.js',
+	// 	text: 'That was easy!'
+	// };
+
+	// transporter.sendMail(mailOptions, function (error, info) {
+	// 	if (error) {
+	// 		console.log(error);
+	// 	} else {
+	// 		console.log('Email sent: ' + info.response);
+	// 	}
+	// });
 </script>
 
 <svelte:head>
