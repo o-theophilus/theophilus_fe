@@ -54,3 +54,4 @@ module.exports = {
 - [  ] add blog to home
 - [  ] populate proj and blog content
 - [  ] npm mailer
+- [  ] page title images
