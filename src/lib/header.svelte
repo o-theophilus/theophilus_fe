@@ -24,34 +24,32 @@
 </header>
 
 <!-- {/if} -->
-<style type="text/scss">
-	@import '../variable';
-
+<style>
 	.header {
 		position: fixed;
-		top: -$headerHeight;
-		height: $headerHeight;
+		top: calc(-1 * var(--headerHeight));
+		height: var(--headerHeight);
 
 		width: 100%;
 
-		background-color: $color2;
+		background-color: var(--color2);
 
 		z-index: 1;
 
-		transition: top $animTime1;
-		&.showHeader {
-			top: 0;
-		}
+		transition: top var(--animTime1);
+	}
+	.showHeader {
+		top: 0;
 	}
 
 	.block {
 		display: flex;
 		align-items: center;
 
-		max-width: $mobileWidth2;
+		max-width: var(--mobileWidth2);
 		height: 100%;
 
-		padding: 0 $pad;
+		padding: 0 var(--pad);
 		margin: auto;
 	}
 
@@ -62,9 +60,9 @@
 
 		font-size: 20px;
 		text-decoration: none;
-		color: $fColor1;
-		fill: $color3;
+		color: var(--fColor1);
+		fill: var(--color3);
 
-		font-family: font2, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+		font-family: var(--font2);
 	}
 </style>

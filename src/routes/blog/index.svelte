@@ -37,6 +37,3 @@
 		<p>No Blog post found</p>
 	{/each}
 </Content>
-
-<style type="text/scss">
-</style>

@@ -20,12 +20,10 @@
 </div>
 
 <style type="text/scss">
-	@import '../variable';
-
 	.topBar {
 		position: fixed;
 		top: 0;
-		height: $headerHeight;
+		height: var(--headerHeight);
 
 		width: 100%;
 		pointer-events: none;
@@ -35,22 +33,22 @@
 		&.notMobile {
 			display: none;
 		}
+
+		--buttonSize: 50px;
+
+		--barHeight: calc(var(--buttonSize) / 10);
+		--barWidth: calc(var(--buttonSize) - var(--buttonSize) / 5);
+		--barPos: calc(var(--buttonSize) / 5);
+		--barCenter: calc(var(--buttonSize) / 2 - var(--barHeight) / 2);
 	}
 
 	.block {
 		position: relative;
-		max-width: $mobileWidth2;
+		max-width: var(--mobileWidth2);
 		height: 100%;
 
 		margin: auto;
 	}
-
-	$buttonSize: 50px;
-
-	$barHeight: calc(#{$buttonSize}/ 10);
-	$barWidth: calc(#{$buttonSize} - #{$buttonSize}/ 5);
-	$barPos: calc(#{$buttonSize}/ 5);
-	$barCenter: calc(#{$buttonSize}/ 2 - #{$barHeight}/ 2);
 
 	.mmb {
 		display: flex;
@@ -59,61 +57,61 @@
 
 		position: absolute;
 		top: 10px;
-		right: $pad;
+		right: var(--pad);
 
-		width: $buttonSize;
-		height: $buttonSize;
+		width: var(--buttonSize);
+		height: var(--buttonSize);
 
-		border-radius: $bRadius;
+		border-radius: var(--bRadius);
 		cursor: pointer;
-		background-color: $colorNill;
+		background-color: var(--colorNill);
 
-		transition: all $animTime1;
+		transition: all var(--animTime1);
 
 		pointer-events: auto;
 	}
 
 	.hideHeader {
-		background-color: $color4;
+		background-color: var(--color4);
 		.bar {
-			background-color: $color5;
+			background-color: var(--color5);
 		}
 	}
 
 	.bar {
 		position: absolute;
 
-		height: $barHeight;
-		width: $barWidth;
+		height: var(--barHeight);
+		width: var(--barWidth);
 
-		border-radius: calc(#{$barHeight} / 2);
-		background-color: $color1;
+		border-radius: calc(var(--barHeight) / 2);
+		background-color: var(--color1);
 
-		transition: all $animTime1;
+		transition: all var(--animTime1);
 
 		// mix-blend-mode: exclusion;
 		// mix-blend-mode: difference;
 	}
 	.one {
-		top: $barPos;
+		top: var(--barPos);
 	}
 	.three {
-		bottom: $barPos;
+		bottom: var(--barPos);
 	}
 
 	.mmb:hover {
-		background-color: $color3;
+		background-color: var(--color3);
 		.bar {
-			background-color: $color1;
+			background-color: var(--color1);
 		}
 	}
 
 	.openMobileMenu {
 		.one {
-			top: $barCenter;
+			top: var(--barCenter);
 		}
 		.three {
-			bottom: $barCenter;
+			bottom: var(--barCenter);
 		}
 		.one,
 		.three {

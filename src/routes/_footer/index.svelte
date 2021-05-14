@@ -10,11 +10,9 @@
 	<Copyright />
 </footer>
 
-<style type="text/scss">
-	@import '../../variable';
-
+<style>
 	footer {
-		background-color: $color2;
+		background-color: var(--color2);
 		padding: 50px 0;
 	}
 </style>

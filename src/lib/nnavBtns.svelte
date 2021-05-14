@@ -11,9 +11,7 @@
 	<Link name={'contact'} />
 </div>
 
-<style type="text/scss">
-	@import '../variable';
-
+<style>
 	.btns {
 		list-style-type: none;
 	}
@@ -22,7 +20,7 @@
 
 		width: 100%;
 		height: 100%;
-		max-width: $mobileWidth;
+		max-width: var(--mobileWidth);
 
 		margin-left: auto;
 	}

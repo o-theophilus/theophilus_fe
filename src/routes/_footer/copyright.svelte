@@ -1,22 +1,19 @@
 <div class="copyright">
 	<div class="copyright__block">
-		<p class="copyright__block__text">Copyright &copy theophilus.website 2021. All rights reserved.</p>
+		<p class="copyright__block__text">
+			Copyright &copy theophilus.website 2021. All rights reserved.
+		</p>
 	</div>
 </div>
 
-<style type="text/scss">
-	@import '../../variable';
-
-	// .copyright {
-	// 	background-color: $color2;
-	// }
+<style>
 	.copyright__block {
-		max-width: $mobileWidth;
+		max-width: var(--mobileWidth);
 
 		margin: auto;
-		padding: $pad;
+		padding: var(--pad);
 
-		color: $color1;
+		color: var(--color1);
 	}
 
 	.copyright__block__text {

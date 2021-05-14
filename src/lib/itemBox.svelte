@@ -35,9 +35,7 @@
 </a>
 <br />
 
-<style type="text/scss">
-	@import '../variable';
-
+<style>
 	a {
 		display: flex;
 		flex-direction: column;
@@ -45,10 +43,10 @@
 		height: 600px;
 
 		text-decoration: none;
-		color: $fColor2;
-		background-color: $color1;
+		color: var(--fColor2);
+		background-color: var(--color1);
 		box-shadow: 0 0 5px 0.1px;
-		border-radius: $bRadius;
+		border-radius: var(--bRadius);
 		overflow: hidden;
 	}
 
@@ -63,7 +61,7 @@
 		padding: 20px;
 	}
 	.name {
-		color: $fColor3;
+		color: var(--fColor3);
 	}
 
 	.summary {

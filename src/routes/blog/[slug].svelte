@@ -35,27 +35,16 @@
 </svelte:head>
 
 <Image src="/images/{data.img}" />
-<div class="html_content">
-	<Content>
-		<h1>
-			<p>{data.name}</p>
-		</h1>
-		<p>{data.category}</p>
-		<p class="date">{data.date}</p>
-	</Content>
-	<hr />
-	<Content>
+<Content>
+	<h1>
+		<p>{data.name}</p>
+	</h1>
+	<p>{data.category}</p>
+	<p class="date">{data.date}</p>
+</Content>
+<hr />
+<Content>
+	<div class="html_content">
 		{@html data.html}
-	</Content>
-</div>
-
-<style type="text/scss">
-	@import '../../variable';
-
-	:global(.html_content) {
-		:global(img) {
-			width: 100%;
-			border-radius: $bRadius;
-		}
-	}
-</style>
+	</div>
+</Content>

@@ -26,29 +26,26 @@
 
 <main class="content" class:openMobileMenu={$openMobileMenu}>
 	<Header />
-	<div class="content__block">
-		<slot />
-		<Footer />
-	</div>
-	<Blocker />
-	<Nav />
+	<!-- <div class="block"> -->
+	<slot />
+	<Footer />
+	<!-- </div> -->
 </main>
+<Blocker />
+<Nav />
 
 <MobileMenuButton />
 
-<style type="text/scss">
-	@import '../variable';
-
+<style>
 	.content {
 		position: relative;
 		left: 0;
 
-		margin-top: $headerHeight;
+		margin-top: var(--headerHeight);
 
-		transition: left $animTime1;
-
-		&.openMobileMenu {
-			left: $mobileMenuWidth;
-		}
+		transition: left var(--animTime1);
+	}
+	.openMobileMenu {
+		left: var(--mobileMenuWidth);
 	}
 </style>

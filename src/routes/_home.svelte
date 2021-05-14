@@ -2,7 +2,6 @@
 	import Content from '$lib/pageContent.svelte';
 </script>
 
-
 <Content>
 	<h1>Welcome!</h1>
 </Content>
@@ -40,15 +39,12 @@
 	<br />
 </Content>
 
-<style type="text/scss">
-	@import '../variable';
+<style>
 	.type2 {
-		color: $color3;
+		color: var(--fColor3);
 	}
 
 	a {
-		color: $fColor2;
+		color: var(--fColor2);
 	}
-
-
 </style>

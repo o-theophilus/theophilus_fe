@@ -37,6 +37,3 @@
 		<p>No Project found</p>
 	{/each}
 </Content>
-
-<style type="text/scss">
-</style>

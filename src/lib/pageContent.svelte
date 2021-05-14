@@ -3,12 +3,10 @@
 </div>
 
 <style type="text/scss">
-	@import '../variable';
-
 	.content {
-		max-width: $mobileWidth;
+		max-width: var(--mobileWidth);
 		margin: auto;
-		padding: $pad;
+		padding: var(--pad);
 
 		line-height: 30px;
 	}

@@ -43,15 +43,13 @@
 	</div>
 </div>
 
-<style type="text/scss">
-	@import '../../variable';
-
+<style>
 	.block {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 
-		max-width: $mobileWidth;
+		max-width: var(--mobileWidth);
 
 		padding: 40px 20px;
 		margin: auto;
@@ -68,16 +66,16 @@
 
 		border-radius: 50%;
 
-		background-color: $colorNill;
+		background-color: var(--colorNill);
 
-		transition: all $animTime1;
+		transition: all var(--animTime1);
 		box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 		fill: white;
 	}
 
 	a:hover {
-		box-shadow: 0 0 1em $color3;
-		background-color: $color1;
-		fill: $color3;
+		box-shadow: 0 0 1em var(--color3);
+		background-color: var(--color1);
+		fill: var(--color3);
 	}
 </style>

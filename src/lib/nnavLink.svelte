@@ -25,50 +25,47 @@
 		{#if $isMobile}
 			<SVG type={name} />
 		{/if}
-		<div class="text">{name.replace("_", " ")}</div>
+		<div class="text">{name.replace('_', ' ')}</div>
 	</div>
 </a>
 
-<style type="text/scss">
-	@import '../variable';
-
+<style>
 	.link {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 
 		width: 100%;
-		height: $headerHeight;
+		height: var(--headerHeight);
 
 		text-decoration: none;
-		color: $color1;
+		color: var(--color1);
 
-		background-color: $colorNill;
+		background-color: var(--colorNill);
 
 		text-transform: capitalize;
-		fill: $color1;
-		
-		transition: all $animTime1;
+		fill: var(--color1);
 
-		&:hover{
-			background-color: $color5;
+		transition: all var(--animTime1);
 
-		}
 	}
 	.notMobile {
 		height: 100%;
 	}
+	.link:hover {
+		background-color: var(--color5);
+	}
 
 	.active {
 		font-weight: bold;
-		background-color: $color5;
+		background-color: var(--color5);
 
-		border-color: $color3;
+		border-color: var(--color3);
 		border-width: 10px;
 		border-width: 5px;
 		border-bottom-style: solid;
 
-		fill: $color3;
+		fill: var(--color3);
 	}
 
 	.block {

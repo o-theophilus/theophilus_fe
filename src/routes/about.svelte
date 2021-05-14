@@ -78,6 +78,3 @@
 		{/each}
 	</div>
 </Content>
-
-<style type="text/scss">
-</style>

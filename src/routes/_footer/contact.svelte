@@ -24,33 +24,31 @@
 	</div>
 </div>
 
-<style type="text/scss">
-	@import '../../variable';
-
+<style>
 	.block {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 
-		max-width: $mobileWidth;
+		max-width: var(--mobileWidth);
 
 		margin: auto;
-		padding: $pad;
+		padding: var(--pad);
 
-		color: $color1;
+		color: var(--color1);
 	}
 	a {
 		display: flex;
 		gap: 20px;
 		align-items: center;
 
-		color: $fColor1;
+		color: var(--fColor1);
 		text-decoration: none;
-		fill: $color1;
+		fill: var(--color1);
 
-		transition: all $animTime1;
+		transition: all var(--animTime1);
 	}
 	a:hover {
-		fill: $color3;
+		fill: var(--color3);
 	}
 </style>

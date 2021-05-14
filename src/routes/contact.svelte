@@ -3,7 +3,6 @@
 	import Content from '$lib/pageContent.svelte';
 	// import nodemailer from 'nodemailer';
 
-
 	// var transporter = nodemailer.createTransport({
 	// 	service: 'gmail',
 	// 	auth: {
@@ -69,8 +68,6 @@
 </Content>
 
 <style type="text/scss">
-	@import '../variable';
-
 	.inputGroup {
 		margin-top: 20px;
 	}
@@ -83,9 +80,9 @@
 		width: 100%;
 		height: 50px;
 
-		border-radius: $bRadius;
+		border-radius: var(--bRadius);
 		border-radius: 25px;
-		border: 2px solid $colorNill;
+		border: 2px solid var(--colorNill);
 
 		padding: 10px;
 
@@ -93,14 +90,14 @@
 
 		resize: none;
 
-		background-color: $color6;
+		background-color: var(--color6);
 
-		transition: all $animTime1;
+		transition: all var(--animTime1);
 
 		&:focus {
 			outline: none;
-			background-color: $color1;
-			border-color: $color3;
+			background-color: var(--color1);
+			border-color: var(--color3);
 		}
 	}
 	textarea {
@@ -108,12 +105,12 @@
 	}
 
 	[type='submit'] {
-		background-color: $color2;
-		color: $color1;
+		background-color: var(--color2);
+		color: var(--color1);
 		&:hover {
 			outline: none;
-			background-color: $color3;
-			border-color: $colorNill;
+			background-color: var(--color3);
+			border-color: var(--colorNill);
 		}
 	}
 </style>

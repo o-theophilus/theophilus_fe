@@ -45,11 +45,9 @@
 	</Content>
 </div>
 
-<style type="text/scss">
-	@import '../variable';
-
+<style>
 	.proj {
-		background-color: $color3;
+		background-color: var(--color3);
 		position: relative;
 	}
 
@@ -59,8 +57,8 @@
 	}
 
 	h1 {
-		color: $fColor1;
-		// color: white;
-		// mix-blend-mode: difference;
+		color: var(--fColor1);
+		/* color: white; */
+		/* mix-blend-mode: difference; */
 	}
 </style>

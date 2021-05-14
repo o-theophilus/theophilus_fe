@@ -13,9 +13,7 @@
 	out:fade={{ duration: 300 }}
 />
 
-<style type="text/scss">
-	@import '../variable';
-
+<style>
 	.blocker {
 		display: none;
 
@@ -31,9 +29,8 @@
 		z-index: 2;
 
 		backdrop-filter: blur(2px);
-
-		&.openMobileMenu {
-			display: unset;
-		}
+	}
+	.openMobileMenu {
+		display: unset;
 	}
 </style>

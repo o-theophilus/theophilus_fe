@@ -9,28 +9,26 @@
 	</div>
 </nav>
 
-<style type="text/scss">
-	@import '../variable';
-
+<style>
 	.nav {
 		position: fixed;
 		top: 0;
-		left: -$mobileMenuWidth;
+		left: calc(-1 * var(--mobileMenuWidth));
 		z-index: 3;
 
 		display: flex;
 		align-items: center;
 
-		width: $mobileMenuWidth;
+		width: var(--mobileMenuWidth);
 		height: 100vh;
 
-		background-color: $color2;
+		background-color: var(--color2);
 		overflow: hidden;
 
-		transition: left $animTime1;
-		&.openMobileMenu {
-			left: 0;
-		}
+		transition: left var(--animTime1);
+	}
+	.openMobileMenu {
+		left: 0;
 	}
 
 	.block {
