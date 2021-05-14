@@ -33,7 +33,7 @@ console.log("here")
 
 <div class="area">
 	<textarea bind:value={md} />
-	<div class="output">{@html html}</div>
+	<div class="md">{@html html}</div>
 </div>
 
 
@@ -50,7 +50,7 @@ console.log("here")
 		padding: 30px;
 		width: 100%;
 	}
-	.output {
+	.md {
 		padding: 30px;
 		width: 100%;
 	}
