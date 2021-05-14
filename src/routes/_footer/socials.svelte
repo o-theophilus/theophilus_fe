@@ -18,7 +18,7 @@
 <div class="socials">
 	<div class="block">
 		<!-- <a href="assets/file/theophilus_cv.pdf" class="cv btn" download>
-				<li>Download CV</li>
+				Download CV
 			</a> -->
 
 		<a href="https://wa.me/2348067397793/?text=Hello%20Theophilus">
