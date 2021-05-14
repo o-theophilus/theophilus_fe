@@ -1,5 +1,3 @@
-@import './variable';
-
 @font-face {
 	font-family: font1;
 	src: url('/font/JosefinSans-Regular.ttf');
@@ -12,14 +10,17 @@
 html,
 body {
 	overflow-x: hidden;
+}
+
+* {
+	box-sizing: border-box;
 	font-family: var(--font1);
 }
 
-*:not(.md *) {
-// * {
+.content *,
+hr {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
 }
 
 #svelte-announcer {

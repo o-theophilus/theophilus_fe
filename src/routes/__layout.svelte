@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 
 	import '../app.scss';
+	import '../variable.scss';
 	import { showHeader, isMobile, openMobileMenu } from '$lib/store.js';
 	import Nav from '$lib/nnav.svelte';
 	import MobileMenuButton from '$lib/mmb.svelte';
@@ -24,7 +25,7 @@
 	});
 </script>
 
-<main class="content" class:openMobileMenu={$openMobileMenu}>
+<main class="page" class:openMobileMenu={$openMobileMenu}>
 	<Header />
 	<!-- <div class="block"> -->
 	<slot />
@@ -37,7 +38,7 @@
 <MobileMenuButton />
 
 <style>
-	.content {
+	.page {
 		position: relative;
 		left: 0;
 
