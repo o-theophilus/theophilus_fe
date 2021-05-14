@@ -9,9 +9,9 @@ const config = {
 	kit: {
 		adapter: vercel(),
 
-		target: '#svelte'
+		target: '#svelte',
 
-		// vite: () => ({})
+		vite: () => ({})
 	}
 };
 
