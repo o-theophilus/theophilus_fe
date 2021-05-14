@@ -12,14 +12,13 @@
 html,
 body {
 	overflow-x: hidden;
+	font-family: var(--font1);
 }
 
-:not(md *) {
+:not(.md *) {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-
-	font-family: var(--font1);
 }
 
 #svelte-announcer {
