@@ -38,10 +38,6 @@ console.log("here")
 
 
 <style>
-	// :global(*) {
-	// 	margin: 50px;
-	// 	padding: 50px;
-	// }
 	.area {
 		display: flex;
 		height: 1000px;
