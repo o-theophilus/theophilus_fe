@@ -15,7 +15,7 @@ body {
 	font-family: var(--font1);
 }
 
-:not(.md *) {
+*:not(.md *) {
 // * {
 	margin: 0;
 	padding: 0;
