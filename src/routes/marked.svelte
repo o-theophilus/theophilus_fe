@@ -2,15 +2,21 @@
 	import Content from '$lib/pageContent.svelte';
 	import marked from 'marked';
 	import hljs from 'highlight.js';
-	import { onMount } from 'svelte';
+	import '../a11y-dark.css';
 
-	onMount(() => {
-		marked.setOptions({
-			renderer: new marked.Renderer(),
-			highlight: function (code, lang) {
-				return hljs.highlight(code, { language: lang, ignoreIllegals: true }).value;
-			}
-		});
+	marked.setOptions({
+		renderer: new marked.Renderer(),
+		highlight: function (code, lang) {
+			const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+			return hljs.highlight(code, { language }).value;
+		}
+		// pedantic: false,
+		// gfm: true,
+		// breaks: false,
+		// sanitize: false,
+		// smartLists: true,
+		// smartypants: false,
+		// xhtml: false
 	});
 
 	let md = `
@@ -20,8 +26,8 @@
 
 
 \`\`\`javascript
-	console.log("here")
-	let a = 55;
+console.log("here")
+let a = 55;
 \`\`\`
 
 
@@ -43,8 +49,6 @@ console.log("here")
 	
 
 	`;
-
-	$: html = marked(md);
 </script>
 
 <Content>
@@ -53,13 +57,12 @@ console.log("here")
 <hr />
 <div class="area">
 	<textarea bind:value={md} />
-	<div class="md">{@html html}</div>
+	<div class="md">{@html marked(md)}</div>
 </div>
 
 <style>
 	.area {
 		display: flex;
-		/* height: 1000px; */
 		max-width: calc(2 * var(--mobileWidth));
 
 		margin: auto;
@@ -76,5 +79,12 @@ console.log("here")
 	textarea {
 		border: none;
 		background-color: rgb(255, 255, 175);
+	}
+
+	:global(pre) {
+		padding: 20px;
+	}
+	:global(pre *) {
+		font-family: monospace;
 	}
 </style>

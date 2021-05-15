@@ -1,30 +1,33 @@
 <script>
 	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
-	// import nodemailer from 'nodemailer';
 
-	// var transporter = nodemailer.createTransport({
-	// 	service: 'gmail',
-	// 	auth: {
-	// 		user: 'theophilus.ogbolu@gmail.com',
-	// 		pass: 'th3hipsoul'
-	// 	}
-	// });
+	let form = {
+		name: '',
+		email: '',
+		message: ''
+	};
 
-	// var mailOptions = {
-	// 	from: 'theophilus.ogbolu@gmail.com',
-	// 	to: 'theo.like.that@gmail.com',
-	// 	subject: 'Sending Email using Node.js',
-	// 	text: 'That was easy!'
-	// };
+	const submit = async (event) => {
+		const resp = await fetch('https://formspree.io/f/xknkjbpb', {
+			method: 'post',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify(form)
+		});
 
-	// transporter.sendMail(mailOptions, function (error, info) {
-	// 	if (error) {
-	// 		console.log(error);
-	// 	} else {
-	// 		console.log('Email sent: ' + info.response);
-	// 	}
-	// });
+		const data = resp.json();
+
+		if (resp.ok) {
+			console.log('Thanks for your submission!');
+			// form.reset();
+		} else {
+			console.log('Oops! There was a problem submitting your form');
+			return {
+				status: resp.status,
+				error: data.message
+			};
+		}
+	};
 </script>
 
 <svelte:head>
@@ -43,23 +46,18 @@
 		Feel free to contact me with questions or anything else. I will do my best to respond to your
 		query as soon as possible.
 	</p>
-	<form
-		class="form"
-		method="post"
-		autoComplete="off"
-		action="https://formspree.io/theophilus.ogbolu@gmail.com"
-	>
+	<form on:submit|preventDefault={submit}>
 		<div class="inputGroup required">
 			<label for="name">Full Name</label>
-			<input placeholder="Your Name" type="text" name="name" required />
+			<input placeholder="Your Name" type="text" name="name" bind:value={form.name} />
 		</div>
 		<div class="inputGroup required">
 			<label for="email">Email Address</label>
-			<input placeholder="Your Email Address" type="email" name="email" required />
+			<input placeholder="Your Email Address" type="email" name="email" bind:value={form.email} />
 		</div>
 		<div class="inputGroup required">
 			<label for="message">Message</label>
-			<textarea placeholder="Your Message" name="message" required />
+			<textarea placeholder="Your Message" name="message" bind:value={form.message} />
 		</div>
 		<div class="inputGroup submit">
 			<input type="submit" value="Send Message" />
