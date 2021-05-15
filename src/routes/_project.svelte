@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import Content from '$lib/pageContent.svelte';
+	import Title from '$lib/pageTitle.svelte';
 	import ItemBox from '$lib/itemBox.svelte';
 
 	export let projects = [];
@@ -31,9 +32,9 @@
 
 <div class="proj">
 	<div class="title" bind:this={title}>
-		<Content>
+		<Title>
 			<h1>Projects</h1>
-		</Content>
+		</Title>
 	</div>
 
 	<Content>

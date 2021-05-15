@@ -7,7 +7,8 @@ export default [
 		img: 'connekt_001.jpg',
 		summary:
 			'Connekt is a social sharing application that enable users to easily find and connect with other users that are interested in the Products or Services which are being Offered or Requested.',
-		link: 'http://www.connekt.website'
+		type: 'link',
+		content: 'http://www.connekt.website'
 	},
 	{
 		name: 'Lily Collection',
@@ -16,7 +17,8 @@ export default [
 		category: 'Logos and Banners',
 		img: 'lilyCollection_001.jpg',
 		summary: '',
-		html: `
+		type: 'html',
+		content: `
 			<img class="noDesign" src="/images/lilyCollection_001.jpg" alt="image_image" />
 			<br />
 			<br />
@@ -30,7 +32,8 @@ export default [
 		category: 'Logos and Banners',
 		img: 'flipaxis_001.jpg',
 		summary: '',
-		html: `
+		type: 'html',
+		content: `
 			<img class="noDesign" src="/images/flipaxis_001.jpg" alt="image_image" />
 		`
 	},
@@ -41,7 +44,8 @@ export default [
 		category: 'Models, Visualisation and Animation',
 		img: 'mvS3V.jpg',
 		summary: 'hhas ijhashah ajhasha jkajhsaj asjjakjs ',
-		html: `
+		type: 'html',
+		content: `
 			<iframe
 			title="iframe"
 			src="/project/mvS3V/index.html"
@@ -56,7 +60,8 @@ export default [
 		category: 'Models, Visualisation and Animation',
 		img: 'bead_003.jpeg',
 		summary: '',
-		html: `
+		type: 'html',
+		content: `
 			<img class="noDesign" src="/images/bead_001.jpeg" alt="image_image" />
 			<br />
 			<br />
@@ -94,7 +99,8 @@ export default [
 		category: 'Models, Visualisation and Animation',
 		img: 'charms_01_01.jpg',
 		summary: '',
-		html: `
+		type: 'html',
+		content: `
 			<img class="noDesign" src="/images/charms_01_01.jpg" alt="image_image" />
 			<br />
 			<br />
@@ -192,7 +198,8 @@ export default [
 		category: 'Models, Visualisation and Animation',
 		img: 'ankara_001.jpg',
 		summary: '',
-		html: `
+		type: 'html',
+		content: `
 			<img class="noDesign" src="/images/ankara_001.jpg" alt="image_image" />
 			<br />
 			<br />
@@ -209,7 +216,8 @@ export default [
 		category: 'Models, Visualisation and Animation',
 		img: 'faceoff_003.jpg',
 		summary: '',
-		html: `
+		type: 'html',
+		content: `
 			<img class="noDesign" src="/images/faceoff_002.jpg" alt="image_image" />
 			<br />
 			<br />
@@ -244,7 +252,8 @@ export default [
 		category: 'Models, Visualisation and Animation',
 		img: 'interrogationRoom_005.jpg',
 		summary: '',
-		html: `
+		type: 'html',
+		content: `
 			<div class="unit">
 				<img class="noDesign" src="/images/interrogationRoom_014.jpg" alt="image_image" />
 				<br />
@@ -302,7 +311,8 @@ export default [
 		category: 'Models, Visualisation and Animation',
 		img: 'nimc_001.jpg',
 		summary: '',
-		html: `
+		type: 'html',
+		content: `
 			<video controls>
 				<source src="/videos/nimc_001.mp4" type="video/mp4" />
 			</video>
@@ -316,7 +326,8 @@ export default [
 		category: 'Models, Visualisation and Animation',
 		img: 'akropol_001.jpeg',
 		summary: '',
-		html: `
+		type: 'html',
+		content: `
 			<img class="noDesign" src="/images/akropol_001.jpeg" alt="image_image" />
 			<br />
 			<br />
@@ -336,7 +347,8 @@ export default [
 		category: 'Models, Visualisation and Animation',
 		img: 'tin_001.jpg',
 		summary: 'Fan art',
-		html: `
+		type: 'html',
+		content: `
 			<div class="unit">
 				<img class="noDesign" src="/images/tin_001.jpg" alt="image_image" />
 				<br />
@@ -354,7 +366,8 @@ export default [
 		category: 'Models, Visualisation and Animation',
 		img: 'danfo_001.jpg',
 		summary: 'How to rig a Vehicle tutorial.',
-		html: `
+		type: 'html',
+		content: `
 			<div>
 				<img class="noDesign" src="/images/danfo_001.jpg" alt="image_image" />
 				<br />
@@ -377,7 +390,8 @@ export default [
 		category: 'Others',
 		img: 'costar_001.jpg',
 		summary: '',
-		doc: 'costar_001.pdf'
+		type: 'doc',
+		content: 'costar_001.pdf'
 	},
 	{
 		name: 'Aris Brochure',
@@ -386,6 +400,7 @@ export default [
 		category: 'Others',
 		img: 'aris_001.jpg',
 		summary: '',
-		doc: 'aris_001.pdf'
+		type: 'doc',
+		content: 'aris_001.pdf'
 	}
 ];

@@ -16,6 +16,7 @@
 <script>
 	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
+	import Title from '$lib/pageTitle.svelte';
 	import ItemBox from '$lib/itemBox.svelte';
 
 	export let items;
@@ -26,10 +27,10 @@
 </svelte:head>
 
 <Image src="/images/akropol_001.jpeg" />
-<Content>
+<Title>
 	<h1>Blog Posts</h1>
-</Content>
-<hr />
+</Title>
+
 <Content>
 	{#each items as item}
 		<ItemBox {item} blog />

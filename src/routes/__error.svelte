@@ -11,6 +11,7 @@
 
 <script>
 	import Content from '$lib/pageContent.svelte';
+	import Title from '$lib/pageTitle.svelte';
 
 	export let status;
 	export let error;
@@ -20,8 +21,11 @@
 	<title>{status} - {error.name}</title>
 </svelte:head>
 
-<Content>
+<Title>
 	<h1>{status}</h1>
+</Title>
+
+<Content>
 
 	<p>{error.message}</p>
 	<br />

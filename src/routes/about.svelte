@@ -1,6 +1,8 @@
 <script>
 	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
+	import Title from '$lib/pageTitle.svelte';
+	
 
 	let skills = [
 		// { name: 'C#', value: 82 },
@@ -33,10 +35,9 @@
 </svelte:head>
 
 <Image src="/site/theophilus.jpg" />
-<Content>
+<Title>
 	<h1>About Me</h1>
-</Content>
-<hr />
+</Title>
 <Content>
 	<div class="content about">
 		<p>

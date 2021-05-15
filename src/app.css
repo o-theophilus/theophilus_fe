@@ -17,32 +17,16 @@ body {
 	font-family: var(--font1);
 }
 
-
 #svelte-announcer {
 	display: none;
 }
 
-
-
-
-
-//move to page component
-//conver to css
-.content *,
-hr {
-	margin: 0;
-	padding: 0;
+video,
+img {
+	width: 100%;
 }
+
 .date {
 	font-style: italic;
 	font-size: 12px;
-}
-
-.html_content img {
-	width: 100%;
-	border-radius: var(--bRadius);
-}
-
-video {
-	width: 100%;
 }

@@ -6,7 +6,8 @@ export default [
 		category: 'Electronics',
 		img: 'arduino_001.jpg',
 		summary: '',
-		html: `
+		type: 'html',
+		content: `
 			<img class="noDesign" src="/images/arduino_001.jpg" alt="image_image" />
 			<p>
 				Arduino smart little turtle car is a MCU learning application development system. The arduino
@@ -65,5 +66,15 @@ export default [
 			<img class="noDesign" src="/images/arduino_016.jpg" alt="image_image" />
 			<img class="noDesign" src="/images/arduino_001.jpg" alt="image_image" />
 		`
+	},
+	{
+		name: 'Marked Blog',
+		slug: 'test_md_blog',
+		date: '15 May 2021',
+		category: 'Programming',
+		img: 'arduino_001.jpg',
+		summary: 'This is an example of a marked blog',
+		type: 'md',
+		content: undefined
 	}
 ];

@@ -15,6 +15,8 @@
 	p {
 		text-align: center;
 		margin: 0;
+		
 		color: var(--color1);
+		line-height: var(--lineHeight);
 	}
 </style>

@@ -6,11 +6,11 @@
 	let href;
 	let target;
 
-	if (item.link) {
-		href = item.link;
+	if (item.type === 'link') {
+		href = item.content;
 		target = 'blank';
-	} else if (item.doc) {
-		href = `/docs/${item.doc}`;
+	} else if (item.type === 'doc') {
+		href = `/docs/${item.content}`;
 		target = 'blank';
 	} else {
 		href = `/${blog ? 'blog' : 'project'}/${item.slug}`;
@@ -36,6 +36,10 @@
 <br />
 
 <style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
 	a {
 		display: flex;
 		flex-direction: column;

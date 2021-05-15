@@ -1,18 +1,17 @@
-<div class="content">
+<div class="pageContent">
 	<slot />
 </div>
 
 <style>
-	.content {
+	.pageContent {
 		max-width: var(--mobileWidth);
 		margin: auto;
-		padding: var(--pad);
 
-		line-height: 30px;
+		padding: var(--pad);
+		line-height: var(--lineHeight);
 	}
 
-	:global(.content *) {
-		margin: 0;
-		padding: 0;
+	:global(.pageContent img) {
+		border-radius: var(--bRadius);
 	}
 </style>

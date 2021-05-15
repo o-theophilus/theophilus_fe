@@ -1,31 +1,47 @@
 <script>
 	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
+	import Title from '$lib/pageTitle.svelte';
+
+	import { goto } from '$app/navigation';
 
 	let form = {
 		name: '',
 		email: '',
-		message: ''
+		msg: ''
 	};
 
-	const submit = async (event) => {
+	let err = {
+		name: '',
+		email: '',
+		msg: '',
+		form: ''
+	};
+
+	const validate = () => {
+		err.name = form.name === '' ? 'Please enter your name' : '';
+		err.email = form.email === '' ? 'Please enter your email address' : '';
+		err.msg = form.msg === '' ? 'Please enter your message' : '';
+
+		if (err.name === '' && err.email === '' && err.msg === '' && err.form === '') {
+			submit();
+		}
+	};
+
+	const submit = async () => {
 		const resp = await fetch('https://formspree.io/f/xknkjbpb', {
 			method: 'post',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(form)
 		});
 
-		const data = resp.json();
+		const data = await resp.json();
 
 		if (resp.ok) {
-			console.log('Thanks for your submission!');
+			goto('/done');
 			// form.reset();
 		} else {
-			console.log('Oops! There was a problem submitting your form');
-			return {
-				status: resp.status,
-				error: data.message
-			};
+			err.form = data.error;
 		}
 	};
 </script>
@@ -36,29 +52,48 @@
 
 <Image src="/site/theophilus.jpg" />
 
-<Content>
+<Title>
 	<h1>Contact</h1>
-</Content>
-<hr />
+</Title>
 
 <Content>
 	<p>
 		Feel free to contact me with questions or anything else. I will do my best to respond to your
 		query as soon as possible.
 	</p>
-	<form on:submit|preventDefault={submit}>
+	<form on:submit|preventDefault={validate}>
 		<div class="inputGroup required">
 			<label for="name">Full Name</label>
 			<input placeholder="Your Name" type="text" name="name" bind:value={form.name} />
+			{#if err.name}
+				<p class="err">
+					{err.name}
+				</p>
+			{/if}
 		</div>
 		<div class="inputGroup required">
 			<label for="email">Email Address</label>
 			<input placeholder="Your Email Address" type="email" name="email" bind:value={form.email} />
+			{#if err.email}
+				<p class="err">
+					{err.email}
+				</p>
+			{/if}
 		</div>
 		<div class="inputGroup required">
 			<label for="message">Message</label>
-			<textarea placeholder="Your Message" name="message" bind:value={form.message} />
+			<textarea placeholder="Your Message" name="message" bind:value={form.msg} />
+			{#if err.msg}
+				<p class="err">
+					{err.msg}
+				</p>
+			{/if}
 		</div>
+		{#if err.form}
+			<p class="err">
+				{err.form}
+			</p>
+		{/if}
 		<div class="inputGroup submit">
 			<input type="submit" value="Send Message" />
 		</div>
@@ -105,10 +140,15 @@
 	[type='submit'] {
 		background-color: var(--color2);
 		color: var(--color1);
-		&:hover {
+		&:hover,
+		&:focus {
 			outline: none;
 			background-color: var(--color3);
 			border-color: var(--colorNill);
 		}
+	}
+
+	.err {
+		color: red;
 	}
 </style>

@@ -1,67 +1,26 @@
 <script>
-	import Content from '$lib/pageContent.svelte';
-	import marked from 'marked';
-	import hljs from 'highlight.js';
-	import '../a11y-dark.css';
-
-	marked.setOptions({
-		renderer: new marked.Renderer(),
-		highlight: function (code, lang) {
-			const language = hljs.getLanguage(lang) ? lang : 'plaintext';
-			return hljs.highlight(code, { language }).value;
-		}
-		// pedantic: false,
-		// gfm: true,
-		// breaks: false,
-		// sanitize: false,
-		// smartLists: true,
-		// smartypants: false,
-		// xhtml: false
-	});
+	import Title from '$lib/pageTitle.svelte';
+	import Marked from '$lib/marked.svelte';
 
 	let md = `
-# create-svelte
-
-## Creating a project
-
-
 \`\`\`javascript
 console.log("here")
 let a = 55;
 \`\`\`
-
-
-console.log("here")
-1. ewe
-1. ewe
-1. ewe
-   1. ewe
-   5. ewe
-
-* ewe
-* ewe
-
-
-*sdfsdfsf* **fsdfsdf**
-
-[ x ]. kdfdfjk
-
-	
-
 	`;
 </script>
 
-<Content>
+<Title>
 	<h1>Marked</h1>
-</Content>
-<hr />
-<div class="area">
+</Title>
+
+<div class="block">
 	<textarea bind:value={md} />
-	<div class="md">{@html marked(md)}</div>
+	<div class="md"><Marked {md} /></div>
 </div>
 
 <style>
-	.area {
+	.block {
 		display: flex;
 		max-width: calc(2 * var(--mobileWidth));
 
@@ -72,19 +31,12 @@ console.log("here")
 	textarea,
 	.md {
 		padding: var(--pad);
-		width: 100%;
+		width: 50%;
 
 		resize: none;
+		border: none;
 	}
 	textarea {
-		border: none;
 		background-color: rgb(255, 255, 175);
-	}
-
-	:global(pre) {
-		padding: 20px;
-	}
-	:global(pre *) {
-		font-family: monospace;
 	}
 </style>

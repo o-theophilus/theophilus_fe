@@ -1,14 +1,17 @@
 <script>
 	import Content from '$lib/pageContent.svelte';
-
-	export let title
 </script>
 
-<svelte:head>
-	<title>{title} - Theophilus</title>
-</svelte:head>
+<div class="pageTitle">
+	<Content>
+		<slot />
+	</Content>
+	<hr />
+</div>
 
-<Content>
-	<h1>{title}</h1>
-</Content>
-<hr />
+<style>
+	:global(.pageTitle *, hr) {
+		margin: 0;
+		padding: 0;
+	}
+</style>

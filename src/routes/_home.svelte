@@ -1,11 +1,11 @@
 <script>
 	import Content from '$lib/pageContent.svelte';
+	import Title from '$lib/pageTitle.svelte';
 </script>
 
-<Content>
+<Title>
 	<h1>Welcome!</h1>
-</Content>
-<hr />
+</Title>
 <Content>
 	<div class="center">
 		<h3>Hi.</h3>

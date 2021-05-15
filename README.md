@@ -47,11 +47,14 @@ module.exports = {
 
 # Tasks
 
-- [  ] project title static
-- [  ] about skills
-- [  ] svg mmb
-- [  ] blog .md
-- [  ] add blog to home
-- [  ] populate proj and blog content
-- [  ] npm mailer
-- [  ] page title images
+1. [ ] purchase theophilus.website
+1. [ ] page title images
+1. [ ] populate proj and blog content
+1. [ ] index animation
+1. [ ] item box elipses
+1. [ ] about skills
+1. [ ] svg mmb
+1. [ ] project title static
+1. [ ] more form validation
+1. [ ] enhance form
+1. [ ] add blog to home
