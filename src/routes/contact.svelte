@@ -100,7 +100,7 @@
 	</form>
 </Content>
 
-<style type="text/scss">
+<style>
 	.inputGroup {
 		margin-top: 20px;
 	}
@@ -126,26 +126,26 @@
 		background-color: var(--color6);
 
 		transition: all var(--animTime1);
-
-		&:focus {
-			outline: none;
-			background-color: var(--color1);
-			border-color: var(--color3);
-		}
 	}
 	textarea {
 		height: 150px;
+	}
+	input:focus,
+	textarea:focus {
+		outline: none;
+		background-color: var(--color1);
+		border-color: var(--color3);
 	}
 
 	[type='submit'] {
 		background-color: var(--color2);
 		color: var(--color1);
-		&:hover,
-		&:focus {
-			outline: none;
-			background-color: var(--color3);
-			border-color: var(--colorNill);
-		}
+	}
+	[type='submit']:hover,
+	[type='submit']:focus {
+		outline: none;
+		background-color: var(--color3);
+		border-color: var(--colorNill);
 	}
 
 	.err {

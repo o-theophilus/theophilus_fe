@@ -19,7 +19,7 @@
 	</div>
 </div>
 
-<style type="text/scss">
+<style>
 	.topBar {
 		position: fixed;
 		top: 0;
@@ -30,16 +30,15 @@
 
 		z-index: 3;
 
-		&.notMobile {
-			display: none;
-		}
-
 		--buttonSize: 50px;
 
 		--barHeight: calc(var(--buttonSize) / 10);
 		--barWidth: calc(var(--buttonSize) - var(--buttonSize) / 5);
 		--barPos: calc(var(--buttonSize) / 5);
 		--barCenter: calc(var(--buttonSize) / 2 - var(--barHeight) / 2);
+	}
+	.topBar.notMobile {
+		display: none;
 	}
 
 	.block {
@@ -73,9 +72,9 @@
 
 	.hideHeader {
 		background-color: var(--color4);
-		.bar {
-			background-color: var(--color5);
-		}
+	}
+	.hideHeader .bar {
+		background-color: var(--color5);
 	}
 
 	.bar {
@@ -89,8 +88,8 @@
 
 		transition: all var(--animTime1);
 
-		// mix-blend-mode: exclusion;
-		// mix-blend-mode: difference;
+		/* // mix-blend-mode: exclusion; */
+		/* // mix-blend-mode: difference; */
 	}
 	.one {
 		top: var(--barPos);
@@ -101,24 +100,22 @@
 
 	.mmb:hover {
 		background-color: var(--color3);
-		.bar {
-			background-color: var(--color1);
-		}
+	}
+	.mmb:hover .bar {
+		background-color: var(--color1);
 	}
 
-	.openMobileMenu {
-		.one {
-			top: var(--barCenter);
-		}
-		.three {
-			bottom: var(--barCenter);
-		}
-		.one,
-		.three {
-			transform: rotate(45deg);
-		}
-		.two {
-			transform: rotate(-45deg);
-		}
+	.openMobileMenu .one {
+		top: var(--barCenter);
+	}
+	.openMobileMenu .three {
+		bottom: var(--barCenter);
+	}
+	.openMobileMenu .one,
+	.openMobileMenu .three {
+		transform: rotate(45deg);
+	}
+	.openMobileMenu .two {
+		transform: rotate(-45deg);
 	}
 </style>
