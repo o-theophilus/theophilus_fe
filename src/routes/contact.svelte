@@ -217,11 +217,13 @@ I'll like so learn _____ from you.
 		transition: all var(--animTime1);
 	}
 	select {
+		background-color: var(--color1);
 		font-size: 16px;
 		border: none;
 		margin-bottom: 10px;
 	}
-	select:focus, select:active {
+	select:focus,
+	select:active {
 		border: none;
 	}
 
