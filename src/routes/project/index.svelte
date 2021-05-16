@@ -29,6 +29,7 @@
 <Image src="/images/akropol_001.jpeg" />
 <Title>
 	<h1>Projects</h1>
+	<p>Stuff I Made</p>
 </Title>
 
 <Content>

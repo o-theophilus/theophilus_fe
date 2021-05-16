@@ -2,8 +2,10 @@
 	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
 	import Title from '$lib/pageTitle.svelte';
+	import SVG from '$lib/svg.svelte';
 
 	import { goto } from '$app/navigation';
+	import { loop_guard } from 'svelte/internal';
 
 	let form = {
 		name: '',
@@ -20,7 +22,7 @@
 
 	const validate = () => {
 		err.name = form.name === '' ? 'Please enter your name' : '';
-		err.email = form.email === '' ? 'Please enter your email address' : '';
+		err.email = /\S+@\S+\.\S+/.test(form.email) ? '' : 'Please enter a valid email address';
 		err.msg = form.msg === '' ? 'Please enter your message' : '';
 
 		if (err.name === '' && err.email === '' && err.msg === '' && err.form === '') {
@@ -44,6 +46,30 @@
 			err.form = data.error;
 		}
 	};
+
+	const template = [
+		{
+			name: 'Nice Job!',
+			text: 'Wow!! Your site is awesome, Keep it up Bro.'
+		},
+		{
+			name: 'Lets work together',
+			text: `Hi Theo,
+	
+I like what you do, lets work together.
+
+You can reach me on my email or call +_____
+`
+		},
+		{
+			name: 'Learn',
+			text: `Hi Theo,
+
+I'll like so learn _____ from you.
+`
+		}
+	];
+	let store = '';
 </script>
 
 <svelte:head>
@@ -62,27 +88,47 @@
 		query as soon as possible.
 	</p>
 	<form on:submit|preventDefault={validate}>
-		<div class="inputGroup required">
+		<div class="inputGroup">
 			<label for="name">Full Name</label>
-			<input placeholder="Your Name" type="text" name="name" bind:value={form.name} />
+			<input placeholder="Your Name" type="text" id="name" bind:value={form.name} />
+			<svg width="30px" height="30px">
+				<SVG type="username" />
+			</svg>
 			{#if err.name}
 				<p class="err">
 					{err.name}
 				</p>
 			{/if}
 		</div>
-		<div class="inputGroup required">
+		<div class="inputGroup">
 			<label for="email">Email Address</label>
-			<input placeholder="Your Email Address" type="email" name="email" bind:value={form.email} />
+			<input placeholder="Your Email Address" type="text" id="email" bind:value={form.email} />
+			<svg width="30px" height="30px">
+				<SVG type="emailAddress" />
+			</svg>
 			{#if err.email}
 				<p class="err">
 					{err.email}
 				</p>
 			{/if}
 		</div>
-		<div class="inputGroup required">
-			<label for="message">Message</label>
-			<textarea placeholder="Your Message" name="message" bind:value={form.msg} />
+		<div class="inputGroup">
+			<!-- <label for="message">Message</label> -->
+
+			<select name="template" id="" bind:value={form.msg}>
+				<!-- <option selected="true" disabled="disabled">Template</option> -->
+				<option value={store}>Message</option>
+				{#each template as temp}
+					<option value={temp.text}>{temp.name}</option>
+				{/each}
+			</select>
+
+			<textarea
+				placeholder="Your Message"
+				id="message"
+				bind:value={form.msg}
+				on:input={() => (store = form.msg)}
+			/>
 			{#if err.msg}
 				<p class="err">
 					{err.msg}
@@ -102,6 +148,9 @@
 
 <style>
 	.inputGroup {
+		--inputHeight: 50px;
+
+		position: relative;
 		margin-top: 20px;
 	}
 	label {
@@ -111,7 +160,7 @@
 	input,
 	textarea {
 		width: 100%;
-		height: 50px;
+		height: var(--inputHeight);
 
 		border-radius: var(--bRadius);
 		border-radius: 25px;
@@ -146,6 +195,34 @@
 		outline: none;
 		background-color: var(--color3);
 		border-color: var(--colorNill);
+	}
+
+	[type='text'] {
+		padding-left: var(--inputHeight);
+	}
+	[type='text']:hover + svg,
+	[type='text']:focus + svg {
+		fill: var(--color3);
+	}
+	svg {
+		--svgSize: 30px;
+
+		position: absolute;
+
+		top: 50px;
+		left: calc((var(--inputHeight) - var(--svgSize)) / 2);
+
+		fill: var(--color2);
+
+		transition: all var(--animTime1);
+	}
+	select {
+		font-size: 16px;
+		border: none;
+		margin-bottom: 10px;
+	}
+	select:focus, select:active {
+		border: none;
 	}
 
 	.err {

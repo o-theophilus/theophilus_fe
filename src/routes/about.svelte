@@ -2,16 +2,17 @@
 	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
 	import Title from '$lib/pageTitle.svelte';
-	
+	import Skill from '$lib/skill.svelte';
 
 	let skills = [
 		// { name: 'C#', value: 82 },
-		{ name: 'Python', value: 90 },
 		{ name: 'HTML', value: 95 },
 		{ name: 'CSS', value: 90 },
 		{ name: 'JavaScript', value: 65 },
 		// { name: 'React', value: 50 },
-		{ name: 'Svelte', value: 87 },
+		{ name: 'Svelte / SvelteKit', value: 87 },
+		{ name: 'Python', value: 90 },
+		{ name: 'Flask', value: 85 }
 		// { name: 'Arduino', value: 92 }
 	];
 
@@ -68,14 +69,50 @@
 			<br />
 			<br />
 		</p>
+		<h3>Programming Skills / Stack</h3>
 		{#each skills as ent}
-			{ent.name} - {ent.value}
-			<br />
+			<div class="skill">
+				<div class="name">
+					{ent.name}
+				</div>
+				<div>
+					<Skill num={ent.value} />
+				</div>
+			</div>
 		{/each}
 		<br />
+
+		<h3>Software Skills</h3>
 		{#each tools as ent}
-			{ent.name} - {ent.value}
-			<br />
+			<div class="skill">
+				<div class="name">
+					{ent.name}
+				</div>
+				<div>
+					<Skill num={ent.value} />
+				</div>
+			</div>
 		{/each}
+		<br />
+
+		<h2>This Website</h2>
+		<p>
+			The page you're looking at is made with SvelteKit, TypeScript and TailwindCSS and deployed on
+			Vercel. It's entirely static through the SvelteKit's SSG feature. Posts are written in
+			Markdown and converted to nice-looking HTML at build-time. It was originally built with
+			Gridsome, then moved to NextJS and now to SvelteKit. It's an all-in-one blog, portfolio and
+			pet project to try out new shiny things.
+		</p>
 	</div>
 </Content>
+
+<style>
+	.skill {
+		display: flex;
+		gap: 20px;
+		align-items: center;
+	}
+	.name {
+		width: 150px;
+	}
+</style>

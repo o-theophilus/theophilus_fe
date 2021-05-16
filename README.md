@@ -47,14 +47,14 @@ module.exports = {
 
 # Tasks
 
+1. [ ] item box elipses
 1. [ ] purchase theophilus.website
 1. [ ] page title images
 1. [ ] populate proj and blog content
 1. [ ] index animation
-1. [ ] item box elipses
-1. [ ] about skills
 1. [ ] svg mmb
 1. [ ] project title static
-1. [ ] more form validation
-1. [ ] enhance form
+1. [ ] review form message
+1. [ ] form sending animation
 1. [ ] add blog to home
+1. [ ] dark mode

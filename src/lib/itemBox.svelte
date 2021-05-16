@@ -1,6 +1,5 @@
 <script>
 	export let item;
-
 	export let blog = false;
 
 	let href;
