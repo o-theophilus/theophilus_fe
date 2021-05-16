@@ -59,7 +59,7 @@
 			<br />
 			<br />
 			I have benefited in massive ways from the work of those who took the time to share their know-how
-			on the internet. From various bloggers to programming forums, to the now ubiquitous Stack Overow,
+			on the internet. From various bloggers to programming forums, to the now ubiquitous Stack Overflow,
 			I have, in Borg-like fashion, assimilated the experience and college education of some of the biggest
 			(and not so big) names in the technology arena. Shamelessly!
 			<br />
