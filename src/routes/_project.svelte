@@ -5,23 +5,24 @@
 	import ItemBox from '$lib/itemBox.svelte';
 
 	export let projects = [];
+	let items = projects;
 
-	let selected = [0, 3];
-	let len = 5 - selected.length;
+	// let selected = [0, 3];
+	// let len = 5 - selected.length;
 
-	for (let n = 0; n < len; n++) {
-		let num = Math.floor(Math.random() * projects.length);
-		while (selected.includes(num)) {
-			num = Math.floor(Math.random() * projects.length);
-		}
-		selected.push(num);
-	}
+	// for (let n = 0; n < len; n++) {
+	// 	let num = Math.floor(Math.random() * projects.length);
+	// 	while (selected.includes(num)) {
+	// 		num = Math.floor(Math.random() * projects.length);
+	// 	}
+	// 	selected.push(num);
+	// }
 
-	let items = [];
+	// let items = [];
 
-	for (let n = 0; n < selected.length; n++) {
-		items.push(projects[selected[n]]);
-	}
+	// for (let n = 0; n < selected.length; n++) {
+	// 	items.push(projects[selected[n]]);
+	// }
 
 	let title;
 

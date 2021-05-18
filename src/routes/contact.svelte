@@ -4,9 +4,6 @@
 	import Title from '$lib/pageTitle.svelte';
 	import SVG from '$lib/svg.svelte';
 
-	import { goto } from '$app/navigation';
-	import { loop_guard } from 'svelte/internal';
-
 	let form = {
 		name: '',
 		email: '',
@@ -20,6 +17,9 @@
 		form: ''
 	};
 
+	let sent = false;
+	let sending = false;
+
 	const validate = () => {
 		err.name = form.name === '' ? 'Please enter your name' : '';
 		err.email = /\S+@\S+\.\S+/.test(form.email) ? '' : 'Please enter a valid email address';
@@ -31,6 +31,7 @@
 	};
 
 	const submit = async () => {
+		sending = true;
 		const resp = await fetch('https://formspree.io/f/xknkjbpb', {
 			method: 'post',
 			headers: { 'Content-Type': 'application/json' },
@@ -39,9 +40,9 @@
 
 		const data = await resp.json();
 
+		sending = false;
 		if (resp.ok) {
-			goto('/done');
-			// form.reset();
+			sent = true;
 		} else {
 			err.form = data.error;
 		}
@@ -73,77 +74,99 @@ I'll like so learn _____ from you.
 </script>
 
 <svelte:head>
-	<title>Contact - Theophilus</title>
+	<title>{!sent ? 'Contact' : 'Message Sent'} - Theophilus</title>
 </svelte:head>
 
 <Image src="/site/theophilus.jpg" />
 
 <Title>
-	<h1>Contact</h1>
+	<h1>{!sent ? 'Contact' : 'Message Sent'}</h1>
 </Title>
 
 <Content>
-	<p>
-		Feel free to contact me with questions or anything else. I will do my best to respond to your
-		query as soon as possible.
-	</p>
-	<form on:submit|preventDefault={validate}>
-		<div class="inputGroup">
-			<label for="name">Full Name</label>
-			<input placeholder="Your Name" type="text" id="name" bind:value={form.name} />
-			<svg width="30px" height="30px">
-				<SVG type="username" />
-			</svg>
-			{#if err.name}
-				<p class="err">
-					{err.name}
-				</p>
-			{/if}
-		</div>
-		<div class="inputGroup">
-			<label for="email">Email Address</label>
-			<input placeholder="Your Email Address" type="text" id="email" bind:value={form.email} />
-			<svg width="30px" height="30px">
-				<SVG type="emailAddress" />
-			</svg>
-			{#if err.email}
-				<p class="err">
-					{err.email}
-				</p>
-			{/if}
-		</div>
-		<div class="inputGroup">
-			<!-- <label for="message">Message</label> -->
-
-			<select name="template" id="" bind:value={form.msg}>
-				<!-- <option selected="true" disabled="disabled">Template</option> -->
-				<option value={store}>Message</option>
-				{#each template as temp}
-					<option value={temp.text}>{temp.name}</option>
-				{/each}
-			</select>
-
-			<textarea
-				placeholder="Your Message"
-				id="message"
-				bind:value={form.msg}
-				on:input={() => (store = form.msg)}
-			/>
-			{#if err.msg}
-				<p class="err">
-					{err.msg}
-				</p>
-			{/if}
-		</div>
-		{#if err.form}
-			<p class="err">
-				{err.form}
-			</p>
+	<div class="form_block">
+		{#if sending}
+			<div class="blocker">
+				<video class="busy" loop autoplay muted>
+					<source src="/site/busy.mp4" type="video/mp4" />
+				</video>
+				<br />
+				<br />
+				<h2>Sending . . .</h2>
+			</div>
 		{/if}
-		<div class="inputGroup submit">
-			<input type="submit" value="Send Message" />
-		</div>
-	</form>
+		{#if !sent}
+			<p>
+				Feel free to contact me with questions or anything else. I will do my best to respond to
+				your query as soon as possible.
+			</p>
+
+			<form on:submit|preventDefault={validate}>
+				<div class="inputGroup">
+					<label for="name">Full Name</label>
+					<input placeholder="Your Name" type="text" id="name" bind:value={form.name} />
+					<svg width="30px" height="30px">
+						<SVG type="username" />
+					</svg>
+					{#if err.name}
+						<p class="err">
+							{err.name}
+						</p>
+					{/if}
+				</div>
+				<div class="inputGroup">
+					<label for="email">Email Address</label>
+					<input placeholder="Your Email Address" type="text" id="email" bind:value={form.email} />
+					<svg width="30px" height="30px">
+						<SVG type="emailAddress" />
+					</svg>
+					{#if err.email}
+						<p class="err">
+							{err.email}
+						</p>
+					{/if}
+				</div>
+				<div class="inputGroup">
+					<select name="template" id="" bind:value={form.msg}>
+						<option value={store}>Message</option>
+						{#each template as temp}
+							<option value={temp.text}>{temp.name}</option>
+						{/each}
+					</select>
+
+					<textarea
+						placeholder="Your Message"
+						id="message"
+						bind:value={form.msg}
+						on:input={() => (store = form.msg)}
+					/>
+					{#if err.msg}
+						<p class="err">
+							{err.msg}
+						</p>
+					{/if}
+				</div>
+				{#if err.form}
+					<p class="err">
+						{err.form}
+					</p>
+				{/if}
+				<div class="inputGroup submit">
+					<input type="submit" value="Send Message" />
+				</div>
+			</form>
+		{:else}
+			<p>Thank You</p>
+			<br />
+			<br />
+			<video loop autoplay muted>
+				<source src="/site/done.mp4" type="video/mp4" />
+			</video>
+			<br />
+			<br />
+			Back to <a href="/">Home</a>
+		{/if}
+	</div>
 </Content>
 
 <style>
@@ -228,6 +251,29 @@ I'll like so learn _____ from you.
 	}
 
 	.err {
-		color: red;
+		color: var(--fColor3);
+	}
+
+	/* ************************* */
+	.form_block {
+		position: relative;
+	}
+
+	.blocker {
+		position: absolute;
+		background-color: var(--color1);
+
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.busy {
+		max-width: 200px;
 	}
 </style>
