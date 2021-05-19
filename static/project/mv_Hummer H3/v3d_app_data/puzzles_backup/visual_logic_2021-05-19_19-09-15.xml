@@ -1,0 +1,1553 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="false" scrollx="744.9999999999997" scrolly="608" scale="0.9"></tab>
+  <tab name="main" type="MainTab" active="true" scrollx="793.3719240128994" scrolly="2338.9161211550236" scale="0.9070294784580498">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="!.fmxjV|pnptGsl.DfCr" type="">autoRotateDirection</variable>
+      <variable id="}~7ead6=vXJ,O5Fqh,P*" type="">opened.FL</variable>
+      <variable id="dbj]C@v3fsqQ02KinS5X" type="">opened.FR</variable>
+      <variable id="nj4,H%%m:h5t6F$s^2G[" type="">opened.BL</variable>
+      <variable id="+KH=nK-4SIeaE5biJ;u7" type="">opened.BR</variable>
+      <variable id="}*o+D%smO.V@zve_I:b+" type="">opened.boot</variable>
+      <variable id="w-p!dldc[C,!@du9[w!|" type="">opened.roof</variable>
+      <variable id="M;)/y|Pp*}6;+z*p#X8K" type="">autoRotateSpeed</variable>
+      <variable id="p1N1j7=z0/qx-PdyrBb}" type="">playing.FL</variable>
+      <variable id="Fp.yF|rM;Qbc`L]w0E|$" type="">playing.FR</variable>
+      <variable id="j3x.*R`yn(K3|c5+W8m7" type="">playing.BL</variable>
+      <variable id="zmZIkvT,OLLce]IdX.se" type="">playing.BR</variable>
+      <variable id="H`D-8KDH/}89HZj/0X%S" type="">playing.boot</variable>
+      <variable id="91en[jF1Q%7EO[tCwQy[" type="">playing.roof</variable>
+      <variable id="NFCfO|SaIe%_OgHfMi0." type="">allowAutoRotate</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="`wB^/5M@t_B.e36?W4]x" x="-750" y="-2210">
+      <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
+      <value name="VALUE">
+        <block type="math_number" id="+py]^R5K0K0|JT~M;k8l">
+          <field name="NUM">1</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set" id="pT^3.0PMR%ewX8WAhCSO">
+          <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
+          <value name="VALUE">
+            <block type="math_number" id="tqGKue}u6/4g7(BkZv?z">
+              <field name="NUM">2</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set" id="ukpVpP$E`*laQ$Df;!5Z">
+              <field name="VAR" id="NFCfO|SaIe%_OgHfMi0.">allowAutoRotate</field>
+              <value name="VALUE">
+                <block type="logic_boolean" id="Tz=uB=dbmGoWve=5,]Ae">
+                  <field name="BOOL">TRUE</field>
+                </block>
+              </value>
+              <next>
+                <block type="autoRotateCamera" id="69lV8#5,wZIy=fhPtKbQ">
+                  <field name="ON_OFF">ON</field>
+                  <value name="SPEED">
+                    <shadow type="math_number" id="^3aegt$0.+g5s4KE*j86">
+                      <field name="NUM">2</field>
+                    </shadow>
+                    <block type="math_arithmetic" id="AYs6aiDF!v_td0+:FE4K">
+                      <field name="OP">MULTIPLY</field>
+                      <value name="A">
+                        <shadow type="math_number">
+                          <field name="NUM">2</field>
+                        </shadow>
+                        <block type="variables_get" id="|-(?#o-TW]6^Fr|KJ=F+">
+                          <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <shadow type="math_number">
+                          <field name="NUM">2</field>
+                        </shadow>
+                        <block type="variables_get" id="*(v}s%{Q$ZUS6BHsh:$F">
+                          <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="of,,jEK)2[$JyK5SE_`p" x="-750" y="-2050">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="^[bV#jNzC}{fb;E+{$s2">
+          <field name="FIELDNAME">&lt;none&gt;</field>
+        </shadow>
+        <block type="allObjectList" id="xiR7d?ry6|sxW0|rTxmw"/>
+      </value>
+      <statement name="DO">
+        <block type="console.log" id="{PiP`t~D*Ip{b=8YBV)6">
+          <value name="VALUE">
+            <shadow type="text" id="}UkOU.X09;1=xbz*G#^~">
+              <field name="TEXT">auto rotate</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="console.log" id="0w(cjoSRoAWZStJRX=Ly">
+              <value name="VALUE">
+                <shadow type="text" id="B%Wnorob@LJ/zeWY/jfX">
+                  <field name="TEXT">auto rotate</field>
+                </shadow>
+                <block type="variables_get" id="O;6or$N%(P|TA?8A)3H}">
+                  <field name="VAR" id="NFCfO|SaIe%_OgHfMi0.">allowAutoRotate</field>
+                </block>
+              </value>
+              <next>
+                <block type="controls_if" id="581B}dcdm^9B/Y{Qr]1%">
+                  <mutation else="1"/>
+                  <value name="IF0">
+                    <block type="variables_get" id="ZUhoxd/XWfGiFB0)]6i5">
+                      <field name="VAR" id="NFCfO|SaIe%_OgHfMi0.">allowAutoRotate</field>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="autoRotateCamera" id="8`JJb-jCn;U@R#7(Yt5X">
+                      <field name="ON_OFF">OFF</field>
+                      <value name="SPEED">
+                        <shadow type="math_number" id="t.KInr}eWE-JA9T[hmo~">
+                          <field name="NUM">0</field>
+                        </shadow>
+                      </value>
+                      <next>
+                        <block type="setTimeout" id="0wiHdht{%*J.tp?ZUzi4">
+                          <value name="VALUE">
+                            <shadow type="math_number" id="sy:9UjI3sl]|lKPEc?;X">
+                              <field name="NUM">5</field>
+                            </shadow>
+                          </value>
+                          <statement name="DO">
+                            <block type="autoRotateCamera" id="L,[S#I:s8IeSat/QxN`Y">
+                              <field name="ON_OFF">ON</field>
+                              <value name="SPEED">
+                                <shadow type="math_number" id="x6Hi:]vWdt(toh_Dy8uo">
+                                  <field name="NUM">2</field>
+                                </shadow>
+                                <block type="math_arithmetic" id="$8?m;W?Qf~8Pdi2jw2V/">
+                                  <field name="OP">MULTIPLY</field>
+                                  <value name="A">
+                                    <shadow type="math_number">
+                                      <field name="NUM">2</field>
+                                    </shadow>
+                                    <block type="variables_get" id="NAh91ZuUN~j`6E:|S2h[">
+                                      <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <shadow type="math_number">
+                                      <field name="NUM">2</field>
+                                    </shadow>
+                                    <block type="variables_get" id="hv{`(2A^(Te9]B?sA6}B">
+                                      <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="autoRotateCamera" id="fERC4i+/rS1og0`STiQj">
+                      <field name="ON_OFF">OFF</field>
+                      <value name="SPEED">
+                        <shadow type="math_number" id="4PMJE|(TaD{S1BKAb@2f">
+                          <field name="NUM">0</field>
+                        </shadow>
+                      </value>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="C-+n]v1UR98bMIgeC?v}" x="-130" y="-1770">
+      <field name="EVENT">click</field>
+      <field name="PARENT">TRUE</field>
+      <value name="ID">
+        <shadow type="text" id="5S)BnC%(}+-6xvz`;dS/">
+          <field name="TEXT">direction</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="console.log" id="/AS6:ENpn~DO/V,d8{Dm">
+          <value name="VALUE">
+            <shadow type="text" id="0Z-r3+;/GAw$_;FeZ+JU">
+              <field name="TEXT">direction</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="controls_ifelse" id="=im9lx+^/}-YA^ew1M!b">
+              <value name="IF0">
+                <block type="logic_compare" id="f?AV3zIa3uY]B[PJahF_">
+                  <field name="OP">EQ</field>
+                  <value name="A">
+                    <block type="variables_get" id=")=eG-Io|EDuVyiNd]Nh@">
+                      <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number" id="Qyv8WCHOvKN~vDq~J(tz">
+                      <field name="NUM">1</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="variables_set" id="mt}YJ5)p29K;k|fTc{wh">
+                  <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
+                  <value name="VALUE">
+                    <block type="math_number" id="ypn0~5}TLPW5-HzDQ{yb">
+                      <field name="NUM">-1</field>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <statement name="ELSE">
+                <block type="variables_set" id="7RzJ8DUHFlUY3q.0v|*K">
+                  <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
+                  <value name="VALUE">
+                    <block type="math_number" id="WNl5V{/D+OF4zX7)?~SI">
+                      <field name="NUM">1</field>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="rct7%}`JvpPf02xPt`dZ" x="-750" y="-1650">
+      <field name="EVENT">click</field>
+      <field name="PARENT">TRUE</field>
+      <value name="ID">
+        <shadow type="text" id="9zMVBx-jyJ+MF,:Fdvbv">
+          <field name="TEXT">autoRotate</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="console.log" id="6K=Y6-0j$xO7)=^O@s|Q">
+          <value name="VALUE">
+            <shadow type="text" id="aa/gj#c-BDqA*IK#MZBO">
+              <field name="TEXT">auto rotate</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="controls_ifelse" id="wul};t1g[kZ.Dn=vwor2">
+              <value name="IF0">
+                <block type="variables_get" id="^HJLLkSnV!JiFN{D=G~:">
+                  <field name="VAR" id="NFCfO|SaIe%_OgHfMi0.">allowAutoRotate</field>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="autoRotateCamera" id="q}J7Zgl{+N1n7k,tOj56">
+                  <field name="ON_OFF">OFF</field>
+                  <value name="SPEED">
+                    <shadow type="math_number" id="GLkJa^4(N#YW*$6dDV_L">
+                      <field name="NUM">0</field>
+                    </shadow>
+                  </value>
+                  <next>
+                    <block type="variables_set" id="cX5#plBo9YU2d@PgAgF#">
+                      <field name="VAR" id="NFCfO|SaIe%_OgHfMi0.">allowAutoRotate</field>
+                      <value name="VALUE">
+                        <block type="logic_boolean" id="CCO1l|ICr4j8[/.cF7;n">
+                          <field name="BOOL">FALSE</field>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <statement name="ELSE">
+                <block type="autoRotateCamera" id="b7@nkWYHqVqgHR!ueKBS">
+                  <field name="ON_OFF">ON</field>
+                  <value name="SPEED">
+                    <shadow type="math_number">
+                      <field name="NUM">2</field>
+                    </shadow>
+                    <block type="math_arithmetic" id="E;baMfow)~zbrO0Mn:H^">
+                      <field name="OP">MULTIPLY</field>
+                      <value name="A">
+                        <shadow type="math_number">
+                          <field name="NUM">2</field>
+                        </shadow>
+                        <block type="variables_get" id="wz1I^Lu|GfX=zKiKbbK=">
+                          <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <shadow type="math_number">
+                          <field name="NUM">2</field>
+                        </shadow>
+                        <block type="variables_get" id="qpTep_2ku75505s$;,)e">
+                          <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="variables_set" id=":S]Rmo+:_:;gY7tSr[87">
+                      <field name="VAR" id="NFCfO|SaIe%_OgHfMi0.">allowAutoRotate</field>
+                      <value name="VALUE">
+                        <block type="logic_boolean" id="JtR/u6a)5b@C^XOHdJo=">
+                          <field name="BOOL">TRUE</field>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="gKQjzK|?/k(K;R55[y:e" x="50" y="-210">
+      <field name="VAR" id="}~7ead6=vXJ,O5Fqh,P*">opened.FL</field>
+      <value name="VALUE">
+        <block type="logic_boolean" id="bEGeZ)Iq%CxkcGtKveL@">
+          <field name="BOOL">FALSE</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set" id="AQZg8MQ+qMN7M=.kCb4F">
+          <field name="VAR" id="p1N1j7=z0/qx-PdyrBb}">playing.FL</field>
+          <value name="VALUE">
+            <block type="logic_boolean" id="uEy@K.%mvmX+:z=)Wvp_">
+              <field name="BOOL">FALSE</field>
+            </block>
+          </value>
+          <next>
+            <block type="whenClicked" id="?ASxuR@?cnKPa#hXPDlC">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+              <field name="X_RAY">FALSE</field>
+              <field name="DOUBLE_CLICK">FALSE</field>
+              <field name="LEFT_BUTTON">TRUE</field>
+              <field name="MIDDLE_BUTTON">TRUE</field>
+              <field name="RIGHT_BUTTON">TRUE</field>
+              <value name="VALUE">
+                <shadow type="objectList">
+                  <field name="FIELDNAME">door.FL</field>
+                </shadow>
+                <block type="objectList" id="-/Jl(#:JEW3=F^!!VQ{6">
+                  <field name="FIELDNAME">door.FL</field>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="controls_if" id="pbzLk@9r,(0eGdhNLNb1">
+                  <value name="IF0">
+                    <block type="logic_negate" id="gHFZeHr,,C$VTrUG/}=3">
+                      <value name="BOOL">
+                        <block type="variables_get" id="9:*SiQTZqnr28ncCWJ5t">
+                          <field name="VAR" id="p1N1j7=z0/qx-PdyrBb}">playing.FL</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="variables_set" id="N*ULqel2VYKymM]9:s:j">
+                      <field name="VAR" id="p1N1j7=z0/qx-PdyrBb}">playing.FL</field>
+                      <value name="VALUE">
+                        <block type="logic_boolean" id="7*+O,;%UsUzw%x__yj`T">
+                          <field name="BOOL">TRUE</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="controls_ifelse" id="zzjsmr|ylFOwf*|TDXv-">
+                          <value name="IF0">
+                            <block type="logic_negate" id="/45GfYVV8~5iLNw.8TK{">
+                              <value name="BOOL">
+                                <block type="variables_get" id="tWTt=?XX]Xo3wxmf!hgk">
+                                  <field name="VAR" id="}~7ead6=vXJ,O5Fqh,P*">opened.FL</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <statement name="DO0">
+                            <block type="playAnimationAdv" id=".1X^T=Du)ks^(Ce@R^ZA">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="false" enablewhenfinished="true"></mutation>
+                              <field name="REVERSED">FALSE</field>
+                              <field name="LOOP">LoopOnce</field>
+                              <value name="VALUE">
+                                <shadow type="animationList" id="L_n52*o5phL=m@1t^Y3;">
+                                  <field name="FIELDNAME">door.FL</field>
+                                </shadow>
+                                <block type="animationList" id="B@:5%aBruFWUDycmjKHJ">
+                                  <field name="FIELDNAME">door.FL</field>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="variables_set" id="aB6I-1;~{W:siey)wwxF">
+                                  <field name="VAR" id="}~7ead6=vXJ,O5Fqh,P*">opened.FL</field>
+                                  <value name="VALUE">
+                                    <block type="logic_boolean" id="IbiO/@Waz5I5aJWi}rpY">
+                                      <field name="BOOL">TRUE</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="variables_set" id="ruHQ%kxv]hJv9rV6V#Z,">
+                                      <field name="VAR" id="p1N1j7=z0/qx-PdyrBb}">playing.FL</field>
+                                      <value name="VALUE">
+                                        <block type="logic_boolean" id="IEFqayYSo#+k9C:H~5eT">
+                                          <field name="BOOL">FALSE</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </statement>
+                          <statement name="ELSE">
+                            <block type="playAnimationAdv" id="k_eTs$g)Y4`5_bD9@8nu">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="true"></mutation>
+                              <field name="REVERSED">TRUE</field>
+                              <field name="LOOP">LoopOnce</field>
+                              <value name="VALUE">
+                                <shadow type="animationList" id="?].GS:C5nw:aDG!JOJdh">
+                                  <field name="FIELDNAME">door.FL</field>
+                                </shadow>
+                                <block type="animationList" id="y$aQR53eW+Us~lsZz38Q">
+                                  <field name="FIELDNAME">door.FL</field>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="variables_set" id="^oN3Yf0l9$B=^L(vpjrl">
+                                  <field name="VAR" id="}~7ead6=vXJ,O5Fqh,P*">opened.FL</field>
+                                  <value name="VALUE">
+                                    <block type="logic_boolean" id="O`D[X2OGdX!^LsPk2DOg">
+                                      <field name="BOOL">FALSE</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="variables_set" id="3_J$Nvwc!I)+WrG`wvo;">
+                                      <field name="VAR" id="p1N1j7=z0/qx-PdyrBb}">playing.FL</field>
+                                      <value name="VALUE">
+                                        <block type="logic_boolean" id="Hy~JP8TSMG?+.W%p[K$c">
+                                          <field name="BOOL">FALSE</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenHovered" id="qM,Q@Cg4PlVOC,jYcj?W" x="-630" y="-170">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="JUj;J+$G_u#0DGNdo;ve">
+          <field name="FIELDNAME">door.FL</field>
+        </shadow>
+      </value>
+      <statement name="DO_OVER">
+        <block type="outline" id="/Z[E#PIPST0aTK(qqC)P">
+          <field name="DO_WHAT">ENABLE</field>
+          <value name="TARGET">
+            <shadow type="objectList" id="^na.DI]LQ61Bn/s~DW=m">
+              <field name="FIELDNAME">door.FL</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+      <statement name="DO_OUT">
+        <block type="outline" id="hf.nYy4bZj0JarBdR4F)">
+          <field name="DO_WHAT">DISABLE</field>
+          <value name="TARGET">
+            <shadow type="objectList" id="1tGz{S~sq^WB!-ax?t:!">
+              <field name="FIELDNAME">door.FL</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+      <next>
+        <block type="whenHovered" id="ZE7A+5VtxZcd?,5j*$qG">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+          <field name="X_RAY">FALSE</field>
+          <value name="VALUE">
+            <shadow type="objectList" id="Xc=qMuD-uK0@A}cRa;Hn">
+              <field name="FIELDNAME">door.FR</field>
+            </shadow>
+          </value>
+          <statement name="DO_OVER">
+            <block type="outline" id="8?UXoxQr^*YL#%g-BLG1">
+              <field name="DO_WHAT">ENABLE</field>
+              <value name="TARGET">
+                <shadow type="objectList" id="K|9_={Ob~$mipfFck_A@">
+                  <field name="FIELDNAME">door.FR</field>
+                </shadow>
+              </value>
+            </block>
+          </statement>
+          <statement name="DO_OUT">
+            <block type="outline" id="D8LPL`yvDL#9_E@fNkrE">
+              <field name="DO_WHAT">DISABLE</field>
+              <value name="TARGET">
+                <shadow type="objectList" id=":hlS)|p;b[P5be1:tkm;">
+                  <field name="FIELDNAME">door.FR</field>
+                </shadow>
+              </value>
+            </block>
+          </statement>
+          <next>
+            <block type="whenHovered" id="4SV4shdV7T1JYnxFdmv4">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+              <field name="X_RAY">FALSE</field>
+              <value name="VALUE">
+                <shadow type="objectList" id="3XQ5fWj5NxpZYa0O32Cp">
+                  <field name="FIELDNAME">door.BL</field>
+                </shadow>
+              </value>
+              <statement name="DO_OVER">
+                <block type="outline" id="|b9KiO/~c..)l+LUd#O,">
+                  <field name="DO_WHAT">ENABLE</field>
+                  <value name="TARGET">
+                    <shadow type="objectList" id="QM/6*aOi0sT,t5vJb{;I">
+                      <field name="FIELDNAME">door.BL</field>
+                    </shadow>
+                  </value>
+                </block>
+              </statement>
+              <statement name="DO_OUT">
+                <block type="outline" id="(ctK.]~8T:`RGhd_fpqW">
+                  <field name="DO_WHAT">DISABLE</field>
+                  <value name="TARGET">
+                    <shadow type="objectList" id="DF;/)Qhtqp!%W29to6~A">
+                      <field name="FIELDNAME">door.BL</field>
+                    </shadow>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="whenHovered" id="C.*wN|3fw%41|MiVX@RR">
+                  <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+                  <field name="X_RAY">FALSE</field>
+                  <value name="VALUE">
+                    <shadow type="objectList" id="VAwn{,5?T^PlnDB{]Q$+">
+                      <field name="FIELDNAME">door.BR</field>
+                    </shadow>
+                  </value>
+                  <statement name="DO_OVER">
+                    <block type="outline" id="JAc}LlU;q=9EhI$~vuwy">
+                      <field name="DO_WHAT">ENABLE</field>
+                      <value name="TARGET">
+                        <shadow type="objectList" id="@2bW:o:PK-8[OEniZ6Y@">
+                          <field name="FIELDNAME">door.BR</field>
+                        </shadow>
+                      </value>
+                    </block>
+                  </statement>
+                  <statement name="DO_OUT">
+                    <block type="outline" id="WsM0/Qf]]N~Ryh6XrJys">
+                      <field name="DO_WHAT">DISABLE</field>
+                      <value name="TARGET">
+                        <shadow type="objectList" id=",:oQz=M(vU#+R*X8KSq/">
+                          <field name="FIELDNAME">door.BR</field>
+                        </shadow>
+                      </value>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="whenHovered" id="DeX3X5o;vnzi6|tm^G+@">
+                      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+                      <field name="X_RAY">FALSE</field>
+                      <value name="VALUE">
+                        <shadow type="objectList" id="-}Xw@)-9k2iB{Mz3#5_L">
+                          <field name="FIELDNAME">boot</field>
+                        </shadow>
+                      </value>
+                      <statement name="DO_OVER">
+                        <block type="outline" id="q1(/n~q1|jV=/:6OGQe]">
+                          <field name="DO_WHAT">ENABLE</field>
+                          <value name="TARGET">
+                            <shadow type="objectList" id="{||opN:c5;,OjLdwo`8-">
+                              <field name="FIELDNAME">boot</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </statement>
+                      <statement name="DO_OUT">
+                        <block type="outline" id="=nvYRhIb8Ho{*}q#@?;$">
+                          <field name="DO_WHAT">DISABLE</field>
+                          <value name="TARGET">
+                            <shadow type="objectList" id="v,i5zqTAD#Ode7+qDC/S">
+                              <field name="FIELDNAME">boot</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="whenHovered" id="!t3wgw*p=s:,LB$wd(@h">
+                          <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+                          <field name="X_RAY">FALSE</field>
+                          <value name="VALUE">
+                            <shadow type="objectList" id="S0DE]Eca@-0Q?K$q@[_i">
+                              <field name="FIELDNAME">roof</field>
+                            </shadow>
+                          </value>
+                          <statement name="DO_OVER">
+                            <block type="outline" id="(%DG=;dq:,Bib251$F-r">
+                              <field name="DO_WHAT">ENABLE</field>
+                              <value name="TARGET">
+                                <shadow type="objectList" id="QLVvBkzFfe_UlO$_qun6">
+                                  <field name="FIELDNAME">roof</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </statement>
+                          <statement name="DO_OUT">
+                            <block type="outline" id=";S?Mehew-wor};6N;DXB">
+                              <field name="DO_WHAT">DISABLE</field>
+                              <value name="TARGET">
+                                <shadow type="objectList" id="?:/m=1s/xQfXsPe83:rb">
+                                  <field name="FIELDNAME">roof</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="Y45Z|@iEb+3xv%oC^618" x="930" y="-210">
+      <field name="VAR" id="dbj]C@v3fsqQ02KinS5X">opened.FR</field>
+      <value name="VALUE">
+        <block type="logic_boolean" id="vR};e/AAOo151#(BckSk">
+          <field name="BOOL">FALSE</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set" id="R*UTkCVEdFv%vhV}bouz">
+          <field name="VAR" id="Fp.yF|rM;Qbc`L]w0E|$">playing.FR</field>
+          <value name="VALUE">
+            <block type="logic_boolean" id="N@u`g_LN]|i4xLDy18RC">
+              <field name="BOOL">FALSE</field>
+            </block>
+          </value>
+          <next>
+            <block type="whenClicked" id="L2@Hc3qM|VPjoT!}x9OB">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+              <field name="X_RAY">FALSE</field>
+              <field name="DOUBLE_CLICK">FALSE</field>
+              <field name="LEFT_BUTTON">TRUE</field>
+              <field name="MIDDLE_BUTTON">TRUE</field>
+              <field name="RIGHT_BUTTON">TRUE</field>
+              <value name="VALUE">
+                <shadow type="objectList">
+                  <field name="FIELDNAME">door.FL</field>
+                </shadow>
+                <block type="objectList" id="UH`*7il2i`3Ry8jlc,C@">
+                  <field name="FIELDNAME">door.FR</field>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="controls_if" id="Qq1YI1g|UBmqqAP1DpTv">
+                  <value name="IF0">
+                    <block type="logic_negate" id="1*-4N17kFC,%MrO8bc.m">
+                      <value name="BOOL">
+                        <block type="variables_get" id="wT,Eu~Aa|Hc,_X;X7q6P">
+                          <field name="VAR" id="Fp.yF|rM;Qbc`L]w0E|$">playing.FR</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="variables_set" id="N]-oI8ddVU*_V}EXl-Wo">
+                      <field name="VAR" id="Fp.yF|rM;Qbc`L]w0E|$">playing.FR</field>
+                      <value name="VALUE">
+                        <block type="logic_boolean" id="0B?0}.aZl4I+tRfS`eBA">
+                          <field name="BOOL">TRUE</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="controls_ifelse" id="9ENZ[ZB/oX[0ZhKY=VwE">
+                          <value name="IF0">
+                            <block type="logic_negate" id="7US5qbkdRGF9XxIUQPXS">
+                              <value name="BOOL">
+                                <block type="variables_get" id="_sO@$$bm`L,Xevd6gG2R">
+                                  <field name="VAR" id="dbj]C@v3fsqQ02KinS5X">opened.FR</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <statement name="DO0">
+                            <block type="playAnimationAdv" id="uF]Qh0Ik@DI:e($avhc3">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="false" enablewhenfinished="true"></mutation>
+                              <field name="REVERSED">FALSE</field>
+                              <field name="LOOP">LoopOnce</field>
+                              <value name="VALUE">
+                                <shadow type="animationList">
+                                  <field name="FIELDNAME">door.FL</field>
+                                </shadow>
+                                <block type="animationList" id="H8{ZNC-AdAYWqVZ]S-E@">
+                                  <field name="FIELDNAME">door.FR</field>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="variables_set" id="E`ou!`ios*~BY;|OZ~)j">
+                                  <field name="VAR" id="dbj]C@v3fsqQ02KinS5X">opened.FR</field>
+                                  <value name="VALUE">
+                                    <block type="logic_boolean" id="6QS@ZBsXDx8PM~62;fqk">
+                                      <field name="BOOL">TRUE</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="variables_set" id="!fXGXPug:lKzvw)kSjZ3">
+                                      <field name="VAR" id="Fp.yF|rM;Qbc`L]w0E|$">playing.FR</field>
+                                      <value name="VALUE">
+                                        <block type="logic_boolean" id="Ee1,`A]qxe2e,JTL})1!">
+                                          <field name="BOOL">FALSE</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </statement>
+                          <statement name="ELSE">
+                            <block type="playAnimationAdv" id="pry.V/4A1pG7C3je-aw6">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="true"></mutation>
+                              <field name="REVERSED">TRUE</field>
+                              <field name="LOOP">LoopOnce</field>
+                              <value name="VALUE">
+                                <shadow type="animationList">
+                                  <field name="FIELDNAME">door.FL</field>
+                                </shadow>
+                                <block type="animationList" id=".dO]#%YL|Y7V^R#Gn,sr">
+                                  <field name="FIELDNAME">door.FR</field>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="variables_set" id="V%4ss~6c!,?RA|Beyx5E">
+                                  <field name="VAR" id="dbj]C@v3fsqQ02KinS5X">opened.FR</field>
+                                  <value name="VALUE">
+                                    <block type="logic_boolean" id="h9Xm4%JHhQcDM~+0DMWw">
+                                      <field name="BOOL">FALSE</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="variables_set" id=")2Lt_hXYU[sA)oDB_vc^">
+                                      <field name="VAR" id="Fp.yF|rM;Qbc`L]w0E|$">playing.FR</field>
+                                      <value name="VALUE">
+                                        <block type="logic_boolean" id="4sHQeFf7GwT_[pAXnCm2">
+                                          <field name="BOOL">FALSE</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="addAnnotation" id="tQ?k-R]:i#F@#n@/%}w{" x="2010" y="-70">
+      <value name="ANNOTATION">
+        <shadow type="text" id="|o-{|ZgLd_MIFc~jqzID">
+          <field name="TEXT">1</field>
+        </shadow>
+      </value>
+      <value name="TARGET">
+        <shadow type="objectList" id="[)RviPUGx_EWfyj?3]5S">
+          <field name="FIELDNAME">poi.01</field>
+        </shadow>
+      </value>
+      <value name="CONTENTS">
+        <shadow type="text" id="P.*gSTSbQP6_,g,GkB8A">
+          <field name="TEXT">The Armored Hummer H3 was developed by Hummer Special Vehicles in 2007. In with Armor Holdings Group.</field>
+        </shadow>
+      </value>
+      <value name="ID">
+        <shadow type="text" id="y/w$Ao];2og0I=|@%k@G">
+          <field name="TEXT">poi1</field>
+        </shadow>
+      </value>
+      <next>
+        <block type="addAnnotation" id="T|#+k|3n$y^Yt,w}M[TP">
+          <value name="ANNOTATION">
+            <shadow type="text" id="HFZV:7*VJ_6Q3*+I52#c">
+              <field name="TEXT">2</field>
+            </shadow>
+          </value>
+          <value name="TARGET">
+            <shadow type="objectList" id="K*[as#gDVx-:wHk54{pS">
+              <field name="FIELDNAME">poi.02</field>
+            </shadow>
+          </value>
+          <value name="CONTENTS">
+            <shadow type="text" id="R{;U)H,,I4SMB!*-$(DX">
+              <field name="TEXT">All panels on the car are bulletproof.</field>
+            </shadow>
+          </value>
+          <value name="ID">
+            <shadow type="text" id="1vnn7pmG+LEt+5W6i:$S">
+              <field name="TEXT">poi2</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="addAnnotation" id="9?i4Mw_.+AYPJ619qyUV">
+              <value name="ANNOTATION">
+                <shadow type="text" id="KPTI$o(2Ws[7~y|,1TWt">
+                  <field name="TEXT">3</field>
+                </shadow>
+              </value>
+              <value name="TARGET">
+                <shadow type="objectList" id="=zt,iASgtZ8Ql.JWN5P*">
+                  <field name="FIELDNAME">poi.03</field>
+                </shadow>
+              </value>
+              <value name="CONTENTS">
+                <shadow type="text" id="@CEZ-a+ms(G.T+vY0f$_">
+                  <field name="TEXT">Uprated handling and braking system.</field>
+                </shadow>
+              </value>
+              <value name="ID">
+                <shadow type="text" id="^@{f.cIq0iY=5iYeR:tf">
+                  <field name="TEXT">poi3</field>
+                </shadow>
+              </value>
+              <next>
+                <block type="addAnnotation" id="N6im`(1`5r-yoBM|m,;n">
+                  <value name="ANNOTATION">
+                    <shadow type="text" id=";i=HWk0q|C:4U(oWftTJ">
+                      <field name="TEXT">4</field>
+                    </shadow>
+                  </value>
+                  <value name="TARGET">
+                    <shadow type="objectList" id="VJ=fI#t_q$_[BZhrgOPO">
+                      <field name="FIELDNAME">poi.04</field>
+                    </shadow>
+                  </value>
+                  <value name="CONTENTS">
+                    <shadow type="text" id="C(23*RlWkqM=$3N9-MQq">
+                      <field name="TEXT">Fuel cut-off override.</field>
+                    </shadow>
+                  </value>
+                  <value name="ID">
+                    <shadow type="text" id="X#WOKQ:f_0=Y5LgY`?ZA">
+                      <field name="TEXT">poi4</field>
+                    </shadow>
+                  </value>
+                  <next>
+                    <block type="addAnnotation" id=",14pq:XgiNDK6Kpj[wpP">
+                      <value name="ANNOTATION">
+                        <shadow type="text" id="o[b1iF{#6xQu6]n0{ANV">
+                          <field name="TEXT">5</field>
+                        </shadow>
+                      </value>
+                      <value name="TARGET">
+                        <shadow type="objectList" id="_Au(qm:eedeM%JFEx6XI">
+                          <field name="FIELDNAME">poi.05</field>
+                        </shadow>
+                      </value>
+                      <value name="CONTENTS">
+                        <shadow type="text" id="[J/N9*y#jFtwON;vbl9Y">
+                          <field name="TEXT">All windows are highly resilient ballistic glass.</field>
+                        </shadow>
+                      </value>
+                      <value name="ID">
+                        <shadow type="text" id="3KGvCAmRF^`RLBCCoeg3">
+                          <field name="TEXT">poi5</field>
+                        </shadow>
+                      </value>
+                      <next>
+                        <block type="addAnnotation" id="OS!Hyq4,Y=UB{lfy61cE">
+                          <value name="ANNOTATION">
+                            <shadow type="text" id="vm5fwqulFtSTvr2pSVYr">
+                              <field name="TEXT">6</field>
+                            </shadow>
+                          </value>
+                          <value name="TARGET">
+                            <shadow type="objectList" id="/SsX9okVg@s+80.v8*k!">
+                              <field name="FIELDNAME">poi.06</field>
+                            </shadow>
+                          </value>
+                          <value name="CONTENTS">
+                            <shadow type="text" id=":bq[(cZ]rKas-xso++a[">
+                              <field name="TEXT">Wheel fitted with run-flat tire system.</field>
+                            </shadow>
+                          </value>
+                          <value name="ID">
+                            <shadow type="text" id=",nk((AP}%!1^3.km9FB#">
+                              <field name="TEXT">poi6</field>
+                            </shadow>
+                          </value>
+                          <next>
+                            <block type="addAnnotation" id="EmrIS8.FE{b,ia5,,:=-">
+                              <value name="ANNOTATION">
+                                <shadow type="text" id="-.,}Er#[z$vuqy1gIOWs">
+                                  <field name="TEXT">7</field>
+                                </shadow>
+                              </value>
+                              <value name="TARGET">
+                                <shadow type="objectList" id="snF^9kRTVVK18#QLo~07">
+                                  <field name="FIELDNAME">poi.07</field>
+                                </shadow>
+                              </value>
+                              <value name="CONTENTS">
+                                <shadow type="text" id="n3kn#1qm}u#sE)0)nC97">
+                                  <field name="TEXT">It includes side blast and under floor grenade protection.</field>
+                                </shadow>
+                              </value>
+                              <value name="ID">
+                                <shadow type="text" id="[+`$*pSvi:KJr(}|._r}">
+                                  <field name="TEXT">poi7</field>
+                                </shadow>
+                              </value>
+                              <next>
+                                <block type="addAnnotation" id="?$#mCUjw7k!qIa9=3{ft">
+                                  <value name="ANNOTATION">
+                                    <shadow type="text" id="[=wy^Wt]A{Zr!40.Q|{1">
+                                      <field name="TEXT">8</field>
+                                    </shadow>
+                                  </value>
+                                  <value name="TARGET">
+                                    <shadow type="objectList" id="TiZvv#uZ+Xx#tmCuPn:S">
+                                      <field name="FIELDNAME">poi.08</field>
+                                    </shadow>
+                                  </value>
+                                  <value name="CONTENTS">
+                                    <shadow type="text" id="Qb?WT13=]qF-!@PZ~rVB">
+                                      <field name="TEXT">Uprated suspension.</field>
+                                    </shadow>
+                                  </value>
+                                  <value name="ID">
+                                    <shadow type="text" id="^DetGE$)f~U8vKD*=syp">
+                                      <field name="TEXT">poi8</field>
+                                    </shadow>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="/EW)#$WfhT[K*y`5D$F^" x="50" y="250">
+      <field name="VAR" id="nj4,H%%m:h5t6F$s^2G[">opened.BL</field>
+      <value name="VALUE">
+        <block type="logic_boolean" id="ItMsM|g-6@x%-`0tS[Qv">
+          <field name="BOOL">FALSE</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set" id="[6CR-VEnD/`j?Mf!(@zw">
+          <field name="VAR" id="j3x.*R`yn(K3|c5+W8m7">playing.BL</field>
+          <value name="VALUE">
+            <block type="logic_boolean" id="k7$c1RD,4wa`vBP~UlzS">
+              <field name="BOOL">FALSE</field>
+            </block>
+          </value>
+          <next>
+            <block type="whenClicked" id="gV$yEdr@Pv(b74zXj$N)">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+              <field name="X_RAY">FALSE</field>
+              <field name="DOUBLE_CLICK">FALSE</field>
+              <field name="LEFT_BUTTON">TRUE</field>
+              <field name="MIDDLE_BUTTON">TRUE</field>
+              <field name="RIGHT_BUTTON">TRUE</field>
+              <value name="VALUE">
+                <shadow type="objectList">
+                  <field name="FIELDNAME">door.FL</field>
+                </shadow>
+                <block type="objectList" id="4De^tSuOj#]CtC[%96W[">
+                  <field name="FIELDNAME">door.BL</field>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="controls_if" id="FAmVRje%~7OWg.,EOI$P">
+                  <value name="IF0">
+                    <block type="logic_negate" id="`#_|;YzcHwMkFs$.--Gx">
+                      <value name="BOOL">
+                        <block type="variables_get" id="fICFy|*0nYD^i#3j9-y#">
+                          <field name="VAR" id="j3x.*R`yn(K3|c5+W8m7">playing.BL</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="variables_set" id="jjCqzrMWv3NL6|)@clzt">
+                      <field name="VAR" id="j3x.*R`yn(K3|c5+W8m7">playing.BL</field>
+                      <value name="VALUE">
+                        <block type="logic_boolean" id="J=fc)4Dsg{`8-2D{.$)P">
+                          <field name="BOOL">TRUE</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="controls_ifelse" id="jO!b5;+AMs%iv9+]+5xz">
+                          <value name="IF0">
+                            <block type="logic_negate" id="_^AElsvV^va5YqQe5Kgu">
+                              <value name="BOOL">
+                                <block type="variables_get" id="9S#Y=Kd%o9V]H;Sh/!e)">
+                                  <field name="VAR" id="nj4,H%%m:h5t6F$s^2G[">opened.BL</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <statement name="DO0">
+                            <block type="playAnimationAdv" id=".GcKR$r.l~sLge657!Z1">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="false" enablewhenfinished="true"></mutation>
+                              <field name="REVERSED">FALSE</field>
+                              <field name="LOOP">LoopOnce</field>
+                              <value name="VALUE">
+                                <shadow type="animationList">
+                                  <field name="FIELDNAME">door.FL</field>
+                                </shadow>
+                                <block type="animationList" id="D,u)1Oc(Q_H^EUCzl%8t">
+                                  <field name="FIELDNAME">door.BL</field>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="variables_set" id="})m#t(%y,_dj,QJSHqK*">
+                                  <field name="VAR" id="nj4,H%%m:h5t6F$s^2G[">opened.BL</field>
+                                  <value name="VALUE">
+                                    <block type="logic_boolean" id="MRnrtgjcj+=TfB71u7*/">
+                                      <field name="BOOL">TRUE</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="variables_set" id="5Mc),v:h9(A9a-mnltZD">
+                                      <field name="VAR" id="j3x.*R`yn(K3|c5+W8m7">playing.BL</field>
+                                      <value name="VALUE">
+                                        <block type="logic_boolean" id="5PT452L1nN[{-N.#AXyT">
+                                          <field name="BOOL">FALSE</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </statement>
+                          <statement name="ELSE">
+                            <block type="playAnimationAdv" id="=H`1ya8D#iYt-ba#W[-J">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="true"></mutation>
+                              <field name="REVERSED">TRUE</field>
+                              <field name="LOOP">LoopOnce</field>
+                              <value name="VALUE">
+                                <shadow type="animationList">
+                                  <field name="FIELDNAME">door.FL</field>
+                                </shadow>
+                                <block type="animationList" id="mBF)975CVuJ:;^QANRG`">
+                                  <field name="FIELDNAME">door.BL</field>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="variables_set" id="xl6OuU/EUcGvUv+VVpN3">
+                                  <field name="VAR" id="nj4,H%%m:h5t6F$s^2G[">opened.BL</field>
+                                  <value name="VALUE">
+                                    <block type="logic_boolean" id="gnqL%(.{F.kxd]*|RRfy">
+                                      <field name="BOOL">FALSE</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="variables_set" id="uU=Nu.f76C|9,vJ]oNXA">
+                                      <field name="VAR" id="j3x.*R`yn(K3|c5+W8m7">playing.BL</field>
+                                      <value name="VALUE">
+                                        <block type="logic_boolean" id="|I)_zp|}F)E76GIpD`G;">
+                                          <field name="BOOL">FALSE</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="]R@boFm^5Fj^)fk7d^J$" x="930" y="250">
+      <field name="VAR" id="+KH=nK-4SIeaE5biJ;u7">opened.BR</field>
+      <value name="VALUE">
+        <block type="logic_boolean" id="LWrD(#~i~5r;ytOdK.;$">
+          <field name="BOOL">FALSE</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set" id="Y*#8(+sB9mm]hzk1t*R{">
+          <field name="VAR" id="zmZIkvT,OLLce]IdX.se">playing.BR</field>
+          <value name="VALUE">
+            <block type="logic_boolean" id="[NC8w;MINbNZli86}%39">
+              <field name="BOOL">FALSE</field>
+            </block>
+          </value>
+          <next>
+            <block type="whenClicked" id="~!g~fa$S%$;8O::UKhWQ">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+              <field name="X_RAY">FALSE</field>
+              <field name="DOUBLE_CLICK">FALSE</field>
+              <field name="LEFT_BUTTON">TRUE</field>
+              <field name="MIDDLE_BUTTON">TRUE</field>
+              <field name="RIGHT_BUTTON">TRUE</field>
+              <value name="VALUE">
+                <shadow type="objectList">
+                  <field name="FIELDNAME">door.FL</field>
+                </shadow>
+                <block type="objectList" id="ZHGj+|Z]VJk`BtPRDpRE">
+                  <field name="FIELDNAME">door.BR</field>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="controls_if" id="e=.{F+]d:8;,6/x:74m!">
+                  <value name="IF0">
+                    <block type="logic_negate" id="Xv}4?L{^qhe_V=4H~uz`">
+                      <value name="BOOL">
+                        <block type="variables_get" id="d`%UQVUMgE*XrJtcMv+]">
+                          <field name="VAR" id="zmZIkvT,OLLce]IdX.se">playing.BR</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="variables_set" id="s9KNR%$]5WC0s|2r/`[f">
+                      <field name="VAR" id="zmZIkvT,OLLce]IdX.se">playing.BR</field>
+                      <value name="VALUE">
+                        <block type="logic_boolean" id="(Cv}@D=YWJ*Fr(-3+~?~">
+                          <field name="BOOL">TRUE</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="controls_ifelse" id="oPPy7_L5GF@?NQ[f9}eZ">
+                          <value name="IF0">
+                            <block type="logic_negate" id="Vr2~G8OtMg~!ca{~RFc6">
+                              <value name="BOOL">
+                                <block type="variables_get" id="k|Sa%L@_I3RL0CL|YanL">
+                                  <field name="VAR" id="+KH=nK-4SIeaE5biJ;u7">opened.BR</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <statement name="DO0">
+                            <block type="playAnimationAdv" id="V~O;MBPzwN)6]!A}v!/$">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="false" enablewhenfinished="true"></mutation>
+                              <field name="REVERSED">FALSE</field>
+                              <field name="LOOP">LoopOnce</field>
+                              <value name="VALUE">
+                                <shadow type="animationList">
+                                  <field name="FIELDNAME">door.FL</field>
+                                </shadow>
+                                <block type="animationList" id="Ss:E9VrmfTT=JPaqDiMH">
+                                  <field name="FIELDNAME">door.BR</field>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="variables_set" id="No|#}r(DmLz[~;njXZ0t">
+                                  <field name="VAR" id="+KH=nK-4SIeaE5biJ;u7">opened.BR</field>
+                                  <value name="VALUE">
+                                    <block type="logic_boolean" id="khDQEhqCyA!o1TrVeBT2">
+                                      <field name="BOOL">TRUE</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="variables_set" id="kb[d*?zc*%_er/KszGBb">
+                                      <field name="VAR" id="zmZIkvT,OLLce]IdX.se">playing.BR</field>
+                                      <value name="VALUE">
+                                        <block type="logic_boolean" id="5l^g),d4?;uVH;M4BK,[">
+                                          <field name="BOOL">FALSE</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </statement>
+                          <statement name="ELSE">
+                            <block type="playAnimationAdv" id="jx*l?Xmn1Qtv}yWb+KJ]">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="true"></mutation>
+                              <field name="REVERSED">TRUE</field>
+                              <field name="LOOP">LoopOnce</field>
+                              <value name="VALUE">
+                                <shadow type="animationList">
+                                  <field name="FIELDNAME">door.FL</field>
+                                </shadow>
+                                <block type="animationList" id="-S3ifn1EB!sJ?s,CaL[F">
+                                  <field name="FIELDNAME">door.BR</field>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="variables_set" id="HB~J:Q5;RE.mZU:csP;l">
+                                  <field name="VAR" id="+KH=nK-4SIeaE5biJ;u7">opened.BR</field>
+                                  <value name="VALUE">
+                                    <block type="logic_boolean" id="Jf~.?g_A87Do}voqFCco">
+                                      <field name="BOOL">FALSE</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="variables_set" id="PzmA*[=zzs|]d},VOu$2">
+                                      <field name="VAR" id="zmZIkvT,OLLce]IdX.se">playing.BR</field>
+                                      <value name="VALUE">
+                                        <block type="logic_boolean" id="KlAX)aC|.dx;:J`J]_lz">
+                                          <field name="BOOL">FALSE</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="y![CV1=J=[6i]VK*a38l" x="110" y="770">
+      <field name="VAR" id="}*o+D%smO.V@zve_I:b+">opened.boot</field>
+      <value name="VALUE">
+        <block type="logic_boolean" id="s+%0*}8]NEIUz+A4X6LU">
+          <field name="BOOL">FALSE</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set" id="~-]oDc`8ZncBw5IqX1kI">
+          <field name="VAR" id="H`D-8KDH/}89HZj/0X%S">playing.boot</field>
+          <value name="VALUE">
+            <block type="logic_boolean" id="q!0dd#aI2tJ.#*@20d1R">
+              <field name="BOOL">FALSE</field>
+            </block>
+          </value>
+          <next>
+            <block type="whenClicked" id="/cpCdV]UdD(61tIJCz|?">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+              <field name="X_RAY">FALSE</field>
+              <field name="DOUBLE_CLICK">FALSE</field>
+              <field name="LEFT_BUTTON">TRUE</field>
+              <field name="MIDDLE_BUTTON">TRUE</field>
+              <field name="RIGHT_BUTTON">TRUE</field>
+              <value name="VALUE">
+                <shadow type="objectList">
+                  <field name="FIELDNAME">door.FL</field>
+                </shadow>
+                <block type="objectList" id="R~c4y[mP%=k{w!t`)f]Q">
+                  <field name="FIELDNAME">boot</field>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="controls_if" id="S~C@CL2nb%r!EGBBnAni">
+                  <value name="IF0">
+                    <block type="logic_negate" id="1ecqb?_wQ8,{Ftp:(ZcV">
+                      <value name="BOOL">
+                        <block type="variables_get" id="PJ7s:wxuE{_x-6PZ+uwK">
+                          <field name="VAR" id="H`D-8KDH/}89HZj/0X%S">playing.boot</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="variables_set" id="@_o}qSSi{X?!4Km=a21Z">
+                      <field name="VAR" id="H`D-8KDH/}89HZj/0X%S">playing.boot</field>
+                      <value name="VALUE">
+                        <block type="logic_boolean" id="N3+W#lITFSqX=?NAQlW~">
+                          <field name="BOOL">TRUE</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="controls_ifelse" id=")h;8?%Acls$HAiMV~4.9">
+                          <value name="IF0">
+                            <block type="logic_negate" id="z/p$zd%.hpQt^W9R*[1o">
+                              <value name="BOOL">
+                                <block type="variables_get" id="mK`:W{?3bl`)Zmrz=mHN">
+                                  <field name="VAR" id="}*o+D%smO.V@zve_I:b+">opened.boot</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <statement name="DO0">
+                            <block type="playAnimationAdv" id="bjF^:y2!tMZPXasq7y-#">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="false" enablewhenfinished="true"></mutation>
+                              <field name="REVERSED">FALSE</field>
+                              <field name="LOOP">LoopOnce</field>
+                              <value name="VALUE">
+                                <shadow type="animationList">
+                                  <field name="FIELDNAME">door.FL</field>
+                                </shadow>
+                                <block type="animationList" id=";;N;n$[%tOXj0A4|-6R:">
+                                  <field name="FIELDNAME">boot</field>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="variables_set" id=")AXdg4@=3L#/LT!inRPk">
+                                  <field name="VAR" id="}*o+D%smO.V@zve_I:b+">opened.boot</field>
+                                  <value name="VALUE">
+                                    <block type="logic_boolean" id="aD0]4@AwK%!;LyuMUI0#">
+                                      <field name="BOOL">TRUE</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="variables_set" id="um;sc_ki1Ujg,J_LR_kR">
+                                      <field name="VAR" id="H`D-8KDH/}89HZj/0X%S">playing.boot</field>
+                                      <value name="VALUE">
+                                        <block type="logic_boolean" id="I/n+FWRBC^y9p_O3$LHk">
+                                          <field name="BOOL">FALSE</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </statement>
+                          <statement name="ELSE">
+                            <block type="playAnimationAdv" id="eb|JS8U_v1(}R1ELrD=p">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="true"></mutation>
+                              <field name="REVERSED">TRUE</field>
+                              <field name="LOOP">LoopOnce</field>
+                              <value name="VALUE">
+                                <shadow type="animationList">
+                                  <field name="FIELDNAME">door.FL</field>
+                                </shadow>
+                                <block type="animationList" id="`}0pw,oP#$[i=u441OD1">
+                                  <field name="FIELDNAME">boot</field>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="variables_set" id="148b`DU9_JPPQM`4MaTd">
+                                  <field name="VAR" id="}*o+D%smO.V@zve_I:b+">opened.boot</field>
+                                  <value name="VALUE">
+                                    <block type="logic_boolean" id="gW[253I%J`[_%CIu(TOq">
+                                      <field name="BOOL">FALSE</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="variables_set" id="5nkV)l()N$b9v0p{.bC=">
+                                      <field name="VAR" id="H`D-8KDH/}89HZj/0X%S">playing.boot</field>
+                                      <value name="VALUE">
+                                        <block type="logic_boolean" id="-SG835o3#aIH+;+:GgQ?">
+                                          <field name="BOOL">FALSE</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="W^5)C+Ce}Opzl^XBI=.n" x="1010" y="750">
+      <field name="VAR" id="w-p!dldc[C,!@du9[w!|">opened.roof</field>
+      <value name="VALUE">
+        <block type="logic_boolean" id="aCvGF_wCm0T$zOzMwB;)">
+          <field name="BOOL">FALSE</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set" id="V?N.G_|HudnO^v2T~pv1">
+          <field name="VAR" id="91en[jF1Q%7EO[tCwQy[">playing.roof</field>
+          <value name="VALUE">
+            <block type="logic_boolean" id="m4J^xb8d!nK.7dazizZ=">
+              <field name="BOOL">FALSE</field>
+            </block>
+          </value>
+          <next>
+            <block type="whenClicked" id=",ov`:)o+lcFTTQp^ITlJ">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+              <field name="X_RAY">FALSE</field>
+              <field name="DOUBLE_CLICK">FALSE</field>
+              <field name="LEFT_BUTTON">TRUE</field>
+              <field name="MIDDLE_BUTTON">TRUE</field>
+              <field name="RIGHT_BUTTON">TRUE</field>
+              <value name="VALUE">
+                <shadow type="objectList">
+                  <field name="FIELDNAME">door.FL</field>
+                </shadow>
+                <block type="objectList" id="xw]==*C5A:to3XkU/t]V">
+                  <field name="FIELDNAME">roof</field>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="controls_if" id="$:5.]evoY:@gDFX8.dw5">
+                  <value name="IF0">
+                    <block type="logic_negate" id="uvfjpY|Ace$tVx[W_JK@">
+                      <value name="BOOL">
+                        <block type="variables_get" id="s!}zFUDsg*%@?^|T#CHa">
+                          <field name="VAR" id="91en[jF1Q%7EO[tCwQy[">playing.roof</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="variables_set" id="c5e8{B`OCebV9@$kHqO8">
+                      <field name="VAR" id="91en[jF1Q%7EO[tCwQy[">playing.roof</field>
+                      <value name="VALUE">
+                        <block type="logic_boolean" id="nh9/sZn{zVqt-XTg+|01">
+                          <field name="BOOL">TRUE</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="controls_ifelse" id="s6~QvFVKAvGalsC(vfs-">
+                          <value name="IF0">
+                            <block type="logic_negate" id="RnCDNu;5LQ*A}GU{:0lC">
+                              <value name="BOOL">
+                                <block type="variables_get" id="Hq_r$|w0_]s[vl{nXvrA">
+                                  <field name="VAR" id="w-p!dldc[C,!@du9[w!|">opened.roof</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <statement name="DO0">
+                            <block type="playAnimationAdv" id="99AeM`sAUlh$sJ_:QEnE">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="false" enablewhenfinished="true"></mutation>
+                              <field name="REVERSED">FALSE</field>
+                              <field name="LOOP">LoopOnce</field>
+                              <value name="VALUE">
+                                <shadow type="animationList">
+                                  <field name="FIELDNAME">door.FL</field>
+                                </shadow>
+                                <block type="animationList" id="D9mg$X=h+%v#M`Uqlhr,">
+                                  <field name="FIELDNAME">roof</field>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="variables_set" id="h:)b#`@asU.v^p;]z/*M">
+                                  <field name="VAR" id="w-p!dldc[C,!@du9[w!|">opened.roof</field>
+                                  <value name="VALUE">
+                                    <block type="logic_boolean" id="A?d@^b]~zG,+!WW_8ofZ">
+                                      <field name="BOOL">TRUE</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="variables_set" id="!~Q1UpN*e:O3JZ)G)Y7C">
+                                      <field name="VAR" id="91en[jF1Q%7EO[tCwQy[">playing.roof</field>
+                                      <value name="VALUE">
+                                        <block type="logic_boolean" id="J6l.+yC;!4Z]jFCIWc`)">
+                                          <field name="BOOL">FALSE</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </statement>
+                          <statement name="ELSE">
+                            <block type="playAnimationAdv" id="x(t1d@n!E9;oPi{_5am-">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="true"></mutation>
+                              <field name="REVERSED">TRUE</field>
+                              <field name="LOOP">LoopOnce</field>
+                              <value name="VALUE">
+                                <shadow type="animationList">
+                                  <field name="FIELDNAME">door.FL</field>
+                                </shadow>
+                                <block type="animationList" id="4bZl}H0WEte!=X=?sj,[">
+                                  <field name="FIELDNAME">roof</field>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="variables_set" id="dFsgc:dYO!#E.n0utUAT">
+                                  <field name="VAR" id="w-p!dldc[C,!@du9[w!|">opened.roof</field>
+                                  <value name="VALUE">
+                                    <block type="logic_boolean" id="ByW~d*;.onb8J=]`16.0">
+                                      <field name="BOOL">FALSE</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="variables_set" id="@TUV,|qm$)]{NQa0smYC">
+                                      <field name="VAR" id="91en[jF1Q%7EO[tCwQy[">playing.roof</field>
+                                      <value name="VALUE">
+                                        <block type="logic_boolean" id=";3R{o$Rso7jcL}2{Gga^">
+                                          <field name="BOOL">FALSE</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </tab>
+  <tab name="camera" type="SecondaryTab" active="false" scrollx="2.2737367544323206e-13" scrolly="2.2737367544323206e-13" scale="0.9"></tab>
+  <editorsettings viewport-x="1010.7999313354492" viewport-y="69.33334350585938" viewport-w="627.188" viewport-h="491.333" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>
