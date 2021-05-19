@@ -8,7 +8,8 @@ const c = [
 	() => import("..\\..\\..\\src\\routes\\marked.svelte"),
 	() => import("..\\..\\..\\src\\routes\\about.svelte"),
 	() => import("..\\..\\..\\src\\routes\\blog\\index.svelte"),
-	() => import("..\\..\\..\\src\\routes\\blog\\[slug].svelte")
+	() => import("..\\..\\..\\src\\routes\\blog\\[slug].svelte"),
+	() => import("..\\..\\..\\src\\routes\\del.svelte")
 ];
 
 const d = decodeURIComponent;
@@ -42,7 +43,10 @@ export const routes = [
 	[/^\/blog\/?$/, [c[0], c[8]], [c[1]]],
 
 	// src/routes/blog/[slug].svelte
-	[/^\/blog\/([^/]+?)\/?$/, [c[0], c[9]], [c[1]], (m) => ({ slug: d(m[1])})]
+	[/^\/blog\/([^/]+?)\/?$/, [c[0], c[9]], [c[1]], (m) => ({ slug: d(m[1])})],
+
+	// src/routes/del.svelte
+	[/^\/del\/?$/, [c[0], c[10]], [c[1]]]
 ];
 
 export const fallback = [c[0](), c[1]()];
