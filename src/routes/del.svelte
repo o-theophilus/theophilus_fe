@@ -21,6 +21,10 @@
 			<div class="btn" id="autoRotateDirection">d</div>
 			<input type="range" min="1" max="8" value="2" step="0.1" id="autoRotateSpeed" />
 		</div>
+		<div id="splash_screen">
+			<div id="loading_bar"></div>
+			<p>Loading <span id="loading_text"></span>%</p>
+		</div>
 	</div>
 </Content>
 
