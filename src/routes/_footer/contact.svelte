@@ -47,8 +47,10 @@
 		fill: var(--color1);
 
 		transition: all var(--animTime1);
+		transition-timing-function: ease-in-out;
 	}
 	a:hover {
+		color: var(--color3);
 		fill: var(--color3);
 	}
 </style>

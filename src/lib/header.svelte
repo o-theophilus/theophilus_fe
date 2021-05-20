@@ -37,6 +37,7 @@
 		z-index: 1;
 
 		transition: top var(--animTime1);
+		transition-timing-function: ease-in-out;
 	}
 	.showHeader {
 		top: 0;

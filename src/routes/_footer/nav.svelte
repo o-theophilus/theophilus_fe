@@ -27,7 +27,8 @@
 		line-height: var(--lineHeight);
 
 		border-bottom: 2px solid var(--colorNill);
-		transition: all var(--animTime2);
+		transition: all var(--animTime1);
+		transition-timing-function: ease-in-out;
 	}
 	a:hover {
 		border-color: var(--fColor3);

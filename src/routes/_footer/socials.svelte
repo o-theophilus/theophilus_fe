@@ -68,9 +68,11 @@
 
 		background-color: var(--colorNill);
 
-		transition: all var(--animTime1);
 		box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 		fill: white;
+
+		transition: all var(--animTime1);
+		transition-timing-function: ease-in-out;
 	}
 
 	a:hover {

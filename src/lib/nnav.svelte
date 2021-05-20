@@ -26,6 +26,7 @@
 		overflow: hidden;
 
 		transition: left var(--animTime1);
+		transition-timing-function: ease-in-out;
 	}
 	.openMobileMenu {
 		left: 0;

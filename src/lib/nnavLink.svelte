@@ -47,7 +47,7 @@
 		fill: var(--color1);
 
 		transition: all var(--animTime1);
-
+		transition-timing-function: ease-in-out;
 	}
 	.notMobile {
 		height: 100%;

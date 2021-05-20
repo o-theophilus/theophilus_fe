@@ -43,6 +43,7 @@
 		margin-top: var(--headerHeight);
 
 		transition: left var(--animTime1);
+		transition-timing-function: ease-in-out;
 	}
 	.openMobileMenu {
 		left: var(--mobileMenuWidth);

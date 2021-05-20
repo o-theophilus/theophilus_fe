@@ -198,6 +198,7 @@ I'll like so learn _____ from you.
 		background-color: var(--color6);
 
 		transition: all var(--animTime1);
+		transition-timing-function: ease-in-out;
 	}
 	textarea {
 		height: 150px;
@@ -238,6 +239,7 @@ I'll like so learn _____ from you.
 		fill: var(--color2);
 
 		transition: all var(--animTime1);
+		transition-timing-function: ease-in-out;
 	}
 	select {
 		background-color: var(--color1);
