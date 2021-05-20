@@ -36,11 +36,14 @@
 
 		z-index: 1;
 
+		box-shadow: 0 0 0 var(--colorNill);
+		
 		transition: top var(--animTime1);
 		transition-timing-function: ease-in-out;
 	}
 	.showHeader {
 		top: 0;
+		box-shadow: 0 0 12px var(--color2);
 	}
 
 	.block {

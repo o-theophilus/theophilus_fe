@@ -38,19 +38,21 @@ body {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-/* .v3d-annotation { */
+.v3d-annotation {
 	/* opacity: 0.5; */
     /* opacity: 0; */
     /* display: none; */
-/* } */
+	transition: opacity 200ms;
+	transition-timing-function: ease-in-out;
+}
 /* .v3d-annotation-dialog { */
     /* opacity: 0.9; */
     /* display: none; */
     /* opacity: 0; */
-/* } */
-.v3d-annotation-transparent {
-    /* opacity: 0; */
-    display: none;
+	/* } */
+	.v3d-annotation-transparent {
+    opacity: 0;
+    /* display: none; */
     /* visibility: hidden; */
 }
 [href="https://www.soft8soft.com/verge3d-trial/"]
