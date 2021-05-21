@@ -80,7 +80,7 @@
       </statement>
     </block>
   </tab>
-  <tab name="main" type="MainTab" active="true" scrollx="-57.77523299162249" scrolly="702.1011687655337" scale="0.9070294784580496">
+  <tab name="main" type="MainTab" active="false" scrollx="-57.775232991622374" scrolly="702.1011687655337" scale="0.9070294784580496">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="+mx`YV.FL(C:t`=4V?`V" type="">lim</variable>
       <variable id="}~7ead6=vXJ,O5Fqh,P*" type="">opened.FL</variable>
@@ -1133,7 +1133,7 @@
       </next>
     </block>
   </tab>
-  <tab name="camera" type="SecondaryTab" active="false" scrollx="-202.5760744546045" scrolly="-685.9121093749995" scale="1">
+  <tab name="camera" type="SecondaryTab" active="true" scrollx="-201.5760744546045" scrolly="-534.9121093749995" scale="1">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="!.fmxjV|pnptGsl.DfCr" type="">autoRotateDirection</variable>
       <variable id="M;)/y|Pp*}6;+z*p#X8K" type="">autoRotateSpeed</variable>
@@ -1196,55 +1196,149 @@
         </block>
       </next>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="`)jPkHX}Ww7~5,-HUrE/" x="310" y="370">
-      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
-      <field name="X_RAY">FALSE</field>
-      <field name="DOUBLE_CLICK">FALSE</field>
-      <field name="LEFT_BUTTON">TRUE</field>
-      <field name="MIDDLE_BUTTON">TRUE</field>
-      <field name="RIGHT_BUTTON">TRUE</field>
-      <value name="VALUE">
-        <shadow type="objectList">
-          <field name="FIELDNAME">&lt;none&gt;</field>
+    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="w9ICT0y1`MMY0C~.aV{I" x="330" y="730">
+      <field name="EVENT">click</field>
+      <field name="PARENT">TRUE</field>
+      <value name="ID">
+        <shadow type="text" id="eymx]`vcJBjU?(VX`LTn">
+          <field name="TEXT">autoRotate</field>
         </shadow>
-        <block type="allObjectList" id="}0@-Zj`0~fEW)qGrOI[p"/>
       </value>
       <statement name="DO">
-        <block type="autoRotateCamera" id="Uo2]w=2SZx)gQe^aOr-`">
-          <field name="ON_OFF">OFF</field>
-          <value name="SPEED">
-            <shadow type="math_number" id="t-}6.T!;5YEt.OL.GrvG">
-              <field name="NUM">0</field>
+        <block type="controls_ifelse" id="80~OJbTFof/:cl}zrkQ)">
+          <value name="IF0">
+            <block type="variables_get" id="U37.w+2)I,*X~AN|OO:P">
+              <field name="VAR" id="NFCfO|SaIe%_OgHfMi0.">allowAutoRotate</field>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="autoRotateCamera" id="3}HTpk_eOsULGQ(rjC=$">
+              <field name="ON_OFF">OFF</field>
+              <value name="SPEED">
+                <shadow type="math_number" id="W%`Z5a?DW%`mkTgKSs4U">
+                  <field name="NUM">0</field>
+                </shadow>
+              </value>
+              <next>
+                <block type="variables_set" id="6L*.R/d*}N)3WB;[P7Wv">
+                  <field name="VAR" id="NFCfO|SaIe%_OgHfMi0.">allowAutoRotate</field>
+                  <value name="VALUE">
+                    <block type="logic_boolean" id="y;stF4H-@LnV59VVqGv7">
+                      <field name="BOOL">FALSE</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
+          <statement name="ELSE">
+            <block type="autoRotateCamera" id="Xoi3sKU50.JB!B8aC6Nq">
+              <field name="ON_OFF">ON</field>
+              <value name="SPEED">
+                <shadow type="math_number">
+                  <field name="NUM">2</field>
+                </shadow>
+                <block type="math_arithmetic" id="d|Y}[2*u5aj9SImoSs}+">
+                  <field name="OP">MULTIPLY</field>
+                  <value name="A">
+                    <shadow type="math_number">
+                      <field name="NUM">2</field>
+                    </shadow>
+                    <block type="variables_get" id=";7,:TRbO/-1)2o7`/MV,">
+                      <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <shadow type="math_number">
+                      <field name="NUM">2</field>
+                    </shadow>
+                    <block type="variables_get" id="+`Z1}g04AT/A%@z5u]2.">
+                      <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="variables_set" id="4@,Gh+3{,ui+#OYzhF54">
+                  <field name="VAR" id="NFCfO|SaIe%_OgHfMi0.">allowAutoRotate</field>
+                  <value name="VALUE">
+                    <block type="logic_boolean" id="[h}1%sibYP(c`m!^+zp*">
+                      <field name="BOOL">TRUE</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </statement>
+      <next>
+        <block type="eventHTMLElem" id="yr,Fan7z_Ed5sq`d$B7D">
+          <field name="EVENT">click</field>
+          <field name="PARENT">TRUE</field>
+          <value name="ID">
+            <shadow type="text" id="Ieh6_RqDFzfvK^m)_R#.">
+              <field name="TEXT">autoRotateDirection</field>
             </shadow>
           </value>
-          <next>
-            <block type="controls_if" id="sr#B?Mst7[A}]N-e3e^a">
+          <statement name="DO">
+            <block type="controls_ifelse" id="U09?KM:RymfnA~m$-~Uw">
               <value name="IF0">
-                <block type="variables_get" id="6|-f,ZIp!n!-8-?rX~]p">
-                  <field name="VAR" id="NFCfO|SaIe%_OgHfMi0.">allowAutoRotate</field>
+                <block type="logic_compare" id="7v6UE%VlSLkmiyI~l~)y">
+                  <field name="OP">EQ</field>
+                  <value name="A">
+                    <block type="variables_get" id="oAuic0d*,xw|527Dyr7z">
+                      <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number" id=".,9ert#+jGD6599w_0zw">
+                      <field name="NUM">1</field>
+                    </block>
+                  </value>
                 </block>
               </value>
               <statement name="DO0">
-                <block type="setTimeout" id="NGQm!r[YPJL:ipWF)]|j">
+                <block type="variables_set" id="JZ--AGa+T.VccYKeu4-E">
+                  <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
                   <value name="VALUE">
-                    <shadow type="math_number" id="7Y6:ZYk009Fh,FSQOYfY">
-                      <field name="NUM">5</field>
-                    </shadow>
+                    <block type="math_number" id="9Wil?!x`VA7,7^:OIM+w">
+                      <field name="NUM">-1</field>
+                    </block>
                   </value>
-                  <statement name="DO">
-                    <block type="autoRotateCamera" id="O]K}F%UFq{lT{B@OJ3FD">
+                </block>
+              </statement>
+              <statement name="ELSE">
+                <block type="variables_set" id="ZIcmv6(7hql#;%5up|=3">
+                  <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
+                  <value name="VALUE">
+                    <block type="math_number" id="_2.h,Y5j(X6%o1[Y(n(P">
+                      <field name="NUM">1</field>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_if" id="[y-I,IbB9.rQGRwx9La0">
+                  <value name="IF0">
+                    <block type="variables_get" id="nXFTH7RjZ{s7|FhaN}Ug">
+                      <field name="VAR" id="NFCfO|SaIe%_OgHfMi0.">allowAutoRotate</field>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="autoRotateCamera" id="r2I*f%8P5REeaVC={3qQ">
                       <field name="ON_OFF">ON</field>
                       <value name="SPEED">
                         <shadow type="math_number">
                           <field name="NUM">2</field>
                         </shadow>
-                        <block type="math_arithmetic" id="#O:!TX~Q;}?+C^[El.,a">
+                        <block type="math_arithmetic" id="E+6x8AG*%Gf=$paOjCc)">
                           <field name="OP">MULTIPLY</field>
                           <value name="A">
                             <shadow type="math_number">
                               <field name="NUM">2</field>
                             </shadow>
-                            <block type="variables_get" id="@pA?^7zJ9d)m~sJFkK@/">
+                            <block type="variables_get" id="J/1%B6L][|12=EI~Nltx">
                               <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
                             </block>
                           </value>
@@ -1252,7 +1346,218 @@
                             <shadow type="math_number">
                               <field name="NUM">2</field>
                             </shadow>
-                            <block type="variables_get" id="-DV]S}mmpR(~LT_31R``">
+                            <block type="variables_get" id="9$)hx9[rSp[N2!_S(QRn">
+                              <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+          <next>
+            <block type="eventHTMLElem" id="Ga$$(z#QG7W#[aHu8J8V">
+              <field name="EVENT">click</field>
+              <field name="PARENT">TRUE</field>
+              <value name="ID">
+                <shadow type="text" id="|P#7D(%MiT8@N99~)|~|">
+                  <field name="TEXT">autoRotateSpeed</field>
+                </shadow>
+              </value>
+              <statement name="DO">
+                <block type="variables_set" id="d`mFsgEgGPHILhl,.)*g">
+                  <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
+                  <value name="VALUE">
+                    <block type="math_arithmetic" id="QgYP*xby8v-`{epLC[A1">
+                      <field name="OP">ADD</field>
+                      <value name="A">
+                        <shadow type="math_number">
+                          <field name="NUM">2</field>
+                        </shadow>
+                        <block type="variables_get" id="dWf;)Bqq?;h]yt,X+7aa">
+                          <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <shadow type="math_number" id="8~AuqOulsw!n1iM1P._r">
+                          <field name="NUM">2</field>
+                        </shadow>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if" id="`r`QA5Z^IYjvJR|m[tI_">
+                      <value name="IF0">
+                        <block type="logic_compare" id="nAN;Ah{3)Lw:Qo+,vbH!">
+                          <field name="OP">GT</field>
+                          <value name="A">
+                            <block type="variables_get" id="0@`~#6=_%+o=i)|,L=m`">
+                              <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="math_number" id="xt7RDA86:Q~X/^:W/V)O">
+                              <field name="NUM">6</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="variables_set" id="hD6yD|EUB?!liAlMfLB!">
+                          <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
+                          <value name="VALUE">
+                            <block type="math_number" id="0$5|d@*LG69hm=4BwSK#">
+                              <field name="NUM">2</field>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="controls_if" id="cqV1lk(0lPVEIcB3@n6o">
+                          <value name="IF0">
+                            <block type="variables_get" id="QCG(J$2q1|n*X*j/Glpj">
+                              <field name="VAR" id="NFCfO|SaIe%_OgHfMi0.">allowAutoRotate</field>
+                            </block>
+                          </value>
+                          <statement name="DO0">
+                            <block type="autoRotateCamera" id="_#4^IdoT2+TFL9OM?{[@">
+                              <field name="ON_OFF">ON</field>
+                              <value name="SPEED">
+                                <shadow type="math_number">
+                                  <field name="NUM">2</field>
+                                </shadow>
+                                <block type="math_arithmetic" id="H.M}DvL#fJ|DB1TyxwIO">
+                                  <field name="OP">MULTIPLY</field>
+                                  <value name="A">
+                                    <shadow type="math_number">
+                                      <field name="NUM">2</field>
+                                    </shadow>
+                                    <block type="variables_get" id=")DyE0H-=4QLut+dJHL`n">
+                                      <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <shadow type="math_number">
+                                      <field name="NUM">2</field>
+                                    </shadow>
+                                    <block type="variables_get" id="XQa-i][KuHu6yupAs|A|">
+                                      <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="sj}7Ccvw-zhxZ,LcE+o]" x="1130" y="770">
+      <field name="EVENT">mousedown</field>
+      <field name="PARENT">FALSE</field>
+      <value name="ID">
+        <shadow type="text" id="_KU9vOC`hQhlRZcY9$`I">
+          <field name="TEXT"/>
+        </shadow>
+        <block type="querySelector" id="TH$+x2RM$PT(bNRdiUwt">
+          <value name="QUERY">
+            <shadow type="text" id="j=O}YG}}SQ$y2@HV`ER{">
+              <field name="TEXT">canvas</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="removeTimer" id="4T[4l@hXMpS^P,Kq/iy!">
+          <value name="ID">
+            <shadow type="text" id="XL,A+Cu~m~,VWXBaS2KS">
+              <field name="TEXT">myTimer</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="autoRotateCamera" id="l~Rxt|QZgZ[^d85A-#5y">
+              <field name="ON_OFF">OFF</field>
+              <value name="SPEED">
+                <shadow type="math_number" id="9`NQ3Ytmpd/UdgZ.ImV/">
+                  <field name="NUM">0</field>
+                </shadow>
+              </value>
+            </block>
+          </next>
+        </block>
+      </statement>
+      <next>
+        <block type="eventHTMLElem" id="4O6#]8{Eu8mHg_trs|*M">
+          <field name="EVENT">mouseup</field>
+          <field name="PARENT">FALSE</field>
+          <value name="ID">
+            <shadow type="text">
+              <field name="TEXT"/>
+            </shadow>
+            <block type="querySelector" id="~4248.quk3FY1!X,zL!p">
+              <value name="QUERY">
+                <shadow type="text" id="9x:8sYnP^*{P8S5mB9{n">
+                  <field name="TEXT">canvas</field>
+                </shadow>
+              </value>
+            </block>
+          </value>
+          <statement name="DO">
+            <block type="setTimer" id="vo5q:J1C9|+sl;HjO9*:">
+              <value name="ID">
+                <shadow type="text" id="Oyh/ec]rsOqAvaJ79wOM">
+                  <field name="TEXT">myTimer</field>
+                </shadow>
+              </value>
+              <value name="VALUE">
+                <shadow type="math_number" id="D]=!:2n!d9G}w0*i;A5F">
+                  <field name="NUM">5</field>
+                </shadow>
+              </value>
+              <value name="REPEAT">
+                <shadow type="math_number" id="kJpdA0Vy}OjY$S3;l;!]">
+                  <field name="NUM">1</field>
+                </shadow>
+              </value>
+              <statement name="DO">
+                <block type="controls_if" id="~xr$Kg^{f4RVQ-,bz6[|">
+                  <value name="IF0">
+                    <block type="variables_get" id="RT7xcO~w2w;6cL?g+9}:">
+                      <field name="VAR" id="NFCfO|SaIe%_OgHfMi0.">allowAutoRotate</field>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="autoRotateCamera" id="7(n}.YQQ8Jh/^G1aenqx">
+                      <field name="ON_OFF">ON</field>
+                      <value name="SPEED">
+                        <shadow type="math_number">
+                          <field name="NUM">2</field>
+                        </shadow>
+                        <block type="math_arithmetic" id="atga!*I@K2i4*2g4[NEg">
+                          <field name="OP">MULTIPLY</field>
+                          <value name="A">
+                            <shadow type="math_number">
+                              <field name="NUM">2</field>
+                            </shadow>
+                            <block type="variables_get" id="_jxP0:k6Z3(7[ikvjBF=">
+                              <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <shadow type="math_number">
+                              <field name="NUM">2</field>
+                            </shadow>
+                            <block type="variables_get" id="*uT-*gxqw1J?Ds+Fn)Ut">
                               <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
                             </block>
                           </value>
@@ -1263,275 +1568,7 @@
                 </block>
               </statement>
             </block>
-          </next>
-        </block>
-      </statement>
-      <next>
-        <block type="eventHTMLElem" id="w9ICT0y1`MMY0C~.aV{I">
-          <field name="EVENT">click</field>
-          <field name="PARENT">TRUE</field>
-          <value name="ID">
-            <shadow type="text" id="eymx]`vcJBjU?(VX`LTn">
-              <field name="TEXT">autoRotate</field>
-            </shadow>
-          </value>
-          <statement name="DO">
-            <block type="controls_ifelse" id="80~OJbTFof/:cl}zrkQ)">
-              <value name="IF0">
-                <block type="variables_get" id="U37.w+2)I,*X~AN|OO:P">
-                  <field name="VAR" id="NFCfO|SaIe%_OgHfMi0.">allowAutoRotate</field>
-                </block>
-              </value>
-              <statement name="DO0">
-                <block type="autoRotateCamera" id="3}HTpk_eOsULGQ(rjC=$">
-                  <field name="ON_OFF">OFF</field>
-                  <value name="SPEED">
-                    <shadow type="math_number" id="W%`Z5a?DW%`mkTgKSs4U">
-                      <field name="NUM">0</field>
-                    </shadow>
-                  </value>
-                  <next>
-                    <block type="variables_set" id="6L*.R/d*}N)3WB;[P7Wv">
-                      <field name="VAR" id="NFCfO|SaIe%_OgHfMi0.">allowAutoRotate</field>
-                      <value name="VALUE">
-                        <block type="logic_boolean" id="y;stF4H-@LnV59VVqGv7">
-                          <field name="BOOL">FALSE</field>
-                        </block>
-                      </value>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-              <statement name="ELSE">
-                <block type="autoRotateCamera" id="Xoi3sKU50.JB!B8aC6Nq">
-                  <field name="ON_OFF">ON</field>
-                  <value name="SPEED">
-                    <shadow type="math_number">
-                      <field name="NUM">2</field>
-                    </shadow>
-                    <block type="math_arithmetic" id="d|Y}[2*u5aj9SImoSs}+">
-                      <field name="OP">MULTIPLY</field>
-                      <value name="A">
-                        <shadow type="math_number">
-                          <field name="NUM">2</field>
-                        </shadow>
-                        <block type="variables_get" id=";7,:TRbO/-1)2o7`/MV,">
-                          <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
-                        </block>
-                      </value>
-                      <value name="B">
-                        <shadow type="math_number">
-                          <field name="NUM">2</field>
-                        </shadow>
-                        <block type="variables_get" id="+`Z1}g04AT/A%@z5u]2.">
-                          <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="variables_set" id="4@,Gh+3{,ui+#OYzhF54">
-                      <field name="VAR" id="NFCfO|SaIe%_OgHfMi0.">allowAutoRotate</field>
-                      <value name="VALUE">
-                        <block type="logic_boolean" id="[h}1%sibYP(c`m!^+zp*">
-                          <field name="BOOL">TRUE</field>
-                        </block>
-                      </value>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-            </block>
           </statement>
-          <next>
-            <block type="eventHTMLElem" id="yr,Fan7z_Ed5sq`d$B7D">
-              <field name="EVENT">click</field>
-              <field name="PARENT">TRUE</field>
-              <value name="ID">
-                <shadow type="text" id="Ieh6_RqDFzfvK^m)_R#.">
-                  <field name="TEXT">autoRotateDirection</field>
-                </shadow>
-              </value>
-              <statement name="DO">
-                <block type="controls_ifelse" id="U09?KM:RymfnA~m$-~Uw">
-                  <value name="IF0">
-                    <block type="logic_compare" id="7v6UE%VlSLkmiyI~l~)y">
-                      <field name="OP">EQ</field>
-                      <value name="A">
-                        <block type="variables_get" id="oAuic0d*,xw|527Dyr7z">
-                          <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
-                        </block>
-                      </value>
-                      <value name="B">
-                        <block type="math_number" id=".,9ert#+jGD6599w_0zw">
-                          <field name="NUM">1</field>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <statement name="DO0">
-                    <block type="variables_set" id="JZ--AGa+T.VccYKeu4-E">
-                      <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
-                      <value name="VALUE">
-                        <block type="math_number" id="9Wil?!x`VA7,7^:OIM+w">
-                          <field name="NUM">-1</field>
-                        </block>
-                      </value>
-                    </block>
-                  </statement>
-                  <statement name="ELSE">
-                    <block type="variables_set" id="ZIcmv6(7hql#;%5up|=3">
-                      <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
-                      <value name="VALUE">
-                        <block type="math_number" id="_2.h,Y5j(X6%o1[Y(n(P">
-                          <field name="NUM">1</field>
-                        </block>
-                      </value>
-                    </block>
-                  </statement>
-                  <next>
-                    <block type="controls_if" id="[y-I,IbB9.rQGRwx9La0">
-                      <value name="IF0">
-                        <block type="variables_get" id="nXFTH7RjZ{s7|FhaN}Ug">
-                          <field name="VAR" id="NFCfO|SaIe%_OgHfMi0.">allowAutoRotate</field>
-                        </block>
-                      </value>
-                      <statement name="DO0">
-                        <block type="autoRotateCamera" id="r2I*f%8P5REeaVC={3qQ">
-                          <field name="ON_OFF">ON</field>
-                          <value name="SPEED">
-                            <shadow type="math_number">
-                              <field name="NUM">2</field>
-                            </shadow>
-                            <block type="math_arithmetic" id="E+6x8AG*%Gf=$paOjCc)">
-                              <field name="OP">MULTIPLY</field>
-                              <value name="A">
-                                <shadow type="math_number">
-                                  <field name="NUM">2</field>
-                                </shadow>
-                                <block type="variables_get" id="J/1%B6L][|12=EI~Nltx">
-                                  <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
-                                </block>
-                              </value>
-                              <value name="B">
-                                <shadow type="math_number">
-                                  <field name="NUM">2</field>
-                                </shadow>
-                                <block type="variables_get" id="9$)hx9[rSp[N2!_S(QRn">
-                                  <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                        </block>
-                      </statement>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-              <next>
-                <block type="eventHTMLElem" id="Ga$$(z#QG7W#[aHu8J8V">
-                  <field name="EVENT">click</field>
-                  <field name="PARENT">TRUE</field>
-                  <value name="ID">
-                    <shadow type="text" id="|P#7D(%MiT8@N99~)|~|">
-                      <field name="TEXT">autoRotateSpeed</field>
-                    </shadow>
-                  </value>
-                  <statement name="DO">
-                    <block type="variables_set" id="d`mFsgEgGPHILhl,.)*g">
-                      <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
-                      <value name="VALUE">
-                        <block type="math_arithmetic" id="QgYP*xby8v-`{epLC[A1">
-                          <field name="OP">ADD</field>
-                          <value name="A">
-                            <shadow type="math_number">
-                              <field name="NUM">2</field>
-                            </shadow>
-                            <block type="variables_get" id="dWf;)Bqq?;h]yt,X+7aa">
-                              <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
-                            </block>
-                          </value>
-                          <value name="B">
-                            <shadow type="math_number" id="8~AuqOulsw!n1iM1P._r">
-                              <field name="NUM">2</field>
-                            </shadow>
-                          </value>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="controls_if" id="`r`QA5Z^IYjvJR|m[tI_">
-                          <value name="IF0">
-                            <block type="logic_compare" id="nAN;Ah{3)Lw:Qo+,vbH!">
-                              <field name="OP">GT</field>
-                              <value name="A">
-                                <block type="variables_get" id="0@`~#6=_%+o=i)|,L=m`">
-                                  <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
-                                </block>
-                              </value>
-                              <value name="B">
-                                <block type="math_number" id="xt7RDA86:Q~X/^:W/V)O">
-                                  <field name="NUM">6</field>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                          <statement name="DO0">
-                            <block type="variables_set" id="hD6yD|EUB?!liAlMfLB!">
-                              <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
-                              <value name="VALUE">
-                                <block type="math_number" id="0$5|d@*LG69hm=4BwSK#">
-                                  <field name="NUM">2</field>
-                                </block>
-                              </value>
-                            </block>
-                          </statement>
-                          <next>
-                            <block type="controls_if" id="cqV1lk(0lPVEIcB3@n6o">
-                              <value name="IF0">
-                                <block type="variables_get" id="QCG(J$2q1|n*X*j/Glpj">
-                                  <field name="VAR" id="NFCfO|SaIe%_OgHfMi0.">allowAutoRotate</field>
-                                </block>
-                              </value>
-                              <statement name="DO0">
-                                <block type="autoRotateCamera" id="_#4^IdoT2+TFL9OM?{[@">
-                                  <field name="ON_OFF">ON</field>
-                                  <value name="SPEED">
-                                    <shadow type="math_number">
-                                      <field name="NUM">2</field>
-                                    </shadow>
-                                    <block type="math_arithmetic" id="H.M}DvL#fJ|DB1TyxwIO">
-                                      <field name="OP">MULTIPLY</field>
-                                      <value name="A">
-                                        <shadow type="math_number">
-                                          <field name="NUM">2</field>
-                                        </shadow>
-                                        <block type="variables_get" id=")DyE0H-=4QLut+dJHL`n">
-                                          <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
-                                        </block>
-                                      </value>
-                                      <value name="B">
-                                        <shadow type="math_number">
-                                          <field name="NUM">2</field>
-                                        </shadow>
-                                        <block type="variables_get" id="XQa-i][KuHu6yupAs|A|">
-                                          <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                </block>
-                              </statement>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </statement>
-                </block>
-              </next>
-            </block>
-          </next>
         </block>
       </next>
     </block>
@@ -1730,190 +1767,6 @@
         </block>
       </next>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="whenHovered" id="M?6(C[ZdL5sOC%_UpGXV" disabled="true" x="1350" y="550">
-      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
-      <field name="X_RAY">FALSE</field>
-      <value name="VALUE">
-        <shadow type="objectList" id="4=SMBLk(d@J}`uA,wao;">
-          <field name="FIELDNAME">door.FL</field>
-        </shadow>
-      </value>
-      <statement name="DO_OVER">
-        <block type="outline" id="m*he)!3rbHDC=pT]1bn5">
-          <field name="DO_WHAT">ENABLE</field>
-          <value name="TARGET">
-            <shadow type="objectList" id="e97EfjCXmVS!#Yq#V}K?">
-              <field name="FIELDNAME">door.FL</field>
-            </shadow>
-          </value>
-        </block>
-      </statement>
-      <statement name="DO_OUT">
-        <block type="outline" id="#l]+LM$~oN|hydBKKMR6">
-          <field name="DO_WHAT">DISABLE</field>
-          <value name="TARGET">
-            <shadow type="objectList" id="fnw.GOsy9c?$pu2Y3.qd">
-              <field name="FIELDNAME">door.FL</field>
-            </shadow>
-          </value>
-        </block>
-      </statement>
-      <next>
-        <block type="whenHovered" id="SVN42./QMmJ8(f;w_=Tz" disabled="true">
-          <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
-          <field name="X_RAY">FALSE</field>
-          <value name="VALUE">
-            <shadow type="objectList" id=")X,/yYyfNKck75lN9qbv">
-              <field name="FIELDNAME">door.FR</field>
-            </shadow>
-          </value>
-          <statement name="DO_OVER">
-            <block type="outline" id="{}|sot,wycZr.LMVl|,4">
-              <field name="DO_WHAT">ENABLE</field>
-              <value name="TARGET">
-                <shadow type="objectList" id="uP#m_~+Ip]gAXr[gxK`J">
-                  <field name="FIELDNAME">door.FR</field>
-                </shadow>
-              </value>
-            </block>
-          </statement>
-          <statement name="DO_OUT">
-            <block type="outline" id="nC-~ufF3|l]FRTDlH`MW">
-              <field name="DO_WHAT">DISABLE</field>
-              <value name="TARGET">
-                <shadow type="objectList" id="W}2pA$N12/H*=%XvU~ze">
-                  <field name="FIELDNAME">door.FR</field>
-                </shadow>
-              </value>
-            </block>
-          </statement>
-          <next>
-            <block type="whenHovered" id="-oI[4w%3rJYwNtJFto/W" disabled="true">
-              <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
-              <field name="X_RAY">FALSE</field>
-              <value name="VALUE">
-                <shadow type="objectList" id="_S=K~OG8Qi,~Z4jG;$ef">
-                  <field name="FIELDNAME">door.BL</field>
-                </shadow>
-              </value>
-              <statement name="DO_OVER">
-                <block type="outline" id="PfrU|4nfDQusx!_J?00%">
-                  <field name="DO_WHAT">ENABLE</field>
-                  <value name="TARGET">
-                    <shadow type="objectList" id="C75/5!*y9r@Ek_IBEu]=">
-                      <field name="FIELDNAME">door.BL</field>
-                    </shadow>
-                  </value>
-                </block>
-              </statement>
-              <statement name="DO_OUT">
-                <block type="outline" id="dI=3n%CI)(p/?`a*{|IS">
-                  <field name="DO_WHAT">DISABLE</field>
-                  <value name="TARGET">
-                    <shadow type="objectList" id="b0#W@%dU/Y1o4:^jqh`w">
-                      <field name="FIELDNAME">door.BL</field>
-                    </shadow>
-                  </value>
-                </block>
-              </statement>
-              <next>
-                <block type="whenHovered" id="/7C*`ce;epj:*dqHhjeo" disabled="true">
-                  <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
-                  <field name="X_RAY">FALSE</field>
-                  <value name="VALUE">
-                    <shadow type="objectList" id="y_p3rQqb%f#0^i;ykply">
-                      <field name="FIELDNAME">door.BR</field>
-                    </shadow>
-                  </value>
-                  <statement name="DO_OVER">
-                    <block type="outline" id="qK??M;-vMlYQ-uOnYy1R">
-                      <field name="DO_WHAT">ENABLE</field>
-                      <value name="TARGET">
-                        <shadow type="objectList" id="VzuIP7lsq`ANG],MQe]1">
-                          <field name="FIELDNAME">door.BR</field>
-                        </shadow>
-                      </value>
-                    </block>
-                  </statement>
-                  <statement name="DO_OUT">
-                    <block type="outline" id="3NuVK/J`?={X*`V/!y[{">
-                      <field name="DO_WHAT">DISABLE</field>
-                      <value name="TARGET">
-                        <shadow type="objectList" id="=%J0kfxnb[)C7{WEa@$,">
-                          <field name="FIELDNAME">door.BR</field>
-                        </shadow>
-                      </value>
-                    </block>
-                  </statement>
-                  <next>
-                    <block type="whenHovered" id="b_T.3Zr=ABao@z[@[1|$" disabled="true">
-                      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
-                      <field name="X_RAY">FALSE</field>
-                      <value name="VALUE">
-                        <shadow type="objectList" id="-%Jj0K_8I@=)l@F!Q?FR">
-                          <field name="FIELDNAME">boot</field>
-                        </shadow>
-                      </value>
-                      <statement name="DO_OVER">
-                        <block type="outline" id="9k-hNbm^u^q$HmNFr#H#">
-                          <field name="DO_WHAT">ENABLE</field>
-                          <value name="TARGET">
-                            <shadow type="objectList" id="i8[P;Yx{890}?-:Go=hT">
-                              <field name="FIELDNAME">boot</field>
-                            </shadow>
-                          </value>
-                        </block>
-                      </statement>
-                      <statement name="DO_OUT">
-                        <block type="outline" id="?!*4v^g2WX:Mi|8dP_;!">
-                          <field name="DO_WHAT">DISABLE</field>
-                          <value name="TARGET">
-                            <shadow type="objectList" id="pB)-7d8LUm$A=eAlV=QN">
-                              <field name="FIELDNAME">boot</field>
-                            </shadow>
-                          </value>
-                        </block>
-                      </statement>
-                      <next>
-                        <block type="whenHovered" id="+SO3/okeQq5VH7JvMB(t" disabled="true">
-                          <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
-                          <field name="X_RAY">FALSE</field>
-                          <value name="VALUE">
-                            <shadow type="objectList" id="`3,xF#[PT,eG3WzHVuV}">
-                              <field name="FIELDNAME">roof</field>
-                            </shadow>
-                          </value>
-                          <statement name="DO_OVER">
-                            <block type="outline" id="g8uVWMs;eti*x58rKfRr">
-                              <field name="DO_WHAT">ENABLE</field>
-                              <value name="TARGET">
-                                <shadow type="objectList" id="^ASL`!3snW!1rA1aqHzY">
-                                  <field name="FIELDNAME">roof</field>
-                                </shadow>
-                              </value>
-                            </block>
-                          </statement>
-                          <statement name="DO_OUT">
-                            <block type="outline" id="B:oQ7i4uQTjUnlbB^rdy">
-                              <field name="DO_WHAT">DISABLE</field>
-                              <value name="TARGET">
-                                <shadow type="objectList" id="z!0ZfKg+Vt=MYB}xvj0u">
-                                  <field name="FIELDNAME">roof</field>
-                                </shadow>
-                              </value>
-                            </block>
-                          </statement>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-      </next>
-    </block>
     <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="e%Pra%p.hu{8SE7AQeLL" x="230" y="970">
       <field name="VAR" id="wx{Ws)RL+Nfx^a.+Ho3E">showAnnotation</field>
       <value name="VALUE">
@@ -2007,5 +1860,5 @@
       </value>
     </block>
   </tab>
-  <editorsettings viewport-x="1129.7999313354492" viewport-y="344.00000762939453" viewport-w="627.188" viewport-h="499.312" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+  <editorsettings viewport-x="1129.7999313354492" viewport-y="344.00000762939453" viewport-w="627.188" viewport-h="499.312" viewport-hidden="true" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
 </xml>
