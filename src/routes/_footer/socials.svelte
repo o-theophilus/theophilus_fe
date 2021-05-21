@@ -68,7 +68,7 @@
 
 		background-color: var(--colorNill);
 
-		box-shadow: 0 0 0 var(--colorNill);
+		/* box-shadow: 0 0 0 var(--colorNill); */
 		fill: white;
 
 		transition: all var(--animTime1);
@@ -76,8 +76,8 @@
 	}
 
 	a:hover {
-		box-shadow: 0 0 12px var(--color3);
-		background-color: var(--color1);
+		/* box-shadow: 0 0 12px var(--color3); */
+		/* background-color: var(--color1); */
 		fill: var(--color3);
 	}
 </style>
