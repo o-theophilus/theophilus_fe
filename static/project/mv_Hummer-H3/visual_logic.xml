@@ -1133,7 +1133,7 @@
       </next>
     </block>
   </tab>
-  <tab name="camera" type="SecondaryTab" active="true" scrollx="-201.5760744546045" scrolly="-534.9121093749995" scale="1">
+  <tab name="camera" type="SecondaryTab" active="true" scrollx="-393.5760744546045" scrolly="-584.9121093749995" scale="1">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="!.fmxjV|pnptGsl.DfCr" type="">autoRotateDirection</variable>
       <variable id="M;)/y|Pp*}6;+z*p#X8K" type="">autoRotateSpeed</variable>
@@ -1196,7 +1196,7 @@
         </block>
       </next>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="w9ICT0y1`MMY0C~.aV{I" x="330" y="730">
+    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="w9ICT0y1`MMY0C~.aV{I" x="361" y="778">
       <field name="EVENT">click</field>
       <field name="PARENT">TRUE</field>
       <value name="ID">
@@ -1569,6 +1569,118 @@
               </statement>
             </block>
           </statement>
+          <next>
+            <block type="eventHTMLElem" id="hl/n%YeF2z(-;vk|NA^l">
+              <field name="EVENT">touchstart</field>
+              <field name="PARENT">FALSE</field>
+              <value name="ID">
+                <shadow type="text">
+                  <field name="TEXT"/>
+                </shadow>
+                <block type="querySelector" id="fxZ@Q@U8J,`iZsD@T}0x">
+                  <value name="QUERY">
+                    <shadow type="text" id="9B.iFM5Q{~W%[;yPi+Kz">
+                      <field name="TEXT">canvas</field>
+                    </shadow>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="removeTimer" id="NMA?60`b?{S*LwV.A:wZ">
+                  <value name="ID">
+                    <shadow type="text" id="tZVh{5AN|2#AXc1=FbbZ">
+                      <field name="TEXT">myTimer</field>
+                    </shadow>
+                  </value>
+                  <next>
+                    <block type="autoRotateCamera" id=")Wh2/H]^la)#Fi8*{xTq">
+                      <field name="ON_OFF">OFF</field>
+                      <value name="SPEED">
+                        <shadow type="math_number" id="dFN0(rLWh;hdv?~1D`:4">
+                          <field name="NUM">0</field>
+                        </shadow>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="eventHTMLElem" id="6k]fXF-{ADG9,Dn}cn^a">
+                  <field name="EVENT">touchend</field>
+                  <field name="PARENT">FALSE</field>
+                  <value name="ID">
+                    <shadow type="text">
+                      <field name="TEXT"/>
+                    </shadow>
+                    <block type="querySelector" id="cDGv5L+MbztmRlyyr*Ww">
+                      <value name="QUERY">
+                        <shadow type="text" id="S@G4_x^#cnyE|i*v9;(g">
+                          <field name="TEXT">canvas</field>
+                        </shadow>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="setTimer" id="kJGhW=QI)X_Kcsps*EHS">
+                      <value name="ID">
+                        <shadow type="text" id="z]K]3{rHZRZcUWt)$jZ+">
+                          <field name="TEXT">myTimer</field>
+                        </shadow>
+                      </value>
+                      <value name="VALUE">
+                        <shadow type="math_number" id="c5iAVLE{mM@R79hO2l$D">
+                          <field name="NUM">5</field>
+                        </shadow>
+                      </value>
+                      <value name="REPEAT">
+                        <shadow type="math_number" id="GKQ)t?X@:ee,k|*0dtrH">
+                          <field name="NUM">1</field>
+                        </shadow>
+                      </value>
+                      <statement name="DO">
+                        <block type="controls_if" id="O8/UNdU[|%vsX[+$y-Vo">
+                          <value name="IF0">
+                            <block type="variables_get" id="9ruwOE/5zN:IBdi_yYf+">
+                              <field name="VAR" id="NFCfO|SaIe%_OgHfMi0.">allowAutoRotate</field>
+                            </block>
+                          </value>
+                          <statement name="DO0">
+                            <block type="autoRotateCamera" id="{[9}Qd;soD;e{mM*Q4cg">
+                              <field name="ON_OFF">ON</field>
+                              <value name="SPEED">
+                                <shadow type="math_number">
+                                  <field name="NUM">2</field>
+                                </shadow>
+                                <block type="math_arithmetic" id="$I5HU]Kr(lCOpjU%~0]e">
+                                  <field name="OP">MULTIPLY</field>
+                                  <value name="A">
+                                    <shadow type="math_number">
+                                      <field name="NUM">2</field>
+                                    </shadow>
+                                    <block type="variables_get" id="g(YHX;Ivp;t0P$HIQk4X">
+                                      <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <shadow type="math_number">
+                                      <field name="NUM">2</field>
+                                    </shadow>
+                                    <block type="variables_get" id="%S;7T,|kV61VL~WqOA0s">
+                                      <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </statement>
+                        </block>
+                      </statement>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
         </block>
       </next>
     </block>
