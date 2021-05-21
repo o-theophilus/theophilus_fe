@@ -1,0 +1,35 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="false" scrollx="838.5" scrolly="608" scale="0.9"></tab>
+  <tab name="main" type="MainTab" active="true" scrollx="838.5" scrolly="608" scale="0.9">
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenHovered" id="qM,Q@Cg4PlVOC,jYcj?W" x="-630" y="-170">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="JUj;J+$G_u#0DGNdo;ve">
+          <field name="FIELDNAME">door.BL</field>
+        </shadow>
+      </value>
+      <statement name="DO_OVER">
+        <block type="outline" id="/Z[E#PIPST0aTK(qqC)P">
+          <field name="DO_WHAT">ENABLE</field>
+          <value name="TARGET">
+            <shadow type="objectList" id="^na.DI]LQ61Bn/s~DW=m">
+              <field name="FIELDNAME">door.BL</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+      <statement name="DO_OUT">
+        <block type="outline" id="hf.nYy4bZj0JarBdR4F)">
+          <field name="DO_WHAT">DISABLE</field>
+          <value name="TARGET">
+            <shadow type="objectList" id="1tGz{S~sq^WB!-ax?t:!">
+              <field name="FIELDNAME">door.BL</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1090.8" viewport-y="28" viewport-w="739.2" viewport-h="646" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>
