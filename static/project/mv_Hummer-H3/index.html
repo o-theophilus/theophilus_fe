@@ -8,8 +8,13 @@
 			box-sizing: border-box;
 		}
 		.btn {
+			display: block;
+
 			width: 50px;
 			height: 50px;
+
+			border-radius: 50%;
+			background-size: contain;
 
 			cursor: pointer;
 			pointer-events: auto;
@@ -24,6 +29,9 @@
 
 		/* ************************************************** */
 		.block {
+			--pad: 10px;
+			--btnSize: 50px;
+
 			position: relative;
 			/* height: 500px; */
 			height: 100vh;
@@ -47,58 +55,58 @@
 		}
 
 		/* ************************************************** */
-		#menu {
-			display: block;
+		#menu,
+		#fullScreen {
 			position: absolute;
-
-			top: 5px;
-			left: 5px;
-
+			top: var(--pad);
+		}
+		#menu {
+			left: var(--pad);
 			background-image: url("media/menu.png");
-			background-size: contain;
+		}
+		#fullScreen {
+			right: var(--pad);
+			background-image: url("media/full_screen.png");
 		}
 
-		#t_01:checked + .panel01 {
+		#t_01:checked ~ #menu {
+			transform: scaleY(-1);
+		}
+		#t_02:checked ~ #fullScreen {
+			transform: scale(-1, -1);
+		}
+		#t_01:checked ~ .panel01 {
 			display: flex;
 		}
+
 		.panel01 {
 			display: none;
+			flex-direction: column;
 
 			position: absolute;
 
-			top: 60px;
-			left: 5px;
+			top: calc(var(--btnSize) + var(--pad) * 2);
+			left: var(--pad);
 
-			gap: 20px;
+			gap: 10px;
 		}
 
 		#autoRotate {
 			background-image: url("media/auto_rotate.png");
-			background-size: contain;
 		}
 		#autoRotateDirection {
 			background-image: url("media/auto_rotate_direction.png");
-			background-size: contain;
 		}
 		#showAnnotation {
 			background-image: url("media/show_annotation.png");
-			background-size: contain;
 		}
-		/* ************************************************** */
-
-		#fullScreen {
-			position: absolute;
-
-			top: 5px;
-			right: 5px;
-
-			background-image: url("media/full_screen.png");
-			background-size: contain;
+		#autoRotateSpeed {
+			background-image: url("media/auto_rotate_speed.png");
 		}
 		/* ************************************************** */
 
 		#splash_screen {
-			display: none;
+			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
@@ -124,9 +132,6 @@
 
 			border-radius: 3px;
 		}
-		video {
-			max-width: 100px;
-		}
 		#loading_bar {
 			height: 10px;
 			background-color: rgb(255, 102, 51);
@@ -143,35 +148,33 @@
 			></iframe>
 
 			<div id="ui">
-				<label class="btn" id="menu" for="t_01"> </label>
 				<input type="checkbox" class="helperToggle" id="t_01" />
+				<input type="checkbox" class="helperToggle" id="t_02" />
+
+				<label class="btn" id="menu" for="t_01"> </label>
+				<label class="btn" id="fullScreen" for="t_02"> </label>
 
 				<div class="panel01">
 					<div class="btn" id="showAnnotation"></div>
 					<div class="btn" id="autoRotate"></div>
 					<div class="btn" id="autoRotateDirection"></div>
-					<input
+					<div class="btn" id="autoRotateSpeed"></div>
+					<!-- <input
 						type="range"
 						min="1"
 						max="8"
 						value="2"
 						step="0.1"
-						id="autoRotateSpeed"
-					/>
+						id="autoRotateSpeed2"
+						/> -->
 				</div>
-				<div class="btn" id="fullScreen"></div>
 			</div>
 			<div id="splash_screen">
-				<video class="busy" loop autoplay muted>
-					<source src="busy.mp4" type="video/mp4" />
-				</video>
-				<br />
-				<br />
 				<div id="loading">
 					<div id="loading_bar"></div>
 				</div>
 				<br />
-				<h3>Loading <span id="loading_text"></span>%</h3>
+				<h3>Loading <span id="loading_text">0</span>%</h3>
 			</div>
 		</div>
 	</body>

@@ -7,13 +7,11 @@
 	<h1>About Me</h1>
 </Title>
 <Content>
-	<div class="block">
-		<iframe
-			style="width: 100%;
+	<iframe
+		style="width: 100%;
 		height: 500px;"
-			src="/project/mv_Hummer-H3/index.html"
-			frameborder="0"
-			title="container"
-		/>
-
+		src="/project/mv_Hummer-H3/index.html"
+		frameborder="0"
+		title="container"
+	/>
 </Content>

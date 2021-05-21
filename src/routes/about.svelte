@@ -1,4 +1,6 @@
 <script>
+	export const prerender = true;
+	
 	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
 	import Title from '$lib/pageTitle.svelte';

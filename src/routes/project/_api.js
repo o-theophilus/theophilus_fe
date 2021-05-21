@@ -37,22 +37,22 @@ export default [
 	// 		<img class="noDesign" src="/images/flipaxis_001.jpg" alt="image_image" />
 	// 	`
 	// },
-	{
-		name: 'Model Viewer - S3V Range Rover L322',
-		slug: 'L322',
-		date: '01 Jan 2021',
-		category: 'Models, Visualisation and Animation',
-		img: 'mvS3V.jpg',
-		summary: 'hhas ijhashah ajhasha jkajhsaj asjjakjs ',
-		type: 'html',
-		content: `
-			<iframe
-			title="iframe"
-			src="/project/mvS3V/index.html"
-			style=" width: 100%; height: 500px; "
-			ref="iFrame"/>
-		`
-	},
+	// {
+	// 	name: 'Model Viewer - S3V Range Rover L322',
+	// 	slug: 'L322',
+	// 	date: '01 Jan 2021',
+	// 	category: 'Models, Visualisation and Animation',
+	// 	img: 'mvS3V.jpg',
+	// 	summary: 'hhas ijhashah ajhasha jkajhsaj asjjakjs ',
+	// 	type: 'html',
+	// 	content: `
+	// 		<iframe
+	// 		title="iframe"
+	// 		src="/project/mvS3V/index.html"
+	// 		style=" width: 100%; height: 500px; "
+	// 		ref="iFrame"/>
+	// 	`
+	// },
 	// {
 	// 	name: 'Beads',
 	// 	slug: 'bead',
@@ -404,53 +404,22 @@ export default [
 	// 	content: 'aris_001.pdf'
 	// }
 
-
-	// {
-	// 	name: 'Model Viewer - Hummer H3',
-	// 	slug: 'mv_hummer_h3',
-	// 	date: '19 May 2021',
-	// 	category: 'Models, Visualisation and Animation',
-	// 	img: 'tin_001.jpg',
-	// 	summary: 'Built with Verge3D',
-	// 	type: 'html',
-	// 	content: `
-	// 	<div class="block">
-	// 	<iframe
-	// 		style="width: 100%;
-	// 	height: 500px;"
-	// 		src="/project/mv_Hummer H3/mv_Hummer H3.html"
-	// 		frameborder="0"
-	// 		title="container"
-	// 	/>
-
-	// 	<div class="ui">
-	// 		<div class="btn" id="autoRotate">AR</div>
-	// 		<div class="btn" id="autoRotateDirection">d</div>
-	// 		<input type="range" min="1" max="8" value="2" step="0.1" id="autoRotateSpeed" />
-	// 	</div>
-	// </div>
-	// <style>
-	// 	.block {
-	// 		position: relative;
-	// 	}
-	// 	iframe{
-	// 		/* background-color: black; */
-	// 	}
-	// 	.ui{
-	// 		position: absolute;
-	// 		display: flex;
-	// 		gap: 20px;
-	
-	
-	// 		top: 0;
-	// 		left: 0;
-	// 	}
-	// 	.btn {
-	// 		background-color: red;
-	// 		width: 50px;
-	// 		height: 50px;
-	// 	}
-	// </style>
-	// 	`
-	// },
+	{
+		name: 'Product Viewer - Hummer H3',
+		slug: 'mv_hummer_h3',
+		date: '21 May 2021',
+		category: 'Models, Visualisation and Animation',
+		img: 'mvS3V.jpg',
+		summary: 'Built with Verge3D',
+		type: 'html',
+		content: `
+		<iframe
+		style="width: 100%;
+		height: 500px;"
+		src="/project/mv_Hummer-H3/index.html"
+		frameborder="0"
+		title="container"
+	/>
+		`
+	}
 ];

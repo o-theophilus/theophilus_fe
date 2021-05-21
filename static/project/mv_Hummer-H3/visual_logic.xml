@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <tab name="init" type="InitTab" active="false" scrollx="557.4229012875605" scrolly="573.360479608757" scale="0.6715938569729647">
+  <tab name="init" type="InitTab" active="false" scrollx="561.4229012875605" scrolly="449.9678841718862" scale="0.6715938569729647">
     <block xmlns="https://developers.google.com/blockly/xml" type="initSettings" id="5OvcTUb`Q$#!yKxEW8Xu" x="-650" y="-670">
       <field name="LOAD_COMP_ASSETS">FALSE</field>
       <field name="FULLSCREEN">FALSE</field>
@@ -8,22 +8,6 @@
       <field name="FADE_ANNOTATIONS">TRUE</field>
     </block>
     <block xmlns="https://developers.google.com/blockly/xml" type="initPreloader" id="S=K1FbS2)v,6P%g097mm" x="-830" y="-290">
-      <statement name="DO_START">
-        <block type="setHTMLElemStyle" id="Bo34.{4.GI:@BRRUjAX=">
-          <field name="PROPERTY">display</field>
-          <field name="PARENT">TRUE</field>
-          <value name="VALUE">
-            <block type="text" id="d2s$l`_3csH=Su2nE?(;">
-              <field name="TEXT">flex</field>
-            </block>
-          </value>
-          <value name="ID">
-            <shadow type="text" id="aY(:ibzV`~..l$f)E`.s">
-              <field name="TEXT">splash_screen</field>
-            </shadow>
-          </value>
-        </block>
-      </statement>
       <statement name="DO_PROGRESS">
         <block type="setHTMLElemAttribute" id="p,LxoX@@c,]GKA)x9rQV">
           <field name="ATTRIBUTE">innerHTML</field>
@@ -96,7 +80,7 @@
       </statement>
     </block>
   </tab>
-  <tab name="main" type="MainTab" active="false" scrollx="123.56099950652754" scrolly="309.10867810586115" scale="0.45811152199140004">
+  <tab name="main" type="MainTab" active="false" scrollx="123.56099950652765" scrolly="309.1086781058613" scale="0.45811152199140004">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="}~7ead6=vXJ,O5Fqh,P*" type="">opened.FL</variable>
       <variable id="dbj]C@v3fsqQ02KinS5X" type="">opened.FR</variable>
@@ -964,13 +948,13 @@
       </next>
     </block>
   </tab>
-  <tab name="camera" type="SecondaryTab" active="false" scrollx="-129.67913832199508" scrolly="-234.47507141897654" scale="0.9070294784580493">
+  <tab name="camera" type="SecondaryTab" active="true" scrollx="-202.5760744546045" scrolly="-685.9121093749997" scale="1">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="!.fmxjV|pnptGsl.DfCr" type="">autoRotateDirection</variable>
       <variable id="M;)/y|Pp*}6;+z*p#X8K" type="">autoRotateSpeed</variable>
       <variable id="NFCfO|SaIe%_OgHfMi0." type="">allowAutoRotate</variable>
     </variables>
-    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="aTO(x1kRGH-%Ej`1?RS:" x="990" y="150">
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="aTO(x1kRGH-%Ej`1?RS:" x="310" y="130">
       <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
       <value name="VALUE">
         <block type="math_number" id="bQj`~6.;?`Q+wC`^y~Zw">
@@ -1261,64 +1245,100 @@
                 </block>
               </statement>
               <next>
-                <block type="eventHTMLElem" id="?1n0t4bE!CCs+@g=(BjW">
-                  <field name="EVENT">change</field>
+                <block type="eventHTMLElem" id="Ga$$(z#QG7W#[aHu8J8V">
+                  <field name="EVENT">click</field>
                   <field name="PARENT">TRUE</field>
                   <value name="ID">
-                    <shadow type="text" id="g22Y_.;i}O$nd7:CtA1`">
+                    <shadow type="text" id="|P#7D(%MiT8@N99~)|~|">
                       <field name="TEXT">autoRotateSpeed</field>
                     </shadow>
                   </value>
                   <statement name="DO">
-                    <block type="variables_set" id="dOFiGXY=2N3ukhC1@J5O">
+                    <block type="variables_set" id="d`mFsgEgGPHILhl,.)*g">
                       <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
                       <value name="VALUE">
-                        <block type="getHTMLElemAttribute" id="|s?Csq?Vz6N@a;0G7J5S">
-                          <field name="ATTRIBUTE">value</field>
-                          <field name="PARENT">TRUE</field>
-                          <value name="ID">
-                            <shadow type="text" id="gl{]9*$)^iS/8=Vn#^JV">
-                              <field name="TEXT">autoRotateSpeed</field>
+                        <block type="math_arithmetic" id="QgYP*xby8v-`{epLC[A1">
+                          <field name="OP">ADD</field>
+                          <value name="A">
+                            <shadow type="math_number">
+                              <field name="NUM">2</field>
+                            </shadow>
+                            <block type="variables_get" id="dWf;)Bqq?;h]yt,X+7aa">
+                              <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <shadow type="math_number" id="8~AuqOulsw!n1iM1P._r">
+                              <field name="NUM">2</field>
                             </shadow>
                           </value>
                         </block>
                       </value>
                       <next>
-                        <block type="controls_if" id="7;;Ij808[%jSs3AJc$1H">
+                        <block type="controls_if" id="`r`QA5Z^IYjvJR|m[tI_">
                           <value name="IF0">
-                            <block type="variables_get" id="DqrAj}|Z1e(33^M;|r.n">
-                              <field name="VAR" id="NFCfO|SaIe%_OgHfMi0.">allowAutoRotate</field>
+                            <block type="logic_compare" id="nAN;Ah{3)Lw:Qo+,vbH!">
+                              <field name="OP">GT</field>
+                              <value name="A">
+                                <block type="variables_get" id="0@`~#6=_%+o=i)|,L=m`">
+                                  <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="math_number" id="xt7RDA86:Q~X/^:W/V)O">
+                                  <field name="NUM">6</field>
+                                </block>
+                              </value>
                             </block>
                           </value>
                           <statement name="DO0">
-                            <block type="autoRotateCamera" id="RpEsxjBbtA225pAiVbwK">
-                              <field name="ON_OFF">ON</field>
-                              <value name="SPEED">
-                                <shadow type="math_number">
+                            <block type="variables_set" id="hD6yD|EUB?!liAlMfLB!">
+                              <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
+                              <value name="VALUE">
+                                <block type="math_number" id="0$5|d@*LG69hm=4BwSK#">
                                   <field name="NUM">2</field>
-                                </shadow>
-                                <block type="math_arithmetic" id="C!L{P`ej$lty9:z8uT6B">
-                                  <field name="OP">MULTIPLY</field>
-                                  <value name="A">
-                                    <shadow type="math_number">
-                                      <field name="NUM">2</field>
-                                    </shadow>
-                                    <block type="variables_get" id="$nDGY/Dx8lj`^[j%JLGs">
-                                      <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
-                                    </block>
-                                  </value>
-                                  <value name="B">
-                                    <shadow type="math_number">
-                                      <field name="NUM">2</field>
-                                    </shadow>
-                                    <block type="variables_get" id="dP;Z[(SnQhCkn{Wq`nDq">
-                                      <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
-                                    </block>
-                                  </value>
                                 </block>
                               </value>
                             </block>
                           </statement>
+                          <next>
+                            <block type="controls_if" id="cqV1lk(0lPVEIcB3@n6o">
+                              <value name="IF0">
+                                <block type="variables_get" id="QCG(J$2q1|n*X*j/Glpj">
+                                  <field name="VAR" id="NFCfO|SaIe%_OgHfMi0.">allowAutoRotate</field>
+                                </block>
+                              </value>
+                              <statement name="DO0">
+                                <block type="autoRotateCamera" id="_#4^IdoT2+TFL9OM?{[@">
+                                  <field name="ON_OFF">ON</field>
+                                  <value name="SPEED">
+                                    <shadow type="math_number">
+                                      <field name="NUM">2</field>
+                                    </shadow>
+                                    <block type="math_arithmetic" id="H.M}DvL#fJ|DB1TyxwIO">
+                                      <field name="OP">MULTIPLY</field>
+                                      <value name="A">
+                                        <shadow type="math_number">
+                                          <field name="NUM">2</field>
+                                        </shadow>
+                                        <block type="variables_get" id=")DyE0H-=4QLut+dJHL`n">
+                                          <field name="VAR" id="M;)/y|Pp*}6;+z*p#X8K">autoRotateSpeed</field>
+                                        </block>
+                                      </value>
+                                      <value name="B">
+                                        <shadow type="math_number">
+                                          <field name="NUM">2</field>
+                                        </shadow>
+                                        <block type="variables_get" id="XQa-i][KuHu6yupAs|A|">
+                                          <field name="VAR" id="!.fmxjV|pnptGsl.DfCr">autoRotateDirection</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
                         </block>
                       </next>
                     </block>
@@ -1331,7 +1351,7 @@
       </next>
     </block>
   </tab>
-  <tab name="annotations" type="SecondaryTab" active="false" scrollx="-62.54037704133941" scrolly="-148.49132545567147" scale="0.7219857701073253">
+  <tab name="annotations" type="SecondaryTab" active="false" scrollx="-62.540377041339426" scrolly="-172.09217355902908" scale="0.7219857701073253">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="wx{Ws)RL+Nfx^a.+Ho3E" type="">showAnnotation</variable>
     </variables>
@@ -1792,7 +1812,7 @@
       </next>
     </block>
   </tab>
-  <tab name="ui" type="SecondaryTab" active="true" scrollx="0" scrolly="0" scale="0.9">
+  <tab name="ui" type="SecondaryTab" active="false" scrollx="-78" scrolly="-8.100000000000307" scale="0.9">
     <block xmlns="https://developers.google.com/blockly/xml" type="initFullscreen" id="u-~S~rkn^N:_=idm`w_k" x="270" y="370">
       <field name="PARENT">TRUE</field>
       <value name="ID">
@@ -1802,5 +1822,5 @@
       </value>
     </block>
   </tab>
-  <editorsettings viewport-x="1054.7999313354492" viewport-y="164.00000762939453" viewport-w="627.188" viewport-h="499.312" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+  <editorsettings viewport-x="1240.7999313354492" viewport-y="402.00000762939453" viewport-w="627.188" viewport-h="499.312" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
 </xml>
