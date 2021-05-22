@@ -17,7 +17,6 @@
 	<br />
 	<div class="left">
 		<h3 class="type2">What I can do.</h3>
-		<br />
 		<strong>Design what you want.</strong>
 		<br />
 		I like to keep it simple. My goals are focused on details, content and conveying the message that
