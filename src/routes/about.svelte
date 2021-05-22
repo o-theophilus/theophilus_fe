@@ -103,8 +103,8 @@ Posts are written in
 <br>
 This website was originally built with
 			C# and Razor then ported to React and now to SvelteKit because of it's simplicity and ease of use.
-<br>
-It's an all-in-one blog, portfolio and
+<br><br>
+This website is an all-in-one blog, portfolio and
 			pet project to try out new shiny things.
 		</p>
 	</div>
