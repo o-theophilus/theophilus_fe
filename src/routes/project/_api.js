@@ -410,7 +410,7 @@ export default [
 		date: '21 May 2021',
 		category: 'Models, Visualisation and Animation',
 		img: 'mvS3V.jpg',
-		summary: 'Built with Verge3D',
+		summary: '3D model visualization demo. powered by WebGL',
 		type: 'html',
 		content: `
 		<iframe
@@ -419,7 +419,7 @@ export default [
 		src="/project/mv_Hummer-H3/index.html"
 		frameborder="0"
 		title="container"
-	/>
+	></iframe>
 <p>
 This is a 3D model visualization demo. It aims to illustrate how WebGL offer new ways to showcase and interacting with products on the Web.
 <br><br>
