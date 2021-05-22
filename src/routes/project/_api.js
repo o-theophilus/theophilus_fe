@@ -420,6 +420,15 @@ export default [
 		frameborder="0"
 		title="container"
 	/>
+<p>
+This is a 3D model visualization demo. It aims to illustrate how WebGL offer new ways to showcase and interacting with products on the Web.
+<br><br>
+ Since it's running in real-time 3D, you are able to inspect the model from every angle, and even interact with various parts.
+<br><br>
+Modeling, texturing, lightening, rigging and animation was done in Blender. Exporting to WebGL and interaction was done Verge3D. UI was created using HTML and CSS.
+<br><br>
+Interested in hiring me to build something awesome? <a href="/contact" >Get in touch</a>.
+</p>
 		`
 	}
 ];
