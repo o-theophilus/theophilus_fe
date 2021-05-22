@@ -51,10 +51,6 @@
 			and money pursuing this interest. My friends and family are concerned for my well-being.
 			<br />
 			<br />
-			In August of 2013 I accepted a position as a professional developer with a startup in Lagos, Nigeria.
-			So I get paid to do what I would have been doing anyway, for free.
-			<br />
-			<br />
 			I spend most of my free time working on building my skillset, contributing to Open Source projects,
 			and trying to learn as much as I can. There have been many good people who have assited me in learning
 			this craft, and I try to pay that forward by helping others who may be newer than I.
@@ -99,10 +95,16 @@
 
 		<h2>This Website</h2>
 		<p>
-			The page you're looking at is made with SvelteKit, TypeScript and TailwindCSS and deployed on
-			Vercel. It's entirely static through the SvelteKit's SSG feature. Posts are written in
-			Markdown and converted to nice-looking HTML at build-time. It was originally built with
-			Gridsome, then moved to NextJS and now to SvelteKit. It's an all-in-one blog, portfolio and
+			The website was made with SvelteKit and deployed on
+			Vercel. It's entirely static through the SvelteKit's SSG feature.
+<br>
+Posts are written in
+			Markdown, in-page codes are formatted using Highlight.js and then converted to nice-looking HTML at build-time.
+<br>
+This website was originally built with
+			C# and Razor then ported to React and now to SvelteKit because of it's simplicity and ease of use.
+<br>
+It's an all-in-one blog, portfolio and
 			pet project to try out new shiny things.
 		</p>
 	</div>
