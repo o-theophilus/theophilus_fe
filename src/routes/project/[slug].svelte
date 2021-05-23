@@ -1,24 +1,17 @@
 <script context="module">
-	export async function load({ page, fetch }) {
-		const resp = await fetch('/project.json');
-		let data = await resp.json();
+	import { projects } from '$lib/db.js';
 
-		data = data.api;
+	export async function load({ page }) {
 		let { slug } = page.params;
-
-		let item;
-		for (let index = 0; index < data.length; index++) {
-			if (data[index].slug === slug) {
-				item = data[index];
+		let project;
+		for (let i = 0; i < projects.length; i++) {
+			if (projects[i].slug === slug) {
+				project = projects[i];
 				break;
 			}
 		}
-		if (item) {
-			return {
-				props: {
-					data: item
-				}
-			};
+		if (project) {
+			return { props: { project } };
 		}
 	}
 </script>
@@ -29,27 +22,27 @@
 	import Title from '$lib/pageTitle.svelte';
 	import Marked from '$lib/marked.svelte';
 
-	export let data;
+	export let project;
 </script>
 
 <svelte:head>
-	<title>{data.name}</title>
+	<title>{project.name}</title>
 </svelte:head>
 
-<Image src="/images/{data.img}" />
+<Image src="/images/{project.img}" />
 
 <Title>
 	<h1>
-		<p>{data.name}</p>
+		<p>{project.name}</p>
 	</h1>
-	<p>{data.category}</p>
-	<p class="date">{data.date}</p>
+	<p>{project.category}</p>
+	<p class="date">{project.date}</p>
 </Title>
 
 <Content>
-	{#if data.type === 'md'}
-		<Marked md={data.content} />
+	{#if project.type === 'md'}
+		<Marked md={project.content} />
 	{:else}
-		{@html data.content}
+		{@html project.content}
 	{/if}
 </Content>

@@ -48,7 +48,6 @@ module.exports = {
 # Tasks
 
 1. [ ] page title images
-1. [ ] populate proj and blog content
 1. [ ] review form message
 1. [ ] purchase theophilus.website
 

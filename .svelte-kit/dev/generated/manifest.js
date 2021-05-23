@@ -21,9 +21,6 @@ export const routes = [
 	// src/routes/contact.svelte
 	[/^\/contact\/?$/, [c[0], c[3]], [c[1]]],
 
-	// src/routes/project/index.json.js
-	[/^\/project\.json$/],
-
 	// src/routes/project/index.svelte
 	[/^\/project\/?$/, [c[0], c[4]], [c[1]]],
 
@@ -35,9 +32,6 @@ export const routes = [
 
 	// src/routes/about.svelte
 	[/^\/about\/?$/, [c[0], c[7]], [c[1]]],
-
-	// src/routes/blog/index.json.js
-	[/^\/blog\.json$/],
 
 	// src/routes/blog/index.svelte
 	[/^\/blog\/?$/, [c[0], c[8]], [c[1]]],

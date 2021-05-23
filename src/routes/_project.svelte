@@ -1,10 +1,11 @@
 <script>
+	import { projects } from '$lib/db.js';
+
 	import { onMount } from 'svelte';
 	import Content from '$lib/pageContent.svelte';
 	import Title from '$lib/pageTitle.svelte';
 	import ItemBox from '$lib/itemBox.svelte';
 
-	export let projects = [];
 	let items = projects;
 
 	// let selected = [0, 3];
