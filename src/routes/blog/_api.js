@@ -8,13 +8,13 @@ export default [
 		summary: 'The new reactive component based approach to web design',
 		type: 'md',
 		content: `
-Web designing can be a tedious and uninteresting process, especially now that is an ever-evolving processing, you decide to learn a technology by the time you are done learning it is already obsolete and there is a new tool replacing it.
+Web designing can be a tedious, repeative and uninteresting process, especially now that it is an ever-evolving. You decide to learn a technology by the time you are done learning, it is already obsolete and there is a new tool replacing it.
 
-I have been in search for better approach in wed development as most of the methods were not intuitive
+I have been in search for better approach to web development as most of the methods were not intuitive.
 
-I found many temples engine – Wix, DreamWeaver, Blue griffon, WordPress - and libraries - Angular, react jQuery mobile/ desktop, C# with razor -. Most of which will get the job done. But you will always run into issues if you have to fix a small bug or modify / add a custom feature. The source code is usually bloated and filled unnecessary and unused codes. This will be a nightmare.
+I found many temples engine – Wix, DreamWeaver, Blue Griffon, WordPress - and libraries - Angular, react jQuery mobile/ desktop, C# with razor. Most of which will get the job done. But you will always run into issues when trying to fix a small bug or modify / add a custom feature. The source code is usually bloated and filled unnecessary and unused codes. This will be a nightmare.
 
-I came across a [blog](https://www.simform.com/best-frontend-frameworks/#section9)  about Best Frontend Frameworks of 2021 for Web Development. That was the first time I ever came across Svelte. Guess what? Svelte was not in the top 5. Inface it was last on the list. But the outlined features caught my attention. Especially for that fact that it the newest on the list, lightweight.
+I came across a [blog](https://www.simform.com/best-frontend-frameworks/#section9)  titled *Best Frontend Frameworks of 2021 for Web Development*. The blog listed the the top 9 frontend frameworks according to various features, that was the first time I ever came across Svelte. Guess what? Svelte was not among the top 5 on the list. Inface it was last. But the outlined features caught my attention. Especially for that fact that it the newest on the list, lightweight.
 
 I did a little search and found the maker of Svelte was one ordinary looking dude, Rich Harris was a graphics editor for New York Time.
 
