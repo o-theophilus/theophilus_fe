@@ -1,12 +1,13 @@
 <script context="module">
-	import { projects } from '$lib/db.js';
+	import { projects, _projects } from '$lib/db.js';
+	let temp = [...projects, ..._projects]
 
 	export async function load({ page }) {
 		let { slug } = page.params;
 		let project;
-		for (let i = 0; i < projects.length; i++) {
-			if (projects[i].slug === slug) {
-				project = projects[i];
+		for (let i = 0; i < temp.length; i++) {
+			if (temp[i].slug === slug) {
+				project = temp[i];
 				break;
 			}
 		}
