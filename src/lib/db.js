@@ -65,7 +65,7 @@ All you need now is:
 ### The Intepreter
 The commands starting with 'npm' are Node command. **Node** is very powerful tool that will help us install, run and build our web app.
 1. Download Lateset version here: https://nodejs.org/en/download/
-[VSCode](/images/creating-your-first-svelte-app-03.jpg)
+![VSCode](/images/creating-your-first-svelte-app-03.jpg)
 
 1. Install Node
 > This should be a seamless process
@@ -75,7 +75,7 @@ The commands starting with 'npm' are Node command. **Node** is very powerful too
 ### The Terminal
 The terminal we will be using to type our code is **Visual Studio Code**. VS Code is not just a terminal, it is a very powerful IDE that can easily be extended.
 1. Download Lateset version here: https://code.visualstudio.com/
-[VSCode](/images/creating-your-first-svelte-app-02.jpg)
+![VSCode](/images/creating-your-first-svelte-app-02.jpg)
 
 1. Install VS Code
 > This should be a seamless process
