@@ -9,7 +9,7 @@
 			// root: document.querySelector('#scrollArea'),
 			root: null,
 			rootMargin: '0px',
-			threshold: 1.0
+			threshold: 0.5
 		};
 		const callback = (elements) => {
 			elements.forEach((e) => {
@@ -48,8 +48,11 @@
 		<br />
 		I like to keep it simple. My goals are focused on details, content and conveying the message that
 		you want to send.
+</div>
 		<br />
 		<br />
+
+<div class="group">
 		<strong>Develop what you need.</strong>
 		<br />I am a developer, so I know how to create your website to run accross devices using the
 		latest technologies available.
