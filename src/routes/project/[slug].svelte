@@ -33,9 +33,9 @@
 <Image src="/images/{project.img}" />
 
 <Title>
-	<h1>
+	<h2>
 		<p>{project.name}</p>
-	</h1>
+	</h2>
 	<p>{project.tags}</p>
 	<p class="date">{project.date}</p>
 </Title>

@@ -7,10 +7,10 @@
 
 	if (item.type === 'link') {
 		href = item.content;
-		target = 'blank';
+		target = '_blank';
 	} else if (item.type === 'doc') {
 		href = `/docs/${item.content}`;
-		target = 'blank';
+		target = '_blank';
 	} else {
 		href = `/${blog ? 'blog' : 'project'}/${item.slug}`;
 	}

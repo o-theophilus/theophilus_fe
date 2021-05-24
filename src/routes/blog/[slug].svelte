@@ -32,9 +32,9 @@
 <Image src="/images/{post.img}" />
 
 <Title>
-	<h1>
+	<h2>
 		<p>{post.name}</p>
-	</h1>
+	</h2>
 	<p>{post.tags}</p>
 	<p class="date">{post.date}</p>
 </Title>

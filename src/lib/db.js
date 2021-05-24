@@ -203,7 +203,7 @@ export let _posts = [
 	},
 	{
 		name: 'Marked Blog',
-		slug: 'test_md_blog',
+		slug: 'test-md-blog',
 		date: '15 May 2021',
 		tags: 'Programming',
 		img: 'arduino_001.jpg',
@@ -337,7 +337,7 @@ export let projects = [
 
 	{
 		name: 'This is Nigeria ft. Falz',
-		slug: 'tin',
+		slug: 'this-is-nigeria',
 		date: '01 Jan 2021',
 		tags: 'Model, Visualisation, Animation',
 		img: 'tin_001.jpg',
@@ -356,7 +356,7 @@ export let projects = [
 	},
 	{
 		name: 'Product Viewer - Hummer H3',
-		slug: 'mv_hummer_h3',
+		slug: 'mv-hummer-h3',
 		date: '21 May 2021',
 		tags: 'Model, Visualisation, Animation',
 		img: 'mv_hummer_h3.jpg',
@@ -377,7 +377,7 @@ Since it's running in real-time 3D, you are able to inspect the model from every
 
 Modeling, texturing, lightening, rigging and animation was done in Blender. Exporting to WebGL and interaction was done using Verge3D. UI was created using HTML and CSS.
 
-Here is a link to the <a href="/project/L322">first version of this project</a> that was made using Unity3D
+Here is a link to the <a href="/project/l322">first version of this project</a> that was made using Unity3D
 
 <br>
 
@@ -427,7 +427,7 @@ export let _projects = [
 	},
 	{
 		name: 'Model Viewer - S3V Range Rover L322',
-		slug: 'L322',
+		slug: 'l322',
 		date: '01 Jan 2021',
 		tags: 'Model, Visualisation and Animation',
 		img: 'mvS3V.jpg',
@@ -536,7 +536,7 @@ export let _projects = [
 	},
 	{
 		name: 'Interrogation Room',
-		slug: 'interrogation_room',
+		slug: 'interrogation-room',
 		date: '01 Jan 2021',
 		tags: 'Model, Visualisation, Animation',
 		img: 'interrogationRoom_005.jpg',
