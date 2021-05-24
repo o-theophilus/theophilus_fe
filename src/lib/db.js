@@ -86,7 +86,7 @@ The terminal we will be using to type our code is **Visual Studio Code**. VS Cod
 <br>
 
 ## Lets get started
-1. create a new folder for your project
+1. Create a new folder for your project
 1. Open VS Code
 1. In VS Code, open the folder you created 
 ![VSCode](/images/creating-your-first-svelte-app-04.jpg)
@@ -97,7 +97,7 @@ The terminal we will be using to type our code is **Visual Studio Code**. VS Cod
 \`\`\`node
 npm init svelte@next
 \`\`\`
-You will be prompte to with some questions. Choose youe answers acccording to the image below.
+You will be prompted with some questions. Answers acccording to the image below.
 ![VSCode](/images/creating-your-first-svelte-app-07.jpg)
 This will scaffold a new project in the folder you created.<br>
 ![VSCode](/images/creating-your-first-svelte-app-06.jpg)
