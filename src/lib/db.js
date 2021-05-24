@@ -117,6 +117,8 @@ This will start a developement server on 'localhost:3000'.
 1. Open your browser and type 'localhost:3000' in the address bar
 ![VSCode](/images/creating-your-first-svelte-app-08.jpg)
 
+<br>
+
 ### Viola!!!
 You did it!
 
