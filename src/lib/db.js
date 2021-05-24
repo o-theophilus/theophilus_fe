@@ -57,14 +57,14 @@ npm run dev
 Thats it! Thats all you need to know to get your app started.
 
 All you need now is:
-1. An intepreter to process the command
-1. A terminal ot type in the commands
+1. An intepreter to process the command.
+1. A terminal to type in the commands.
 
 <br>
 
 ### The Intepreter
-Terminal commands starting with 'npm' are node command. **Node** is very powerful tool that will help us install, run and build our web app.
-1. Download Lateset version: https://nodejs.org/en/download/
+The commands starting with 'npm' are Node command. **Node** is very powerful tool that will help us install, run and build our web app.
+1. Download Lateset version here: https://nodejs.org/en/download/
 [VSCode](/images/creating-your-first-svelte-app-03.jpg)
 
 1. Install Node
@@ -73,15 +73,15 @@ Terminal commands starting with 'npm' are node command. **Node** is very powerfu
 <br>
 
 ### The Terminal
-The terminal we will be using to type on our code is **Visual Studio Code**. VS Code is not just a terminal, it is a very powerful IDE that can easily be extendable.
-1. Download Lateset version: https://code.visualstudio.com/
+The terminal we will be using to type our code is **Visual Studio Code**. VS Code is not just a terminal, it is a very powerful IDE that can easily be extended.
+1. Download Lateset version here: https://code.visualstudio.com/
 [VSCode](/images/creating-your-first-svelte-app-02.jpg)
 
 1. Install VS Code
->. This should be a seamless process
+> This should be a seamless process
 1. Install "Svelte for VS Code" Extension (Optional)
-> Although not required to get your app started, This Extension will later come in handy when we stare coding our web app.
-> It add great features to VS Code like: Code highliing, code completion, code formatting, error linting and many more.
+> Although not required to get your app started, This Extension will later come in handy when we start coding our web app.
+> It adds great features to VS Code like: code highliing, code completion, code formatting, error linting and many more.
 
 <br>
 
@@ -97,10 +97,10 @@ The terminal we will be using to type on our code is **Visual Studio Code**. VS 
 \`\`\`node
 npm init svelte@next
 \`\`\`
-This will scaffold a new project in the folder you created.<br>
-![VSCode](/images/creating-your-first-svelte-app-06.jpg)
 You will be prompte to with some questions. Choose youe answers acccording to the image below.
 ![VSCode](/images/creating-your-first-svelte-app-07.jpg)
+This will scaffold a new project in the folder you created.<br>
+![VSCode](/images/creating-your-first-svelte-app-06.jpg)
 
 1. Type in the second command, and press Enter
 \`\`\`node
@@ -125,7 +125,7 @@ You did it!
 You have just created your first working Svelte app. This is the begining of greater things to come.
 
 What you have created is a skelental project which is the most basic form of a Svelte app.
-This app can be expaded however you like in building extremely high-performance web apps. 
+This app can be expanded however you like in building extremely high-performance web apps. 
 
 <br>
 
