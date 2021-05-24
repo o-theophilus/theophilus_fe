@@ -35,7 +35,7 @@
 	<h1>
 		<p>{post.name}</p>
 	</h1>
-	<p>{post.category}</p>
+	<p>{post.tags}</p>
 	<p class="date">{post.date}</p>
 </Title>
 

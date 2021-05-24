@@ -21,7 +21,7 @@
 	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
 	import Title from '$lib/pageTitle.svelte';
-	import Marked from '$lib/marked.svelte';
+	import Marked from '$lib/marked.svelte';	
 
 	export let project;
 </script>
@@ -36,7 +36,7 @@
 	<h1>
 		<p>{project.name}</p>
 	</h1>
-	<p>{project.category}</p>
+	<p>{project.tags}</p>
 	<p class="date">{project.date}</p>
 </Title>
 

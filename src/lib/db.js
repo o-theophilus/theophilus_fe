@@ -1,44 +1,133 @@
 export let posts = [
 	{
 		name: 'How I met Svelte',
-		slug: 'how_i_met_svelte',
+		slug: 'how-i-met-svelte',
 		date: '18 May 2021',
-		category: 'Programming',
-		img: 'svelte_01.jpg',
-		summary: 'The new reactive component based approach to web design',
+		tags: 'Programming',
+		img: 'how-i-met-svelte-01.jpg',
+		summary: 'The new reactive component based approach to web design without a virtual DOM',
 		type: 'md',
 		content: `
-Web designing can be a tedious, repeative and uninteresting process, especially now that it is an ever-evolving. You decide to learn a technology by the time you are done learning, it is already obsolete and there is a new tool replacing it.
+Web designing can be a tedious, repeative and uninteresting process, especially for the fact that it is ever-evolving. A technology you decide to learn today might become obsolete tomorow with a better tool replacing it.
 
-I have been in search for better approach to web development as most of the methods were not intuitive.
+I have been in search for better approach to web development as existing methods are not intuitive, complex and have a steep learning curve. I found many temples engine – Wix, Webflow DreamWeaver, Blue Griffon, WordPress - and libraries - Angular, React, jQuery, C# with Razor. Most of which will get the job done. But you will always run into issues when trying to fix a small bug or modify / add a custom feature. The source code is usually filled unnecessary and unused codes which will definately be a nightmare to go through.
 
-I found many temples engine – Wix, Webflow DreamWeaver, Blue Griffon, WordPress - and libraries - Angular, react jQuery mobile/ desktop, C# with razor. Most of which will get the job done. But you will always run into issues when trying to fix a small bug or modify / add a custom feature. The source code is usually bloated and filled unnecessary and unused codes. This will be a nightmare.
+I came across this blog: [*Best Frontend Frameworks of 2021 for Web Development*](https://www.simform.com/best-frontend-frameworks/#section9). The blog listed the top 9 frontend frameworks according to various features; and that was the first time I ever came across Svelte. Guess what? Svelte was not among the top 5 frameworks on the list. Infact it was last. But the outlined features caught my attention. Especially for that fact that it the newest on the list at the time and lightweight.
 
-I came across a [blog](https://www.simform.com/best-frontend-frameworks/#section9)  titled *Best Frontend Frameworks of 2021 for Web Development*. The blog listed the the top 9 frontend frameworks according to various features, that was the first time I ever came across Svelte. Guess what? Svelte was not among the top 5 on the list. Inface it was last. But the outlined features caught my attention. Especially for that fact that it the newest on the list, lightweight.
+I did a little research and found the maker of Svelte was an average looking man, Rich Harris, who was a graphics editor for New York Time.
 
-I did a little search and found the maker of Svelte was one ordinary looking dude, Rich Harris was a graphics editor for New York Time.
+Really! A graphic designer. Well, I could relate because at the moment I also work as a graphic designer, but I know deep down I should be programming big time.
 
-Really! A graphic designer. Well, I could relate because at the moment I also work as a graphic designer, but I know deep down that I should be programming big time.
-
-I was still sceptical but after watching [this great talk](https://www.youtube.com/watch?v=AdNJ3fydeao) from Rich Harris about rethinking how we build frontend Javascript frameworks and I was sold. If you have half an hour to kill and haven't seen it, check it out. I promise it is better than any content you will find on my blog.
+I was still sceptical but after watching this great talk by Rich Harris about [rethinking how we build frontend Javascript frameworks](https://www.youtube.com/watch?v=AdNJ3fydeao), I was sold. If you have half an hour to kill and haven't seen it, please check it out. I promise it is better than any content you will find on my blog.
 
 Svelte is a new reactive component-based approach to web design. Svelte works differently by putting the work into a compile step instead of putting them in the browser, unlike frameworks like React and Vue. It does many other things easily and improves most of the bottlenecks of using other frameworks.
 
-Visiting the official website if Svelte and Svelte kit I saw they were well documented and had good examples
+Visiting the official website of [Svelte](https://svelte.dev/) and [SvelteKit](https://kit.svelte.dev/), It is clearly seen that they are well documented and have good examples.
 
-At this point my palms are sweaty, knees weak, arms are heavy, I was ready to get my hands wet dive in head first and hope for the best.
+At this point my palms are sweaty, knees weak, arms are heavy, I was ready to ~get my hands wet~ dive in head first and hope for the best.
 
-I lunched VS Code the one IDE to rule then all, opened the node terminal and with 3 lines of code in less than 1 min I was able to get my web app up and running. My mind was blown, this must be sorcery. Never seen anything like it.
+I lunched VS Code - the one IDE to rule them all, opened the node terminal and with 3 lines of code in less than 1 min I was able to get my first Svelte web app up and running. My mind was blown, this must be sorcery. Never seen anything like it.
 
 
-![If you are reading this it was made with Svelte](/images/svelte_02.jpg)
+![If you are reading this it was made with Svelte](/images/how-i-met-svelte-02.jpg)
 
 And the rest is history.
 
 I would recommend Svelte if you are:
 
-1. new in web development, lucky you. You will not have to unlearn react😊
+1. new in web development, lucky you. You will not have to through the pain of unlearning React😊
 2. a veteran in web development, you'll realize how easy life can be
+`
+	},
+	{
+		name: 'Creating your first Svelte App with just 3 lines of code',
+		slug: 'creating-your-first-svelte-app',
+		date: '24 May 2021',
+		tags: 'Programming',
+		img: 'creating-your-first-svelte-app_01.jpg',
+		summary: 'This post is intended to demonstrate how easy it is for anyone to create a web app in Svelte',
+		type: 'md',
+		content: `
+\`\`\`node
+npm init svelte@next
+npm i
+npm run dev
+\`\`\`
+
+Thats it! Thats all you need to know to get your app started.
+
+All you need now is:
+1. An intepreter to process the command
+1. A terminal ot type in the commands
+
+<br>
+
+### The Intepreter
+Terminal commands starting with 'npm' are node command. **Node** is very powerful tool that will help us install, run and build our web app.
+1. Download Lateset version: https://nodejs.org/en/download/
+![VSCode](/images/creating-your-first-svelte-app_03.jpg)
+
+1. Install Node
+> This should be a seamless process
+
+<br>
+
+### The Terminal
+The terminal we will be using to type on our code is **Visual Studio Code**. VS Code is not just a terminal, it is a very powerful IDE that can easily be extendable.
+1. Download Lateset version: https://code.visualstudio.com/
+![VSCode](/images/creating-your-first-svelte-app_02.jpg)
+
+1. Install VS Code
+>. This should be a seamless process
+1. Install "Svelte for VS Code" Extension (Optional)
+> Although not required to get your app started, This Extension will later come in handy when we stare coding our web app.
+> It add great features to VS Code like: Code highliing, code completion, code formatting, error linting and many more.
+
+<br>
+
+## Lets get started
+1. create a new folder for your project
+1. Open VS Code
+1. In VS Code, open the folder you created 
+![VSCode](/images/creating-your-first-svelte-app_04.jpg)
+1. Open the terminal window 
+![VSCode](/images/creating-your-first-svelte-app_05.jpg)
+
+1. Type in the first command, and press Enter
+\`\`\`node
+npm init svelte@next
+\`\`\`
+This will scaffold a new project in the folder you created.<br>
+![VSCode](/images/creating-your-first-svelte-app_06.jpg)
+You will be prompte to with some questions. Choose youe answers acccording to the image below.
+![VSCode](/images/creating-your-first-svelte-app_07.jpg)
+
+1. Type in the second command, and press Enter
+\`\`\`node
+npm i
+\`\`\`
+This is the short form of 'npm install'. This will install your app dependencies.
+
+1. Type in the third command, and press Enter
+\`\`\`node
+npm run dev
+\`\`\`
+This will start a developement server on 'localhost:3000'.
+
+1. Open your browser and type 'localhost:3000' in the address bar
+![VSCode](/images/creating-your-first-svelte-app_08.jpg)
+
+### Viola!!!
+You did it!
+
+You have just created your first working Svelte app. This is the begining of greater things to come.
+
+What you have created is a skelental project which is the most basic form of a Svelte app.
+This app can be expaded however you like in building extremely high-performance web apps. 
+
+<br>
+
+You can learn more and get more details at [Svelte](https://svelte.dev/) and [SvelteKit](https://kit.svelte.dev/).
 `
 	}
 ];
@@ -48,7 +137,7 @@ export let _posts = [
 		name: 'Arduino Smart Car',
 		slug: 'arduino',
 		date: '01 Jan 2021',
-		category: 'Electronics',
+		tags: 'Electronic',
 		img: 'arduino_001.jpg',
 		summary: '',
 		type: 'html',
@@ -116,7 +205,7 @@ export let _posts = [
 		name: 'Marked Blog',
 		slug: 'test_md_blog',
 		date: '15 May 2021',
-		category: 'Programming',
+		tags: 'Programming',
 		img: 'arduino_001.jpg',
 		summary: 'This is an example of a marked blog',
 		type: 'md',
@@ -129,7 +218,7 @@ export let projects = [
 		name: 'Charms Interior Design',
 		slug: 'charms',
 		date: '01 Jan 2021',
-		category: 'Models, Visualisation and Animation',
+		tags: 'Model, Visualisation, Animation',
 		img: 'charms_01_01.jpg',
 		summary: '',
 		type: 'html',
@@ -229,7 +318,7 @@ export let projects = [
 		name: 'Akropol',
 		slug: 'akropol',
 		date: '01 Jan 2021',
-		category: 'Models, Visualisation and Animation',
+		tags: 'Model, Visualisation, Animation',
 		img: 'akropol_001.jpeg',
 		summary: '',
 		type: 'html',
@@ -250,7 +339,7 @@ export let projects = [
 		name: 'This is Nigeria ft. Falz',
 		slug: 'tin',
 		date: '01 Jan 2021',
-		category: 'Models, Visualisation and Animation',
+		tags: 'Model, Visualisation, Animation',
 		img: 'tin_001.jpg',
 		summary: 'Fan art',
 		type: 'html',
@@ -269,29 +358,30 @@ export let projects = [
 		name: 'Product Viewer - Hummer H3',
 		slug: 'mv_hummer_h3',
 		date: '21 May 2021',
-		category: 'Models, Visualisation and Animation',
+		tags: 'Model, Visualisation, Animation',
 		img: 'mv_hummer_h3.jpg',
 		summary: '3D model visualization demo. powered by WebGL',
-		type: 'html',
+		type: 'md',
 		content: `
-		<iframe
-		style="width: 100%;
-		height: 500px;"
-		src="/project/mv_Hummer-H3/index.html"
-		frameborder="0"
-		title="container"
-	></iframe>
-<p>
-This is a 3D model visualization demo. It aims to illustrate how WebGL offer new ways to showcase and interacting with products on the Web.
-<br><br>
- Since it's running in real-time 3D, you are able to inspect the model from every angle, and even interact with various parts.
-<br><br>
+<iframe
+style="width: 100%;
+height: 500px;"
+src="/project/mv_Hummer-H3/index.html"
+frameborder="0"
+title="container"
+></iframe>
+
+This is an interractive 3D visualization demo. It aims to illustrate how WebGL offer new ways to showcase and interacting with products on the Web.
+
+Since it's running in real-time 3D, you are able to inspect the model from every angle, and even interact with various parts.
+
 Modeling, texturing, lightening, rigging and animation was done in Blender. Exporting to WebGL and interaction was done using Verge3D. UI was created using HTML and CSS.
-<br><br>
-Interested in hiring me to build something awesome? <a href="/contact" >Get in touch</a>.
-<br><br>
+
 Here is a link to the <a href="/project/L322">first version of this project</a> that was made using Unity3D
-</p>
+
+<br>
+
+Interested in hiring me to build something awesome? <a href="/contact" >Get in touch</a>.
 		`
 	}
 ];
@@ -301,7 +391,7 @@ export let _projects = [
 		name: 'Connekt',
 		slug: 'connekt',
 		date: '01 Jan 2021',
-		category: 'web',
+		tags: 'Web',
 		img: 'connekt_001.jpg',
 		summary:
 			'Connekt is a social sharing application that enable users to easily find and connect with other users that are interested in the Products or Services which are being Offered or Requested.',
@@ -312,7 +402,7 @@ export let _projects = [
 		name: 'Lily Collection',
 		slug: 'lily',
 		date: '01 Jan 2021',
-		category: 'Logos and Banners',
+		tags: 'Logo, Banner',
 		img: 'lilyCollection_001.jpg',
 		summary: '',
 		type: 'html',
@@ -327,7 +417,7 @@ export let _projects = [
 		name: 'Flipaxis Logo',
 		slug: 'flipaxis',
 		date: '01 Jan 2021',
-		category: 'Logos and Banners',
+		tags: 'Logo, Banner',
 		img: 'flipaxis_001.jpg',
 		summary: '',
 		type: 'html',
@@ -339,7 +429,7 @@ export let _projects = [
 		name: 'Model Viewer - S3V Range Rover L322',
 		slug: 'L322',
 		date: '01 Jan 2021',
-		category: 'Models, Visualisation and Animation',
+		tags: 'Model, Visualisation and Animation',
 		img: 'mvS3V.jpg',
 		summary: 'hhas ijhashah ajhasha jkajhsaj asjjakjs ',
 		type: 'html',
@@ -355,7 +445,7 @@ export let _projects = [
 		name: 'Beads',
 		slug: 'bead',
 		date: '01 Jan 2021',
-		category: 'Models, Visualisation and Animation',
+		tags: 'Model, Visualisation, Animation',
 		img: 'bead_003.jpeg',
 		summary: '',
 		type: 'html',
@@ -394,7 +484,7 @@ export let _projects = [
 		name: 'Ankara with Marvealous Designer',
 		slug: 'ankara',
 		date: '01 Jan 2021',
-		category: 'Models, Visualisation and Animation',
+		tags: 'Model, Visualisation, Animation',
 		img: 'ankara_001.jpg',
 		summary: '',
 		type: 'html',
@@ -412,7 +502,7 @@ export let _projects = [
 		name: 'Bliss',
 		slug: 'bliss',
 		date: '01 Jan 2021',
-		category: 'Models, Visualisation and Animation',
+		tags: 'Model, Visualisation, Animation',
 		img: 'faceoff_003.jpg',
 		summary: '',
 		type: 'html',
@@ -448,7 +538,7 @@ export let _projects = [
 		name: 'Interrogation Room',
 		slug: 'interrogation_room',
 		date: '01 Jan 2021',
-		category: 'Models, Visualisation and Animation',
+		tags: 'Model, Visualisation, Animation',
 		img: 'interrogationRoom_005.jpg',
 		summary: '',
 		type: 'html',
@@ -507,7 +597,7 @@ export let _projects = [
 		name: 'National Identity Management Commission',
 		slug: 'nimc',
 		date: '01 Jan 2021',
-		category: 'Models, Visualisation and Animation',
+		tags: 'Model, Visualisation, Animation',
 		img: 'nimc_001.jpg',
 		summary: '',
 		type: 'html',
@@ -521,7 +611,7 @@ export let _projects = [
 		name: 'Danfo 2.0',
 		slug: 'danfo',
 		date: '01 Jan 2021',
-		category: 'Models, Visualisation and Animation',
+		tags: 'Model, Visualisation, Animation',
 		img: 'danfo_001.jpg',
 		summary: 'How to rig a Vehicle tutorial.',
 		type: 'html',
@@ -545,7 +635,7 @@ export let _projects = [
 		name: 'Costar Brochure',
 		slug: 'costar',
 		date: '01 Jan 2021',
-		category: 'Others',
+		tags: 'Brochure',
 		img: 'costar_001.jpg',
 		summary: '',
 		type: 'doc',
@@ -555,7 +645,7 @@ export let _projects = [
 		name: 'Aris Brochure',
 		slug: 'aris',
 		date: '01 Jan 2021',
-		category: 'Others',
+		tags: 'Brochure',
 		img: 'aris_001.jpg',
 		summary: '',
 		type: 'doc',
