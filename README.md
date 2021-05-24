@@ -51,7 +51,7 @@ module.exports = {
 1. [ ] review form message
 1. [ ] purchase theophilus.website
 
-1. [ ] index animation with intersection observer
 1. [ ] project title static
 1. [ ] add blog to home
 1. [ ] dark mode
+1. [ ] site search

@@ -1,13 +1,40 @@
 <script>
 	import Content from '$lib/pageContent.svelte';
 	import Title from '$lib/pageTitle.svelte';
+
+	import { browser } from '$app/env';
+
+	if (browser) {
+		let options = {
+			// root: document.querySelector('#scrollArea'),
+			root: null,
+			rootMargin: '0px',
+			threshold: 1.0
+		};
+		const callback = (elements) => {
+			elements.forEach((e) => {
+				// console.log(e);
+				if (e.isIntersecting) {
+					e.target.classList.add('show');
+					observer.unobserve(e.target);
+				}
+			});
+		};
+
+		let observer = new IntersectionObserver(callback, options);
+
+		let elements = document.querySelectorAll('.group');
+		elements.forEach((e) => {
+			observer.observe(e);
+		});
+	}
 </script>
 
 <Title>
 	<h1>Welcome!</h1>
 </Title>
 <Content>
-	<div class="center">
+	<div class="group">
 		<h3>Hi.</h3>
 		Welcome to my personal portfolio website.
 		<br />I am a web developer / graphics designer based in Lagos. I have a passion for designing
@@ -15,7 +42,7 @@
 	</div>
 	<br />
 	<br />
-	<div class="left">
+	<div class="group">
 		<h3 class="type2">What I can do.</h3>
 		<strong>Design what you want.</strong>
 		<br />
@@ -29,7 +56,7 @@
 	</div>
 	<br />
 	<br />
-	<div class="right">
+	<div class="group">
 		<h3 class="type2">I can help.</h3>
 		I am currently available for freelance work. If you have a project that you want to get started,
 		think you need my help with something or just fancy saying hey, then
@@ -45,5 +72,17 @@
 
 	a {
 		color: var(--fColor2);
+	}
+
+	.group {
+		opacity: 0;
+		transform: translateY(100px);
+		
+		transition: all 1s;
+		transition-timing-function: ease-in-out;
+	}
+	:global(.group.show) {
+		opacity: 1;
+		transform: translateY(0);
 	}
 </style>
