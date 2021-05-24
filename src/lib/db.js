@@ -44,7 +44,7 @@ I would recommend Svelte if you are:
 		slug: 'creating-your-first-svelte-app',
 		date: '24 May 2021',
 		tags: 'Programming',
-		img: 'creating-your-first-svelte-app_01.jpg',
+		img: 'creating-your-first-svelte-app-01.jpg',
 		summary: 'This post is intended to demonstrate how easy it is for anyone to create a web app in Svelte',
 		type: 'md',
 		content: `
@@ -65,7 +65,7 @@ All you need now is:
 ### The Intepreter
 Terminal commands starting with 'npm' are node command. **Node** is very powerful tool that will help us install, run and build our web app.
 1. Download Lateset version: https://nodejs.org/en/download/
-![VSCode](/images/creating-your-first-svelte-app_03.jpg)
+[VSCode](/images/creating-your-first-svelte-app-03.jpg)
 
 1. Install Node
 > This should be a seamless process
@@ -75,7 +75,7 @@ Terminal commands starting with 'npm' are node command. **Node** is very powerfu
 ### The Terminal
 The terminal we will be using to type on our code is **Visual Studio Code**. VS Code is not just a terminal, it is a very powerful IDE that can easily be extendable.
 1. Download Lateset version: https://code.visualstudio.com/
-![VSCode](/images/creating-your-first-svelte-app_02.jpg)
+[VSCode](/images/creating-your-first-svelte-app-02.jpg)
 
 1. Install VS Code
 >. This should be a seamless process
@@ -89,18 +89,18 @@ The terminal we will be using to type on our code is **Visual Studio Code**. VS 
 1. create a new folder for your project
 1. Open VS Code
 1. In VS Code, open the folder you created 
-![VSCode](/images/creating-your-first-svelte-app_04.jpg)
+![VSCode](/images/creating-your-first-svelte-app-04.jpg)
 1. Open the terminal window 
-![VSCode](/images/creating-your-first-svelte-app_05.jpg)
+![VSCode](/images/creating-your-first-svelte-app-05.jpg)
 
 1. Type in the first command, and press Enter
 \`\`\`node
 npm init svelte@next
 \`\`\`
 This will scaffold a new project in the folder you created.<br>
-![VSCode](/images/creating-your-first-svelte-app_06.jpg)
+![VSCode](/images/creating-your-first-svelte-app-06.jpg)
 You will be prompte to with some questions. Choose youe answers acccording to the image below.
-![VSCode](/images/creating-your-first-svelte-app_07.jpg)
+![VSCode](/images/creating-your-first-svelte-app-07.jpg)
 
 1. Type in the second command, and press Enter
 \`\`\`node
@@ -115,7 +115,7 @@ npm run dev
 This will start a developement server on 'localhost:3000'.
 
 1. Open your browser and type 'localhost:3000' in the address bar
-![VSCode](/images/creating-your-first-svelte-app_08.jpg)
+![VSCode](/images/creating-your-first-svelte-app-08.jpg)
 
 ### Viola!!!
 You did it!
