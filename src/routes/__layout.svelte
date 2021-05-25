@@ -13,7 +13,6 @@
 	const run = () => {
 		$showHeader = document.documentElement.scrollTop < 500;
 		$isMobile = document.documentElement.clientWidth < 900;
-		// top = window.pageYOffset;
 	};
 
 	$: $openMobileMenu = $isMobile == false ? false : $openMobileMenu;

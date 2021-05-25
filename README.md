@@ -56,3 +56,5 @@ module.exports = {
 1. [ ] project title static
 1. [ ] add blog to home
 1. [ ] dark mode
+
+git add -A && git commit -m "mod note" && git push
