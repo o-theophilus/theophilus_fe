@@ -14,6 +14,7 @@
 		const callback = (elements) => {
 			elements.forEach((e) => {
 				// console.log(e);
+				
 				if (!e.isIntersecting) {
 					e.target.classList.add('hide');
 				}
