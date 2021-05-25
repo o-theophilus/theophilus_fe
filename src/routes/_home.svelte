@@ -9,12 +9,16 @@
 			// root: document.querySelector('#scrollArea'),
 			root: null,
 			rootMargin: '0px',
-			threshold: 0.5
+			threshold: 1
 		};
 		const callback = (elements) => {
 			elements.forEach((e) => {
 				// console.log(e);
+				if (!e.isIntersecting) {
+					e.target.classList.add('hide');
+				}
 				if (e.isIntersecting) {
+					e.target.classList.remove('hide');
 					e.target.classList.add('show');
 					observer.unobserve(e.target);
 				}
@@ -48,11 +52,11 @@
 		<br />
 		I like to keep it simple. My goals are focused on details, content and conveying the message that
 		you want to send.
-</div>
-		<br />
-		<br />
+	</div>
+	<br />
+	<br />
 
-<div class="group">
+	<div class="group">
 		<strong>Develop what you need.</strong>
 		<br />I am a developer, so I know how to create your website to run accross devices using the
 		latest technologies available.
@@ -77,15 +81,24 @@
 		color: var(--fColor2);
 	}
 
-	.group {
-		opacity: 0;
-		transform: translateY(100px);
-		
-		transition: all 1s;
-		transition-timing-function: ease-in-out;
+	@keyframes show {
+		from {
+			opacity: 0;
+			transform: translateY(100px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
-	:global(.group.show) {
-		opacity: 1;
-		transform: translateY(0);
+
+	:global(.hide) {
+		opacity: 0;
+	}
+	:global(.show) {
+		animation-name: show;
+		animation-duration: 1s;
+		animation-timing-function: ease-in-out;
+		/* animation-fill-mode: forwards; */
 	}
 </style>
