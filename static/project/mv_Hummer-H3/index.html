@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+
+			box-sizing: border-box;
+		}
+		.btn {
+			display: block;
+
+			width: 50px;
+			height: 50px;
+
+			border-radius: 50%;
+			background-size: contain;
+
+			cursor: pointer;
+			pointer-events: auto;
+		}
+		input {
+			cursor: pointer;
+			pointer-events: auto;
+		}
+		.helperToggle {
+			display: none;
+		}
+
+		/* ************************************************** */
+		.block {
+			--pad: 10px;
+			--btnSize: 50px;
+
+			position: relative;
+			/* height: 500px; */
+			height: 100vh;
+		}
+		iframe {
+			width: 100%;
+			height: 100%;
+
+			background-color: white;
+		}
+		#ui {
+			display: none;
+			position: absolute;
+
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+
+			pointer-events: none;
+		}
+
+		/* ************************************************** */
+		#menu,
+		#fullScreen {
+			position: absolute;
+			top: var(--pad);
+		}
+		#menu {
+			left: var(--pad);
+			background-image: url("media/menu.png");
+		}
+		#fullScreen {
+			right: var(--pad);
+			background-image: url("media/full_screen.png");
+		}
+
+		#t_01:checked ~ #menu {
+			transform: scaleY(-1);
+		}
+		#t_02:checked ~ #fullScreen {
+			transform: scale(-1, -1);
+		}
+		#t_01:checked ~ .panel01 {
+			display: flex;
+		}
+
+		.panel01 {
+			display: none;
+			flex-direction: column;
+
+			position: absolute;
+
+			top: calc(var(--btnSize) + var(--pad) * 2);
+			left: var(--pad);
+
+			gap: 10px;
+		}
+
+		#autoRotate {
+			background-image: url("media/auto_rotate.png");
+		}
+		#autoRotateDirection {
+			background-image: url("media/auto_rotate_direction.png");
+		}
+		#showAnnotation {
+			background-image: url("media/show_annotation.png");
+		}
+		#autoRotateSpeed {
+			background-image: url("media/auto_rotate_speed.png");
+		}
+		/* ************************************************** */
+
+		#splash_screen {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			position: absolute;
+
+			top: 0;
+			left: 0;
+
+			width: 100%;
+			height: 100%;
+
+			background-color: white;
+		}
+		#loading {
+			display: flex;
+			justify-content: center;
+
+			width: 30%;
+			padding: 2px;
+
+			border: 2px solid black;
+
+			border-radius: 3px;
+		}
+		#loading_bar {
+			height: 10px;
+			background-color: rgb(255, 102, 51);
+
+			border-radius: 3px;
+		}
+	</style>
+	<body>
+		<div class="block">
+			<iframe
+				src="mv_Hummer H3.html"
+				frameborder="0"
+				title="container"
+			></iframe>
+
+			<div id="ui">
+				<input type="checkbox" class="helperToggle" id="t_01" />
+				<input type="checkbox" class="helperToggle" id="t_02" />
+
+				<label class="btn" id="menu" for="t_01"> </label>
+				<label class="btn" id="fullScreen" for="t_02"> </label>
+
+				<div class="panel01">
+					<div class="btn" id="showAnnotation"></div>
+					<div class="btn" id="autoRotate"></div>
+					<div class="btn" id="autoRotateDirection"></div>
+					<div class="btn" id="autoRotateSpeed"></div>
+					<!-- <input
+						type="range"
+						min="1"
+						max="8"
+						value="2"
+						step="0.1"
+						id="autoRotateSpeed2"
+						/> -->
+				</div>
+			</div>
+			<div id="splash_screen">
+				<div id="loading">
+					<div id="loading_bar"></div>
+				</div>
+				<br />
+				<h3>Loading <span id="loading_text">0</span>%</h3>
+			</div>
+		</div>
+	</body>
+</html>

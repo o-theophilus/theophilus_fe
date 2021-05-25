@@ -1,13 +1,45 @@
 <script>
 	import Content from '$lib/pageContent.svelte';
 	import Title from '$lib/pageTitle.svelte';
+
+	import { browser } from '$app/env';
+
+	if (browser) {
+		let options = {
+			// root: document.querySelector('#scrollArea'),
+			root: null,
+			rootMargin: '0px',
+			threshold: 1
+		};
+		const callback = (elements) => {
+			elements.forEach((e) => {
+				// console.log(e);
+				
+				if (!e.isIntersecting) {
+					e.target.classList.add('hide');
+				}
+				if (e.isIntersecting) {
+					e.target.classList.remove('hide');
+					e.target.classList.add('show');
+					observer.unobserve(e.target);
+				}
+			});
+		};
+
+		let observer = new IntersectionObserver(callback, options);
+
+		let elements = document.querySelectorAll('.group');
+		elements.forEach((e) => {
+			observer.observe(e);
+		});
+	}
 </script>
 
 <Title>
 	<h1>Welcome!</h1>
 </Title>
 <Content>
-	<div class="center">
+	<div class="group">
 		<h3>Hi.</h3>
 		Welcome to my personal portfolio website.
 		<br />I am a web developer / graphics designer based in Lagos. I have a passion for designing
@@ -15,22 +47,24 @@
 	</div>
 	<br />
 	<br />
-	<div class="left">
+	<div class="group">
 		<h3 class="type2">What I can do.</h3>
-		<br />
 		<strong>Design what you want.</strong>
 		<br />
 		I like to keep it simple. My goals are focused on details, content and conveying the message that
 		you want to send.
-		<br />
-		<br />
+	</div>
+	<br />
+	<br />
+
+	<div class="group">
 		<strong>Develop what you need.</strong>
 		<br />I am a developer, so I know how to create your website to run accross devices using the
 		latest technologies available.
 	</div>
 	<br />
 	<br />
-	<div class="right">
+	<div class="group">
 		<h3 class="type2">I can help.</h3>
 		I am currently available for freelance work. If you have a project that you want to get started,
 		think you need my help with something or just fancy saying hey, then
@@ -46,5 +80,26 @@
 
 	a {
 		color: var(--fColor2);
+	}
+
+	@keyframes show {
+		from {
+			opacity: 0;
+			transform: translateY(100px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	:global(.hide) {
+		opacity: 0;
+	}
+	:global(.show) {
+		animation-name: show;
+		animation-duration: 1s;
+		animation-timing-function: ease-in-out;
+		/* animation-fill-mode: forwards; */
 	}
 </style>

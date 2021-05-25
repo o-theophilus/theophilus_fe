@@ -1,24 +1,18 @@
 <script context="module">
-	export async function load({ page, fetch }) {
-		const resp = await fetch('/project.json');
-		let data = await resp.json();
+	import { projects, _projects } from '$lib/db.js';
+	let temp = [...projects, ..._projects]
 
-		data = data.api;
+	export async function load({ page }) {
 		let { slug } = page.params;
-
-		let item;
-		for (let index = 0; index < data.length; index++) {
-			if (data[index].slug === slug) {
-				item = data[index];
+		let project;
+		for (let i = 0; i < temp.length; i++) {
+			if (temp[i].slug === slug) {
+				project = temp[i];
 				break;
 			}
 		}
-		if (item) {
-			return {
-				props: {
-					data: item
-				}
-			};
+		if (project) {
+			return { props: { project } };
 		}
 	}
 </script>
@@ -27,29 +21,29 @@
 	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
 	import Title from '$lib/pageTitle.svelte';
-	import Marked from '$lib/marked.svelte';
+	import Marked from '$lib/marked.svelte';	
 
-	export let data;
+	export let project;
 </script>
 
 <svelte:head>
-	<title>{data.name}</title>
+	<title>{project.name}</title>
 </svelte:head>
 
-<Image src="/images/{data.img}" />
+<Image src="/images/{project.img}" />
 
 <Title>
-	<h1>
-		<p>{data.name}</p>
-	</h1>
-	<p>{data.category}</p>
-	<p class="date">{data.date}</p>
+	<h2>
+		<p>{project.name}</p>
+	</h2>
+	<p>{project.tags}</p>
+	<p class="date">{project.date}</p>
 </Title>
 
 <Content>
-	{#if data.type === 'md'}
-		<Marked md={data.content} />
+	{#if project.type === 'md'}
+		<Marked md={project.content} />
 	{:else}
-		{@html data.content}
+		{@html project.content}
 	{/if}
 </Content>

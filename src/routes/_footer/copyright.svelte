@@ -10,6 +10,7 @@
 
 		margin: auto;
 		padding: var(--pad);
+		padding-bottom: 12px;
 	}
 
 	p {

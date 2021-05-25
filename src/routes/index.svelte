@@ -1,18 +1,3 @@
-<script context="module">
-	// export const prerender = true;
-
-	export async function load({ fetch }) {
-		const resp = await fetch('/project.json');
-		let data = await resp.json();
-
-		return {
-			props: {
-				projects: data.api
-			}
-		};
-	}
-</script>
-
 <script>
 	import Home from './_home.svelte';
 	import Projects from './_project.svelte';
