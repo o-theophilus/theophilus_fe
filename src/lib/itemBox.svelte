@@ -55,7 +55,7 @@
 
 	.img {
 		height: 100%;
-		background-image: url('/Images/{item.img}');
+		/* background-image: url('/Images/{item.img}'); */
 		background-position: center;
 		background-size: cover;
 	}
