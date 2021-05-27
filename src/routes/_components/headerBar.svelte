@@ -3,7 +3,7 @@
 	import SVG from '$lib/svg.svelte';
 	// import { slide } from 'svelte/transition';
 
-	import Btns from './nnavBtns.svelte';
+	import Btns from '../../lib/navBtn.svelte';
 
 	$: $showHeader = $isMobile == false ? true : $showHeader;
 </script>
@@ -34,7 +34,7 @@
 
 		background-color: var(--color2);
 
-		z-index: 1;
+		/* z-index: 1; */
 
 		box-shadow: 0 0 0 var(--colorNill);
 		

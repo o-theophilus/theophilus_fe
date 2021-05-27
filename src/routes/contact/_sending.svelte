@@ -9,17 +9,19 @@
 
 <style>
 	.blocker {
-		position: absolute;
-		background-color: var(--color1);
-
-		z-index: 1;
-		width: 100%;
-		height: 100%;
-
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+
+		position: absolute;
+		top: 0;
+
+		/* z-index: 1; */
+		width: 100%;
+		height: 100%;
+
+		background-color: var(--color1);
 	}
 
 	.busy {

@@ -1,6 +1,6 @@
 <script>
 	import { isMobile } from '$lib/store.js';
-	import Link from './nnavLink.svelte';
+	import Link from './navBtnLink.svelte';
 </script>
 
 <div class="btns" class:notMobile={!$isMobile}>

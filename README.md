@@ -1,18 +1,5 @@
 # My Note
 
-## Getting Started
-
-```npm
-npm init svelte@next
-npm install
-npm run dev
-
-//or
-
-npm i
-npm run dev -- --open
-```
-
 
 ## Building App
 

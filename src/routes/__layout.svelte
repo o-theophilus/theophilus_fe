@@ -4,10 +4,11 @@
 	import '../app_var.css';
 	import '../app.css';
 	import { showHeader, isMobile, openMobileMenu } from '$lib/store.js';
-	import Nav from '$lib/nnav.svelte';
-	import MobileMenuButton from '$lib/mmb.svelte';
-	import Blocker from '$lib/blocker.svelte';
-	import Header from '$lib/header.svelte';
+
+	import Nav from './_components/nav.svelte';
+	import Header2 from './_components/headerBar2.svelte';
+	import Blocker from './_components/blocker.svelte';
+	import Header from './_components/headerBar.svelte';
 	import Footer from './_footer/index.svelte';
 
 	const run = () => {
@@ -25,14 +26,14 @@
 </script>
 
 <main class="page" class:openMobileMenu={$openMobileMenu}>
-	<Header />
 	<slot />
 	<Footer />
+	<Header />
 </main>
+
 <Blocker />
 <Nav />
-
-<MobileMenuButton />
+<Header2 />
 
 <style>
 	.page {

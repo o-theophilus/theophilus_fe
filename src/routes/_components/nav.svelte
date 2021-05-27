@@ -1,6 +1,6 @@
 <script>
 	import { openMobileMenu } from '$lib/store.js';
-	import Buttons from './nnavBtns.svelte';
+	import Buttons from '../../lib/navBtn.svelte';
 </script>
 
 <nav class="nav" class:openMobileMenu={$openMobileMenu}>
@@ -14,7 +14,7 @@
 		position: fixed;
 		top: 0;
 		left: calc(-1 * var(--mobileMenuWidth));
-		z-index: 3;
+		/* z-index: 3; */
 
 		display: flex;
 		align-items: center;

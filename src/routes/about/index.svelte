@@ -4,7 +4,7 @@
 	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
 	import Title from '$lib/pageTitle.svelte';
-	import Skill from '$lib/skill.svelte';
+	import Skill from './_skill.svelte';
 
 	let skills = [
 		// { name: 'C#', value: 82 },

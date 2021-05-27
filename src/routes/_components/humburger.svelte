@@ -1,56 +1,29 @@
 <script>
-	import { openMobileMenu, isMobile, showHeader } from '$lib/store.js';
+	import { openMobileMenu, showHeader } from '$lib/store.js';
 </script>
 
-<div class="topBar" class:notMobile={!$isMobile}>
-	<div class="block">
-		<div
-			class="humburger"
-			class:openMobileMenu={$openMobileMenu}
-			class:hideHeader={!$showHeader}
-			on:click={() => {
-				$openMobileMenu = !$openMobileMenu;
-			}}
-		>
-			<div class=" one" />
-			<div class=" two" />
-			<div class=" three" />
-		</div>
-	</div>
+<div
+	class="humburger"
+	class:openMobileMenu={$openMobileMenu}
+	class:hideHeader={!$showHeader}
+	on:click={() => {
+		$openMobileMenu = !$openMobileMenu;
+	}}
+>
+	<div class=" one" />
+	<div class=" two" />
+	<div class=" three" />
 </div>
 
 <style>
-	.topBar {
-		position: fixed;
-		top: 0;
-		height: var(--headerHeight);
-
-		width: 100%;
-		pointer-events: none;
-
-		z-index: 3;
-
+	.humburger {
 		--buttonSize: 50px;
-
 		--barHeight: calc(var(--buttonSize) / 10);
 		--barWidth: calc(var(--buttonSize) - var(--buttonSize) / 5);
 		--barPos: calc(var(--buttonSize) / 5);
 		--barPos2: calc(var(--buttonSize) / 8);
 		--barCenter: calc(var(--buttonSize) / 2 - var(--barHeight) / 2);
-	}
-	.topBar.notMobile {
-		display: none;
-	}
 
-	.block {
-		position: relative;
-		max-width: var(--mobileWidth2);
-		height: 100%;
-
-		margin: auto;
-	}
-
-	.humburger {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -83,9 +56,6 @@
 
 		transition: all var(--animTime1);
 		transition-timing-function: ease-in-out;
-
-		/* // mix-blend-mode: exclusion; */
-		/* // mix-blend-mode: difference; */
 	}
 
 	.one {
