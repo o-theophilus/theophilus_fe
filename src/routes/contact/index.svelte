@@ -6,6 +6,9 @@
 	import Title from '$lib/pageTitle.svelte';
 	import SVG from '$lib/svg.svelte';
 
+	import Blocker from './_blocker.svelte';
+	import Done from './_done.svelte';
+
 	let form = {
 		name: '',
 		email: '',
@@ -88,14 +91,7 @@ I'll like so learn _____ from you.
 <Content>
 	<div class="form_block">
 		{#if sending}
-			<div class="blocker">
-				<video class="busy" loop autoplay muted>
-					<source src="/site/busy.mp4" type="video/mp4" />
-				</video>
-				<br />
-				<br />
-				<h2>Sending . . .</h2>
-			</div>
+			<Blocker />
 		{/if}
 		{#if !sent}
 			<p>
@@ -158,15 +154,7 @@ I'll like so learn _____ from you.
 				</div>
 			</form>
 		{:else}
-			<p>Thank You</p>
-			<br />
-			<br />
-			<video loop autoplay muted>
-				<source src="/site/done.mp4" type="video/mp4" />
-			</video>
-			<br />
-			<br />
-			Back to <a href="/">Home</a>
+			<Done />
 		{/if}
 	</div>
 </Content>
@@ -251,6 +239,7 @@ I'll like so learn _____ from you.
 	}
 	select:focus,
 	select:active {
+		outline: none;
 		border: none;
 	}
 
@@ -261,23 +250,5 @@ I'll like so learn _____ from you.
 	/* ************************* */
 	.form_block {
 		position: relative;
-	}
-
-	.blocker {
-		position: absolute;
-		background-color: var(--color1);
-
-		z-index: 1;
-		width: 100%;
-		height: 100%;
-
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.busy {
-		max-width: 200px;
 	}
 </style>

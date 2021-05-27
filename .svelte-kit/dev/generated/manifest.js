@@ -2,7 +2,7 @@ const c = [
 	() => import("..\\..\\..\\src\\routes\\__layout.svelte"),
 	() => import("..\\..\\..\\src\\routes\\__error.svelte"),
 	() => import("..\\..\\..\\src\\routes\\index.svelte"),
-	() => import("..\\..\\..\\src\\routes\\contact.svelte"),
+	() => import("..\\..\\..\\src\\routes\\contact\\index.svelte"),
 	() => import("..\\..\\..\\src\\routes\\project\\index.svelte"),
 	() => import("..\\..\\..\\src\\routes\\project\\[slug].svelte"),
 	() => import("..\\..\\..\\src\\routes\\marked.svelte"),
@@ -17,7 +17,7 @@ export const routes = [
 	// src/routes/index.svelte
 	[/^\/$/, [c[0], c[2]], [c[1]]],
 
-	// src/routes/contact.svelte
+	// src/routes/contact/index.svelte
 	[/^\/contact\/?$/, [c[0], c[3]], [c[1]]],
 
 	// src/routes/project/index.svelte
