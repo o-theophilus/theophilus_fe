@@ -1,4 +1,5 @@
 <script>
+	import { isMobile } from '$lib/store.js';
 	import { projects } from '$lib/db.js';
 
 	import { onMount } from 'svelte';
@@ -24,16 +25,10 @@
 	// for (let n = 0; n < selected.length; n++) {
 	// 	items.push(projects[selected[n]]);
 	// }
-
-	let title;
-
-	onMount(() => {
-		console.log(title.offsetTop);
-	});
 </script>
 
 <div class="proj">
-	<div class="title" bind:this={title}>
+	<div class="title" class:notMobile={!$isMobile}>
 		<Title>
 			<h1>Projects</h1>
 		</Title>
@@ -57,11 +52,15 @@
 	.title {
 		position: sticky;
 		top: 0;
+
+		background-color: var(--color3);
+		box-shadow: 0 0 12px var(--color2);
+	}
+	.notMobile {
+		top: var(--headerHeight);
 	}
 
 	h1 {
 		color: var(--fColor1);
-		/* color: white; */
-		/* mix-blend-mode: difference; */
 	}
 </style>

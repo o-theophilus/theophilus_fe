@@ -1,6 +1,5 @@
 <script>
 	import Content from '$lib/pageContent.svelte';
-	import Title from '$lib/pageTitle.svelte';
 
 	import { browser } from '$app/env';
 
@@ -14,7 +13,7 @@
 		const callback = (elements) => {
 			elements.forEach((e) => {
 				// console.log(e);
-				
+
 				if (!e.isIntersecting) {
 					e.target.classList.add('hide');
 				}
@@ -35,9 +34,6 @@
 	}
 </script>
 
-<Title>
-	<h1>Welcome!</h1>
-</Title>
 <Content>
 	<div class="group">
 		<h3>Hi.</h3>

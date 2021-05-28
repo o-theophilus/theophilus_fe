@@ -1,6 +1,6 @@
 <script>
 	export const prerender = true;
-	
+
 	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
 	import Title from '$lib/pageTitle.svelte';
@@ -92,20 +92,24 @@
 			</div>
 		{/each}
 		<br />
-
-		<h2>This Website</h2>
+		<br />
+		<br />
+		
+		<h1>This Website</h1>
+		<br />
 		<p>
-			The website was made with SvelteKit and deployed on
-			Vercel. It's entirely static through the SvelteKit's SSG feature.
-<br>
-Posts are written in
-			Markdown, in-page codes are formatted using Highlight.js and then converted to nice-looking HTML at build-time.
-<br>
-This website was originally built with
-			C# and Razor then ported to React and now to SvelteKit because of it's simplicity and ease of use.
-<br><br>
-This website is an all-in-one blog, portfolio and
-			pet project to try out new shiny things.
+			The website was made with SvelteKit and deployed on Vercel. It's entirely static through the
+			SvelteKit's SSG feature.
+			<br />
+			Posts are written in Markdown, in-page codes are formatted using Highlight.js and then converted
+			to nice-looking HTML at build-time.
+			<br />
+			<br />
+			This website was originally built with C# and Razor then ported to React and now to SvelteKit because
+			of it's simplicity and ease of use.
+			<br />
+			<br />
+			This website is an all-in-one blog, portfolio and pet project to try out new shiny things.
 		</p>
 	</div>
 </Content>

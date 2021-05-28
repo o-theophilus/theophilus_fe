@@ -3,7 +3,7 @@
 	import Projects from './_project.svelte';
 	import Image from '$lib/pageImage.svelte';
 
-	export let projects;
+	import Title from '$lib/pageTitle.svelte';
 </script>
 
 <svelte:head>
@@ -11,6 +11,8 @@
 </svelte:head>
 
 <Image src="/images/akropol_001.jpeg" />
-
+<Title>
+	<h1>Welcome!</h1>
+</Title>
 <Home />
-<Projects {projects} />
+<Projects />

@@ -1,4 +1,8 @@
-<div class="pageContent">
+<script>
+	export let noMargin = false;
+</script>
+
+<div class="pageContent" class:removeMargin={!noMargin}>
 	<slot />
 </div>
 
@@ -9,9 +13,5 @@
 
 		padding: var(--pad);
 		line-height: var(--lineHeight);
-	}
-
-	:global(.pageContent img) {
-		border-radius: var(--bRadius);
 	}
 </style>
