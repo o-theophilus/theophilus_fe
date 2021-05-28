@@ -38,7 +38,7 @@
 	<div class="group">
 		<h3>Hi.</h3>
 		Welcome to my personal portfolio website.
-		<br />I am a web developer / graphics designer based in Lagos. I have a passion for designing
+		<br />I am a web developer/graphic designer based in Lagos. I have a passion for designing,
 		and I love to create for web and mobile devices.
 	</div>
 	<br />
@@ -55,7 +55,7 @@
 
 	<div class="group">
 		<strong>Develop what you need.</strong>
-		<br />I am a developer, so I know how to create your website to run accross devices using the
+		<br />I am a developer, so I know how to create your website to run across devices using the
 		latest technologies available.
 	</div>
 	<br />

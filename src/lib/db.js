@@ -8,17 +8,17 @@ export let posts = [
 		summary: 'The new reactive component based approach to web design without a virtual DOM',
 		type: 'md',
 		content: `
-Web designing can be a tedious, repeative and uninteresting process, especially for the fact that it is ever-evolving. A technology you decide to learn today might become obsolete tomorow with a better tool replacing it.
+Web designing can be a tedious, repetitive and uninteresting process, especially for the fact that it is ever-evolving. A technology you decide to learn today might become obsolete tomorrow with a better tool replacing it.
 
-I have been in search for better approach to web development as existing methods are not intuitive, complex and have a steep learning curve. I found many temples engine – Wix, Webflow DreamWeaver, Blue Griffon, WordPress - and libraries - Angular, React, jQuery, C# with Razor. Most of which will get the job done. But you will always run into issues when trying to fix a small bug or modify / add a custom feature. The source code is usually filled unnecessary and unused codes which will definately be a nightmare to go through.
+I have been in search for better approach to web development as existing methods are not intuitive, complex and have a steep learning curve. I found many temples engines – Wix, Webflow DreamWeaver, Blue Griffon, WordPress - and libraries - Angular, React, jQuery, C# with Razor. Most of which will get the job done. But you will always run into issues when trying to fix a small bug or modify/add a custom feature. The source code is usually filled unnecessary and unused codes which will definitely be a nightmare to go through.
 
-I came across this blog: [*Best Frontend Frameworks of 2021 for Web Development*](https://www.simform.com/best-frontend-frameworks/#section9). The blog listed the top 9 frontend frameworks according to various features; and that was the first time I ever came across Svelte. Guess what? Svelte was not among the top 5 frameworks on the list. Infact it was last. But the outlined features caught my attention. Especially for that fact that it the newest on the list at the time and lightweight.
+I came across this blog: [*Best Frontend Frameworks of 2021 for Web Development*](https://www.simform.com/best-frontend-frameworks/#section9). The blog listed the top 9 frontend frameworks according to various features. That was the first time I ever came across Svelte. Guess what? Svelte was not among the top 5 frameworks on the list. In fact it was last. But the outlined features caught my attention. Especially for that fact that it was the newest on the list at the time and lightweight.
 
 I did a little research and found the maker of Svelte was an average looking man, Rich Harris, who was a graphics editor for New York Time.
 
 Really! A graphic designer. Well, I could relate because at the moment I also work as a graphic designer, but I know deep down I should be programming big time.
 
-I was still sceptical but after watching this great talk by Rich Harris about [rethinking how we build frontend Javascript frameworks](https://www.youtube.com/watch?v=AdNJ3fydeao), I was sold. If you have half an hour to kill and haven't seen it, please check it out. I promise it is better than any content you will find on my blog.
+I was still sceptical but after watching this great talk by Rich Harris about [rethinking how we build frontend JavaScript frameworks](https://www.youtube.com/watch?v=AdNJ3fydeao), I was sold. If you have half an hour to kill and haven't seen it, please check it out. I promise it is better than any content you will find on my blog.
 
 Svelte is a new reactive component-based approach to web design. Svelte works differently by putting the work into a compile step instead of putting them in the browser, unlike frameworks like React and Vue. It does many other things easily and improves most of the bottlenecks of using other frameworks.
 
@@ -26,7 +26,7 @@ Visiting the official website of [Svelte](https://svelte.dev/) and [SvelteKit](h
 
 At this point my palms are sweaty, knees weak, arms are heavy, I was ready to ~get my hands wet~ dive in head first and hope for the best.
 
-I lunched VS Code - the one IDE to rule them all, opened the node terminal and with 3 lines of code in less than 1 min I was able to get my first Svelte web app up and running. My mind was blown, this must be sorcery. Never seen anything like it.
+I lunched VS Code - the one IDE to rule them all, opened the node terminal and with three lines of code in less than one minute I was able to get my first Svelte web app up and running. My mind was blown, this must be sorcery. Never seen anything like it.
 
 
 ![If you are reading this it was made with Svelte](/images/how-i-met-svelte-02.jpg)
@@ -35,8 +35,8 @@ And the rest is history.
 
 I would recommend Svelte if you are:
 
-1. new in web development, lucky you. You will not have to through the pain of unlearning React😊
-2. a veteran in web development, you'll realize how easy life can be
+1. New in web development, lucky you. You will not have to through the pain of unlearning React😊
+2. A veteran in web development, you'll realize how easy life can be.
 `
 	},
 	{
@@ -373,9 +373,9 @@ frameborder="0"
 title="container"
 ></iframe>
 
-This is an interractive 3D visualization demo. It aims to illustrate how WebGL offer new ways to showcase and interacting with products on the Web.
+This is an interactive 3D visualization demo. It aims to illustrate how WebGL offer new ways to showcase and interacting with products on the Web.
 
-Since it's running in real-time 3D, you are able to inspect the model from every angle, and even interact with various parts.
+Since it's running in real-time 3D, you are able to inspect the model from every angle and even interact with various parts.
 
 Modeling, texturing, lightening, rigging and animation was done in Blender. Exporting to WebGL and interaction was done using Verge3D. UI was created using HTML and CSS.
 
