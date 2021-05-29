@@ -1,6 +1,5 @@
 # My Note
 
-
 ## Building App
 
 ```npm
@@ -12,7 +11,6 @@ npm run build
 ```npm
 npm start
 ```
-
 
 # Deploy on vercel
 
@@ -31,14 +29,12 @@ module.exports = {
 };
 ```
 
-
 # Tasks
 
-1. [ ] page title images
 1. [ ] wide screen increase content css
+1. [ ] fix home default title image size
 
 1. [ ] review form message
-1. [ ] purchase theophilus.website
 
 1. [ ] add blog to home
 1. [ ] dark mode

@@ -101,8 +101,10 @@
 			This website was made with SvelteKit and deployed on Vercel. It's entirely static through the
 			SvelteKit's SSG feature.
 			<br />
+			<br />
 			Posts are written in Markdown, in-page codes are formatted using Highlight.js and then converted
 			to nice-looking HTML at build-time.
+			<br />
 			<br />
 			This website was originally built with C# and Razor then ported to React and now to SvelteKit because
 			of its simplicity and ease of use.
