@@ -1,29 +1,23 @@
 <script>
 	import { showHeader, isMobile } from '$lib/store.js';
 	import SVG from '$lib/svg.svelte';
-	// import { slide } from 'svelte/transition';
 
-	import Btns from '../../lib/navBtn.svelte';
-
-	$: $showHeader = $isMobile == false ? true : $showHeader;
+	import Btns from '../../lib/nav.svelte';
 </script>
 
-<!-- {#if $showHeader} -->
-<!-- <header class="header" in:slide={{ duration: 300 }} out:slide={{ delay: 500, duration: 300 }}> -->
 <header class="header" class:showHeader={$showHeader}>
 	<div class="block">
 		<a href="/" class="logo">
-			<SVG type="logo" size="50" />
+			<SVG type="logo" size="40" />
 			Theophilus
 		</a>
 
-		{#if $isMobile == false}
+		{#if !$isMobile}
 			<Btns />
 		{/if}
 	</div>
 </header>
 
-<!-- {/if} -->
 <style>
 	.header {
 		position: fixed;
@@ -34,10 +28,8 @@
 
 		background-color: var(--color2);
 
-		/* z-index: 1; */
-
 		box-shadow: 0 0 0 var(--colorNill);
-		
+
 		transition: top var(--animTime1);
 		transition-timing-function: ease-in-out;
 	}

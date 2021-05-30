@@ -1,8 +1,6 @@
 <script>
-	import { isMobile } from '$lib/store.js';
 	import { projects } from '$lib/db.js';
 
-	import { onMount } from 'svelte';
 	import Content from '$lib/pageContent.svelte';
 	import Title from '$lib/pageTitle.svelte';
 	import ItemBox from '$lib/itemBox.svelte';
@@ -28,7 +26,7 @@
 </script>
 
 <div class="proj">
-	<div class="title" class:notMobile={!$isMobile}>
+	<div class="title">
 		<Title>
 			<h1>Projects</h1>
 		</Title>
@@ -55,9 +53,14 @@
 
 		background-color: var(--color3);
 		box-shadow: 0 0 12px var(--color2);
+
+		transition: top var(--animTime1);
+		transition-timing-function: ease-in-out;
 	}
-	.notMobile {
-		top: var(--headerHeight);
+	@media screen and (min-width: 900px) {
+		.title {
+			top: var(--headerHeight);
+		}
 	}
 
 	h1 {

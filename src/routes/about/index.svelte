@@ -112,6 +112,7 @@
 			This website is an all-in-one blog, portfolio and pet project to try out new shiny things.
 		</p>
 	</div>
+	<br />
 </Content>
 
 <style>

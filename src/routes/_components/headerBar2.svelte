@@ -1,10 +1,8 @@
 <script>
-	import { isMobile } from '$lib/store.js';
-
 	import Humburger from './humburger.svelte';
 </script>
 
-<div class="topBar" class:notMobile={!$isMobile}>
+<div class="topBar">
 	<div class="block">
 		<Humburger />
 	</div>
@@ -21,8 +19,10 @@
 
 		/* z-index: 3; */
 	}
-	.topBar.notMobile {
-		display: none;
+	@media screen and (min-width: 900px) {
+		.topBar {
+			display: none;
+		}
 	}
 
 	.block {
