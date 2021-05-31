@@ -1,14 +1,19 @@
 <script>
+	import { browser } from '$app/env';
+	// fix nav header blink
+
 	import Link from './navBtn.svelte';
 </script>
 
-<nav>
-	<Link name={'home'} link={''} />
-	<Link name={'project'} />
-	<Link name={'blog'} />
-	<Link name={'about'} />
-	<Link name={'contact'} />
-</nav>
+{#if browser}
+	<nav>
+		<Link name={'home'} link={''} />
+		<Link name={'project'} />
+		<Link name={'blog'} />
+		<Link name={'about'} />
+		<Link name={'contact'} />
+	</nav>
+{/if}
 
 <style>
 	nav {

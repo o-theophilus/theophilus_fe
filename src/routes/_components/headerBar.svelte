@@ -2,7 +2,7 @@
 	import { showHeader, isMobile } from '$lib/store.js';
 	import SVG from '$lib/svg.svelte';
 
-	import Btns from '../../lib/nav.svelte';
+	import Nav from '../../lib/nav.svelte';
 </script>
 
 <header class="header" class:showHeader={$showHeader}>
@@ -13,7 +13,7 @@
 		</a>
 
 		{#if !$isMobile}
-			<Btns />
+			<Nav />
 		{/if}
 	</div>
 </header>

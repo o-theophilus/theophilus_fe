@@ -1,4 +1,7 @@
 <script>
+	import Image from '$lib/pageImage.svelte';
+
+	import Title from '$lib/pageTitle.svelte';
 	import Content from '$lib/pageContent.svelte';
 
 	import { browser } from '$app/env';
@@ -34,12 +37,16 @@
 	}
 </script>
 
+<!-- <Image src="/images/akropol_001.jpeg" />
+<Title>
+	<h1>Welcome!</h1>
+</Title> -->
 <Content>
 	<div class="group">
 		<h3>Hi.</h3>
 		Welcome to my personal portfolio website.
-		<br />I am a web developer/graphic designer based in Lagos. I have a passion for designing,
-		and I love to create for web and mobile devices.
+		<br />I am a web developer/graphic designer based in Lagos. I have a passion for designing, and
+		I love to create for web and mobile devices.
 	</div>
 	<br />
 	<br />

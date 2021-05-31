@@ -1,11 +1,11 @@
 <script>
 	import { openMobileMenu } from '$lib/store.js';
-	import Buttons from '../../lib/nav.svelte';
+	import Nav from '../../lib/nav.svelte';
 </script>
 
 <div class="mobileMenu" class:active={$openMobileMenu}>
 	<div class="block">
-		<Buttons />
+		<Nav />
 	</div>
 </div>
 
