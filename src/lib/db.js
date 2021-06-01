@@ -391,7 +391,7 @@ Interested in hiring me to build something awesome? <a href="/contact" >Get in t
 		name: 'eInvition',
 		slug: 'einvition',
 		date: '1 June 2021',
-		tags: 'Model, Visualisation, Animation',
+		tags: 'Web',
 		img: 'bamidami.jpg',
 		summary: 'A customised web wedding invitation',
 		type: 'link',
