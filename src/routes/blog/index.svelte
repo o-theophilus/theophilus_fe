@@ -15,7 +15,7 @@
 	<title>Blog - Theophilus</title>
 </svelte:head>
 
-<Image src="/images/akropol_001.jpeg" />
+<Image src="/images/akropol_001.jpg" />
 <Title>
 	<h1>Blog Posts</h1>
 </Title>

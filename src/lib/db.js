@@ -322,11 +322,11 @@ export let projects = [
 		slug: 'akropol',
 		date: '01 Jan 2021',
 		tags: 'Model, Visualisation, Animation',
-		img: 'akropol_001.jpeg',
+		img: 'akropol_001.jpg',
 		summary: '',
 		type: 'html',
 		content: `
-			<img class="noDesign" src="/images/akropol_001.jpeg" alt="image_image" />
+			<img class="noDesign" src="/images/akropol_001.jpg" alt="image_image" />
 			<br />
 			<br />
 			<img class="noDesign" src="/images/akropol_002.jpg" alt="image_image" />
@@ -459,38 +459,38 @@ export let _projects = [
 		slug: 'bead',
 		date: '01 Jan 2021',
 		tags: 'Model, Visualisation, Animation',
-		img: 'bead_003.jpeg',
+		img: 'bead_003.jpg',
 		summary: '',
 		type: 'html',
 		content: `
-			<img class="noDesign" src="/images/bead_001.jpeg" alt="image_image" />
+			<img class="noDesign" src="/images/bead_001.jpg" alt="image_image" />
 			<br />
 			<br />
-			<img class="noDesign" src="/images/bead_010.jpeg" alt="image_image" />
+			<img class="noDesign" src="/images/bead_010.jpg" alt="image_image" />
 			<br />
 			<br />
-			<img class="noDesign" src="/images/bead_004.jpeg" alt="image_image" />
+			<img class="noDesign" src="/images/bead_004.jpg" alt="image_image" />
 			<br />
 			<br />
-			<img class="noDesign" src="/images/bead_005.jpeg" alt="image_image" />
+			<img class="noDesign" src="/images/bead_005.jpg" alt="image_image" />
 			<br />
 			<br />
-			<img class="noDesign" src="/images/bead_006.jpeg" alt="image_image" />
+			<img class="noDesign" src="/images/bead_006.jpg" alt="image_image" />
 			<br />
 			<br />
-			<img class="noDesign" src="/images/bead_007.jpeg" alt="image_image" />
+			<img class="noDesign" src="/images/bead_007.jpg" alt="image_image" />
 			<br />
 			<br />
-			<img class="noDesign" src="/images/bead_008.jpeg" alt="image_image" />
+			<img class="noDesign" src="/images/bead_008.jpg" alt="image_image" />
 			<br />
 			<br />
-			<img class="noDesign" src="/images/bead_009.jpeg" alt="image_image" />
+			<img class="noDesign" src="/images/bead_009.jpg" alt="image_image" />
 			<br />
 			<br />
-			<img class="noDesign" src="/images/bead_002.jpeg" alt="image_image" />
+			<img class="noDesign" src="/images/bead_002.jpg" alt="image_image" />
 			<br />
 			<br />
-			<img class="noDesign" src="/images/bead_003.jpeg" alt="image_image" />
+			<img class="noDesign" src="/images/bead_003.jpg" alt="image_image" />
 		`
 	},
 	{

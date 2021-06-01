@@ -37,7 +37,7 @@
 	}
 </script>
 
-<!-- <Image src="/images/akropol_001.jpeg" />
+<!-- <Image src="/images/akropol_001.jpg" />
 <Title>
 	<h1>Welcome!</h1>
 </Title> -->

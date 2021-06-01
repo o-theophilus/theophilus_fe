@@ -62,7 +62,7 @@
 ---
 # IMAGES
 
-![GitHub Logo](/images/akropol_001.jpeg)
+![GitHub Logo](/images/akropol_001.jpg)
 
 
 ---
