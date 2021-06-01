@@ -45,7 +45,8 @@ I would recommend Svelte if you are:
 		date: '24 May 2021',
 		tags: 'Programming',
 		img: 'creating-your-first-svelte-app-01.jpg',
-		summary: 'This post is intended to demonstrate how easy it is for anyone to create a web app in Svelte',
+		summary:
+			'This post is intended to demonstrate how easy it is for anyone to create a web app in Svelte',
 		type: 'md',
 		content: `
 \`\`\`node
@@ -385,6 +386,16 @@ Here is a link to the <a href="/project/l322">first version of this project</a> 
 
 Interested in hiring me to build something awesome? <a href="/contact" >Get in touch</a>.
 		`
+	},
+	{
+		name: 'eInvition',
+		slug: 'einvition',
+		date: '1 June 2021',
+		tags: 'Model, Visualisation, Animation',
+		img: 'bamidami.jpg',
+		summary: 'A customised web wedding invitation',
+		type: 'link',
+		content: "http://bamianddayo.vercel.app/"
 	}
 ];
 
