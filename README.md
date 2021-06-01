@@ -32,13 +32,11 @@ module.exports = {
 # Tasks
 
 1. [ ] fix home default title image size
-1. [ ] review form message
 1. [ ] change site images
+1. [ ] review form message
 
 ### features
 
 1. [ ] add blog to home
 1. [ ] dark mode
 1. [ ] site search
-
-git add -A && git commit -m "mod note" && git push
