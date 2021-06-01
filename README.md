@@ -1,19 +1,5 @@
 # My Note
 
-## Getting Started
-
-```npm
-npm init svelte@next
-npm install
-npm run dev
-
-//or
-
-npm i
-npm run dev -- --open
-```
-
-
 ## Building App
 
 ```npm
@@ -25,7 +11,6 @@ npm run build
 ```npm
 npm start
 ```
-
 
 # Deploy on vercel
 
@@ -44,15 +29,14 @@ module.exports = {
 };
 ```
 
-
 # Tasks
 
-1. [ ] page title images
+1. [ ] fix home default title image size
 1. [ ] review form message
-1. [ ] purchase theophilus.website
+1. [ ] change site images
 
-1. [ ] wide screen increase content css
-1. [ ] project title static
+### features
+
 1. [ ] add blog to home
 1. [ ] dark mode
 1. [ ] site search

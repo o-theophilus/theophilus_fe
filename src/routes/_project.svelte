@@ -1,7 +1,6 @@
 <script>
 	import { projects } from '$lib/db.js';
 
-	import { onMount } from 'svelte';
 	import Content from '$lib/pageContent.svelte';
 	import Title from '$lib/pageTitle.svelte';
 	import ItemBox from '$lib/itemBox.svelte';
@@ -24,16 +23,10 @@
 	// for (let n = 0; n < selected.length; n++) {
 	// 	items.push(projects[selected[n]]);
 	// }
-
-	let title;
-
-	onMount(() => {
-		console.log(title.offsetTop);
-	});
 </script>
 
 <div class="proj">
-	<div class="title" bind:this={title}>
+	<div class="title">
 		<Title>
 			<h1>Projects</h1>
 		</Title>
@@ -57,11 +50,20 @@
 	.title {
 		position: sticky;
 		top: 0;
+
+		background-color: var(--color3);
+		box-shadow: 0 0 12px var(--color2);
+
+		transition: top var(--animTime1);
+		transition-timing-function: ease-in-out;
+	}
+	@media screen and (min-width: 900px) {
+		.title {
+			top: var(--headerHeight);
+		}
 	}
 
 	h1 {
 		color: var(--fColor1);
-		/* color: white; */
-		/* mix-blend-mode: difference; */
 	}
 </style>

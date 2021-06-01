@@ -1,38 +1,31 @@
 <script>
-	import { onMount } from 'svelte';
-
 	import '../app_var.css';
 	import '../app.css';
 	import { showHeader, isMobile, openMobileMenu } from '$lib/store.js';
-	import Nav from '$lib/nnav.svelte';
-	import MobileMenuButton from '$lib/mmb.svelte';
-	import Blocker from '$lib/blocker.svelte';
-	import Header from '$lib/header.svelte';
+
+	import MobileMenu from './_components/mobileMenu.svelte';
+	import Header2 from './_components/headerBar2.svelte';
+	import Blocker from './_components/blocker.svelte';
+	import Header from './_components/headerBar.svelte';
 	import Footer from './_footer/index.svelte';
 
-	const run = () => {
-		$showHeader = document.documentElement.scrollTop < 500;
-		$isMobile = document.documentElement.clientWidth < 900;
-	};
-
-	$: $openMobileMenu = $isMobile == false ? false : $openMobileMenu;
-
-	onMount(() => {
-		window.addEventListener('scroll', run);
-		window.addEventListener('resize', run);
-		run();
-	});
+	let innerWidth, scrollY;
+	$: $isMobile = innerWidth < 900;
+	$: $showHeader = !$isMobile ? true : scrollY < 500;
+	$: $openMobileMenu = !$isMobile ? false : $openMobileMenu;
 </script>
 
+<svelte:window bind:innerWidth bind:scrollY />
+
 <main class="page" class:openMobileMenu={$openMobileMenu}>
-	<Header />
 	<slot />
 	<Footer />
+	<Header />
 </main>
-<Blocker />
-<Nav />
 
-<MobileMenuButton />
+<Blocker />
+<MobileMenu />
+<Header2 />
 
 <style>
 	.page {

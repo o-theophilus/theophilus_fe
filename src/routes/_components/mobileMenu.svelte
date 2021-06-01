@@ -1,20 +1,19 @@
 <script>
 	import { openMobileMenu } from '$lib/store.js';
-	import Buttons from './nnavBtns.svelte';
+	import Nav from '../../lib/nav.svelte';
 </script>
 
-<nav class="nav" class:openMobileMenu={$openMobileMenu}>
+<div class="mobileMenu" class:active={$openMobileMenu}>
 	<div class="block">
-		<Buttons />
+		<Nav />
 	</div>
-</nav>
+</div>
 
 <style>
-	.nav {
+	.mobileMenu {
 		position: fixed;
 		top: 0;
 		left: calc(-1 * var(--mobileMenuWidth));
-		z-index: 3;
 
 		display: flex;
 		align-items: center;
@@ -28,7 +27,7 @@
 		transition: left var(--animTime1);
 		transition-timing-function: ease-in-out;
 	}
-	.openMobileMenu {
+	.active {
 		left: 0;
 	}
 

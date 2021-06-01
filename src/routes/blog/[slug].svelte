@@ -39,7 +39,7 @@
 	<p class="date">{post.date}</p>
 </Title>
 
-<Content>
+<Content noMargin >
 	{#if post.type === 'md'}
 		<Marked md={post.content} />
 	{:else}

@@ -7,14 +7,19 @@
 	src: url('/font/JosefinSans-Bold.ttf');
 }
 
-html,
+/* html, */
 body {
 	overflow-x: hidden;
+	font-family: var(--font1);
 }
 
 * {
 	box-sizing: border-box;
-	font-family: var(--font1);
+}
+
+.removeMargin * {
+	margin: 0;
+	padding: 0;
 }
 
 #svelte-announcer {
@@ -24,6 +29,10 @@ body {
 video,
 img {
 	width: 100%;
+}
+
+.pageContent img {
+	border-radius: var(--bRadius);
 }
 
 .date {

@@ -40,7 +40,7 @@
 	<p class="date">{project.date}</p>
 </Title>
 
-<Content>
+<Content noMargin>
 	{#if project.type === 'md'}
 		<Marked md={project.content} />
 	{:else}

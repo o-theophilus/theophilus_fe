@@ -17,7 +17,9 @@
 </script>
 
 <a {href} {target}>
-	<div class="img" style="background-image: url('/images/{item.img}')" />
+	<div class="img">
+		<img src="/images/{item.img}" alt={item.img} />
+	</div>
 	<div class="details">
 		<h3 class="name">
 			{item.name}
@@ -43,21 +45,28 @@
 		display: flex;
 		flex-direction: column;
 
-		height: 600px;
+		height: 300px;
+		line-height: 20px;
 
 		text-decoration: none;
 		color: var(--fColor2);
+
 		background-color: var(--color1);
 		box-shadow: 0 0 5px 0.1px;
 		border-radius: var(--bRadius);
+
 		overflow: hidden;
 	}
 
 	.img {
 		height: 100%;
-		/* background-image: url('/Images/{item.img}'); */
-		background-position: center;
-		background-size: cover;
+		overflow: hidden;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+
+		object-fit: cover;
 	}
 
 	.details {
@@ -71,10 +80,10 @@
 		margin-top: 10px;
 	}
 
-	@media screen and (max-width: 500px) {
+	@media screen and (min-width: 600px) {
 		a {
-			height: 300px;
-			line-height: 20px;
+			height: 600px;
+			line-height: unset;
 		}
 	}
 </style>

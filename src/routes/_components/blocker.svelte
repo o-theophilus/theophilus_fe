@@ -26,7 +26,7 @@
 		width: 100vw;
 		height: 100vh;
 
-		z-index: 2;
+		/* z-index: 2; */
 
 		backdrop-filter: blur(2px);
 	}

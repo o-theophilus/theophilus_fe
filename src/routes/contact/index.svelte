@@ -1,10 +1,14 @@
 <script>
 	export const prerender = true;
 
+	import { template } from './_template.js';
 	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
 	import Title from '$lib/pageTitle.svelte';
 	import SVG from '$lib/svg.svelte';
+
+	import Sending from './_sending.svelte';
+	import Done from './_done.svelte';
 
 	let form = {
 		name: '',
@@ -50,29 +54,7 @@
 		}
 	};
 
-	const template = [
-		{
-			name: 'Nice Job!',
-			text: 'Wow!! Your site is awesome, Keep it up Bro.'
-		},
-		{
-			name: 'Lets work together',
-			text: `Hi Theo,
-	
-I like what you do, lets work together.
-
-You can reach me on my email or call +_____
-`
-		},
-		{
-			name: 'Learn',
-			text: `Hi Theo,
-
-I'll like so learn _____ from you.
-`
-		}
-	];
-	let store = '';
+	let msgStore = '';
 </script>
 
 <svelte:head>
@@ -86,17 +68,7 @@ I'll like so learn _____ from you.
 </Title>
 
 <Content>
-	<div class="form_block">
-		{#if sending}
-			<div class="blocker">
-				<video class="busy" loop autoplay muted>
-					<source src="/site/busy.mp4" type="video/mp4" />
-				</video>
-				<br />
-				<br />
-				<h2>Sending . . .</h2>
-			</div>
-		{/if}
+	<div class="form_position">
 		{#if !sent}
 			<p>
 				Feel free to contact me with questions or anything else. I will do my best to respond to
@@ -130,7 +102,7 @@ I'll like so learn _____ from you.
 				</div>
 				<div class="inputGroup">
 					<select name="template" id="" bind:value={form.msg}>
-						<option value={store}>Message</option>
+						<option value={msgStore}>Message</option>
 						{#each template as temp}
 							<option value={temp.text}>{temp.name}</option>
 						{/each}
@@ -140,7 +112,7 @@ I'll like so learn _____ from you.
 						placeholder="Your Message"
 						id="message"
 						bind:value={form.msg}
-						on:input={() => (store = form.msg)}
+						on:input={() => (msgStore = form.msg)}
 					/>
 					{#if err.msg}
 						<p class="err">
@@ -158,20 +130,23 @@ I'll like so learn _____ from you.
 				</div>
 			</form>
 		{:else}
-			<p>Thank You</p>
-			<br />
-			<br />
-			<video loop autoplay muted>
-				<source src="/site/done.mp4" type="video/mp4" />
-			</video>
-			<br />
-			<br />
-			Back to <a href="/">Home</a>
+			<Done />
+		{/if}
+
+		{#if sending}
+			<Sending />
 		{/if}
 	</div>
 </Content>
 
 <style>
+	* {
+		outline: none;
+	}
+
+	.form_position {
+		position: relative;
+	}
 	.inputGroup {
 		--inputHeight: 50px;
 
@@ -182,53 +157,35 @@ I'll like so learn _____ from you.
 		display: inline-block;
 		margin-bottom: 10px;
 	}
+
 	input,
 	textarea {
 		width: 100%;
 		height: var(--inputHeight);
 
-		border-radius: var(--bRadius);
-		border-radius: 25px;
+		border-radius: calc(var(--inputHeight) / 2);
 		border: 2px solid var(--colorNill);
 
 		padding: 10px;
 
 		font-size: 1.2rem;
 
-		resize: none;
-
 		background-color: var(--color6);
 
 		transition: all var(--animTime1);
 		transition-timing-function: ease-in-out;
 	}
-	textarea {
-		height: 150px;
-	}
-	input:focus,
-	textarea:focus {
-		outline: none;
-		background-color: var(--color1);
-		border-color: var(--color3);
-	}
-
-	[type='submit'] {
-		background-color: var(--color2);
-		color: var(--color1);
-	}
-	[type='submit']:hover,
-	[type='submit']:focus {
-		outline: none;
-		background-color: var(--color3);
-		border-color: var(--colorNill);
-	}
-
 	[type='text'] {
 		padding-left: var(--inputHeight);
 	}
-	[type='text']:hover + svg,
-	[type='text']:focus + svg {
-		fill: var(--color3);
+	textarea {
+		display: block;
+		resize: none;
+		height: 150px;
+	}
+	[type='submit'] {
+		background-color: var(--color2);
+		color: var(--color1);
 	}
 	svg {
 		--svgSize: 30px;
@@ -249,35 +206,27 @@ I'll like so learn _____ from you.
 		border: none;
 		margin-bottom: 10px;
 	}
-	select:focus,
-	select:active {
-		border: none;
+
+	input:focus,
+	textarea:focus {
+		outline: none;
+		background-color: var(--color1);
+		border-color: var(--color3);
+	}
+
+	[type='submit']:hover,
+	[type='submit']:focus {
+		background-color: var(--color3);
+		border-color: var(--colorNill);
+	}
+
+	[type='text']:hover + svg,
+	[type='text']:focus + svg {
+		fill: var(--color3);
 	}
 
 	.err {
+		margin: 0;
 		color: var(--fColor3);
-	}
-
-	/* ************************* */
-	.form_block {
-		position: relative;
-	}
-
-	.blocker {
-		position: absolute;
-		background-color: var(--color1);
-
-		z-index: 1;
-		width: 100%;
-		height: 100%;
-
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.busy {
-		max-width: 200px;
 	}
 </style>

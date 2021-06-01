@@ -6,12 +6,12 @@
 	<Content>
 		<slot />
 	</Content>
-	<hr />
+	<!-- <hr /> -->
 </div>
 
+
 <style>
-	:global(.pageTitle *, hr) {
-		margin: 0;
-		padding: 0;
+	.pageTitle{
+		border-bottom: 5px solid var(--color3);
 	}
 </style>

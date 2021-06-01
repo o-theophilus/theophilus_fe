@@ -15,7 +15,6 @@
 <a
 	class="link"
 	class:active={segment === page_}
-	class:notMobile={!$isMobile}
 	href="/{link}"
 	on:click={() => {
 		$openMobileMenu = false;
@@ -49,9 +48,11 @@
 		transition: all var(--animTime1);
 		transition-timing-function: ease-in-out;
 	}
-	.notMobile {
-		height: 100%;
-	}
+	/* @media screen and (min-width: 900px) {
+		.link {
+			height: 100%;
+		}
+	} */
 	.link:hover {
 		background-color: var(--color5);
 	}
