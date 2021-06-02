@@ -1685,7 +1685,7 @@
       </next>
     </block>
   </tab>
-  <tab name="annotations" type="SecondaryTab" active="false" scrollx="-62.54037704133941" scrolly="-172.0921735590291" scale="0.7219857701073253">
+  <tab name="annotations" type="SecondaryTab" active="false" scrollx="-62.54037704133941" scrolly="-177.5318889611754" scale="0.7219857701073253">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="wx{Ws)RL+Nfx^a.+Ho3E" type="">showAnnotation</variable>
     </variables>
