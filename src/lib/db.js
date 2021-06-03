@@ -388,12 +388,12 @@ Interested in hiring me to build something awesome? <a href="/contact" >Get in t
 		`
 	},
 	{
-		name: 'eInvitation',
-		slug: 'einvitation',
+		name: 'eInvite',
+		slug: 'eInvite',
 		date: '1 June 2021',
 		tags: 'Web',
 		img: 'bamidami.jpg',
-		summary: 'A customised wedding invitation website',
+		summary: 'A customised wedding invite website',
 		type: 'link',
 		content: "http://bamianddayo.vercel.app/"
 	}
