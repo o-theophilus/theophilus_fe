@@ -6,7 +6,8 @@
 
 	import { browser } from '$app/env';
 
-	if (browser) {
+	export let ready;
+	$: if (browser && ready) {
 		let options = {
 			// root: document.querySelector('#scrollArea'),
 			root: null,

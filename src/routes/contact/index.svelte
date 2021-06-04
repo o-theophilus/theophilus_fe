@@ -142,6 +142,7 @@
 <style>
 	* {
 		outline: none;
+		font-family: var(--font1);
 	}
 
 	.form_position {
