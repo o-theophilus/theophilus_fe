@@ -1,13 +1,8 @@
 <script>
-	import Image from '$lib/pageImage.svelte';
-
-	import Title from '$lib/pageTitle.svelte';
 	import Content from '$lib/pageContent.svelte';
-
 	import { browser } from '$app/env';
 
-	export let ready;
-	$: if (browser && ready) {
+	if (browser) {
 		let options = {
 			// root: document.querySelector('#scrollArea'),
 			root: null,
@@ -30,7 +25,6 @@
 		};
 
 		let observer = new IntersectionObserver(callback, options);
-
 		let elements = document.querySelectorAll('.group');
 		elements.forEach((e) => {
 			observer.observe(e);
@@ -38,10 +32,6 @@
 	}
 </script>
 
-<!-- <Image src="/images/akropol_001.jpg" />
-<Title>
-	<h1>Welcome!</h1>
-</Title> -->
 <Content>
 	<div class="group">
 		<h3>Hi.</h3>
