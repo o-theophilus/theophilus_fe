@@ -40,8 +40,8 @@ I would recommend Svelte if you are:
 `
 	},
 	{
-		name: 'Creating your first Svelte App with just 3 lines of code',
-		slug: 'creating-your-first-svelte-app',
+		name: 'Starting your first Svelte App with just 3 lines of code',
+		slug: 'starting-your-first-svelte-app',
 		date: '24 May 2021',
 		tags: 'Programming',
 		img: 'creating-your-first-svelte-app-01.jpg',
@@ -58,14 +58,14 @@ npm run dev
 Thats it! Thats all you need to know to get your app started.
 
 All you need now is:
-1. An intepreter to process the command.
+1. An interpreter to process the command.
 1. A terminal to type in the commands.
 
 <br>
 
-### The Intepreter
+### The Interpreter
 The commands starting with 'npm' are Node command. **Node** is very powerful tool that will help us install, run and build our web app.
-1. Download Lateset version here: https://nodejs.org/en/download/
+1. Download latest version here: https://nodejs.org/en/download/
 ![VSCode](/images/creating-your-first-svelte-app-03.jpg)
 
 1. Install Node
@@ -75,14 +75,20 @@ The commands starting with 'npm' are Node command. **Node** is very powerful too
 
 ### The Terminal
 The terminal we will be using to type our code is **Visual Studio Code**. VS Code is not just a terminal, it is a very powerful IDE that can easily be extended.
-1. Download Lateset version here: https://code.visualstudio.com/
+1. Download latest version here: https://code.visualstudio.com/
 ![VSCode](/images/creating-your-first-svelte-app-02.jpg)
 
 1. Install VS Code
-> This should be a seamless process
+	> This should be a seamless process
 1. Install "Svelte for VS Code" Extension (Optional)
-> Although not required to get your app started, This Extension will later come in handy when we start coding our web app.
-> It adds great features to VS Code like: code highliing, code completion, code formatting, error linting and many more.
+	> Although not required to get your app started, This Extension will later come in handy when we start coding our web app.
+	![VSCode](/images/creating-your-first-svelte-app-09.jpg)
+	1. Click on Extensions on the side bar
+	1. Search for "Svelte for VS Code"
+	1. Select it in the search result
+	1. Click on Install
+	
+	> This extension adds great features to VS Code like: code highlighting, code completion, code formatting, error linting and many more.
 
 <br>
 
@@ -98,7 +104,7 @@ The terminal we will be using to type our code is **Visual Studio Code**. VS Cod
 \`\`\`node
 npm init svelte@next
 \`\`\`
-You will be prompted with some questions. Answers acccording to the image below.
+You will be prompted with some questions. Answers according to the image below.
 ![VSCode](/images/creating-your-first-svelte-app-07.jpg)
 This will scaffold a new project in the folder you created.<br>
 ![VSCode](/images/creating-your-first-svelte-app-06.jpg)
@@ -113,7 +119,7 @@ This is the short form of 'npm install'. This will install your app dependencies
 \`\`\`node
 npm run dev
 \`\`\`
-This will start a developement server on 'localhost:3000'.
+This will start a development server on 'localhost:3000'.
 
 1. Open your browser and type 'localhost:3000' in the address bar
 ![VSCode](/images/creating-your-first-svelte-app-08.jpg)
@@ -123,93 +129,265 @@ This will start a developement server on 'localhost:3000'.
 ### Viola!!!
 You did it!
 
-You have just created your first working Svelte app. This is the begining of greater things to come.
+You have just created your first working Svelte app. This is the beginning of greater things to come.
 
-What you have created is a skelental project which is the most basic form of a Svelte app.
+What you have created is a skeletal project which is the most basic form of a Svelte app.
 This app can be expanded however you like in building extremely high-performance web apps. 
 
 <br>
 
 You can learn more and get more details at [Svelte](https://svelte.dev/) and [SvelteKit](https://kit.svelte.dev/).
 `
+	},
+	{
+		name: 'Basic Svelte App',
+		slug: 'basic-svelte-app',
+		date: '08 June 2021',
+		tags: 'Programming',
+		img: 'creating-your-first-svelte-app-01.jpg',
+		summary: 'This is a basic Svelte app',
+		type: 'md',
+		content: `
+The purpose of this post is to show the basic workflow of svelte and introduce you to some svelte concepts like component and routing.
+
+In this post we will create a svelte app that has a Home page, an About page, and a Contact page.
+
+This post will assume you know how to start a svelte app.
+
+If you are totally new to svelte, you can check out this post I made earlier on [starting a svelte app](/blog/starting-your-first-svelte-app).
+
+
+## Svelte folder structure
+
+Once you've gotten you app up and running in VS Code you should have a folder structure that looks something like the image below:
+
+![basic-svelte-app](../images/basic-svelte-app_01.jpg)
+
+Your app is made up of files and folders which includes:
+
+* node_modules - This folder houses all libraries and external modules. you will not have to do anything in this folder
+* src -  This folder is where the bulk of your work will be done. This is the root of you app and all your code goes here. by default it contains:
+	* routes - This folder handles the structure and routing of your app,
+	* app.html - this is a skeletal html file in which the app will be rendered into,
+	* global.d.ts - This is a Type script file. If you are not into TypeScript you can totally ignore this file.
+* static - This folder holds all your static files like images, sounds, videos, fonts, etc.
+* helper files - This are files that starts with a ".", eg. '.eslintrc.cjs'. This files contains settings and help manage your app extensions.
+* jsconfig.json and svelte.config.js -  This JavaScript files contains the app configurations.
+* package-lock.json and package.json -  This files contains reference to libraries and and modules that this app depends on.
+* README.md -  This is a note written in markdown
+
+
+## The App
+
+As mentioned earlier, the bulk of the work will be done in the src folder which will be our focus.
+
+Start the default app by running the below code in the \`terminal\`
+
+\`\`\`node
+npm run dev
+\`\`\`
+
+Open your browser and go to: *localhost:3000*
+![VSCode](../images/creating-your-first-svelte-app-08.jpg)
+
+There nothing much going on here, just a welcome page.
+
+The code for this page can be found in \`src/routes/index.svelte\`
+\`\`\`html
+<h1>Welcome to SvelteKit</h1>
+<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+\`\`\`
+
+## Svelte component
+A Svelte component is any file with the \`.svelte\` extension just like our \`index.svelte\` file.
+A Svelte component is made up of:
+1. Any HTML code, 
+1. A script tag -  This contains any javascript that controls the behavior of the component, and
+1. A style tag - that defines the look and feel of the component, 
+
+Our \`index.svelte\` file contains only HTML code;
+
+This code can be modified to.
+\`\`\`html
+<h1>This is the Home page</h1>
+<p>My name is Theophilus and I am so excited to be creating my first Svelte app</p>
+\`\`\`
+
+The good thing about Svelte is that the changes will be seen in the browser realtime.
+
+let us enhance this component by adding javascript to it
+
+\`\`\`html
+<script>
+	let name = 'Theophilus';
+</script>
+
+<h1>This is the Home page</h1>
+<p>My name is {name} and I am so excited to be creating my first Svelte app</p>
+\`\`\`
+
+In the code above we simply defines a javascript variable 'name' and we used this variable within our HTML code.
+So whenever we change the value of the 'name' variable the HTML reference changes too
+
+\`\`\`html
+<script>
+	let name = 'John';
+</script>
+
+<h1>This is the Home page</h1>
+<p>My name is {name} and I am so excited to be creating my first Svelte app</p>
+\`\`\`
+
+We can also style the component
+\`\`\`html
+<script>
+	let name = 'John';
+</script>
+
+<h1>This is the Home page</h1>
+<p>My name is {name} and I am so excited to be creating my first Svelte app</p>
+
+<style>
+	h1{
+		color: red
+	}
+</style>
+\`\`\`
+
+We simply add a red color to the h1 element.
+
+Cool right!!!
+
+
+## Adding a component
+
+Let us add an "about" component this will serve as the about page the about page.
+
+In the \`src/routes/\` folder create a file and name it \`about.svelte\`.
+
+Input the code below in the component
+
+\`\`\`html
+<h1>This is the About page</h1>
+<p>
+	This app show the basic workflow of Svelte and serves as a testing ground for components and
+	routing.
+</p>
+\`\`\`
+
+We can view this page by going to: *localhost:3000/about* on the browser
+![basic-svelte-app](../images/basic-svelte-app_02.jpg)
+
+How cool!!!!
+
+
+Lets add a "contact" component the same way.
+\`\`\`html
+<h1>This is the Contact page</h1>
+<p>You can reach me on: theophilus.ogbolu@gamil.com</p>
+\`\`\`
+
+Again, we can view this page by going to 'localhost:3000/contact'  on the browser
+
+*smile*!!
+
+## The Layout Component
+
+This is a special component that contains the common components that appears on all pages in the app. like a header, a nav and a footer.
+
+Create a new fine in the \`src/routes/\` folder, the layout component is a special component and must be named \`__layout.svelte\`
+
+This \`__layout.svelte\` file must contain a \`<slot/>\` tag. This is where the route pages will be rendered.
+
+\`\`\`html
+<slot/>
+\`\`\`
+we can now define our nav bar and footer in this component
+
+\`\`\`html
+<nav>
+	<a href="/">Home</a>
+	<a href="/about">About</a>
+	<a href="/contact">Contact</a>
+</nav>
+
+<slot/>
+
+<footer>
+	<p>Thank you for visiting my awesome app.</p>
+</footer>
+\`\`\`
+
+We have a nav element that contain links that navigates to index, about and contact components.
+
+When any of the link is clicked the component is rendered in place of \`<slot />\`.
+
+
+Let us now style our layout component and add some html element to define the structure of our app
+
+\`\`\`html
+<nav>
+	<div class="block">
+		<a href="/">Home</a>
+		<a href="/about">About</a>
+		<a href="/contact">Contact</a>
+	</div>
+</nav>
+
+<section>
+	<div class="block">
+		<slot />
+	</div>
+</section>
+
+<footer>
+	<div class="block">
+		<p>Thank you for visiting my awesome app.</p>
+	</div>
+</footer>
+
+<style>
+	.block {
+		max-width: 800px;
+
+		margin: auto;
+		padding: 20px 40px;
+	}
+	nav {
+		background-color: bisque;
+	}
+	section {
+		background-color: lightgrey;
+	}
+	section .block {
+		background-color: white;
+		min-height: calc(100vh - 210px);
+	}
+
+	footer {
+		background-color: black;
+		color: white;
+	}
+</style>
+
+\`\`\`
+![basic-svelte-app](../images/basic-svelte-app_03.jpg)
+We now have a functional app that contains navigation, styles and a script.
+
+This app can be expanded upon by following the simple process explained in this post.
+
+You can get this project file from the [GitHub Repo](https://github.com/pheezie/basic-svelte-app)
+	`
 	}
 ];
 
 export let _posts = [
-	{
-		name: 'Arduino Smart Car',
-		slug: 'arduino',
-		date: '01 Jan 2021',
-		tags: 'Electronic',
-		img: 'arduino_001.jpg',
-		summary: '',
-		type: 'html',
-		content: `
-			<img class="noDesign" src="/images/arduino_001.jpg" alt="image_image" />
-			<p>
-				Arduino smart little turtle car is a MCU learning application development system. The arduino
-				microcontroller series Atmega-328 as the core. This kits include a large of interesting code
-				and extensible external circuit module. Thus increase more function.
-			</p>
-			<br />
-			<h3>Features</h3>
-			<ul>
-				<li>Path Tracking </li>
-				<li>Ultrasonic obstacle avoidance</li>
-				<li>Infrared remote control</li>
-				<li>Bluetooth android mobile control</li>
-			</ul>
-			<br />
-			<h3>Components</h3>
-			<img class="noDesign" src="/images/arduino_002.jpg" alt="image_image" />
-			<ol>
-				<li>Metal gear motor x2</li>
-				<li>Wheel x2</li>
-				<li>Motor fixed part x2</li>
-				<li>Universal wheel x1</li>
-				<li>Chassis x2</li>
-				<li>L298N motor driver module x1</li>
-				<li>Arduino UNO controller x1</li>
-				<li>Arduino sensor shield x1</li>
-				<li>PTZ x1</li>
-				<li>Servo motor x1</li>
-				<li>Ultrasonic module x1</li>
-				<li>Three channels tracking module x1</li>
-				<li>Infrared receive sensor x1</li>
-				<li>Remote control x1</li>
-				<li>2000MA 18650 battery x2</li>
-				<li>18650 battery box x1</li>
-				<li>18650 battery charger x1</li>
-				<li>Dupont line 1P x40</li>
-				<li>M3*35mm copper cylinder x4</li>
-				<li>M3*10mm copper cylinder x2</li>
-				<li>M3 screw and nut</li>
-			</ol>
-			<br />
-			<h3>Installation</h3>
-			<img class="noDesign" src="/images/arduino_003.jpg" alt="image_image" />
-			<img class="noDesign" src="/images/arduino_004.jpg" alt="image_image" />
-			<img class="noDesign" src="/images/arduino_005.jpg" alt="image_image" />
-			<img class="noDesign" src="/images/arduino_006.jpg" alt="image_image" />
-			<img class="noDesign" src="/images/arduino_007.jpg" alt="image_image" />
-			<img class="noDesign" src="/images/arduino_008.jpg" alt="image_image" />
-			<img class="noDesign" src="/images/arduino_009.jpg" alt="image_image" />
-			<img class="noDesign" src="/images/arduino_010.jpg" alt="image_image" />
-			<img class="noDesign" src="/images/arduino_011.jpg" alt="image_image" />
-			<img class="noDesign" src="/images/arduino_012.jpg" alt="image_image" />
-			<img class="noDesign" src="/images/arduino_013.jpg" alt="image_image" />
-			<img class="noDesign" src="/images/arduino_014.jpg" alt="image_image" />
-			<img class="noDesign" src="/images/arduino_015.jpg" alt="image_image" />
-			<img class="noDesign" src="/images/arduino_016.jpg" alt="image_image" />
-			<img class="noDesign" src="/images/arduino_001.jpg" alt="image_image" />
-		`
-	},
-	{
+{
 		name: 'Marked Blog',
 		slug: 'test-md-blog',
 		date: '15 May 2021',
 		tags: 'Programming',
-		img: 'arduino_001.jpg',
+		img: 'akropol_001.jpg',
 		summary: 'This is an example of a marked blog',
 		type: 'md',
 		content: undefined
@@ -221,7 +399,7 @@ export let projects = [
 		name: 'Charms Interior Design',
 		slug: 'charms',
 		date: '01 Jan 2021',
-		tags: 'Model, Visualisation, Animation',
+		tags: 'Model, Visualization, Animation',
 		img: 'charms_01_01.jpg',
 		summary: '',
 		type: 'html',
@@ -321,7 +499,7 @@ export let projects = [
 		name: 'Akropol',
 		slug: 'akropol',
 		date: '01 Jan 2021',
-		tags: 'Model, Visualisation, Animation',
+		tags: 'Model, Visualization, Animation',
 		img: 'akropol_001.jpg',
 		summary: '',
 		type: 'html',
@@ -342,7 +520,7 @@ export let projects = [
 		name: 'This is Nigeria ft. Falz',
 		slug: 'this-is-nigeria',
 		date: '01 Jan 2021',
-		tags: 'Model, Visualisation, Animation',
+		tags: 'Model, Visualization, Animation',
 		img: 'tin_001.jpg',
 		summary: 'Fan art',
 		type: 'html',
@@ -361,7 +539,7 @@ export let projects = [
 		name: 'Product Viewer - Hummer H3',
 		slug: 'mv-hummer-h3',
 		date: '21 May 2021',
-		tags: 'Model, Visualisation, Animation',
+		tags: 'Model, Visualization, Animation',
 		img: 'mv_hummer_h3.jpg',
 		summary: '3D model visualization demo. powered by WebGL',
 		type: 'md',
@@ -392,8 +570,8 @@ Interested in hiring me to build something awesome? <a href="/contact" >Get in t
 		slug: 'eInvite',
 		date: '1 June 2021',
 		tags: 'Web',
-		img: 'bamidami.jpg',
-		summary: 'A customised wedding invite website',
+		img: 'eInvite.jpg',
+		summary: 'A customized wedding invite website',
 		type: 'link',
 		content: "http://bamianddayo.vercel.app/"
 	}
@@ -409,7 +587,7 @@ export let _projects = [
 		summary:
 			'Connekt is a social sharing application that enable users to easily find and connect with other users that are interested in the Products or Services which are being Offered or Requested.',
 		type: 'link',
-		content: 'http://www.connekt.website'
+		content: 'http://www.connekt.vercel.app'
 	},
 	{
 		name: 'Lily Collection',
@@ -427,24 +605,12 @@ export let _projects = [
 		`
 	},
 	{
-		name: 'Flipaxis Logo',
-		slug: 'flipaxis',
-		date: '01 Jan 2021',
-		tags: 'Logo, Banner',
-		img: 'flipaxis_001.jpg',
-		summary: '',
-		type: 'html',
-		content: `
-			<img class="noDesign" src="/images/flipaxis_001.jpg" alt="image_image" />
-		`
-	},
-	{
 		name: 'Model Viewer - S3V Range Rover L322',
 		slug: 'l322',
 		date: '01 Jan 2021',
-		tags: 'Model, Visualisation and Animation',
+		tags: 'Model, Visualization and Animation',
 		img: 'mvS3V.jpg',
-		summary: 'hhas ijhashah ajhasha jkajhsaj asjjakjs ',
+		summary: '',
 		type: 'html',
 		content: `
 			<iframe
@@ -455,103 +621,10 @@ export let _projects = [
 		`
 	},
 	{
-		name: 'Beads',
-		slug: 'bead',
-		date: '01 Jan 2021',
-		tags: 'Model, Visualisation, Animation',
-		img: 'bead_003.jpg',
-		summary: '',
-		type: 'html',
-		content: `
-			<img class="noDesign" src="/images/bead_001.jpg" alt="image_image" />
-			<br />
-			<br />
-			<img class="noDesign" src="/images/bead_010.jpg" alt="image_image" />
-			<br />
-			<br />
-			<img class="noDesign" src="/images/bead_004.jpg" alt="image_image" />
-			<br />
-			<br />
-			<img class="noDesign" src="/images/bead_005.jpg" alt="image_image" />
-			<br />
-			<br />
-			<img class="noDesign" src="/images/bead_006.jpg" alt="image_image" />
-			<br />
-			<br />
-			<img class="noDesign" src="/images/bead_007.jpg" alt="image_image" />
-			<br />
-			<br />
-			<img class="noDesign" src="/images/bead_008.jpg" alt="image_image" />
-			<br />
-			<br />
-			<img class="noDesign" src="/images/bead_009.jpg" alt="image_image" />
-			<br />
-			<br />
-			<img class="noDesign" src="/images/bead_002.jpg" alt="image_image" />
-			<br />
-			<br />
-			<img class="noDesign" src="/images/bead_003.jpg" alt="image_image" />
-		`
-	},
-	{
-		name: 'Ankara with Marvealous Designer',
-		slug: 'ankara',
-		date: '01 Jan 2021',
-		tags: 'Model, Visualisation, Animation',
-		img: 'ankara_001.jpg',
-		summary: '',
-		type: 'html',
-		content: `
-			<img class="noDesign" src="/images/ankara_001.jpg" alt="image_image" />
-			<br />
-			<br />
-			<img class="noDesign" src="/images/ankara_002.jpg" alt="image_image" />
-			<br />
-			<br />
-			<img class="noDesign" src="/images/ankara_003.jpg" alt="image_image" />
-		`
-	},
-	{
-		name: 'Bliss',
-		slug: 'bliss',
-		date: '01 Jan 2021',
-		tags: 'Model, Visualisation, Animation',
-		img: 'faceoff_003.jpg',
-		summary: '',
-		type: 'html',
-		content: `
-			<img class="noDesign" src="/images/faceoff_002.jpg" alt="image_image" />
-			<br />
-			<br />
-			<img class="noDesign" src="/images/faceoff_009.jpg" alt="image_image" />
-			<br />
-			<br />
-			<img class="noDesign" src="/images/faceoff_001.jpg" alt="image_image" />
-			<br />
-			<br />
-			<img class="noDesign" src="/images/faceoff_004.jpg" alt="image_image" />
-			<br />
-			<br />
-			<img class="noDesign" src="/images/faceoff_005.jpg" alt="image_image" />
-			<br />
-			<br />
-			<img class="noDesign" src="/images/faceoff_006.jpg" alt="image_image" />
-			<br />
-			<br />
-			<img class="noDesign" src="/images/faceoff_010.jpg" alt="image_image" />
-			<br />
-			<br />
-			<img class="noDesign" src="/images/faceoff_011.jpg" alt="image_image" />
-			<br />
-			<br />
-			<img class="noDesign" src="/images/faceoff_003.jpg" alt="image_image" />
-		`
-	},
-	{
 		name: 'Interrogation Room',
 		slug: 'interrogation-room',
 		date: '01 Jan 2021',
-		tags: 'Model, Visualisation, Animation',
+		tags: 'Model, Visualization, Animation',
 		img: 'interrogationRoom_005.jpg',
 		summary: '',
 		type: 'html',
@@ -610,7 +683,7 @@ export let _projects = [
 		name: 'National Identity Management Commission',
 		slug: 'nimc',
 		date: '01 Jan 2021',
-		tags: 'Model, Visualisation, Animation',
+		tags: 'Model, Visualization, Animation',
 		img: 'nimc_001.jpg',
 		summary: '',
 		type: 'html',
@@ -624,7 +697,7 @@ export let _projects = [
 		name: 'Danfo 2.0',
 		slug: 'danfo',
 		date: '01 Jan 2021',
-		tags: 'Model, Visualisation, Animation',
+		tags: 'Model, Visualization, Animation',
 		img: 'danfo_001.jpg',
 		summary: 'How to rig a Vehicle tutorial.',
 		type: 'html',
