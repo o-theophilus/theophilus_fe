@@ -9,7 +9,6 @@ This website is an all-in-one blog, portfolio and pet project, It was Built from
 	1. [ ] fix home default title image size
 	1. [ ] change site images
 	1. [ ] review form message
-	1. [ ] header description and image
 
 * Features
 	1. [ ] add blog to home

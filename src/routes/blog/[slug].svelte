@@ -1,6 +1,6 @@
 <script context="module">
 	import { posts, _posts } from '$lib/db.js';
-	let temp = [...posts, ..._posts]
+	let temp = [...posts, ..._posts];
 
 	export async function load({ page }) {
 		let { slug } = page.params;
@@ -22,27 +22,23 @@
 	import Content from '$lib/pageContent.svelte';
 	import Title from '$lib/pageTitle.svelte';
 	import Marked from '$lib/marked.svelte';
+	import Meta from '$lib/meta.svelte';
 
 	export let post;
 </script>
 
-<svelte:head>
-	<title>{post.name}</title>
-	<meta name="title" content={post.name} />
-	<meta name="description" content={post.summary} />
-</svelte:head>
-
-<Image src="/images/{post.img}" />
+<Meta title={post.title} description={post.summary} image={post.image} />
+<Image src="/images/{post.image}" />
 
 <Title>
 	<h2>
-		<p>{post.name}</p>
+		<p>{post.title}</p>
 	</h2>
 	<p>{post.tags}</p>
 	<p class="date">{post.date}</p>
 </Title>
 
-<Content noMargin >
+<Content noMargin>
 	{#if post.type === 'md'}
 		<Marked md={post.content} />
 	{:else}

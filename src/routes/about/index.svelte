@@ -5,6 +5,7 @@
 	import Content from '$lib/pageContent.svelte';
 	import Title from '$lib/pageTitle.svelte';
 	import Skill from './_skill.svelte';
+	import Meta from '$lib/meta.svelte';
 
 	let skills = [
 		// { name: 'C#', value: 82 },
@@ -33,9 +34,11 @@
 	];
 </script>
 
-<svelte:head>
-	<title>About - Theophilus</title>
-</svelte:head>
+<Meta
+	title="About - Theophilus"
+	description="This website is an all-in-one blog, portfolio and pet project to try out new shiny things."
+	image="/site/theophilus.jpg"
+/>
 
 <Image src="/site/theophilus.jpg" />
 <Title>

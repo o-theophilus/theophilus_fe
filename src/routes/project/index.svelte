@@ -9,13 +9,12 @@
 	import Content from '$lib/pageContent.svelte';
 	import Title from '$lib/pageTitle.svelte';
 	import ItemBox from '$lib/itemBox.svelte';
+	import Meta from '$lib/meta.svelte';
 </script>
 
-<svelte:head>
-	<title>Projects - Theophilus</title>
-</svelte:head>
+<Meta title="Projects - Theophilus" description="Stuff I Made." image="/images/akropol_001.jpg" />
 
-<Image src="/images/akropol_001.jpg" />
+<Image src="/site/akropol_001.jpg" />
 <Title>
 	<h1>Projects</h1>
 	<p>Stuff I Made</p>

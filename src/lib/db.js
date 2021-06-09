@@ -1,11 +1,11 @@
 export let posts = [
 	{
-		name: 'How I met Svelte',
-		slug: 'how-i-met-svelte',
-		date: '18 May 2021',
-		tags: 'Programming',
-		img: 'how-i-met-svelte-01.jpg',
+		title: 'How I met Svelte',
 		summary: 'The new reactive component based approach to web design without a virtual DOM.',
+		image: 'how-i-met-svelte-01.jpg',
+		date: '18 May 2021',
+		slug: 'how-i-met-svelte',
+		tags: 'Programming',
 		type: 'md',
 		content: `
 Web designing can be a tedious, repetitive and uninteresting process, especially for the fact that it is ever-evolving. A technology you decide to learn today might become obsolete tomorrow with a better tool replacing it.
@@ -42,13 +42,12 @@ I would recommend Svelte if you are:
 `
 	},
 	{
-		name: 'Starting your first Svelte App with just 3 lines of code',
-		slug: 'starting-your-first-svelte-app',
+		title: 'Starting your first Svelte App with just 3 lines of code',
+		summary: 'This post is intended to demonstrate how easy it is for anyone to create a web app in Svelte.',
+		image: 'creating-your-first-svelte-app-01.jpg',
 		date: '24 May 2021',
+		slug: 'starting-your-first-svelte-app',
 		tags: 'Programming',
-		img: 'creating-your-first-svelte-app-01.jpg',
-		summary:
-			'This post is intended to demonstrate how easy it is for anyone to create a web app in Svelte.',
 		type: 'md',
 		content: `
 \`\`\`node
@@ -142,12 +141,12 @@ You can learn more and get more details at [Svelte](https://svelte.dev/) and [Sv
 `
 	},
 	{
-		name: 'Basic Svelte App',
-		slug: 'basic-svelte-app',
-		date: '08 June 2021',
-		tags: 'Programming',
-		img: 'creating-your-first-svelte-app-01.jpg',
+		title: 'Basic Svelte App',
 		summary: 'Introduction to basic svelte component and routing.',
+		image: 'creating-your-first-svelte-app-01.jpg',
+		date: '08 June 2021',
+		slug: 'basic-svelte-app',
+		tags: 'Programming',
 		type: 'md',
 		content: `
 ### Content
@@ -400,12 +399,12 @@ You can get this project file from the [GitHub Repo](https://github.com/pheezie/
 
 export let _posts = [
 {
-		name: 'Marked Blog',
-		slug: 'test-md-blog',
-		date: '15 May 2021',
-		tags: 'Programming',
-		img: 'akropol_001.jpg',
+		title: 'Marked Blog',
 		summary: 'This is an example of a marked blog',
+		image: 'akropol_001.jpg',
+		date: '15 May 2021',
+		slug: 'test-md-blog',
+		tags: 'Programming',
 		type: 'md',
 		content: undefined
 	}
@@ -413,12 +412,12 @@ export let _posts = [
 
 export let projects = [
 	{
-		name: 'Charms Interior Design',
-		slug: 'charms',
-		date: '01 Jan 2021',
-		tags: 'Model, Visualization, Animation',
-		img: 'charms_01_01.jpg',
+		title: 'Charms Interior Design',
 		summary: '',
+		image: 'charms_01_01.jpg',
+		date: '01 Jan 2021',
+		slug: 'charms',
+		tags: 'Model, Visualization, Animation',
 		type: 'html',
 		content: `
 			<img class="noDesign" src="/images/charms_01_01.jpg" alt="image_image" />
@@ -513,12 +512,12 @@ export let projects = [
 	},
 
 	{
-		name: 'Akropol',
-		slug: 'akropol',
-		date: '01 Jan 2021',
-		tags: 'Model, Visualization, Animation',
-		img: 'akropol_001.jpg',
+		title: 'Akropol',
 		summary: '',
+		image: 'akropol_001.jpg',
+		date: '01 Jan 2021',
+		slug: 'akropol',
+		tags: 'Model, Visualization, Animation',
 		type: 'html',
 		content: `
 			<img class="noDesign" src="/images/akropol_001.jpg" alt="image_image" />
@@ -534,12 +533,12 @@ export let projects = [
 	},
 
 	{
-		name: 'This is Nigeria ft. Falz',
-		slug: 'this-is-nigeria',
-		date: '01 Jan 2021',
-		tags: 'Model, Visualization, Animation',
-		img: 'tin_001.jpg',
+		title: 'This is Nigeria ft. Falz',
 		summary: 'Fan art',
+		image: 'tin_001.jpg',
+		date: '01 Jan 2021',
+		slug: 'this-is-nigeria',
+		tags: 'Model, Visualization, Animation',
 		type: 'html',
 		content: `
 			<div class="unit">
@@ -553,12 +552,12 @@ export let projects = [
 		`
 	},
 	{
-		name: 'Product Viewer - Hummer H3',
-		slug: 'mv-hummer-h3',
-		date: '21 May 2021',
-		tags: 'Model, Visualization, Animation',
-		img: 'mv_hummer_h3.jpg',
+		title: 'Product Viewer - Hummer H3',
 		summary: '3D model visualization demo. powered by WebGL',
+		image: 'mv_hummer_h3.jpg',
+		date: '21 May 2021',
+		slug: 'mv-hummer-h3',
+		tags: 'Model, Visualization, Animation',
 		type: 'md',
 		content: `
 <iframe
@@ -583,12 +582,12 @@ Interested in hiring me to build something awesome? <a href="/contact" >Get in t
 		`
 	},
 	{
-		name: 'eInvite',
-		slug: 'eInvite',
-		date: '1 June 2021',
-		tags: 'Web',
-		img: 'eInvite.jpg',
+		title: 'eInvite',
 		summary: 'A customized wedding invite website',
+		image: 'eInvite.jpg',
+		date: '1 June 2021',
+		slug: 'eInvite',
+		tags: 'Web',
 		type: 'link',
 		content: "http://bamianddayo.vercel.app/"
 	}
@@ -596,23 +595,22 @@ Interested in hiring me to build something awesome? <a href="/contact" >Get in t
 
 export let _projects = [
 	{
-		name: 'Connekt',
-		slug: 'connekt',
+		title: 'Connekt',
+		summary: 'Connekt is a social sharing application that enable users to easily find and connect with other users that are interested in the Products or Services which are being Offered or Requested.',
+		image: 'connekt_001.jpg',
 		date: '01 Jan 2021',
+		slug: 'connekt',
 		tags: 'Web',
-		img: 'connekt_001.jpg',
-		summary:
-			'Connekt is a social sharing application that enable users to easily find and connect with other users that are interested in the Products or Services which are being Offered or Requested.',
 		type: 'link',
 		content: 'http://www.connekt.vercel.app'
 	},
 	{
-		name: 'Lily Collection',
-		slug: 'lily',
-		date: '01 Jan 2021',
-		tags: 'Logo, Banner',
-		img: 'lilyCollection_001.jpg',
+		title: 'Lily Collection',
 		summary: '',
+		image: 'lilyCollection_001.jpg',
+		date: '01 Jan 2021',
+		slug: 'lily',
+		tags: 'Logo, Banner',
 		type: 'html',
 		content: `
 			<img class="noDesign" src="/images/lilyCollection_001.jpg" alt="image_image" />
@@ -622,12 +620,12 @@ export let _projects = [
 		`
 	},
 	{
-		name: 'Model Viewer - S3V Range Rover L322',
-		slug: 'l322',
-		date: '01 Jan 2021',
-		tags: 'Model, Visualization and Animation',
-		img: 'mvS3V.jpg',
+		title: 'Model Viewer - S3V Range Rover L322',
 		summary: '',
+		image: 'mvS3V.jpg',
+		date: '01 Jan 2021',
+		slug: 'l322',
+		tags: 'Model, Visualization and Animation',
 		type: 'html',
 		content: `
 			<iframe
@@ -638,12 +636,12 @@ export let _projects = [
 		`
 	},
 	{
-		name: 'Interrogation Room',
-		slug: 'interrogation-room',
-		date: '01 Jan 2021',
-		tags: 'Model, Visualization, Animation',
-		img: 'interrogationRoom_005.jpg',
+		title: 'Interrogation Room',
 		summary: '',
+		image: 'interrogationRoom_005.jpg',
+		date: '01 Jan 2021',
+		slug: 'interrogation-room',
+		tags: 'Model, Visualization, Animation',
 		type: 'html',
 		content: `
 			<div class="unit">
@@ -697,12 +695,12 @@ export let _projects = [
 		`
 	},
 	{
-		name: 'National Identity Management Commission',
-		slug: 'nimc',
-		date: '01 Jan 2021',
-		tags: 'Model, Visualization, Animation',
-		img: 'nimc_001.jpg',
+		title: 'National Identity Management Commission',
 		summary: '',
+		image: 'nimc_001.jpg',
+		date: '01 Jan 2021',
+		slug: 'nimc',
+		tags: 'Model, Visualization, Animation',
 		type: 'html',
 		content: `
 			<video controls>
@@ -711,12 +709,12 @@ export let _projects = [
 		`
 	},
 	{
-		name: 'Danfo 2.0',
-		slug: 'danfo',
-		date: '01 Jan 2021',
-		tags: 'Model, Visualization, Animation',
-		img: 'danfo_001.jpg',
+		title: 'Danfo 2.0',
 		summary: 'How to rig a Vehicle tutorial.',
+		image: 'danfo_001.jpg',
+		date: '01 Jan 2021',
+		slug: 'danfo',
+		tags: 'Model, Visualization, Animation',
 		type: 'html',
 		content: `
 			<div>
@@ -735,22 +733,22 @@ export let _projects = [
 		`
 	},
 	{
-		name: 'Costar Brochure',
-		slug: 'costar',
-		date: '01 Jan 2021',
-		tags: 'Brochure',
-		img: 'costar_001.jpg',
+		title: 'Costar Brochure',
 		summary: '',
+		image: 'costar_001.jpg',
+		date: '01 Jan 2021',
+		slug: 'costar',
+		tags: 'Brochure',
 		type: 'doc',
 		content: 'costar_001.pdf'
 	},
 	{
-		name: 'Aris Brochure',
-		slug: 'aris',
-		date: '01 Jan 2021',
-		tags: 'Brochure',
-		img: 'aris_001.jpg',
+		title: 'Aris Brochure',
 		summary: '',
+		image: 'aris_001.jpg',
+		date: '01 Jan 2021',
+		slug: 'aris',
+		tags: 'Brochure',
 		type: 'doc',
 		content: 'aris_001.pdf'
 	}
