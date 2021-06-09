@@ -28,6 +28,8 @@
 
 <svelte:head>
 	<title>{project.name}</title>
+	<meta name="title" content={project.name} />
+	<meta name="description" content={project.summary} />
 </svelte:head>
 
 <Image src="/images/{project.img}" />

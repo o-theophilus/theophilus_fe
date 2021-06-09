@@ -22,7 +22,7 @@ I was still sceptical but after watching this great talk by Rich Harris about [r
 
 Svelte is a new reactive component-based approach to web design. Svelte works differently by putting the work into a compile step instead of putting them in the browser, unlike frameworks like React and Vue. It does many other things easily and improves most of the bottlenecks of using other frameworks.
 
-Svelte is “a compiler that takes your declarative components and converts them into efficient JavaScript that surgically updates the DOM” when the state of your application changes. Meaning, you can build boilerplate-free components using CSS, HTML and pure JavaScript, and Svelt will compile it into small and lightweight JS with built-in reactivity.
+Svelte is “a compiler that takes your declarative components and converts them into efficient JavaScript that surgically updates the DOM” when the state of your application changes. Meaning, you can build boilerplate-free components using CSS, HTML and pure JavaScript, and Svelte will compile it into small and lightweight JS with built-in reactivity.
 
 Visiting the official website of [Svelte](https://svelte.dev/) and [SvelteKit](https://kit.svelte.dev/), It is clearly seen that they are well documented and have good examples.
 

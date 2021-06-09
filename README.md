@@ -1,5 +1,5 @@
 # Theophilus.website
-This website is an all-in-one blog, portfolio and pet project, It was Builf from scratch with SvelteKit and deployed on Vercel.
+This website is an all-in-one blog, portfolio and pet project, It was Built from scratch with SvelteKit and deployed on Vercel.
 <br>
 <br>
 
