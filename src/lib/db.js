@@ -5,7 +5,7 @@ export let posts = [
 		date: '18 May 2021',
 		tags: 'Programming',
 		img: 'how-i-met-svelte-01.jpg',
-		summary: 'The new reactive component based approach to web design without a virtual DOM',
+		summary: 'The new reactive component based approach to web design without a virtual DOM.',
 		type: 'md',
 		content: `
 Web designing can be a tedious, repetitive and uninteresting process, especially for the fact that it is ever-evolving. A technology you decide to learn today might become obsolete tomorrow with a better tool replacing it.
@@ -22,6 +22,8 @@ I was still sceptical but after watching this great talk by Rich Harris about [r
 
 Svelte is a new reactive component-based approach to web design. Svelte works differently by putting the work into a compile step instead of putting them in the browser, unlike frameworks like React and Vue. It does many other things easily and improves most of the bottlenecks of using other frameworks.
 
+Svelte is “a compiler that takes your declarative components and converts them into efficient JavaScript that surgically updates the DOM” when the state of your application changes. Meaning, you can build boilerplate-free components using CSS, HTML and pure JavaScript, and Svelt will compile it into small and lightweight JS with built-in reactivity.
+
 Visiting the official website of [Svelte](https://svelte.dev/) and [SvelteKit](https://kit.svelte.dev/), It is clearly seen that they are well documented and have good examples.
 
 At this point my palms are sweaty, knees weak, arms are heavy, I was ready to ~get my hands wet~ dive in head first and hope for the best.
@@ -29,13 +31,13 @@ At this point my palms are sweaty, knees weak, arms are heavy, I was ready to ~g
 I lunched VS Code - the one IDE to rule them all, opened the node terminal and with three lines of code in less than one minute I was able to get my first Svelte web app up and running. My mind was blown, this must be sorcery. Never seen anything like it.
 
 
-![If you are reading this it was made with Svelte](/images/how-i-met-svelte-02.jpg)
+![if you are reading this it was made with Svelte](/images/how-i-met-svelte-02.jpg)
 
 And the rest is history.
 
 I would recommend Svelte if you are:
 
-1. New in web development, lucky you. You will not have to through the pain of unlearning React😊
+1. New in web development, lucky you. You will not have to through the pain of unlearning React😊.
 2. A veteran in web development, you'll realize how easy life can be.
 `
 	},
@@ -46,7 +48,7 @@ I would recommend Svelte if you are:
 		tags: 'Programming',
 		img: 'creating-your-first-svelte-app-01.jpg',
 		summary:
-			'This post is intended to demonstrate how easy it is for anyone to create a web app in Svelte',
+			'This post is intended to demonstrate how easy it is for anyone to create a web app in Svelte.',
 		type: 'md',
 		content: `
 \`\`\`node
@@ -65,7 +67,7 @@ All you need now is:
 
 ### The Interpreter
 The commands starting with 'npm' are Node command. **Node** is very powerful tool that will help us install, run and build our web app.
-1. Download latest version here: https://nodejs.org/en/download/
+1. Download the latest version here: https://nodejs.org/en/download/
 ![VSCode](/images/creating-your-first-svelte-app-03.jpg)
 
 1. Install Node
@@ -75,12 +77,12 @@ The commands starting with 'npm' are Node command. **Node** is very powerful too
 
 ### The Terminal
 The terminal we will be using to type our code is **Visual Studio Code**. VS Code is not just a terminal, it is a very powerful IDE that can easily be extended.
-1. Download latest version here: https://code.visualstudio.com/
+1. Download the latest version here: https://code.visualstudio.com/
 ![VSCode](/images/creating-your-first-svelte-app-02.jpg)
 
-1. Install VS Code
+1. Install VS Code.
 	> This should be a seamless process
-1. Install "Svelte for VS Code" Extension (Optional)
+1. Install "Svelte for VS Code" Extension (Optional).
 	> Although not required to get your app started, This Extension will later come in handy when we start coding our web app.
 	![VSCode](/images/creating-your-first-svelte-app-09.jpg)
 	1. Click on Extensions on the side bar
@@ -100,7 +102,7 @@ The terminal we will be using to type our code is **Visual Studio Code**. VS Cod
 1. Open the terminal window 
 ![VSCode](/images/creating-your-first-svelte-app-05.jpg)
 
-1. Type in the first command, and press Enter
+1. Type in the first command and press Enter
 \`\`\`node
 npm init svelte@next
 \`\`\`
@@ -109,7 +111,7 @@ You will be prompted with some questions. Answers according to the image below.
 This will scaffold a new project in the folder you created.<br>
 ![VSCode](/images/creating-your-first-svelte-app-06.jpg)
 
-1. Type in the second command, and press Enter
+1. Type in the second command and press Enter
 \`\`\`node
 npm i
 \`\`\`
@@ -132,7 +134,7 @@ You did it!
 You have just created your first working Svelte app. This is the beginning of greater things to come.
 
 What you have created is a skeletal project which is the most basic form of a Svelte app.
-This app can be expanded however you like in building extremely high-performance web apps. 
+This app can be expanded into an extremely high-performance web app. 
 
 <br>
 
@@ -145,19 +147,30 @@ You can learn more and get more details at [Svelte](https://svelte.dev/) and [Sv
 		date: '08 June 2021',
 		tags: 'Programming',
 		img: 'creating-your-first-svelte-app-01.jpg',
-		summary: 'This is a basic Svelte app',
+		summary: 'Introduction to basic svelte component and routing.',
 		type: 'md',
 		content: `
+### Content
+1. [Introduction](#introduction)
+1. [Svelte folder structure](#svelte-folder-structure)
+1. [Starting Svelte app](#starting-svelte-app)
+1. [Svelte component](#svelte-component)
+1. [Adding a component](#adding-a-component)
+1. [Layout component](#layout-component)
+1. [Conclusion](#conclusion)
+
+### Introduction
+
 The purpose of this post is to show the basic workflow of svelte and introduce you to some svelte concepts like component and routing.
 
 In this post we will create a svelte app that has a Home page, an About page, and a Contact page.
 
 This post will assume you know how to start a svelte app.
 
-If you are totally new to svelte, you can check out this post I made earlier on [starting a svelte app](/blog/starting-your-first-svelte-app).
+If you are totally new to svelte, you can check out this post on [starting a svelte app](/blog/starting-your-first-svelte-app).
 
 
-## Svelte folder structure
+### Svelte folder structure
 
 Once you've gotten you app up and running in VS Code you should have a folder structure that looks something like the image below:
 
@@ -165,19 +178,19 @@ Once you've gotten you app up and running in VS Code you should have a folder st
 
 Your app is made up of files and folders which includes:
 
-* node_modules - This folder houses all libraries and external modules. you will not have to do anything in this folder
-* src -  This folder is where the bulk of your work will be done. This is the root of you app and all your code goes here. by default it contains:
+* node_modules - This folder houses all libraries and external modules. You will not have to do anything in this folder.
+* src - This folder is where the bulk of your work will be done. This is the root of you app and all your code goes here. Its default contents are:
 	* routes - This folder handles the structure and routing of your app,
 	* app.html - this is a skeletal html file in which the app will be rendered into,
 	* global.d.ts - This is a Type script file. If you are not into TypeScript you can totally ignore this file.
 * static - This folder holds all your static files like images, sounds, videos, fonts, etc.
-* helper files - This are files that starts with a ".", eg. '.eslintrc.cjs'. This files contains settings and help manage your app extensions.
-* jsconfig.json and svelte.config.js -  This JavaScript files contains the app configurations.
-* package-lock.json and package.json -  This files contains reference to libraries and and modules that this app depends on.
+* helper files - This are files that starts with ".", eg. '.eslintrc.cjs'. These files contains settings and help manage your app extensions.
+* jsconfig.json and svelte.config.js - This JavaScript files contains the app configurations.
+* package-lock.json and package.json - This files contains reference to libraries and and modules that this app depends on.
 * README.md -  This is a note written in markdown
 
 
-## The App
+### Starting Svelte app
 
 As mentioned earlier, the bulk of the work will be done in the src folder which will be our focus.
 
@@ -198,11 +211,11 @@ The code for this page can be found in \`src/routes/index.svelte\`
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 \`\`\`
 
-## Svelte component
+### Svelte component
 A Svelte component is any file with the \`.svelte\` extension just like our \`index.svelte\` file.
 A Svelte component is made up of:
 1. Any HTML code, 
-1. A script tag -  This contains any javascript that controls the behavior of the component, and
+1. A script tag -  This contains any JavaScript that controls the behavior of the component, and
 1. A style tag - that defines the look and feel of the component, 
 
 Our \`index.svelte\` file contains only HTML code;
@@ -215,7 +228,7 @@ This code can be modified to.
 
 The good thing about Svelte is that the changes will be seen in the browser realtime.
 
-let us enhance this component by adding javascript to it
+Let us enhance this component by adding JavaScript to it.
 
 \`\`\`html
 <script>
@@ -226,7 +239,7 @@ let us enhance this component by adding javascript to it
 <p>My name is {name} and I am so excited to be creating my first Svelte app</p>
 \`\`\`
 
-In the code above we simply defines a javascript variable 'name' and we used this variable within our HTML code.
+In the code above we simply define a JavaScript variable 'name' and we used this variable within our HTML code.
 So whenever we change the value of the 'name' variable the HTML reference changes too
 
 \`\`\`html
@@ -238,7 +251,7 @@ So whenever we change the value of the 'name' variable the HTML reference change
 <p>My name is {name} and I am so excited to be creating my first Svelte app</p>
 \`\`\`
 
-We can also style the component
+We can also style the component.
 \`\`\`html
 <script>
 	let name = 'John';
@@ -259,19 +272,18 @@ We simply add a red color to the h1 element.
 Cool right!!!
 
 
-## Adding a component
+### Adding a component
 
 Let us add an "about" component this will serve as the about page the about page.
 
 In the \`src/routes/\` folder create a file and name it \`about.svelte\`.
 
-Input the code below in the component
+Input the code below in the component.
 
 \`\`\`html
 <h1>This is the About page</h1>
 <p>
-	This app show the basic workflow of Svelte and serves as a testing ground for components and
-	routing.
+	This app shows the basic workflow of Svelte and serves as a testing ground for components and routing.
 </p>
 \`\`\`
 
@@ -281,7 +293,7 @@ We can view this page by going to: *localhost:3000/about* on the browser
 How cool!!!!
 
 
-Lets add a "contact" component the same way.
+Let's add a "contact" component the same way.
 \`\`\`html
 <h1>This is the Contact page</h1>
 <p>You can reach me on: theophilus.ogbolu@gamil.com</p>
@@ -291,9 +303,9 @@ Again, we can view this page by going to 'localhost:3000/contact'  on the browse
 
 *smile*!!
 
-## The Layout Component
+### Layout component
 
-This is a special component that contains the common components that appears on all pages in the app. like a header, a nav and a footer.
+This is a special component that contains the common components that appears on all pages in the app eg. header, nav and footer.
 
 Create a new fine in the \`src/routes/\` folder, the layout component is a special component and must be named \`__layout.svelte\`
 
@@ -302,7 +314,7 @@ This \`__layout.svelte\` file must contain a \`<slot/>\` tag. This is where the 
 \`\`\`html
 <slot/>
 \`\`\`
-we can now define our nav bar and footer in this component
+We can now define the nav bar and footer in this component.
 
 \`\`\`html
 <nav>
@@ -371,7 +383,12 @@ Let us now style our layout component and add some html element to define the st
 </style>
 
 \`\`\`
-![basic-svelte-app](../images/basic-svelte-app_03.jpg)
+
+
+![basic-svelte-app](/images/basic-svelte-app_03.jpg)
+
+### Conclusion
+
 We now have a functional app that contains navigation, styles and a script.
 
 This app can be expanded upon by following the simple process explained in this post.
@@ -558,7 +575,7 @@ Since it's running in real-time 3D, you are able to inspect the model from every
 
 Modeling, texturing, lightening, rigging and animation was done in Blender. Exporting to WebGL and interaction was done using Verge3D. UI was created using HTML and CSS.
 
-Here is a link to the <a href="/project/l322">first version of this project</a> that was made using Unity3D
+Here is a link to the <a href="/project/l322">first version of this project</a> that was made using Unity3D.
 
 <br>
 
