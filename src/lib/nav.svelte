@@ -23,9 +23,9 @@
 		nav {
 			display: flex;
 
-			width: 100%;
-			height: 100%;
+			width: 70%;
 			max-width: var(--mobileWidth);
+			height: 100%;
 
 			margin-left: auto;
 		}
