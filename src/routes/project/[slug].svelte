@@ -28,9 +28,9 @@
 </script>
 
 <Meta title={project.title} description={project.summary} image={project.image} />
-<Image src="/images/{project.image}" />
 
 <Title>
+	<Image src="/images/{project.image}" />
 	<h2>
 		<p>{project.title}</p>
 	</h2>
