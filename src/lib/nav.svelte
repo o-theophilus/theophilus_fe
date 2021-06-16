@@ -23,8 +23,8 @@
 		nav {
 			display: flex;
 
-			width: 70%;
-			max-width: var(--mobileWidth);
+			width: 100%;
+			max-width: 600px;
 			height: 100%;
 
 			margin-left: auto;
