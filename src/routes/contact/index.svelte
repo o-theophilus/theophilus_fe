@@ -6,6 +6,7 @@
 	import Content from '$lib/pageContent.svelte';
 	import Title from '$lib/pageTitle.svelte';
 	import SVG from '$lib/svg.svelte';
+	import Meta from '$lib/meta.svelte';
 
 	import Sending from './_sending.svelte';
 	import Done from './_done.svelte';
@@ -60,6 +61,12 @@
 <svelte:head>
 	<title>{!sent ? 'Contact' : 'Message Sent'} - Theophilus</title>
 </svelte:head>
+
+<Meta
+	title="{!sent ? 'Contact' : 'Message Sent'} - Theophilus"
+	description="Feel free to contact me with questions or anything else."
+	image="/site/theophilus.jpg"
+/>
 
 <Image src="/site/theophilus.jpg" />
 

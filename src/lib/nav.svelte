@@ -24,8 +24,8 @@
 			display: flex;
 
 			width: 100%;
+			max-width: 600px;
 			height: 100%;
-			max-width: var(--mobileWidth);
 
 			margin-left: auto;
 		}

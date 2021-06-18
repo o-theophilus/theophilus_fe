@@ -1,6 +1,6 @@
 <script context="module">
 	import { projects, _projects } from '$lib/db.js';
-	let temp = [...projects, ..._projects]
+	let temp = [...projects, ..._projects];
 
 	export async function load({ page }) {
 		let { slug } = page.params;
@@ -21,20 +21,18 @@
 	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
 	import Title from '$lib/pageTitle.svelte';
-	import Marked from '$lib/marked.svelte';	
+	import Marked from '$lib/marked.svelte';
+	import Meta from '$lib/meta.svelte';
 
 	export let project;
 </script>
 
-<svelte:head>
-	<title>{project.name}</title>
-</svelte:head>
-
-<Image src="/images/{project.img}" />
+<Meta title={project.title} description={project.summary} image={project.image} />
 
 <Title>
+	<Image src="/images/{project.image}" />
 	<h2>
-		<p>{project.name}</p>
+		<p>{project.title}</p>
 	</h2>
 	<p>{project.tags}</p>
 	<p class="date">{project.date}</p>

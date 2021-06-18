@@ -38,3 +38,11 @@ img {
 	font-style: italic;
 	font-size: 12px;
 }
+
+pre {
+	overflow-x: auto;
+}
+
+p > code{
+	color: darkred;
+}

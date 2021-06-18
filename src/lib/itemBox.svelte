@@ -18,11 +18,11 @@
 
 <a {href} {target}>
 	<div class="img">
-		<img src="/images/{item.img}" alt={item.img} />
+		<img src="/images/{item.image}" alt={item.image} />
 	</div>
 	<div class="details">
-		<h3 class="name">
-			{item.name}
+		<h3 class="title">
+			{item.title}
 		</h3>
 		<p class="date">
 			{item.date}
@@ -72,7 +72,7 @@
 	.details {
 		padding: 20px;
 	}
-	.name {
+	.title {
 		color: var(--fColor3);
 	}
 
