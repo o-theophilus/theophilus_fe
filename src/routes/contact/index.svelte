@@ -11,34 +11,31 @@
 	import Sending from './_sending.svelte';
 	import Done from './_done.svelte';
 
-	let form = {
-		name: '',
-		email: '',
-		msg: ''
-	};
-
-	let err = {
-		name: '',
-		email: '',
-		msg: '',
-		form: ''
-	};
-
-	let sent = false;
-	let sending = false;
+	let form = {};
+	let err = {};
 
 	const validate = () => {
-		err.name = form.name === '' ? 'Please enter your name' : '';
-		err.email = /\S+@\S+\.\S+/.test(form.email) ? '' : 'Please enter a valid email address';
-		err.msg = form.msg === '' ? 'Please enter your message' : '';
+		err = {};
+		if (!form.name) {
+			err.name = 'Please enter your name';
+		}
+		if (!form.email) {
+			err.email = 'Please enter your name';
+		} else if (!/\S+@\S+\.\S+/.test(form.email)) {
+			err.email = 'Please enter a valid email address';
+		}
+		if (!form.msg) {
+			err.msg = 'Please enter your message';
+		}
 
-		if (err.name === '' && err.email === '' && err.msg === '' && err.form === '') {
+		if (Object.keys(err).length === 0) {
 			submit();
 		}
 	};
 
+	let sent = 0;
 	const submit = async () => {
-		sending = true;
+		sent = 1;
 		const resp = await fetch('https://formspree.io/f/xknkjbpb', {
 			method: 'post',
 			headers: { 'Content-Type': 'application/json' },
@@ -47,10 +44,10 @@
 
 		const data = await resp.json();
 
-		sending = false;
 		if (resp.ok) {
-			sent = true;
+			sent = 2;
 		} else {
+			sent = 0;
 			err.form = data.error;
 		}
 	};
@@ -58,12 +55,8 @@
 	let msgStore = '';
 </script>
 
-<svelte:head>
-	<title>{!sent ? 'Contact' : 'Message Sent'} - Theophilus</title>
-</svelte:head>
-
 <Meta
-	title="{!sent ? 'Contact' : 'Message Sent'} - Theophilus"
+	title="Contact - Theophilus"
 	description="Feel free to contact me with questions or anything else."
 	image="/site/theophilus.jpg"
 />
@@ -71,12 +64,16 @@
 <Image src="/site/theophilus.jpg" />
 
 <Title>
-	<h1>{!sent ? 'Contact' : 'Message Sent'}</h1>
+	<h1>{sent < 2 ? 'Contact' : 'Message Sent'}</h1>
 </Title>
 
 <Content>
 	<div class="form_position">
-		{#if !sent}
+		{#if sent === 1}
+			<Sending />
+		{:else if sent === 2}
+			<Done />
+		{:else}
 			<p>
 				Feel free to contact me with questions or anything else. I will do my best to respond to
 				your query as soon as possible.
@@ -136,12 +133,6 @@
 					<input type="submit" value="Send Message" />
 				</div>
 			</form>
-		{:else}
-			<Done />
-		{/if}
-
-		{#if sending}
-			<Sending />
 		{/if}
 	</div>
 </Content>
