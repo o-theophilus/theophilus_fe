@@ -50,9 +50,10 @@
 	.title {
 		position: sticky;
 		top: 0;
+		z-index: 1;
 
 		background-color: var(--color3);
-		box-shadow: 0 0 12px var(--color2);
+		box-shadow: 0 5px 5px var(--color2);
 
 		transition: top var(--animTime1);
 		transition-timing-function: ease-in-out;

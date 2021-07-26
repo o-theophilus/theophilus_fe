@@ -13,6 +13,7 @@
 	.mobileMenu {
 		position: fixed;
 		top: 0;
+		z-index: 4;
 		left: calc(-1 * var(--mobileMenuWidth));
 
 		display: flex;

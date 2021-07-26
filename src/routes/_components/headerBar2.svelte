@@ -12,6 +12,7 @@
 	.topBar {
 		position: fixed;
 		top: 0;
+		z-index: 3;
 		height: var(--headerHeight);
 
 		width: 100%;
