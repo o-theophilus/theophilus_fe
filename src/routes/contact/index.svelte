@@ -19,11 +19,13 @@
 		if (!form.name) {
 			err.name = 'Please enter your name';
 		}
+
 		if (!form.email) {
 			err.email = 'Please enter your name';
 		} else if (!/\S+@\S+\.\S+/.test(form.email)) {
 			err.email = 'Please enter a valid email address';
 		}
+		
 		if (!form.msg) {
 			err.msg = 'Please enter your message';
 		}
@@ -208,7 +210,7 @@
 
 	input:focus,
 	textarea:focus {
-		outline: none;
+		/* outline: none;  */
 		background-color: var(--color1);
 		border-color: var(--color3);
 	}

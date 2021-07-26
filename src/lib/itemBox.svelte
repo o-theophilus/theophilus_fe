@@ -17,72 +17,103 @@
 </script>
 
 <a {href} {target}>
-	<div class="img">
-		<img src="/images/{item.image}" alt={item.image} />
-	</div>
-	<div class="details">
+	<img src="/images/{item.image}" alt={item.image} />
+	<div class="blocker" />
+	<div class="block">
 		<h3 class="title">
 			{item.title}
 		</h3>
-		<p class="date">
-			{item.date}
-		</p>
-		{#if item.summary}
-			<p class="summary">
-				{item.summary}
+		<div class="details">
+			<p class="date">
+				{item.date}
 			</p>
-		{/if}
+			{#if item.summary}
+				<br />
+				<p class="summary">
+					{item.summary}
+				</p>
+			{/if}
+		</div>
 	</div>
 </a>
 <br />
 
 <style>
-	* {
-		margin: 0;
-		padding: 0;
-	}
 	a {
-		display: flex;
-		flex-direction: column;
+		display: block;
+
+		position: relative;
 
 		height: 300px;
-		line-height: 20px;
 
 		text-decoration: none;
 		color: var(--fColor2);
 
-		background-color: var(--color1);
-		box-shadow: 0 0 5px 0.1px;
 		border-radius: var(--bRadius);
-
 		overflow: hidden;
+
+		transition: all var(--animTime1);
+		transition-timing-function: ease-in-out;
+	}
+	a:hover .block {
+		top: 0;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+	a:hover .details {
+		height: initial;
+	}
+	a:hover .title {
+		color: var(--color3);
 	}
 
-	.img {
-		height: 100%;
-		overflow: hidden;
-	}
 	img {
+		display: block;
 		width: 100%;
 		height: 100%;
 
 		object-fit: cover;
 	}
 
+	.block {
+		position: absolute;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		color: var(--color1);
+		
+		inset: 0;
+		top: 80%;
+
+		background-color: rgba(0, 0, 0, 0.3);
+		text-align: center;
+		
+		transition: all var(--animTime1);
+		transition-timing-function: ease-in-out;
+		
+		padding: 0 20px;
+	}
 	.details {
-		padding: 20px;
+		height: 0;
+		overflow: hidden;
 	}
 	.title {
-		color: var(--fColor3);
+		transition: all var(--animTime1);
+		transition-timing-function: ease-in-out;
+	}
+	.date {
+		font-size: 0.7em;
 	}
 
-	.summary {
-		margin-top: 10px;
+	@media screen and (min-width: 500px) {
+		.block {
+			padding: 0 20%;
+		}
 	}
-
 	@media screen and (min-width: 600px) {
 		a {
-			height: 600px;
+			height: 400px;
 			line-height: unset;
 		}
 	}
