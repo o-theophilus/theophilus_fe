@@ -568,7 +568,7 @@ frameborder="0"
 title="container"
 ></iframe>
 
-This is an interactive 3D visualization demo. It aims to illustrate how WebGL offer new ways to showcase and interacting with products on the Web.
+This is an interactive 3D visualization demo. It aims to illustrate how WebGL offer new ways to showcase and interact with products on the Web.
 
 Since it's running in real-time 3D, you are able to inspect the model from every angle and even interact with various parts.
 
