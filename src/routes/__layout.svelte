@@ -32,7 +32,7 @@
 		position: relative;
 		left: 0;
 
-		margin-top: var(--headerHeight);
+		/* margin-top: var(--headerHeight); */
 
 		transition: left var(--animTime1);
 		transition-timing-function: ease-in-out;

@@ -18,9 +18,7 @@
 </script>
 
 <script>
-	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
-	import Title from '$lib/pageTitle.svelte';
 	import Marked from '$lib/marked.svelte';
 	import Meta from '$lib/meta.svelte';
 
@@ -29,16 +27,14 @@
 
 <Meta title={project.title} description={project.summary} image={project.image} />
 
-<Title>
-	<Image src="/images/{project.image}" />
+<Content noMargin>
+	<img src="/images/{project.image}" alt={project.title} />
 	<h2>
 		<p>{project.title}</p>
 	</h2>
 	<p>{project.tags}</p>
 	<p class="date">{project.date}</p>
-</Title>
-
-<Content noMargin>
+	<br />
 	{#if project.type === 'md'}
 		<Marked md={project.content} />
 	{:else}

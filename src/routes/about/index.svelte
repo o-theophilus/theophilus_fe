@@ -3,7 +3,6 @@
 
 	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
-	import Title from '$lib/pageTitle.svelte';
 	import Skill from './_skill.svelte';
 	import Meta from '$lib/meta.svelte';
 
@@ -40,10 +39,8 @@
 	image="/site/theophilus.jpg"
 />
 
-<Image src="/site/theophilus.jpg" />
-<Title>
-	<h1>About Me</h1>
-</Title>
+<Image src="theophilus" copy="About Me" />
+
 <Content>
 	<div class="content about">
 		<p>
@@ -115,7 +112,6 @@
 			This website is an all-in-one blog, portfolio and pet project to try out new shiny things.
 		</p>
 	</div>
-	<br />
 </Content>
 
 <style>

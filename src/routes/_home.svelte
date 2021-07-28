@@ -35,8 +35,9 @@
 <Content>
 	<div class="group">
 		<h3>Hi.</h3>
-		Welcome to my personal portfolio website.
-		<br />I am a web developer/graphic designer based in Lagos. I have a passion for designing, and
+		<!-- Welcome to my personal portfolio website.
+		<br /> -->
+		I am a web developer/graphic designer based in Lagos. I have a passion for designing, and
 		I love to create for the web and mobile devices.
 	</div>
 	<br />
@@ -64,7 +65,6 @@
 		think you need my help with something or just fancy saying hey, then
 		<a href="/contact">get in touch</a>.
 	</div>
-	<br />
 </Content>
 
 <style>

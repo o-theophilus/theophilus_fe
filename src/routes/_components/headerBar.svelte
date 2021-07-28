@@ -27,8 +27,9 @@
 		width: 100%;
 
 		background-color: var(--color2);
-
 		box-shadow: 0 0 0 var(--colorNill);
+		/* background-color: rgba(255, 255, 255, 0.111);
+		backdrop-filter: blur(2px); */
 
 		transition: top var(--animTime1);
 		transition-timing-function: ease-in-out;

@@ -11,23 +11,16 @@
 
 <script>
 	import Content from '$lib/pageContent.svelte';
-	import Title from '$lib/pageTitle.svelte';
 	import Meta from '$lib/meta.svelte';
 
 	export let status;
 	export let error;
 </script>
 
-<Meta
-	title="{error.name} - Theophilus"
-	description={error.message}
-	image="/site/akropol_001.jpg"
-/>
-<Title>
-	<h1>{status} {error.name}</h1>
-</Title>
+<Meta title="{error.name} - Theophilus" description={error.message} image="/site/akropol_001.jpg" />
 
-<Content>
+<Content noMargin>
+	<h1>{status} {error.name}</h1>
 	<p>{error.message}</p>
 	<br />
 	<br />

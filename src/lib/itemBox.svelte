@@ -24,19 +24,17 @@
 			{item.title}
 		</h3>
 		<div class="details">
-			<p class="date">
-				{item.date}
-			</p>
 			{#if item.summary}
-				<br />
 				<p class="summary">
 					{item.summary}
 				</p>
 			{/if}
+			<p class="date">
+				{item.date}
+			</p>
 		</div>
 	</div>
 </a>
-<br />
 
 <style>
 	a {
@@ -54,6 +52,9 @@
 
 		transition: all var(--animTime1);
 		transition-timing-function: ease-in-out;
+	}
+	a:not(:last-child) {
+		margin-bottom: 50px;
 	}
 	a:hover .block {
 		top: 0;
@@ -82,16 +83,16 @@
 		justify-content: center;
 
 		color: var(--color1);
-		
+
 		inset: 0;
 		top: 80%;
 
 		background-color: rgba(0, 0, 0, 0.3);
 		text-align: center;
-		
+
 		transition: all var(--animTime1);
 		transition-timing-function: ease-in-out;
-		
+
 		padding: 0 20px;
 	}
 	.details {

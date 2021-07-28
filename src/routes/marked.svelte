@@ -1,5 +1,4 @@
 <script>
-	import Title from '$lib/pageTitle.svelte';
 	import Marked from '$lib/marked.svelte';
 
 	let md = `
@@ -10,9 +9,7 @@ let a = 55;
 	`;
 </script>
 
-<Title>
-	<h1>Marked</h1>
-</Title>
+<h1>Marked</h1>
 
 <div class="block">
 	<textarea bind:value={md} />

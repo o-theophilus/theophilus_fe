@@ -2,7 +2,6 @@
 	import { projects } from '$lib/db.js';
 
 	import Content from '$lib/pageContent.svelte';
-	import Title from '$lib/pageTitle.svelte';
 	import ItemBox from '$lib/itemBox.svelte';
 
 	let items = projects;
@@ -27,9 +26,9 @@
 
 <div class="proj">
 	<div class="title">
-		<Title>
+		<div class="block">
 			<h1>Projects</h1>
-		</Title>
+		</div>
 	</div>
 
 	<Content>
@@ -48,16 +47,29 @@
 	}
 
 	.title {
+		height: var(--headerHeight);
+
 		position: sticky;
 		top: 0;
 		z-index: 1;
 
 		background-color: var(--color3);
-		box-shadow: 0 5px 5px var(--color2);
+		box-shadow: 0 5px 12px var(--color2);
 
 		transition: top var(--animTime1);
 		transition-timing-function: ease-in-out;
 	}
+
+	.block {
+		display: flex;
+		align-items: center;
+
+		max-width: var(--mobileWidth);
+		margin: auto;
+
+		padding: 0 var(--pad);
+	}
+
 	@media screen and (min-width: 900px) {
 		.title {
 			top: var(--headerHeight);

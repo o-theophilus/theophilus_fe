@@ -4,7 +4,6 @@
 	import { template } from './_template.js';
 	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
-	import Title from '$lib/pageTitle.svelte';
 	import SVG from '$lib/svg.svelte';
 	import Meta from '$lib/meta.svelte';
 
@@ -25,7 +24,7 @@
 		} else if (!/\S+@\S+\.\S+/.test(form.email)) {
 			err.email = 'Please enter a valid email address';
 		}
-		
+
 		if (!form.msg) {
 			err.msg = 'Please enter your message';
 		}
@@ -62,12 +61,6 @@
 	description="Feel free to contact me with questions or anything else."
 	image="/site/theophilus.jpg"
 />
-
-<Image src="/site/theophilus.jpg" />
-
-<Title>
-	<h1>{sent < 2 ? 'Contact' : 'Message Sent'}</h1>
-</Title>
 
 <Content>
 	<div class="form_position">

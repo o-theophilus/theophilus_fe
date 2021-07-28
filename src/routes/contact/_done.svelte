@@ -1,3 +1,4 @@
+<h1>Message Sent</h1>
 <p>Thank You</p>
 <br />
 <br />
