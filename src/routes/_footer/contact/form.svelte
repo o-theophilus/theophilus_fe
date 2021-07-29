@@ -1,14 +1,14 @@
 <script>
 	export const prerender = true;
 
-	import { template } from './_template.js';
+	import { template } from './template.js';
 	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
 	import SVG from '$lib/svg.svelte';
 	import Meta from '$lib/meta.svelte';
 
-	import Sending from './_sending.svelte';
-	import Done from './_done.svelte';
+	import Sending from './sending.svelte';
+	import Done from './done.svelte';
 
 	let form = {};
 	let err = {};
@@ -69,10 +69,7 @@
 		{:else if sent === 2}
 			<Done />
 		{:else}
-			<p>
-				Feel free to contact me with questions or anything else. I will do my best to respond to
-				your query as soon as possible.
-			</p>
+			
 
 			<form on:submit|preventDefault={validate}>
 				<div class="inputGroup">

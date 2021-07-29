@@ -17,8 +17,6 @@
 
 		width: 100%;
 		pointer-events: none;
-
-		/* z-index: 3; */
 	}
 	@media screen and (min-width: 900px) {
 		.topBar {

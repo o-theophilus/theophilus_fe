@@ -39,12 +39,12 @@
 	image="/site/theophilus.jpg"
 />
 
-<Image src="theophilus" copy="About Me" />
+<Image src="about" copy="About Me" />
 
 <Content>
 	<div class="content about">
 		<p>
-			My name is <strong>Theophilus Ogbolu</strong>, and this is the "About Me" stuff...
+			My name is <strong>Theophilus</strong>, and this is the "About Me" stuff...
 			<br />
 			<br />
 			I am a self-taught student of programming and software development, and I spend way too much time

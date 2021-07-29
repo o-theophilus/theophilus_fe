@@ -1,6 +1,6 @@
 <script>
-	import '../app_var.css';
-	import '../app.css';
+	import '$lib/style/app_var.css';
+	import '$lib/style/app.css';
 	import { showHeader, isMobile, openMobileMenu } from '$lib/store.js';
 
 	import MobileMenu from './_components/mobileMenu.svelte';

@@ -13,7 +13,7 @@
 
 <Meta title="Projects - Theophilus" description="Stuff I Made." image="/images/akropol_001.jpg" />
 
-<Image src="project2" copy="Projects" text="Stuff I Made" />
+<Image src="project" copy="Projects" text="Stuff I Made" />
 
 <Content>
 	{#each projects as item}

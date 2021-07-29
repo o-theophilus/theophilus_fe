@@ -1,7 +1,7 @@
 <script>
 	import marked from 'marked';
 	import hljs from 'highlight.js';
-	import './marked.css';
+	import '$lib/style/marked.css';
 
 	marked.setOptions({
 		renderer: new marked.Renderer(),

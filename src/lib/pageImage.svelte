@@ -82,12 +82,18 @@
 		width: var(--size);
 		height: var(--size);
 
-		background-color: var(--color4);
+		background-color: var(--colorNill);
 		justify-self: flex-start;
 
-		backdrop-filter: blur(2px);
+		/* backdrop-filter: blur(2px); */
 		fill: var(--color3);
 
 		cursor: pointer;
+
+		transition: all var(--animTime1);
+		transition-timing-function: ease-in-out;
+	}
+	.scroll:hover {
+		background-color: var(--color4);
 	}
 </style>

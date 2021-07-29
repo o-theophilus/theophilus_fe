@@ -1,13 +1,11 @@
 <script>
-	import Contact from './contact.svelte';
-	import Socials from './socials.svelte';
+	import Contact from './contact/index.svelte';
 	import Copyright from './copyright.svelte';
 	import Nav from './nav.svelte';
 </script>
 
 <footer>
-	<Contact />
-	<Socials />
+	<!-- <Contact /> -->
 	<Copyright />
 	<Nav />
 </footer>

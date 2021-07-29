@@ -11,7 +11,7 @@
 		<Link name={'project'} />
 		<Link name={'blog'} />
 		<Link name={'about'} />
-		<Link name={'contact'} />
+		<!-- <Link name={'contact'} /> -->
 	</nav>
 {/if}
 
