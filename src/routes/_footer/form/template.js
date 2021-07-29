@@ -6,9 +6,8 @@ export let template = [
 	{
 		name: 'Lets work together',
 		text: `Hi Theo,
-	
+		
 I like what you do, lets work together.
-
 You can reach me on my email or call +_____
 `
 	},

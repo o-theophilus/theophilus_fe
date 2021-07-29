@@ -1,20 +1,12 @@
-<div>
-	<div class="block">
-		<a href="/">Home</a> &#8226;
-		<a href="/project">Project</a> &#8226;
-		<a href="/blog">Blog</a> &#8226;
-		<a href="/about">About</a>
-	</div>
+<div class="block">
+	<a href="/">Home</a> &#8226;
+	<a href="/project">Project</a> &#8226;
+	<a href="/blog">Blog</a> &#8226;
+	<a href="/about">About</a>
 </div>
 
 <style>
 	.block {
-		max-width: var(--mobileWidth);
-
-		margin: auto;
-		padding: var(--pad);
-		padding-top: 0;
-
 		text-align: center;
 		color: var(--color1);
 	}
@@ -24,7 +16,6 @@
 
 		color: var(--color1);
 		text-decoration: none;
-		line-height: var(--lineHeight);
 
 		border-bottom: 2px solid var(--colorNill);
 		transition: all var(--animTime1);
