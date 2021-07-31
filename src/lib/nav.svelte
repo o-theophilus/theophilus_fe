@@ -1,11 +1,11 @@
 <script>
-	// import { browser } from '$app/env';
+	import { browser } from '$app/env';
 	// fix nav header blink
 
 	import Link from './navBtn.svelte';
 </script>
 
-<!-- {#if browser} -->
+{#if browser}
 	<nav>
 		<Link name={'home'} link={''} />
 		<Link name={'project'} />
@@ -13,7 +13,7 @@
 		<Link name={'about'} />
 		<!-- <Link name={'contact'} /> -->
 	</nav>
-<!-- {/if} -->
+{/if}
 
 <style>
 	@media screen and (min-width: 900px) {
