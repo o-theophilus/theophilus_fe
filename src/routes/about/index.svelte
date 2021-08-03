@@ -19,8 +19,8 @@
 	];
 
 	let tools = [
-		{ name: 'Microsoft Word', value: 84 },
-		{ name: 'Power Point', value: 73 },
+		// { name: 'Microsoft Word', value: 84 },
+		// { name: 'Power Point', value: 73 },
 		{ name: 'CorelDRAW', value: 94 },
 		{ name: 'Photoshop', value: 79 },
 		{ name: 'Preniere Pro', value: 53 },
