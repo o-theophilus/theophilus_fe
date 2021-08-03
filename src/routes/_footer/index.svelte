@@ -14,8 +14,6 @@
 			<Form />
 		</div>
 		<div class="right">
-			<!-- Feel free to contact me with questions or anything else. I will do my best to respond to your query
-                as soon as possible. -->
 			<Contact />
 			<br />
 			<br />
@@ -25,7 +23,7 @@
 		</div>
 	</section>
 	<div class="copyright">&copy theophilus.website 2021. All rights reserved.</div>
-	<br>
+	<br />
 	<Nav />
 </footer>
 

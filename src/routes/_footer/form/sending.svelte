@@ -10,6 +10,8 @@
 	{:else}
 		<h1>Message Sent</h1>
 		<p>Thank You</p>
+			<!-- Feel free to contact me with questions or anything else. I will do my best to respond to your query
+                as soon as possible. -->
 		<button on:click={() => dispatch('closed')}>Close</button>
 	{/if}
 </div>
