@@ -6,8 +6,6 @@ This website is an all-in-one blog, portfolio and pet project, It was Built from
 # Todo
 
 * Fix
-	1. [ ] fix home default title image size
-	1. [ ] change site images
 	1. [ ] review form message
 
 * Features
