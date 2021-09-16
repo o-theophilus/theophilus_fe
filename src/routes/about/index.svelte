@@ -23,7 +23,7 @@
 		// { name: 'Power Point', value: 73 },
 		{ name: 'CorelDRAW', value: 94 },
 		{ name: 'Photoshop', value: 79 },
-		{ name: 'Preniere Pro', value: 53 },
+		{ name: 'Premiere Pro', value: 53 },
 		// { name: 'Maya', value: 88 },
 		// { name: '3D Max', value: 73 },
 		{ name: 'Blender 3D', value: 80 },
