@@ -1,6 +1,7 @@
 <script>
 	import Content from '$lib/pageContent.svelte';
 	import { browser } from '$app/env';
+	import { scroll } from '$lib/store.js';
 
 	if (browser) {
 		let options = {
@@ -37,8 +38,8 @@
 		<h3>Hi.</h3>
 		<!-- Welcome to my personal portfolio website.
 		<br /> -->
-		I am a web developer/graphic designer based in Lagos. I have a passion for designing, and
-		I love to create for the web and mobile devices.
+		I am a web developer/graphic designer based in Lagos. I have a passion for designing, and I love
+		to create for the web and mobile devices.
 	</div>
 	<br />
 	<br />
@@ -63,7 +64,13 @@
 		<h3 class="type2">I can help.</h3>
 		I am currently available for freelance work. If you have a project that you want to get started,
 		think you need my help with something or just fancy saying hey, then
-		<a href="/contact">get in touch</a>.
+		<span
+			on:click|stopPropagation={() => {
+				scroll('footer');
+			}}
+		>
+			get in touch</span
+		>.
 	</div>
 </Content>
 
@@ -72,8 +79,9 @@
 		color: var(--fColor3);
 	}
 
-	a {
-		color: var(--fColor2);
+	span {
+		color: var(--fColor3);
+		cursor: pointer;
 	}
 
 	@keyframes show {

@@ -1,5 +1,4 @@
 <script>
-	// import Contact from './contact/index.svelte';
 	import Nav from './nav.svelte';
 
 	import Contact from './contact.svelte';

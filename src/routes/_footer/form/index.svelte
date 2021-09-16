@@ -3,7 +3,6 @@
 
 	import { template } from './template.js';
 	import SVG from '$lib/svg.svelte';
-	import Meta from '$lib/meta.svelte';
 
 	import Sending from './sending.svelte';
 
@@ -52,12 +51,6 @@
 
 	let msgStore = '';
 </script>
-
-<Meta
-	title="Contact - Theophilus"
-	description="Feel free to contact me with questions or anything else."
-	image="/site/theophilus.jpg"
-/>
 
 <div class="form_position">
 	{#if state > 0}

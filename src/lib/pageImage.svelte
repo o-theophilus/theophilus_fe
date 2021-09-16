@@ -1,31 +1,11 @@
 <script>
 	import SVG from '$lib/svg.svelte';
-	import { isMobile } from '$lib/store.js';
+	import { scroll } from '$lib/store.js';
 
 	export let src = '';
-	export let query = '.pageContent';
 
 	export let copy = '';
 	export let text = '';
-
-	const scroll = () => {
-		let e = document.querySelector(query);
-		e.scrollIntoView({ behavior: 'smooth' });
-	};
-
-	const scrollDesktop = () => {
-		let e = document.querySelector(query);
-		const offset = 70;
-		const bodyRect = document.body.getBoundingClientRect().top;
-		const elementRect = e.getBoundingClientRect().top;
-		const elementPosition = elementRect - bodyRect;
-		const offsetPosition = elementPosition - offset;
-
-		window.scrollTo({
-			top: offsetPosition,
-			behavior: 'smooth'
-		});
-	};
 </script>
 
 <section>
@@ -34,7 +14,12 @@
 		<h1>{copy}</h1>
 		<p>{text}</p>
 	</div>
-	<div class="scroll" on:click|stopPropagation={$isMobile ? scroll : scrollDesktop}>
+	<div
+		class="scroll"
+		on:click|stopPropagation={() => {
+			scroll('.pageContent');
+		}}
+	>
 		<SVG type="down" size="50" />
 	</div>
 </section>
