@@ -18,11 +18,27 @@
 </script>
 
 <script>
+	import { scroll } from '$lib/store.js';
+	import { onMount } from 'svelte';
+
 	import Content from '$lib/pageContent.svelte';
 	import Marked from '$lib/marked.svelte';
 	import Meta from '$lib/meta.svelte';
 
 	export let project;
+
+	onMount(() => {
+		var parent = document.querySelector('.pageContent');
+		parent.addEventListener(
+			'click',
+			(e) => {
+				if (e.target.matches('span.link')) {
+					scroll('footer');
+				}
+			},
+			false
+		);
+	});
 </script>
 
 <Meta title={project.title} description={project.summary} image={project.image} />

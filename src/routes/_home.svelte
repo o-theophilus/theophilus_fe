@@ -65,6 +65,7 @@
 		I am currently available for freelance work. If you have a project that you want to get started,
 		think you need my help with something or just fancy saying hey, then
 		<span
+			class="link"
 			on:click|stopPropagation={() => {
 				scroll('footer');
 			}}
@@ -77,11 +78,6 @@
 <style>
 	.type2 {
 		color: var(--fColor3);
-	}
-
-	span {
-		color: var(--fColor3);
-		cursor: pointer;
 	}
 
 	@keyframes show {

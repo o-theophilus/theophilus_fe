@@ -48,3 +48,8 @@ pre {
 p > code {
 	color: darkred;
 }
+
+.link {
+	color: var(--fColor3);
+	cursor: pointer;
+}

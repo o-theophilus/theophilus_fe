@@ -578,7 +578,7 @@ Here is a link to the <a href="/project/l322">first version of this project</a> 
 
 <br>
 
-Interested in hiring me to build something awesome? <a href="/contact" >Get in touch</a>.
+Interested in hiring me to build something awesome? <span class="link">Get in touch</span>.
 		`
 	},
 	{
