@@ -40,7 +40,6 @@
 
 	img {
 		position: absolute;
-		/* inset: 0; */
 		height: 100vh;
 
 		object-fit: cover;
@@ -48,11 +47,12 @@
 	}
 	.msg {
 		max-width: var(--mobileWidth);
-		/* margin: auto; */
 
 		font-size: 2em;
 		text-align: center;
 		color: white;
+
+		text-shadow: 0 0 5px var(--color2);
 	}
 	.scroll {
 		display: flex;
