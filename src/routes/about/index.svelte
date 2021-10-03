@@ -48,7 +48,7 @@
 			<br />
 			<br />
 			I am a self-taught student of programming and software development, and I spend way too much time
-			and money pursuing this interest. My friends and family are concerned for my well-being.
+			and money pursuing this interest.
 			<br />
 			<br />
 			I spend most of my free time working on building my skillset, contributing to Open Source projects,
