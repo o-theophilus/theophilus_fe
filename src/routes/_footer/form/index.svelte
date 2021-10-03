@@ -16,7 +16,7 @@
 		}
 
 		if (!form.email) {
-			error.email = 'Please enter your name';
+			error.email = 'Please enter your email address';
 		} else if (!/\S+@\S+\.\S+/.test(form.email)) {
 			error.email = 'Please enter a valid email address';
 		}
