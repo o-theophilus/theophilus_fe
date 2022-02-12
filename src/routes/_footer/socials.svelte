@@ -13,7 +13,7 @@
 		<SVG type="twitter" />
 	</a>
 	<a
-		href="https://www.linkedin.com/in/theophilus-ogbolu-977385136/"
+		href="https://www.linkedin.com/in/o-theophilus/"
 		target="_blank"
 		rel="noopener noreferrer"
 	>
