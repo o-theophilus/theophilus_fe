@@ -590,6 +590,16 @@ Interested in hiring me to build something awesome? <span class="link">Get in to
 		tags: 'Web',
 		type: 'link',
 		content: "http://bamianddayo.vercel.app/"
+	},
+	{
+		title: 'Meji',
+		summary: 'An eCommerce platform',
+		image: 'meji.jpg',
+		date: '13 June 2023',
+		slug: 'meji',
+		tags: 'Web',
+		type: 'link',
+		content: "http://meji.ng/"
 	}
 ];
 
