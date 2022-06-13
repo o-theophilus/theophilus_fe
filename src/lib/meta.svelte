@@ -6,7 +6,7 @@
 	export let image;
 
 	let imageAlt = image;
-	let url = `https://theophilus.website${$page.path}`;
+	let url = `https://theophilus.website${$page.url.pathname}`;
 	let type = 'website';
 	let twitterCard = 'summary_large_image';
 </script>

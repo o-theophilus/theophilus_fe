@@ -9,7 +9,7 @@
 	let page_;
 	link = link === undefined ? name : link;
 	page_ = link === '' ? undefined : link;
-	$: segment = $page.path.split('/')[1] || undefined;
+	$: segment = $page.url.pathname.split('/')[1] || undefined;
 </script>
 
 <a
