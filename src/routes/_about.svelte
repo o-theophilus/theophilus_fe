@@ -1,13 +1,10 @@
 <script>
 	export const prerender = true;
 
-	import Image from '$lib/pageImage.svelte';
 	import Content from '$lib/pageContent.svelte';
-	import Skill from './_skill.svelte';
-	import Meta from '$lib/meta.svelte';
+	import Skill from './_about_skill.svelte';
 
 	let skills = [
-		// { name: 'C#', value: 82 },
 		{ name: 'HTML', value: 95 },
 		{ name: 'CSS', value: 90 },
 		{ name: 'JavaScript', value: 65 },
@@ -15,17 +12,12 @@
 		{ name: 'Svelte / SvelteKit', value: 87 },
 		{ name: 'Python', value: 90 },
 		{ name: 'Flask', value: 85 }
-		// { name: 'Arduino', value: 92 }
 	];
 
 	let tools = [
-		// { name: 'Microsoft Word', value: 84 },
-		// { name: 'Power Point', value: 73 },
 		{ name: 'CorelDRAW', value: 94 },
 		{ name: 'Photoshop', value: 79 },
 		{ name: 'Premiere Pro', value: 53 },
-		// { name: 'Maya', value: 88 },
-		// { name: '3D Max', value: 73 },
 		{ name: 'Blender 3D', value: 80 },
 		{ name: 'Verge3D', value: 80 },
 		{ name: 'SketchUp', value: 85 },
@@ -33,21 +25,10 @@
 	];
 </script>
 
-<Meta
-	title="About - Theophilus"
-	description="This website is an all-in-one blog, portfolio and pet project to try out new shiny things."
-	image="/site/theophilus.jpg"
-/>
-
-<Image src="about" copy="About Me" />
-
 <Content>
 	<div class="content about">
 		<p>
-			My name is <strong>Theophilus</strong>, and this is the "About Me" stuff...
-			<br />
-			<br />
-			I am a self-taught student of programming and software development, and I spend way too much time
+			My name is <strong>Theophilus</strong>, I am a self-taught student of programming and software development, and I spend way too much time
 			and money pursuing this interest.
 			<br />
 			<br />
