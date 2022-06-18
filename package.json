@@ -9,8 +9,8 @@
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-vercel": "next",
-		"@sveltejs/kit": "next",
+		"@sveltejs/adapter-vercel": "^1.0.0-next.39",
+		"@sveltejs/kit": "^1.0.0-next.252",
 		"highlight.js": "^10.7.2",
 		"eslint": "^7.32.0",
 		"eslint-config-prettier": "^8.3.0",
