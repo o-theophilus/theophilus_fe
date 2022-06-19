@@ -2,7 +2,6 @@
 	<a href="/">Home</a> &#8226;
 	<a href="/project">Project</a> &#8226;
 	<a href="/blog">Blog</a> &#8226;
-	<a href="/about">About</a>
 </div>
 
 <style>
