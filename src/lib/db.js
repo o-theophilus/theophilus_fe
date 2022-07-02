@@ -600,6 +600,16 @@ Interested in hiring me to build something awesome? <span class="link">Get in to
 		tags: 'Web',
 		type: 'link',
 		content: "http://meji.ng/"
+	},
+	{
+		title: 'Outside (Pre-NFT)',
+		summary: 'An algorithm to randomly generate over 10,000 variations of artwork',
+		image: 'meji.jpg',
+		date: '30 June 2023',
+		slug: 'outside',
+		tags: 'Web, nft',
+		type: 'link',
+		content: "http://outside-demo.vercel.app/"
 	}
 ];
 

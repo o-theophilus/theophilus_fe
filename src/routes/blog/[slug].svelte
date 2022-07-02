@@ -2,8 +2,8 @@
 	import { posts, _posts } from '$lib/db.js';
 	let temp = [...posts, ..._posts];
 
-	export async function load({ page }) {
-		let { slug } = page.params;
+	export async function load({ params }) {
+		let { slug } = params;
 		let post;
 		for (let i = 0; i < temp.length; i++) {
 			if (temp[i].slug === slug) {
